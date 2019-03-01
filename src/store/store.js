@@ -19,7 +19,7 @@ const fix = n => v => v.toFixed(n);
 Vue.use(Vuex);
 
 const mapCols = [
-  { col: 'name', name: 'Map  ' },
+  { col: 'name', name: 'Map \t ' },
   // { col: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
   { col: 'energy', align: 'right' },
   { col: 'fodder', align: 'right', func:fix(2) },
