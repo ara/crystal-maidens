@@ -19,7 +19,7 @@
       :enabled="fCrystal"
       @click="fCrystal=''"
     >Clear</button><br>
-    <label for="cid">Campaigns</label>
+    <label for="cid">Maps</label>
     <!-- <select id="cid" v-model="filterCampaign"
       @mousewheel.prevent="selectWheel($event,'filterCampaign')"> -->
     <select id="cid"

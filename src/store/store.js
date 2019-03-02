@@ -70,11 +70,13 @@ export const store = new Vuex.Store({
         ret = ret.filter( filterMapsFunc( 'crystal', '=', state.filterCrystal ) );
       }
       if( state.filterCampaign ) {
-        //ret = ret.filter( filterMapsFunc( 'campaignID', '=', state.filterCampaign ) );
+        // eslint-disable-next-line eqeqeq
         if( state.filterCampaign == -1 ) {
           ret = ret.filter( c =>
             (c.campaignID >= 1 && c.campaignID <= 3 && c.missionIndex < 61) ||
+            (c.campaignID >= 1001 && c.campaignID <= 1003 && c.missionIndex < 61) );
         } else {
+          // eslint-disable-next-line eqeqeq
           ret = ret.filter( c => c.campaignID == state.filterCampaign );
         }
       }
