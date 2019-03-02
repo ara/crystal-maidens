@@ -73,8 +73,7 @@ export const store = new Vuex.Store({
         //ret = ret.filter( filterMapsFunc( 'campaignID', '=', state.filterCampaign ) );
         if( state.filterCampaign == -1 ) {
           ret = ret.filter( c =>
-            (c.campaignID >= 1 && c.campaignID <= 3) ||
-            (c.campaignID >= 1001 && c.campaignID <= 1003) );
+            (c.campaignID >= 1 && c.campaignID <= 3 && c.missionIndex < 61) ||
         } else {
           ret = ret.filter( c => c.campaignID == state.filterCampaign );
         }
