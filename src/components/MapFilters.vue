@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display:inline-block;">
     <span>{{ maps.length }} maps</span><br>
     <label><span>Bosses only</span>
       <input type="checkbox" v-model="fBossesOnly"><br>
@@ -52,6 +52,7 @@ export default {
       this.$store.commit('updateCurrPage', 1);
     },
     fCrystal (val, oldVal) {
+      console.log('fCrystal watcher', val, oldVal);
       this.$store.commit('updateFilterCrystal', val);
       this.$store.commit('updateCurrPage', 1);
     },
@@ -71,14 +72,14 @@ export default {
       //this.fCampaign = $event.target.value
     },
     selectWheel (e, propName) {
-      const maxSel = e.target.options.length-1;
-      const prevSel = e.target.options.selectedIndex;
-      const offset = e.wheelDelta > 0 ? -1 : 1;
+      const options = e.target.options;
+      const maxSel = options.length-1;
+      const prevSel = options.selectedIndex;
+      const offset = e.deltaY > 0 ? 1 : -1;
       const newSel = Math.max(0, Math.min(maxSel, prevSel+offset));
-      console.log(prevSel, newSel);
       if( newSel !== prevSel ) {
-        this[propName] = e.target.options[newSel].value/1;
-        e.target.options[newSel].selected = true;
+        this[propName] = options[newSel].value;
+        options[newSel].selected = true;
       }
     },
   },
@@ -88,5 +89,6 @@ export default {
 <style scoped>
 * {
   margin-left: 8px;
+  box-sizing: border-box;
 }
 </style>
