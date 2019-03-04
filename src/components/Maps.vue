@@ -66,8 +66,8 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['lastPage','maps', 'filteredCols']),
     ...mapState(['maxEntries','mapCols','vip','sortedCol1','sortedCol1Asc','sortedCol2','sortedCol2Asc']),
+    ...mapGetters(['lastPage','maps', 'filteredCols']),
     currPage: {
       get () {
         return this.$store.state.currPage;
@@ -111,6 +111,10 @@ export default {
   components: {
     VueSimpleContextMenu,
   },
+
+  created () {
+    console.log('maps.vue created!');
+  }
 }
 </script>
 

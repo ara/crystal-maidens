@@ -1,6 +1,6 @@
 import { cap, maps, campaigns, sortMapsFunc as sortFunc, filterMapsFunc } from '../../maps';
 
-console.log('campaigns: '+campaigns.length);
+console.log('campaigns:', campaigns.length);
 for( const m of maps ) {
   if( m.id < 2000 ) {
     m.name = `C${m.campaignID % 1000} ${m.campaignID>1000?'H':'E'} ${m.missionIndex.toString().padStart(2)}`;
@@ -14,7 +14,7 @@ const fix0 = fix(0);
 const fix2 = fix(2);
 
 const mapCols = [
-  { col: 'name', name: 'Map \t ' },
+  { col: 'name', name: 'Map\t ' },
   // { col: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
   { col: 'energy', align: 'right' },
   { col: 'fodder', align: 'right', func:fix2 },

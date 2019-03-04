@@ -138,11 +138,10 @@ export const filterMapsFunc = (field, compType, value) => (m) => {
 // #region
 /**
  * @param {object} args
- * Uses fields:
- * - maps [array] (required)
- * - field [string] (required)
- * - asc [bool]
- * - save [ function ([map]) return [string] ]
+ * @param {array} args.maps
+ * @param {string} args.field
+ * @param {bool} [args.asc]
+ * @param {function} [args.save]
  */
 // #endregion
 const saveSortedMaps = (args) => {

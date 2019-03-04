@@ -8,12 +8,8 @@ Vue.use(Vuex);
 
 
 export const store = new Vuex.Store({
-  modules: {
-    mMaps,
-  },
   state: {
     vip,
-    filters: [],
     maxEntries: 20,
   },
   getters: {
@@ -47,11 +43,15 @@ export const store = new Vuex.Store({
         [state.sortedCol1Asc, state.sortedCol2Asc] = [false, state.sortedCol1Asc];
       }
     },
+    modules: {
+      mMaps,
+    },
   },
-  actions: {
-    // setFilter: ({ commit, state }, newValue) => {
-    //   commit('SET_FILTER', newValue)
-    //   console.log('action setFilter:', newValue);
-    // },
-  },
+  // actions: {
+  //   setFilter: ({ commit, state }, newValue) => {
+  //     commit('SET_FILTER', newValue)
+  //     console.log('action setFilter:', newValue);
+  //   },
+  // },
 });
+
