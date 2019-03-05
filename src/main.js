@@ -1,14 +1,15 @@
 import Vue from 'vue';
+import store from './store/store';
 import App from './App.vue';
-
-import { store } from './store/store';
 import './registerServiceWorker'
+
 
 Vue.config.productionTip = false;
 
 var vm = new Vue({
+  el: '#app',
   render: function (h) { return h(App) },
   store
-}).$mount('#app');
+})
 
-global.vm = vm;
+//vm.$mount('#app');

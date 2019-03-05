@@ -7,7 +7,7 @@
     <label for="crystals">Crystals</label>
     <select id="crystals"
       @input="fCrystal=$event.target.value"
-      @mousewheel.prevent="selectWheel($event,'fCrystal')">
+      @mousewheel.passive="selectWheel($event,'fCrystal')">
       <option value="">All</option>
       <option value="Dark">Dark</option>
       <option value="Fire">Fire</option>
@@ -24,7 +24,7 @@
       @mousewheel.prevent="selectWheel($event,'filterCampaign')"> -->
     <select id="cid"
       @input="fCampaign=$event.target.value"
-      @mousewheel.prevent="selectWheel($event,'fCampaign')"
+      @mousewheel.passive="selectWheel($event,'fCampaign')"
     >
       <option value="">All</option>
       <option value="-1" selected>All Campaigns</option>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 
 export default {
   data () {
@@ -48,11 +48,11 @@ export default {
 
   watch: {
     fCampaign (val, oldVal) {
+      //console.log('global.vm', GLOBAL.vm, GLOBAL.vm.$store );
       this.$store.commit('updateFilterCampaign', val);
       this.$store.commit('updateCurrPage', 1);
     },
     fCrystal (val, oldVal) {
-      console.log('fCrystal watcher', val, oldVal);
       this.$store.commit('updateFilterCrystal', val);
       this.$store.commit('updateCurrPage', 1);
     },
@@ -63,12 +63,14 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['maps','filteredCols','campaigns']),
+    ...mapState(['campaigns']),
+    ...mapGetters(['maps','filteredCols']),
   },
 
   methods: {
+    ...mapMutations(['currPage']),
     campaignSelected (e) {
-      console.log(e);
+      console.log('BLAH',e);
       //this.fCampaign = $event.target.value
     },
     selectWheel (e, propName) {
@@ -83,6 +85,7 @@ export default {
       }
     },
   },
+
 }
 </script>
 

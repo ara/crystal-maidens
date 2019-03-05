@@ -1,7 +1,7 @@
 <template>
   <div class="grid">
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <table class="maps" @mousewheel.prevent="wheel($event)">
+    <table class="maps" @mousewheel.passive="wheelOnTable($event)">
       <thead @contextmenu.prevent="$refs.colMenu.showMenu($event)">
         <th
           v-for="(c,i) in filteredCols"
@@ -88,7 +88,6 @@ export default {
         case this.sortedCol2: return this.sortedCol2Asc ? asc : desc;
         default: return asc;
       }
-      //return 'sort-btn glyphicon glyphicon-sort'
     },
     sortArrowClasses (col,cc2) {
       return col === this.sortedCol1
@@ -100,7 +99,7 @@ export default {
     campaignClass (map) {
       return map.campaignID < 2000 && map.campaignID % 1000 < 10 ? map.name.substr(0,2)+map.name[3] : 'CXX';
     },
-    wheel (e) {
+    wheelOnTable (e) {
       this.currPage += e.wheelDelta > 0 ? -1 : 1;
     },
     optionClicked (event, item) {
@@ -112,13 +111,11 @@ export default {
     VueSimpleContextMenu,
   },
 
-  created () {
-    console.log('maps.vue created!');
-  }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
 .update-enter-active {
     transition: all .5s ease-in;
 }
@@ -135,6 +132,7 @@ export default {
 .maps {
   background-color: #777;
   box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
+  cursor: default;
 }
 thead,
 tfoot {
@@ -150,16 +148,19 @@ table {
   vertical-align: top;
   border-spacing: 1px;
   table-layout: auto;
+  tr:hover {
+    outline: 3px solid #3c78d8;
+  }
 }
 td {
   padding: .2em .4em;
 }
 th {
   padding: .3em .1em .2em .4em;
-  cursor: default;
   text-align: left;
   width: auto;
 }
+
 .longth {
   white-space: pre-line;
 }

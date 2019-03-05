@@ -1,57 +1,69 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import mMaps from './modules/maps';
-import { vip } from '../maps';
+// import { vip } from '../api/maps';
+// import { cap, sortMapsFunc as sortFunc, filterMapsFunc } from '../api/maps';
+import { cap, campaigns, maps, sortMapsFunc as sortFunc } from '../api/maps';
+
+
+for( const m of maps ) {
+  if( m.id < 2000 ) {
+    m.name = `C${m.campaignID % 1000} ${m.campaignID>1000?'H':'E'} ${m.missionIndex.toString().padStart(2)}`;
+  } else {
+    m.name = `${m.campaignID}-${m.missionIndex.toString().padStart(2)}`;
+  }
+}
+
+const fix = n => v => v.toFixed(n);
+const fix0 = fix(0);
+const fix2 = fix(2);
+const fix2noz = v => v === 0 ? '' : v.toFixed(2);
+
+const mapCols = [
+  { col: 'name', name: 'Map\t   ' },
+  // { col: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
+  { col: 'energy', align: 'right' },
+  { col: 'fodder', align: 'right', func:fix2 },
+  { col: 'coinsPerEnergy', name: 'Coins/E', align: 'right', func:fix0 },
+  { col: 'maidenXPPerEnergy', name: 'M.XP/E', align: 'right', func:fix0 },
+  { col: 'fodderCoins', name:'Fod/Coins', align: 'right', func:fix0, hidden:true },
+  { col: 'crystal', align: 'center' },
+  { col: 'dustCrit', align: 'right', func:fix2noz, name: 'Crit dust' },
+];
+mapCols.forEach( c => (c.name = c.name ? c.name : cap(c.col)) );
 
 
 Vue.use(Vuex);
 
+const store = new Vuex.Store({
 
-export const store = new Vuex.Store({
   state: {
-    vip,
-    maxEntries: 20,
+    ...mMaps.state,
+    maps,
+    mapCols,
+    campaigns: campaigns.sort( sortFunc('groupID', true, 'id', true) ),
   },
-  getters: {
-    lastPage (state, getters) {
-      return Math.ceil( state.filteredMapsCount / state.maxEntries );
-    },
-  },
-  mutations: {
-    updateMaxEntries (state, val) {
-      state.maxEntries = val;
-    },
-    updateCurrPage (state, val) {
-      state.currPage = Math.min(
-        Math.max( val, 1 ),
-        this.getters.lastPage );
-    },
-    columnClicked (state, args) {
-      const [col, event] = args;
-      if( event.ctrlKey && col !== state.sortedCol1 ) {
-        state.sortedCol2 = col;
-        state.sortedCol2Asc = col === state.sortedCol2
-          ? !state.sortedCol2Asc
-          : false;
-      } else if( col === state.sortedCol1 ) {
-        state.sortedCol1Asc = !state.sortedCol1Asc;
-      } else if( col === state.sortedCol2 ) {
-        [state.sortedCol1, state.sortedCol2] = [state.sortedCol2, state.sortedCol1];
-        [state.sortedCol1Asc, state.sortedCol2Asc] = [state.sortedCol2Asc, state.sortedCol1Asc];
-      } else {
-        [state.sortedCol1, state.sortedCol2] = [col, state.sortedCol1];
-        [state.sortedCol1Asc, state.sortedCol2Asc] = [false, state.sortedCol1Asc];
-      }
-    },
-    modules: {
-      mMaps,
-    },
-  },
-  // actions: {
-  //   setFilter: ({ commit, state }, newValue) => {
-  //     commit('SET_FILTER', newValue)
-  //     console.log('action setFilter:', newValue);
-  //   },
+
+  // getters: {
+  //   ...mMaps.getters,
   // },
-});
+
+  // mutations: {
+  //   ...mMaps.mutations,
+  // },
+
+  // actions: {
+  //   ...mMaps.actions,
+  // },
+
+  // modules: {
+  //   mMaps
+  // },
+
+  strict: process.env.NODE_ENV !== 'production',
+
+})
+store.hotUpdate( mMaps );
+
+export default store;
 
