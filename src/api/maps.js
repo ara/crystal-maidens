@@ -60,6 +60,38 @@ const dustCrit = (rewards, energy) => {
   ), 0 );
 }
 
+
+const setDustValues = (map, data) => {
+  let [dustDamage, dustHealth, dustCrit, dustAS, dustDodge, dustDEF, dustCDR] = [0,0,0,0,0,0,0];
+  for( const item of map.rewards ) {
+    const dbitem = data.dbitem.find( dbi => dbi.id == item.itemID );
+    if( dbitem ) {
+      const dust = baseDustValue[item.rarity] * item.quantity * item.droprate / 100 / map.energy;
+      const stats = (dbitem['statsrarity'+rarityIndex[item.rarity]] || '').split(';')
+      for( const nvStat of stats ) { // vpStat: name value pair stat
+        const [statName, _] = nvStat.split(',');
+        switch( statName ) {
+          case 'dmgpercent': dustDamage += dust; break;
+          case 'hppercent': dustHealth += dust; break;
+          case 'critChance': dustCrit += dust; break;
+          case 'attackSpd': dustAS += dust; break;
+          case 'dodge': dustDodge += dust; break;
+          case 'def': dustDEF += dust; break;
+          case 'cooldownReduc': dustCDR += dust; break;
+          default: break;
+        }
+      }
+    }
+  }
+  map.dustDamage = dustDamage;
+  map.dustHealth = dustHealth;
+  map.dustCrit = dustCrit;
+  map.dustAS = dustAS;
+  map.dustDodge = dustDodge;
+  map.dustDEF = dustDEF;
+  map.dustCDR = dustCDR;
+}
+
 const buildCampaigns = (data) => {
   return data.dbcampaign
     .map( c => {
@@ -131,7 +163,7 @@ export const mapsByCID = (data, campaignIDs) => {
     obj.maidenXPPerEnergy = obj.energy>0 ? obj.maidenXP / obj.energy : 0;
     obj.fodderCoins = obj.coinsPerEnergy * obj.fodder;
 
-    obj.dustCrit = obj.energy > 0 ? dustCrit(rewards, obj.energy) : 0;
+    setDustValues(obj, data);
 
     return obj;
   });

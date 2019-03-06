@@ -28,7 +28,13 @@ const mapCols = [
   { col: 'maidenXPPerEnergy', name: 'M.XP/E', align: 'right', func:fix0 },
   { col: 'fodderCoins', name:'Fod/Coins', align: 'right', func:fix0, hidden:true },
   { col: 'crystal', align: 'center' },
+  { col: 'dustDamage', align: 'right', func:fix2noz, name: 'DMG dust' },
+  { col: 'dustHealth', align: 'right', func:fix2noz, name: 'HP dust' },
   { col: 'dustCrit', align: 'right', func:fix2noz, name: 'Crit dust' },
+  { col: 'dustAS', align: 'right', func:fix2noz, name: 'AS dust' },
+  { col: 'dustDodge', align: 'right', func:fix2noz, name: 'Dodge dust' },
+  { col: 'dustDEF', align: 'right', func:fix2noz, name: 'DEF dust' },
+  { col: 'dustCDR', align: 'right', func:fix2noz, name: 'CDR dust' },
 ];
 mapCols.forEach( c => (c.name = c.name ? c.name : cap(c.col)) );
 
