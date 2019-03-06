@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MapFilters/><br>
+    <MapFilters/><br><br>
     <Maps headers="headers"/>
   </div>
 </template>

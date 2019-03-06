@@ -28,21 +28,32 @@
           </td>
         </tr>
       </tbody>
-      <tfoot><tr><td :colspan="filteredCols.length">
-        <div>
-          <button @click="currPage--" :disabled="currPage<=1">
-            <b>◄</b>
-          </button>
-          <input type="text" size="1" v-model="currPage" >
-          <span style="vertical-align:middle">/ {{ lastPage }}</span>
-          <button @click="currPage++" :disabled="currPage>=lastPage">
-            <b>►</b>
-          </button>
-        </div>
-        <div style="transform: scaleY(.7)">
-          <input type=range min=1 :max=lastPage value=1 v-model="currPage">
-        </div>
-        </td></tr>
+      <tfoot>
+        <tr>
+          <td :colspan="filteredCols.length">
+          <table class="paging">
+            <tr>
+              <td style="align:right"></td>
+              <td>
+                <div>
+                  <button @click="currPage--" :disabled="currPage<=1">
+                    <b>◄</b>
+                  </button>
+                  <input type="text" size="1" v-model="currPage" >
+                  <span style="vertical-align:middle">/ {{ lastPage }}</span>
+                  <button @click="currPage++" :disabled="currPage>=lastPage">
+                    <b>►</b>
+                  </button>
+                </div>
+                <div style="transform: scaleY(.7)">
+                  <input type=range min=1 :max=lastPage value=1 v-model=currPage>
+                </div>
+              </td>
+              <td><span>TEST</span></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
       </tfoot>
     </table>
     <vue-simple-context-menu
@@ -115,41 +126,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$p-medium: #777;
+$p-light: #eee;
+$p-dark: #333;
 
 .update-enter-active {
     transition: all .5s ease-in;
 }
-
 .update-leave-active {
     transition: all .5s ease-out;
 }
-
 .update-enter, .update-leave-to {
     opacity: .5;
     background-color: #fd0;
 }
 
 .maps {
-  background-color: #777;
+  background-color: $p-medium;
   box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
   cursor: default;
 }
 thead,
 tfoot {
-  background-color: #eee;
+  background-color: $p-light;
 }
 tfoot>div,span,input,button {
   margin-left: 8px;
 }
 table {
-  background-color: #333;
+  background-color: $p-dark;
   display: inline-block;
   white-space: pre;
   vertical-align: top;
   border-spacing: 1px;
   table-layout: auto;
-  tr:hover {
-    outline: 3px solid #3c78d8;
+  // tbody tr:hover {
+  //   outline: 3px solid #3c78d8;
+  // }
+  .paging {
+    background-color: $p-light;
   }
 }
 td {
