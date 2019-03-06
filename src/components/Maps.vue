@@ -28,14 +28,16 @@
           </td>
         </tr>
       </tbody>
+
       <tfoot>
         <tr>
           <td :colspan="filteredCols.length">
-          <table class="paging">
-            <tr>
-              <td style="align:right"></td>
-              <td>
-                <div>
+            <div class="pagingContainer">
+                
+                <div class="box">
+                </div>
+                
+                <div class="box" style="padding-top:4px">
                   <button @click="currPage--" :disabled="currPage<=1">
                     <b>◄</b>
                   </button>
@@ -44,14 +46,21 @@
                   <button @click="currPage++" :disabled="currPage>=lastPage">
                     <b>►</b>
                   </button>
+                  <br>
+                  <div style="transform: scaleY(.7)">
+                    <input type=range min=1 :max=lastPage value=1 v-model=currPage>
+                  </div>
                 </div>
-                <div style="transform: scaleY(.7)">
-                  <input type=range min=1 :max=lastPage value=1 v-model=currPage>
+                
+                <div>
+                  <div style="float:right;vertical-align:bottom;">
+                    <select v-model="maxEntries">
+                      <option v-for="v in [10,20,30,40,50]" :key="v.id">{{ v }}</option>
+                    </select>
+                  </div>
                 </div>
-              </td>
-              <td><span>TEST</span></td>
-            </tr>
-          </table>
+
+            </div>
           </td>
         </tr>
       </tfoot>
@@ -125,10 +134,26 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
+
+$p-dark: #333;
 $p-medium: #777;
 $p-light: #eee;
-$p-dark: #333;
+
+.pagingContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-wrap: nowrap;
+  > div {
+    width: 40%;
+    * {
+      margin-left: 8px;
+    }
+  }
+}
+
 
 .update-enter-active {
     transition: all .5s ease-in;
@@ -146,13 +171,7 @@ $p-dark: #333;
   box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
   cursor: default;
 }
-thead,
-tfoot {
-  background-color: $p-light;
-}
-tfoot>div,span,input,button {
-  margin-left: 8px;
-}
+
 table {
   background-color: $p-dark;
   display: inline-block;
@@ -160,32 +179,46 @@ table {
   vertical-align: top;
   border-spacing: 1px;
   table-layout: auto;
+
   // tbody tr:hover {
   //   outline: 3px solid #3c78d8;
   // }
-  .paging {
+  
+  thead, tfoot {
     background-color: $p-light;
   }
+  
+  th {
+    padding: .3em .1em .2em .4em;
+    text-align: left;
+    width: auto;
+    
+    .sort-arrow {
+      float: right;
+    }
+    .nosort {
+      opacity: 0;
+    }
+    .sort1 {
+      /* color: black; */
+      opacity: 1;
+    }
+    .sort2 {
+      /* color: #aaa; */
+      opacity: .4;
+    }
+  }
+
+  td {
+    padding: .15em .35em;
+  }
 }
-td {
-  padding: .2em .4em;
-}
-th {
-  padding: .3em .1em .2em .4em;
-  text-align: left;
-  width: auto;
-}
+
 
 .longth {
   white-space: pre-line;
 }
-.footer {
-  display: flex;
-  /* flex-basis: 33%; */
-}
-b.footer {
-  font-size: 13px;
-}
+
 .C1E {
   background-color: #fff2cc;
 }
@@ -207,45 +240,14 @@ b.footer {
 .CXX {
   background-color: #ddd;
 }
-.sort-arrow {
-  float: right;
-}
-.nosort {
-  opacity: 0;
-}
-.sort1 {
-  /* color: black; */
-  opacity: 1;
-}
-.sort2 {
-  /* color: #aaa; */
-  opacity: .4;
-}
-.left {
-  text-align: left;
-}
-.right {
-  text-align: right;
-}
-.center {
-  text-align: center;
-}
+
 body {
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+
 a {
   color: #42b983;
 }
+
 </style>
