@@ -22,9 +22,9 @@
           <td
             v-for="(c,i) in filteredCols"
             :key="i"
-            :style="'text-align:'+c.align"
+            :style="'text-align:'+(c.align||'right')"
           >
-            <span>{{ c.func ? c.func( m[c.col]) : m[c.col] }}</span>
+            <span>{{ formatMapCell(m,c) }}</span>
           </td>
         </tr>
       </tbody>
@@ -34,26 +34,32 @@
           <td :colspan="filteredCols.length">
             <div class="pagingContainer">
                 
-                <div class="box">
-                </div>
+                <div></div>
+                <div></div>
                 
-                <div class="box" style="padding-top:4px">
+                <div style="align-content:center">
                   <button @click="currPage--" :disabled="currPage<=1">
                     <b>◄</b>
                   </button>
                   <input type="text" size="1" v-model="currPage" >
-                  <span style="vertical-align:middle">/ {{ lastPage }}</span>
+                  <span >/ {{ lastPage }}</span>
                   <button @click="currPage++" :disabled="currPage>=lastPage">
                     <b>►</b>
                   </button>
-                  <br>
-                  <div style="transform: scaleY(.7)">
-                    <input type=range min=1 :max=lastPage value=1 v-model=currPage>
-                  </div>
                 </div>
                 
                 <div>
-                  <div style="float:right;vertical-align:bottom;">
+                  <!-- <div style="transform: scaleY(.7)"> -->
+                  <div style="float:left">
+                  <input style="vertical-align:baseline;width:8em;"
+                    type=range min=1 :max=lastPage value=1 v-model=currPage>
+                  <!-- </div> -->
+                  </div>
+                </div>
+
+                <div>
+                  <div style="float:right">
+                    <span style="font-size:smaller">Items per page</span>
                     <select v-model="maxEntries">
                       <option v-for="v in [10,20,30,40,50]" :key="v.id">{{ v }}</option>
                     </select>
@@ -86,7 +92,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['maxEntries','mapCols','vip','sortedCol1','sortedCol1Asc','sortedCol2','sortedCol2Asc']),
+    ...mapState(['mapCols','vip','sortedCol1','sortedCol1Asc','sortedCol2','sortedCol2Asc']),
     ...mapGetters(['lastPage','maps', 'filteredCols']),
     currPage: {
       get () {
@@ -96,10 +102,28 @@ export default {
         this.$store.commit('updateCurrPage', val);
       },
     },
+    maxEntries: {
+      get () {
+        return this.$store.state.maxEntries;
+      },
+      set (val) {
+        this.$store.commit('updateMaxEntries', val);
+        this.currPage = 1;
+      }
+    },
   },
 
   methods: {
+    formatMapCell(map,col) {
+      let cell = map[col.col];
+      if( col.func ) {
+        cell = col.func(cell);
+      }
+      return cell;
+    },
+
     ...mapMutations(['columnClicked']),
+
     sortArrow (col) {
       const asc = '▲';
       const desc = '▼';
@@ -144,13 +168,19 @@ $p-light: #eee;
 .pagingContainer {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  // height: 100%;
   flex-wrap: nowrap;
+  padding-top: 4px;
+  vertical-align: baseline;
+
   > div {
-    width: 40%;
+    width: 20%;
     * {
       margin-left: 8px;
     }
+  }
+  span {
+    font-size: smaller;
   }
 }
 
