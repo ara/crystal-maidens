@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   data () {
@@ -68,11 +68,6 @@ export default {
   },
 
   methods: {
-    ...mapMutations(['currPage']),
-    campaignSelected (e) {
-      console.log('BLAH',e);
-      //this.fCampaign = $event.target.value
-    },
     selectWheel (e, propName) {
       const options = e.target.options;
       const maxSel = options.length-1;
