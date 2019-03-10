@@ -1,6 +1,5 @@
 <template>
   <div style="display:inline-block;">
-    <span>{{ maps.length }} maps</span><br>
     <label><span>Bosses only</span>
       <input type="checkbox" v-model="fBossesOnly"><br>
     </label>
@@ -20,13 +19,11 @@
       @click="fCrystal=''"
     >Clear</button><br>
     <label for="cid">Maps</label>
-    <!-- <select id="cid" v-model="filterCampaign"
-      @mousewheel.prevent="selectWheel($event,'filterCampaign')"> -->
     <select id="cid"
       @input="fCampaign=$event.target.value"
       @mousewheel.passive="selectWheel($event,'fCampaign')"
     >
-      <option value="">All</option>
+      <option :value="-2">All</option>
       <option value="-1" selected>All Campaigns</option>
       <option v-for="c in campaigns" :key="c.id"
         :value="c.id">{{ c.name }}</option>
@@ -48,7 +45,6 @@ export default {
 
   watch: {
     fCampaign (val, oldVal) {
-      //console.log('global.vm', GLOBAL.vm, GLOBAL.vm.$store );
       this.$store.commit('updateFilterCampaign', val);
       this.$store.commit('updateCurrPage', 1);
     },
@@ -63,8 +59,10 @@ export default {
   },
 
   computed: {
-    ...mapState(['campaigns']),
-    ...mapGetters(['maps','filteredCols']),
+    ...mapState({
+      campaigns: state => state.maps.campaigns,
+    }),
+    ...mapGetters(['maps']),
   },
 
   methods: {
@@ -80,6 +78,7 @@ export default {
       }
     },
   },
+
 
 }
 </script>

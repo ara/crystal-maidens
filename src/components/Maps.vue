@@ -2,11 +2,14 @@
   <div class="grid">
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <table class="maps" @mousewheel.passive="wheelOnTable($event)">
-      <thead @contextmenu.prevent="$refs.colMenu.showMenu($event)">
+      <thead @contextmenu.prevent="$refs.colMenu.open">
         <th
           v-for="(c,i) in filteredCols"
           :key="i"
-          @click="columnClicked([c.col,$event]);currPage=1"
+          @click.middle.prevent="onColMiddleClick($event,c)"
+          @click.left.ctrl="columnClicked([c.col,$event]);currPage=1"
+          @click.left.shift="columnClicked([c.col,$event]);currPage=1"
+          @click.left="columnClicked([c.col,$event]);currPage=1"
           :class="i==filteredCols.length-1?'longth':''"
         >{{ c.name }}<span
           :class="sortArrowClasses(c.col)" class="sort-arrow"
@@ -33,11 +36,10 @@
         <tr>
           <td :colspan="filteredCols.length">
             <div class="pagingContainer">
-                
-                <div></div>
-                <div></div>
-                
-                <div style="align-content:center">
+
+                <div/><div/>
+
+                <div>
                   <button @click="currPage--" :disabled="currPage<=1">
                     <b>◄</b>
                   </button>
@@ -47,18 +49,16 @@
                     <b>►</b>
                   </button>
                 </div>
-                
-                <div>
-                  <!-- <div style="transform: scaleY(.7)"> -->
-                  <div style="float:left">
-                  <input style="vertical-align:baseline;width:8em;"
-                    type=range min=1 :max=lastPage value=1 v-model=currPage>
-                  <!-- </div> -->
-                  </div>
-                </div>
 
                 <div>
-                  <div style="float:right">
+                  <div style="transform: scaleY(.7);float:left">
+                  <input style="width:6em;vertical-align:top;margin-top:auto"
+                    type=range min=1 :max=lastPage value=1 v-model=currPage>
+                  </div>
+
+                </div>
+                  <div>
+                  <div class="align-items:flex-end">
                     <span style="font-size:smaller">Items per page</span>
                     <select v-model="maxEntries">
                       <option v-for="v in [10,20,30,40,50]" :key="v.id">{{ v }}</option>
@@ -71,40 +71,51 @@
         </tr>
       </tfoot>
     </table>
-    <vue-simple-context-menu
-      elementId="colMenu"
-      :options="mapCols"
-      ref="colMenu"
-      @option-clicked="optionClicked">
-    </vue-simple-context-menu>
+    <vue-context :closeOnClick="false" ref="colMenu" class="cm">
+      <ul class="cm">
+        <li v-for="col in mapCols" :key="col.col"
+          @click="onCMClick(col)"
+          class="cm"
+        >
+          <span :style="{float:'left', opacity:col.hidden?0:1}"
+          >{{ '✓' }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          {{ col.name }}
+        </li>
+      </ul>
+    </vue-context>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapSetters, mapMutations, mapState } from 'vuex';
-import VueSimpleContextMenu from 'vue-simple-context-menu';
+import { mapState, mapGetters, mapMutations } from 'vuex';
+import { VueContext } from 'vue-context';
+// import VueSimpleContextMenu from 'vue-simple-context-menu';
 
 export default {
-  data () {
-    return {
-      //
-    }
-  },
 
   computed: {
-    ...mapState(['mapCols','vip','sortedCol1','sortedCol1Asc','sortedCol2','sortedCol2Asc']),
-    ...mapGetters(['lastPage','maps', 'filteredCols']),
+    ...mapState({
+      mapCols: state => state.maps.mapCols,
+      sortedCol1: state => state.maps.sortedCol1,
+      sortedCol1Asc: state => state.maps.sortedCol1Asc,
+      sortedCol2: state => state.maps.sortedCol2,
+      sortedCol2Asc: state => state.maps.sortedCol2Asc,
+    }),
+
+    ...mapGetters(['lastPage','maps','filteredCols']),
+
     currPage: {
       get () {
-        return this.$store.state.currPage;
+        return this.$store.state.maps.currPage;
       },
       set (val) {
         this.$store.commit('updateCurrPage', val);
       },
     },
+
     maxEntries: {
       get () {
-        return this.$store.state.maxEntries;
+        return this.$store.state.maps.maxEntries;
       },
       set (val) {
         this.$store.commit('updateMaxEntries', val);
@@ -114,6 +125,14 @@ export default {
   },
 
   methods: {
+    onColMiddleClick(event, col)
+    {
+      this.updateColVisibility( { col, visible:false } );
+    },
+    onCMClick(col) {
+      this.updateColVisibility( { col, visible:col.hidden } );
+    },
+
     formatMapCell(map,col) {
       let cell = map[col.col];
       if( col.func ) {
@@ -122,7 +141,7 @@ export default {
       return cell;
     },
 
-    ...mapMutations(['columnClicked']),
+    ...mapMutations(['columnClicked','updateColVisibility']),
 
     sortArrow (col) {
       const asc = '▲';
@@ -133,7 +152,7 @@ export default {
         default: return asc;
       }
     },
-    sortArrowClasses (col,cc2) {
+    sortArrowClasses (col) {
       return col === this.sortedCol1
         ? 'sort1'
         : col === this.sortedCol2
@@ -146,13 +165,11 @@ export default {
     wheelOnTable (e) {
       this.currPage += e.wheelDelta > 0 ? -1 : 1;
     },
-    optionClicked (event, item) {
-      this.$set( event.option, 'hidden', !event.option.hidden );
-    },
   },
 
   components: {
-    VueSimpleContextMenu,
+    VueContext,
+    // VueSimpleContextMenu,
   },
 
 }
@@ -163,18 +180,18 @@ export default {
 
 $p-dark: #333;
 $p-medium: #777;
+$p-ml: #bbb;
 $p-light: #eee;
 
 .pagingContainer {
   display: flex;
   flex-direction: row;
-  // height: 100%;
   flex-wrap: nowrap;
   padding-top: 4px;
   vertical-align: baseline;
 
   > div {
-    width: 20%;
+    flex:1;
     * {
       margin-left: 8px;
     }
@@ -182,8 +199,36 @@ $p-light: #eee;
   span {
     font-size: smaller;
   }
+  .float-right {
+    float: right;
+  }
 }
 
+.fill {
+  width:-webkit-fill-available;
+  width:-moz-available;
+}
+
+.cm {
+  width: auto !important;
+  font-size: 14px;
+  font-weight: 600;
+  ul {
+    padding: 0px !important;
+    color: $p-dark;
+    background-color: $p-light;
+    li {
+      padding: 4px 8px !important;
+      &:hover {
+        background: $p-medium !important;
+        color: $p-light !important;
+      }
+    }
+    li + li {
+      border-top: 1px solid $p-ml;
+    }
+  }
+}
 
 .update-enter-active {
     transition: all .5s ease-in;
@@ -213,16 +258,17 @@ table {
   // tbody tr:hover {
   //   outline: 3px solid #3c78d8;
   // }
-  
+
   thead, tfoot {
     background-color: $p-light;
   }
-  
+
   th {
     padding: .3em .1em .2em .4em;
     text-align: left;
     width: auto;
-    
+    cursor: pointer;
+
     .sort-arrow {
       float: right;
     }
