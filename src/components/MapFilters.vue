@@ -28,6 +28,12 @@
       <option v-for="c in campaigns" :key="c.id"
         :value="c.id">{{ c.name }}</option>
     </select>
+
+    <div>
+      <button v-for="col in colProfiles" :key="col.name"
+        @click="applyColProfile(col)"
+      >{{ col.name }}</button>
+    </div>
   </div>
 </template>
 
@@ -61,11 +67,16 @@ export default {
   computed: {
     ...mapState({
       campaigns: state => state.maps.campaigns,
+      colProfiles: state => state.maps.colProfiles,
     }),
     ...mapGetters(['maps']),
   },
 
   methods: {
+    applyColProfile (colProfile) {
+      this.$store.dispatch('setColProfile', colProfile);
+    },
+
     selectWheel (e, propName) {
       const options = e.target.options;
       const maxSel = options.length-1;

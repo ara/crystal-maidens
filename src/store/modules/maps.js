@@ -72,6 +72,12 @@ const mapCols = [
 ];
 mapCols.forEach( c => (c.name = c.name ? c.name : cap(c.col)) );
 
+const colProfiles = [
+  { name: 'General', cols: ['name', 'energy', 'fodder', 'coinsPerEnergy', 'maidenXPPerEnergy', 'fodderCoins', 'crystal'] },
+  { name: 'Dusts', cols: ['name', 'dustDamage', 'dustHealth', 'dustCrit', 'dustAS', 'dustDodge', 'dustCDR', 'dustDEF'] },
+  { name: 'Elements', cols: ['name', 'Fire', 'Nature', 'Water', 'Light', 'Dark', 'total'] },
+  { name: 'Classes', cols: ['name', 'Warrior', 'Mage', 'Marksman', 'Engineer', 'Support', 'total'] },
+];
 
 const defaultState = {
   sortedCol1: 'fodder',
@@ -87,6 +93,7 @@ const defaultState = {
   currPage: 1,
   filteredMapsCount: 0,
   maxEntries: 20,
+  colProfiles,
 };
 
 
@@ -167,24 +174,32 @@ const mutations = {
   updateColVisibility (state, payload) {
     payload.col.hidden = !payload.visible;
   },
-
+  SET_COL_PROFILE (state, profile) {
+    // change all columns at once
+    // by working on a mirrored array
+    let mirrorMapCols = state.mapCols.map( c => ({ ...c }) );
+    for( const col of mirrorMapCols ) {
+      if( profile.cols.includes(col.col) ) {
+        col.hidden = false;
+      } else {
+        col.hidden = true;
+      }
+    }
+    state.mapCols = mirrorMapCols;
+  }
 }; // mutations
 
 
-// const actions = {
-//   actions: {
-//     setFilter: ({ commit, state }, newValue) => {
-//       commit('SET_FILTER', newValue)
-//       console.log('action setFilter:', newValue);
-//     },
-//   },
-// }
+const actions = {
+  setColProfile ({ commit }, payload) {
+    commit('SET_COL_PROFILE', payload);
+  },
+}
 
 
 export default {
-
   state: defaultState,
   getters,
   mutations,
-
+  actions
 }
