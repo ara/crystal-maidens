@@ -125,8 +125,7 @@ export default {
   },
 
   methods: {
-    onColMiddleClick(event, col)
-    {
+    onColMiddleClick(event, col) {
       this.updateColVisibility( { col, visible:false } );
     },
     onCMClick(col) {
