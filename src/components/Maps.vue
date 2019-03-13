@@ -76,6 +76,7 @@
         <li v-for="col in mapCols" :key="col.col"
           @click="onCMClick(col)"
           class="cm"
+          :class="col.col==='name'?'disabled':''"
         >
           <span :style="{float:'left', opacity:col.hidden?0:1}"
           >{{ '✓' }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -227,6 +228,11 @@ $p-light: #eee;
       border-top: 1px solid $p-ml;
     }
   }
+}
+
+.disabled {
+    pointer-events:none; //This makes it not clickable
+    opacity:0.6;         //This grays it out to look disabled
 }
 
 .update-enter-active {
