@@ -78,8 +78,8 @@
           class="cm"
           :class="col.col==='name'?'disabled':''"
         >
-          <span :style="{float:'left', opacity:col.hidden?0:1}"
-          >{{ '✓' }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span :style="{float:'left', opacity:col.hidden?0:1, marginRight:'8px'}"
+          >{{ '✓' }}</span>
           {{ col.name }}
         </li>
       </ul>
