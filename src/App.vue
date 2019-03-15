@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <app-header></app-header>
+    <keep-alive>
     <router-view>
     </router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -16,6 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,5 +35,7 @@ export default {
   a:visited {
     color: #777;
   }
+
 }
+
 </style>
