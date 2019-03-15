@@ -23,6 +23,8 @@ module.exports = {
     10: null,
     11:'DefenseModifierEffect',
     12:'ConfuseEffect',
+    13:'ChangeSkillEffect',
+    14:'MorphEffect',
   },
 
   targetTypes: {
