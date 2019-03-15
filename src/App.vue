@@ -1,24 +1,16 @@
 <template>
   <div id="app">
-    <MapFilters/><br><br>
-    <Maps headers="headers"/>
+    <app-header></app-header>
+    <router-view>
+    </router-view>
   </div>
 </template>
 
 <script>
-import Maps from './components/Maps.vue'
-import MapFilters from './components/MapFilters'
-
+import Header from './components/Header';
 export default {
-  name: 'app',
-  data () {
-    return {
-      //
-    }
-  },
   components: {
-    Maps,
-    MapFilters,
+    appHeader: Header
   }
 }
 </script>
@@ -33,6 +25,12 @@ export default {
   margin-top: 40px;
   :focus {
     outline-color: #2c3e50 !important;
+  }
+  a:not(:visited) {
+    color:#2b2;
+  }
+  a:visited {
+    color: #777;
   }
 }
 </style>
