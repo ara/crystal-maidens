@@ -1,15 +1,16 @@
 <template>
   <div class="grid">
+    <MapFilters/><br><br>
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <table class="maps" @mousewheel.passive="wheelOnTable($event)">
       <thead @contextmenu.prevent="$refs.colMenu.open">
         <th
           v-for="(c,i) in filteredCols"
           :key="i"
-          @click.middle.prevent="onColMiddleClick($event,c)"
+          @click.middle.exact.prevent="onColMiddleClick($event,c)"
           @click.left.ctrl="columnClicked([c.col,$event]);currPage=1"
           @click.left.shift="columnClicked([c.col,$event]);currPage=1"
-          @click.left="columnClicked([c.col,$event]);currPage=1"
+          @click.left.exact="columnClicked([c.col,$event]);currPage=1"
           :class="i==filteredCols.length-1?'longth':''"
         >{{ c.name }}<span
           :class="sortArrowClasses(c.col)" class="sort-arrow"
@@ -88,6 +89,7 @@
 </template>
 
 <script>
+import MapFilters from './MapFilters';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { VueContext } from 'vue-context';
 // import VueSimpleContextMenu from 'vue-simple-context-menu';
@@ -169,6 +171,7 @@ export default {
 
   components: {
     VueContext,
+    MapFilters,
     // VueSimpleContextMenu,
   },
 
