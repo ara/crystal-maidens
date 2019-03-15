@@ -1,5 +1,7 @@
 <template>
-  <h3>Root page</h3>
+  <dir>
+    <h3>Home Page</h3>
+  </dir>
 </template>
 
 <script>
