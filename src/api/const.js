@@ -1,18 +1,13 @@
-const elements = ['Neutral'];
-elements[1] = 'Fire';
-elements[2] = 'Water';
-elements[4] = 'Nature';
-elements[8] = 'Dark';
+const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
 elements[16] = 'Light';
 
 
 module.exports = {
-  //             0        1        2        3        4        5
   elements,
   //            0         1       2          3          4         5             6
   itemSlots: ['Head', 'Chest', 'Weapon', 'Off-hand', 'Boots', 'Necklace', 'Consummable'],
   //            0       1         2         3           4          5
-  heroClasses: ['', 'Warrior', 'Mage', 'Marksman', 'Engineer', 'Support'],
+  classes: ['', 'Warrior', 'Mage', 'Marksman', 'Engineer', 'Support'],
   //             0       1       2          3            4
   rarities: ['Common', 'Rare', 'Epic', 'Legendary', 'Set Item'],
 
