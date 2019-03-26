@@ -8,27 +8,27 @@
           v-for="(c,i) in filteredCols"
           :key="i"
           @click.middle.exact.prevent="onColMiddleClick($event,c)"
-          @click.left.ctrl="columnClicked([c.val,$event]);currPage=1"
-          @click.left.shift="columnClicked([c.val,$event]);currPage=1"
-          @click.left.exact="columnClicked([c.val,$event]);currPage=1"
+          @click.left.ctrl="updateSort([c.val,$event]);currPage=1"
+          @click.left.shift="updateSort([c.val,$event]);currPage=1"
+          @click.left.exact="updateSort([c.val,$event]);currPage=1"
           :class="i==filteredCols.length-1?'longth':''"
-        >{{ c.name }}<span
+        >{{ c.caption }}<span
           :class="sortArrowClasses(c.val)" class="sort-arrow"
           >{{ sortArrow(c.val) }}</span>
         </th>
       </thead>
       <tbody style="">
         <tr
-          v-for="m in maps.slice((currPage-1)*maxEntries, currPage*maxEntries)"
+          v-for="m in computeMaps( sortedMaps.slice((currPage-1)*maxEntries, currPage*maxEntries) )"
           :key="m.id"
           :class="campaignClass(m)"
         >
           <td
-            v-for="(c,i) in filteredCols"
-            :key="i"
-            :style="'text-align:'+(c.align||'right')"
+            v-for="col in mapCols.filter( c => c.visible )"
+            :key="col.index"
+            :style="'text-align:'+(col.align||'right')"
           >
-            <span>{{ formatMapCell(m,c) }}</span>
+            <span>{{ m[col.displayField] }}</span>
           </td>
         </tr>
       </tbody>
@@ -74,14 +74,14 @@
     </table>
     <vue-context :closeOnClick="false" ref="colMenu" class="cm">
       <ul class="cm">
-        <li v-for="col in mapCols" :key="col.val"
+        <li v-for="col in mapCols" :key="col.index"
           @click="onCMClick(col)"
           class="cm"
           :class="col.val==='name'?'disabled':''"
         >
-          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'8px'}"
+          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'.6em'}"
           >{{ '✓' }}</span>
-          {{ col.name }}
+          {{ col.caption }}
         </li>
       </ul>
     </vue-context>
@@ -104,6 +104,20 @@ export default {
 
     ...mapGetters(['lastPage','maps','filteredCols']),
 
+    computedMaps () {
+      const time = Date.now();
+      const data = this.maps.map( m => this.computeMap(m, this.mapCols) );
+      console.log(`Maps computed in ${Date.now()-time} ms.`);
+      return data;
+    },
+
+    sortedMaps () {
+      const s = this.sorting;
+      return this.maps.sort(
+        this.sortMapsFunc( s.col1, s.col1Asc, s.col2, s.col2Asc )
+      );
+    },
+
     currPage: {
       get () {
         return this.$store.state.maps.currPage;
@@ -125,6 +139,25 @@ export default {
   },
 
   methods: {
+    computeMap (map) {
+      for( const col of this.mapCols ) {
+        if( col.dataField.startsWith('col') ) {
+          map[col.dataField] = col.val(map);
+        }
+        if( col.fmt ) {
+          map[col.displayField] = col.fmt( map[col.dataField], map );
+        }
+      }
+      return map;
+    },
+
+    computeMaps (maps) {
+      const time = Date.now();
+      const data = maps.map( this.computeMap );
+      console.log(`Maps computed in ${Date.now()-time} ms.`);
+      return data;
+    },
+
     onColMiddleClick(event, col) {
       this.updateColVisibility( { col, visible:false } );
     },
@@ -132,15 +165,7 @@ export default {
       this.updateColVisibility( { col, visible:!col.visible } );
     },
 
-    formatMapCell(map,col) {
-      let cell = map[col.val];
-      if( col.func ) {
-        cell = col.func(cell);
-      }
-      return cell;
-    },
-
-    ...mapMutations(['columnClicked','updateColVisibility']),
+    ...mapMutations(['updateSort','updateColVisibility']),
 
     sortArrow (col) {
       const asc = '▲';
@@ -164,6 +189,21 @@ export default {
     wheelOnTable (e) {
       this.currPage += e.wheelDelta > 0 ? -1 : 1;
     },
+
+    sortMapsFunc: (field, asc, field2, asc2) => (a,b) => {
+      if( a[field] !== b[field] ) {
+        if( asc ) { [a, b] = [b, a]; }
+        return typeof a[field] === 'string'
+          ? a[field].localeCompare( b[field] )
+          : b[field] - a[field];
+      } else {
+        if( asc2 ) { [a, b] = [b, a]; }
+        return typeof a[field2] === 'string'
+          ? a[field2].localeCompare( b[field2] )
+          : b[field2] - a[field2];
+      }
+    },
+
   },
 
   components: {
@@ -193,7 +233,7 @@ $p-light: #eee;
   > div {
     flex:1;
     * {
-      margin-left: 8px;
+      margin-left: .6em;
     }
   }
   span {
