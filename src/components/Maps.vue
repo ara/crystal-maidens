@@ -8,13 +8,13 @@
           v-for="(c,i) in filteredCols"
           :key="i"
           @click.middle.exact.prevent="onColMiddleClick($event,c)"
-          @click.left.ctrl="columnClicked([c.col,$event]);currPage=1"
-          @click.left.shift="columnClicked([c.col,$event]);currPage=1"
-          @click.left.exact="columnClicked([c.col,$event]);currPage=1"
+          @click.left.ctrl="columnClicked([c.val,$event]);currPage=1"
+          @click.left.shift="columnClicked([c.val,$event]);currPage=1"
+          @click.left.exact="columnClicked([c.val,$event]);currPage=1"
           :class="i==filteredCols.length-1?'longth':''"
         >{{ c.name }}<span
-          :class="sortArrowClasses(c.col)" class="sort-arrow"
-          >{{ sortArrow(c.col) }}</span>
+          :class="sortArrowClasses(c.val)" class="sort-arrow"
+          >{{ sortArrow(c.val) }}</span>
         </th>
       </thead>
       <tbody style="">
@@ -74,12 +74,12 @@
     </table>
     <vue-context :closeOnClick="false" ref="colMenu" class="cm">
       <ul class="cm">
-        <li v-for="col in mapCols" :key="col.col"
+        <li v-for="col in mapCols" :key="col.val"
           @click="onCMClick(col)"
           class="cm"
-          :class="col.col==='name'?'disabled':''"
+          :class="col.val==='name'?'disabled':''"
         >
-          <span :style="{float:'left', opacity:col.hidden?0:1, marginRight:'8px'}"
+          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'8px'}"
           >{{ '✓' }}</span>
           {{ col.name }}
         </li>
@@ -99,10 +99,7 @@ export default {
   computed: {
     ...mapState({
       mapCols: state => state.maps.mapCols,
-      sortedCol1: state => state.maps.sortedCol1,
-      sortedCol1Asc: state => state.maps.sortedCol1Asc,
-      sortedCol2: state => state.maps.sortedCol2,
-      sortedCol2Asc: state => state.maps.sortedCol2Asc,
+      sorting: state => state.maps.sorting,
     }),
 
     ...mapGetters(['lastPage','maps','filteredCols']),
@@ -132,11 +129,11 @@ export default {
       this.updateColVisibility( { col, visible:false } );
     },
     onCMClick(col) {
-      this.updateColVisibility( { col, visible:col.hidden } );
+      this.updateColVisibility( { col, visible:!col.visible } );
     },
 
     formatMapCell(map,col) {
-      let cell = map[col.col];
+      let cell = map[col.val];
       if( col.func ) {
         cell = col.func(cell);
       }
@@ -149,15 +146,15 @@ export default {
       const asc = '▲';
       const desc = '▼';
       switch( col ) {
-        case this.sortedCol1: return this.sortedCol1Asc ? asc : desc;
-        case this.sortedCol2: return this.sortedCol2Asc ? asc : desc;
+        case this.sorting.col1: return this.sorting.col1Asc ? asc : desc;
+        case this.sorting.col2: return this.sorting.col2Asc ? asc : desc;
         default: return asc;
       }
     },
     sortArrowClasses (col) {
-      return col === this.sortedCol1
+      return col === this.sorting.col1
         ? 'sort1'
-        : col === this.sortedCol2
+        : col === this.sorting.col2
           ? 'sort2'
           : 'nosort'
     },

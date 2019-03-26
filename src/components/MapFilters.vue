@@ -32,6 +32,7 @@
     <div>
       <button v-for="col in colProfiles" :key="col.name"
         @click="applyColProfile(col)"
+        :class="col.name===selectedProfileName?'selected':''"
       >{{ col.name }}</button>
     </div>
   </div>
@@ -68,6 +69,7 @@ export default {
     ...mapState({
       campaigns: state => state.maps.campaigns,
       colProfiles: state => state.maps.colProfiles,
+      selectedProfileName: state => state.maps.selectedProfileName,
     }),
     ...mapGetters(['maps']),
   },
@@ -94,9 +96,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 * {
   margin-left: 8px;
   box-sizing: border-box;
+}
+.selected {
+  background: #da9;
 }
 </style>

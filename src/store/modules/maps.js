@@ -43,34 +43,38 @@ const noz = v => v || '';
  * @property {string} [defaults.name] - defaults to capitalized 'col' field
  */
 const mapCols = [
-  { hidden:false, col: 'name', name: 'Map\t   ', align:'center' },
-  // { hidden:false, col: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
-  { hidden:false, col: 'energy' },
-  { hidden:false, col: 'fodder', func:fix2 },
-  { hidden:false, col: 'coinsPerEnergy', name: 'Coins/E', func:fix0 },
-  { hidden:false, col: 'maidenXPPerEnergy', name: 'M.XP/E', func:fix0 },
-  { hidden:false, col: 'fodderCoins', name:'Fod/Coins', func:fix0 },
-  { hidden:false, col: 'crystal', align: 'center' },
-  { hidden:true, col: 'dustDamage', func:fix2noz, name: 'DMG dust' },
-  { hidden:true, col: 'dustHealth', func:fix2noz, name: 'HP dust' },
-  { hidden:true, col: 'dustCrit', func:fix2noz, name: 'Crit dust' },
-  { hidden:true, col: 'dustAS', func:fix2noz, name: 'AS dust' },
-  { hidden:true, col: 'dustDodge', func:fix2noz, name: 'Dodge dust' },
-  { hidden:true, col: 'dustDEF', func:fix2noz, name: 'DEF dust' },
-  { hidden:true, col: 'dustCDR', func:fix2noz, name: 'CDR dust' },
-  { hidden:true, col: 'Fire', func:noz, name: 'Fire' },
-  { hidden:true, col: 'Nature', func:noz, name: 'Nature' },
-  { hidden:true, col: 'Water', func:noz, name: 'Water' },
-  { hidden:true, col: 'Light', func:noz, name: 'Light' },
-  { hidden:true, col: 'Dark', func:noz, name: 'Dark' },
-  { hidden:false, col: 'Warrior', func:noz, name: 'Warrior' },
-  { hidden:false, col: 'Mage', func:noz, name: 'Mage' },
-  { hidden:false, col: 'Marksman', func:noz, name: 'Marksman' },
-  { hidden:false, col: 'Engineer', func:noz, name: 'Engineer' },
-  { hidden:false, col: 'Support', func:noz, name: 'Support' },
-  { hidden:false, col: 'total', func:noz },
+  { visible:true, val: 'name', name: 'Map\t   ', align:'center' },
+  // { visible:true, val: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
+  { visible:true, val: 'energy' },
+  { visible:true, val: 'fodder', func:fix2 },
+  { visible:true, val: 'coinsPerEnergy', name: 'Coins/E', func:fix0 },
+  { visible:true, val: 'maidenXPPerEnergy', name: 'M.XP/E', func:fix0 },
+  { visible:true, val: 'fodderCoins', name:'Fod/Coins', func:fix0 },
+  { visible:true, val: 'crystal', align: 'center' },
+  { val: 'dustDamage', func:fix2noz, name: 'DMG dust' },
+  { val: 'dustHealth', func:fix2noz, name: 'HP dust' },
+  { val: 'dustCrit', func:fix2noz, name: 'Crit dust' },
+  { val: 'dustAS', func:fix2noz, name: 'AS dust' },
+  { val: 'dustDodge', func:fix2noz, name: 'Dodge dust' },
+  { val: 'dustDEF', func:fix2noz, name: 'DEF dust' },
+  { val: 'dustCDR', func:fix2noz, name: 'CDR dust' },
+  { val: 'Fire', func:noz, name: 'Fire' },
+  { val: 'Nature', func:noz, name: 'Nature' },
+  { val: 'Water', func:noz, name: 'Water' },
+  { val: 'Light', func:noz, name: 'Light' },
+  { val: 'Dark', func:noz, name: 'Dark' },
+  { val: 'Warrior', func:noz, name: 'Warrior' },
+  { val: 'Mage', func:noz, name: 'Mage' },
+  { val: 'Marksman', func:noz, name: 'Marksman' },
+  { val: 'Engineer', func:noz, name: 'Engineer' },
+  { val: 'Support', func:noz, name: 'Support' },
+  { val: 'total', func:noz },
 ];
-mapCols.forEach( c => (c.name = c.name ? c.name : cap(c.col)) );
+mapCols.forEach( c => {
+  c.name = c.name || cap(c.val);
+  /** add visible state for reactive Vue changes */
+  c.visible = c.visible || false;
+});
 
 const colProfiles = [
   { name: 'General', cols: ['name', 'energy', 'fodder', 'coinsPerEnergy', 'maidenXPPerEnergy', 'fodderCoins', 'crystal'] },
@@ -80,12 +84,14 @@ const colProfiles = [
 ];
 
 const defaultState = {
-  sortedCol1: 'fodder',
-  sortedCol2: 'name',
-  sortedCol1Asc: false,
-  sortedCol2Asc: false,
-  maps, //
-  mapCols, //
+  sorting: {
+    col1: 'fodder',
+    col2: 'name',
+    col1Asc: false,
+    col2Asc: false,
+  },
+  maps,
+  mapCols,
   filterCrystal: '',
   filterBossesOnly: false,
   filterCampaign: -1,
@@ -94,6 +100,7 @@ const defaultState = {
   filteredMapsCount: 0,
   maxEntries: 20,
   colProfiles,
+  selectedProfileName: 'General',
 };
 
 
@@ -120,12 +127,13 @@ const getters = {
         ret = ret.filter( c => c.campaignID == state.filterCampaign );
       }
     }
+    const s = state.sorting;
     return ret.sort(
-      sortFunc( state.sortedCol1, state.sortedCol1Asc, state.sortedCol2, state.sortedCol2Asc ) );
+      sortFunc( s.col1, s.col1Asc, s.col2, s.col2Asc ) );
   },
 
   filteredCols (state) {
-    return state.mapCols.filter( c => !c.hidden );
+    return state.mapCols.filter( c => c.visible );
   },
 
 }; // getters
@@ -133,8 +141,9 @@ const getters = {
 
 const mutations = {
   sortMaps (state) {
+    const s = state.sorting;
     state.maps = state.maps.sort(
-      sortFunc( state.sortedCol1, state.sortedCol1Asc, state.sortedCol2, state.sortedCol2Asc )
+      sortFunc( s.col1, s.col1Asc, s.col2, s.col2Asc )
     );
   },
   updateMaxEntries (state, val) {
@@ -156,33 +165,35 @@ const mutations = {
   },
   columnClicked (state, args) {
     const [col, event] = args;
-    if( event.ctrlKey && col !== state.sortedCol1 ) {
-      state.sortedCol2 = col;
-      state.sortedCol2Asc = col === state.sortedCol2
-        ? !state.sortedCol2Asc
+    const s = state.sorting;
+    if( event.ctrlKey && col !== s.col1 ) {
+      s.col2 = col;
+      s.col2Asc = col === s.col2
+        ? !s.col2Asc
         : false;
-    } else if( col === state.sortedCol1 ) {
-      state.sortedCol1Asc = !state.sortedCol1Asc;
-    } else if( col === state.sortedCol2 ) {
-      [state.sortedCol1, state.sortedCol2] = [state.sortedCol2, state.sortedCol1];
-      [state.sortedCol1Asc, state.sortedCol2Asc] = [state.sortedCol2Asc, state.sortedCol1Asc];
+    } else if( col === s.col1 ) {
+      s.col1Asc = !s.col1Asc;
+    } else if( col === s.col2 ) {
+      [s.col1, s.col2] = [s.col2, s.col1];
+      [s.col1Asc, s.col2Asc] = [s.col2Asc, s.col1Asc];
     } else {
-      [state.sortedCol1, state.sortedCol2] = [col, state.sortedCol1];
-      [state.sortedCol1Asc, state.sortedCol2Asc] = [false, state.sortedCol1Asc];
+      [s.col1, s.col2] = [col, s.col1];
+      [s.col1Asc, s.col2Asc] = [false, s.col1Asc];
     }
   },
   updateColVisibility (state, payload) {
-    payload.col.hidden = !payload.visible;
+    payload.col.visible = payload.visible;
   },
   SET_COL_PROFILE (state, profile) {
+    state.selectedProfileName = profile.name;
     // change all columns at once
     // by working on a mirrored array
     let mirrorMapCols = state.mapCols.map( c => ({ ...c }) );
     for( const col of mirrorMapCols ) {
-      if( profile.cols.includes(col.col) ) {
-        col.hidden = false;
+      if( profile.cols.includes(col.val) ) {
+        col.visible = true;
       } else {
-        col.hidden = true;
+        col.visible = false;
       }
     }
     state.mapCols = mirrorMapCols;
