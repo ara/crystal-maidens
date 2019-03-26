@@ -98,7 +98,8 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  margin-left: 8px;
+  margin-left: .6em;
+  margin-top: .2em;
   box-sizing: border-box;
 }
 .selected {
