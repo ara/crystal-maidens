@@ -1,92 +1,219 @@
 <template>
-  <div class="grid">
-    <table class="maps">
-      <thead>
-        <th>Maiden</th>
-        <th>Skill Dmg</th>
-        <th>Skill Heal</th>
-        <th>Cast Time</th>
+  <div>
+    <div style="display:grid">
+      <div class="grid-row">
+        <div>
+          <label for="selClass">Class</label>
+          <select id="selClass" @input="setFilterClass($event)">
+            <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']"
+              :key="heroClass">{{ heroClass }}</option>
+          </select>
+        </div><div></div>
+      </div>
+      <div class="grid-row">
+        <div>
+          <label for="selEle">Element</label>
+          <select id="selEle" @input="setFilterElem($event)">
+            <option
+              v-for="ele in ['All','Fire','Nature','Water','Light','Dark']"
+              :key="ele.id"
+            >{{ ele }}</option>
+          </select>
+        </div>
+        <div></div>
+      </div>
+      <div class="grid-row">
+        <div>
+          <label for="txSkillLevel">Skill Level</label>
+          <input type="number" min="1" max="29" maxlength="2" id="txSkillLevel"
+            @input="setSkillLevel($event)"
+            :value="skillLevel"
+          >
+        </div><div></div>
+      </div>
+      <div class="grid-row">
+        <div>
+          <label for="txCDR">CDR</label>
+          <input type="number" min="0" max="50" maxlength="2" step="5" id="txCDR"
+            @input="setCDR($event)"
+            :value="cdr"
+          >
+        </div><div></div>
+      </div>
+    </div>
+    <br>
+    <table>
+      <thead @contextmenu.prevent="$refs.colMenu.open">
+        <th v-for="c in filteredHeroCols" :key="c.id"
+          :class="c.dataField===sorting.col1?'hlCol':''"
+          @click.middle.exact.prevent="onColMiddleClick($event,c)"
+          @click.left.exact="updateSort(c.dataField,c.sortOrderAsc)"
+        >{{ c.caption }}</th>
       </thead>
 
       <tbody>
+        <!-- (sorting.col1, sorting.col1Asc, sorting.col2, sorting.col2Asc) -->
         <tr
-          v-for="m in maidens"
+          v-for="m in sortedMaidens"
           :key="m.id"
-          :class="['h'+m.sElement, m.name === selected ? ' selected' : '']"
+          :id="'m'+m.id"
+          :class="'h'+m.sElement"
           @click.prevent="select(m)"
         >
-          <td>
+          <td v-for="(col) in heroCols" :key="col.index"
+            v-show="col.visible"
+            :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
+            :style="'text-align:'+(col.align || 'right')"
+          >{{ m[col.displayField] }}</td>
+          <!-- <td
+            v-for="([displayData,sortData],i) in m.slice(1)"
+            :key="i"
+            :class="i===sorting.col1?'hl'+m.sElement:''"
+            :style="'text-align:'+(filteredHeroCols[i].align || 'right')"
+          ><span>{{ displayData }}</span>
+          </td> -->
             <!-- <img :title="m.sClass" :src="classIcon(m)" style="width: 16px; height: 16px;"> -->
-            <span>{{ m.name }}</span>
-          </td>
-          <td style="text-align:right">
-            {{ skillDmg(m) }}
-          </td>
-          <td style="text-align:right">
-            {{ skillHeal(m) }}
-          </td>
-          <td style="text-align:right">{{ m.skill.castTime.toFixed(1) }}</td>
-
         </tr>
       </tbody>
 
-      <tfoot>
-        <tr>
-          <td colspan="4">
-            <div>
-            </div>
-          </td>
-        </tr>
-      </tfoot>
     </table>
+
+    <vue-context :closeOnClick="false" ref="colMenu" class="cm">
+      <ul class="cm">
+        <li v-for="col in heroCols" :key="col.id"
+          @click="onCMClick(col)"
+          class="cm"
+          :class="col.val==='name'?'disabled':''"
+        >
+          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'8px'}"
+          >{{ '✓' }}</span>
+          {{ col.caption }}
+        </li>
+      </ul>
+    </vue-context>
+
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-// import {  } from 'constants';
-// import { VueContext } from 'vue-context';
+import { mapState, mapGetters, mapMutations } from 'vuex';
+import { VueContext } from 'vue-context';
+
 
 export default {
+  filters: {
+    sort: function (maidens) {
+      const s = this.sorting;
+      return maidens.sort( this.sortHeroesFunc(s.col1, s.col1Asc, s.col2, s.col2Asc) );
+    },
+  },
+
   state: {
     selected: null,
   },
 
   computed: {
     ...mapState({
-      heroes: state => state.heroes.heroes,
+      skillLevel: state => state.heroes.skillLevel,
+      cdr: state => state.heroes.cdr,
+      heroCols: state => state.heroes.heroCols,
+      sorting: state => state.heroes.sorting,
     }),
 
-    ...mapGetters(['maidens', 'filteredHeroCols']),
+    computedMaidens () {
+      const time = Date.now();
+      const data = this.maidens.map( m => this.computeMaiden(m) );
+      console.log(`computed in ${Date.now()-time} ms.`);
+      return data;
+    },
+
+    sortedMaidens () { return this.computedMaidens.sort(
+      this.sortHeroesFunc( this.sorting.col1, this.sorting.col1Asc, this.sorting.col2, this.sorting.col2Asc )
+    ); },
+
+    ...mapGetters(['maidens','filteredHeroCols','cSkillLevel']),
   },
 
   methods: {
+    computeMaiden (maiden) {
+      for( const col of this.heroCols ) {
+        if( col.dataField.startsWith('col') ) {
+          maiden[col.dataField] = col.val(maiden);
+        }
+        if( col.fmt ) {
+          maiden[col.displayField] = col.fmt( maiden, maiden[col.dataField] );
+        }
+      }
+      return maiden;
+    },
+    cellData (maiden, col) {
+      switch( typeof col.val ) {
+        case 'string': return maiden[col.val];
+        case 'function': return col.val(maiden);
+      }
+      throw new Error('unknown field: '+col.val);
+    },
+    sort (maidens, ...args) {
+      return maidens.sort( this.sortHeroesFunc(...args) );
+    },
+    setSkillLevel (event) {
+      this.$store.dispatch('setSkillLevel', parseInt(event.target.value));
+      //this.$store.commit('updateSkillLevel', event.target.value);
+    },
+    setCDR (event) {
+      this.$store.dispatch('setCDR', parseInt(event.target.value));
+    },
+    setFilterClass (event) {
+      this.$store.commit('updateFilterHeroClass', event.target.value);
+    },
+    setFilterElem (event) {
+      this.$store.commit('updateFilterHeroElement', event.target.value);
+    },
+    onColMiddleClick (event, col) {
+      this.updateHeroColVisibility( { col, visible:false } );
+    },
+    onCMClick (col) {
+      this.updateHeroColVisibility( { col, visible:!col.visible } );
+    },
     classIcon (hero) {
       return `../src/assets/classes/${hero.sClass}.png`;
     },
-    skillDmg (m) {
-      if( m.name === 'Ophelia' ) {
-        console.log( m.name + ' ticks',m.skillDMGticks );
-      }
-      const cd = m.skill.castTime + Math.ceil( 6 * m.skill.CD) / 10;
-      // console.log( m.name, cd, m.skill.castTime, m.skill.CD, m.skillDMGticks + ' ticks' );
-      return Math.round((m.skillDMG + m.skillDMGInc * 28 ** m.skillCoef) *
-        m.skillDMGticks / cd).toLocaleString(10);
-    },
-    skillHeal (m) {
-      const cd = m.skill.castTime + Math.ceil( 6 * m.skill.CD) / 10;
-      return Math.round((m.skillHEAL + m.skillHEALInc * 28 ** m.skillCoef) *
-        m.skillHEALticks / cd).toLocaleString(10);
-    },
     select (hero) {
-      this.selected = hero.name;
-      console.log( this.selected );
-      this.$forceUpdate();
-    }
+      const el = window.document.getElementById('m'+hero.id);
+      if( this.selected ) {
+        this.selected.classList.remove('selected');
+      }
+      if( el !== this.selected ) {
+        el.classList.add('selected');
+      }
+      this.selected = el;
+    },
+
+    ...mapMutations(['updateHeroColVisibility','computeMaidens','updateSort']),
+
+    sortHeroesFunc: (field, asc, field2, asc2) => (a,b) => {
+      if( a[field] !== b[field] ) {
+        if( asc ) { [a, b] = [b, a]; }
+        return typeof a[field] === 'string'
+          ? b[field].localeCompare( a[field] )
+          : b[field] - a[field];
+      } else {
+        if( asc2 ) { [a, b] = [b, a]; }
+        return typeof a[field2] === 'string'
+          ? b[field2].localeCompare( a[field2] )
+          : b[field2] - a[field2];
+      }
+    },
+
   },
 
+  components: {
+    VueContext,
+  },
+
+
   created() {
-    this.selected = 'Heet';
+    // this.selected = 'Heet';
   },
 
 }
@@ -98,39 +225,66 @@ $p-medium: #777;
 $p-ml: #bbb;
 $p-light: #eee;
 
+$fire: #f4cccc;
+$nature: #d9ead3;
+$water: #c9daf8;
+$light: #fff2cc;
+$dark: #d9d2e9;
+
+$darkenBy: 5%;
+
+.hlCol {
+  background: $p-ml;
+}
 .hFire {
-  background: #f4cccc;
+  background: $fire;
+}
+.hlFire {
+  background: darken($fire, $darkenBy) !important;
 }
 .hNature {
-  background: #d9ead3;
+  background: $nature;
+}
+.hlNature {
+  background: darken($nature, $darkenBy) !important;
 }
 .hWater{
-  background: #c9daf8;
+  background: $water;
+}
+.hlWater {
+  background: darken($water, $darkenBy) !important;
 }
 .hLight {
-  background: #fff2cc;
+  background: $light;
+}
+.hlLight {
+  background: darken($light, $darkenBy) !important;
 }
 .hDark {
-  background: #d9d2e9;
+  background: $dark;
+}
+.hlDark {
+  background: darken($dark, $darkenBy) !important;
 }
 
 .selected {
-  outline: 3px solid #3c78d8;
-}
-
-.maps {
-  background-color: $p-medium;
-  box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
-  cursor: default;
+  outline: 4px solid #3c78d8;
+  outline-offset: -2px;
 }
 
 table {
+  box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
+  cursor: default;
+
   font-size: smaller;
   background-color: $p-dark;
   display: inline-block;
   // white-space: pre;
   vertical-align: top;
-  border-spacing: 1px;
+
+  border-collapse: collapse;
+  border-spacing: 0px;
+
   table-layout: auto;
 
   // tbody tr:hover {
@@ -146,6 +300,7 @@ table {
     text-align: left;
     width: auto;
     cursor: pointer;
+    border: 1px solid $p-medium;
 
     .sort-arrow {
       float: right;
@@ -164,9 +319,23 @@ table {
   }
 
   td {
-    border-collapse: collapse;
-    border: 1px solid $p-light;
+    // border-collapse: collapse;
+    //border: 1px solid $p-light;
+    border: 1px solid $p-ml;// hsla(0,0%,80%,.5);
     padding: .1em .3em;
+    &:first-child {
+      border-left-color: $p-medium;
+    }
+    &:last-child {
+      border-right-color: $p-medium;
+    }
+    text-align: right;
+  }
+
+  tr {
+    &:last-child td {
+      border-bottom-color: $p-medium;
+    }
   }
 }
 
