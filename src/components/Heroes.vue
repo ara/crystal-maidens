@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="display:grid">
+    <div class="filters">
       <div class="grid-row">
         <div>
           <label for="selClass">Class</label>
@@ -8,7 +8,7 @@
             <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']"
               :key="heroClass">{{ heroClass }}</option>
           </select>
-        </div><div></div>
+        </div>
       </div>
       <div class="grid-row">
         <div>
@@ -25,7 +25,8 @@
       <div class="grid-row">
         <div>
           <label for="txSkillLevel">Skill Level</label>
-          <input type="number" min="1" max="29" maxlength="2" id="txSkillLevel"
+          <input type="number" min="1" max="29" id="txSkillLevel"
+            style="width:3em"
             @input="setSkillLevel($event)"
             :value="skillLevel"
           >
@@ -35,6 +36,7 @@
         <div>
           <label for="txCDR">CDR</label>
           <input type="number" min="0" max="50" maxlength="2" step="5" id="txCDR"
+            style="width:3em"
             @input="setCDR($event)"
             :value="cdr"
           >
@@ -47,7 +49,7 @@
         <th v-for="c in filteredHeroCols" :key="c.id"
           :class="c.dataField===sorting.col1?'hlCol':''"
           @click.middle.exact.prevent="onColMiddleClick($event,c)"
-          @click.left.exact="updateSort(c.dataField,c.sortOrderAsc)"
+          @click.left.exact="updateHeroesSort(c)"
         >{{ c.caption }}</th>
       </thead>
 
@@ -60,10 +62,10 @@
           :class="'h'+m.sElement"
           @click.prevent="select(m)"
         >
-          <td v-for="(col) in heroCols" :key="col.index"
-            v-show="col.visible"
+          <td v-for="col in heroCols.filter( c => c.visible )" :key="col.index"
             :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
             :style="'text-align:'+(col.align || 'right')"
+          ><img v-if="col.dataField==='name'" :title="m.sClass" :src="classImages[m.class]" style="width: 18px; height: 18px; vertical-align: bottom; margin-right:.2em;"
           >{{ m[col.displayField] }}</td>
           <!-- <td
             v-for="([displayData,sortData],i) in m.slice(1)"
@@ -85,7 +87,7 @@
           class="cm"
           :class="col.val==='name'?'disabled':''"
         >
-          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'8px'}"
+          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'.6em'}"
           >{{ '✓' }}</span>
           {{ col.caption }}
         </li>
@@ -99,15 +101,7 @@
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { VueContext } from 'vue-context';
 
-
 export default {
-  filters: {
-    sort: function (maidens) {
-      const s = this.sorting;
-      return maidens.sort( this.sortHeroesFunc(s.col1, s.col1Asc, s.col2, s.col2Asc) );
-    },
-  },
-
   state: {
     selected: null,
   },
@@ -118,12 +112,13 @@ export default {
       cdr: state => state.heroes.cdr,
       heroCols: state => state.heroes.heroCols,
       sorting: state => state.heroes.sorting,
+      classImages: state => state.heroes.classImages,
     }),
 
     computedMaidens () {
       const time = Date.now();
       const data = this.maidens.map( m => this.computeMaiden(m) );
-      console.log(`computed in ${Date.now()-time} ms.`);
+      console.log(`Maidens computed in ${Date.now()-time} ms.`);
       return data;
     },
 
@@ -145,13 +140,6 @@ export default {
         }
       }
       return maiden;
-    },
-    cellData (maiden, col) {
-      switch( typeof col.val ) {
-        case 'string': return maiden[col.val];
-        case 'function': return col.val(maiden);
-      }
-      throw new Error('unknown field: '+col.val);
     },
     sort (maidens, ...args) {
       return maidens.sort( this.sortHeroesFunc(...args) );
@@ -176,7 +164,7 @@ export default {
       this.updateHeroColVisibility( { col, visible:!col.visible } );
     },
     classIcon (hero) {
-      return `../src/assets/classes/${hero.sClass}.png`;
+      return this.classImages[hero.class];
     },
     select (hero) {
       const el = window.document.getElementById('m'+hero.id);
@@ -189,7 +177,7 @@ export default {
       this.selected = el;
     },
 
-    ...mapMutations(['updateHeroColVisibility','computeMaidens','updateSort']),
+    ...mapMutations(['updateHeroColVisibility','computeMaidens','updateHeroesSort']),
 
     sortHeroesFunc: (field, asc, field2, asc2) => (a,b) => {
       if( a[field] !== b[field] ) {
@@ -270,6 +258,18 @@ $darkenBy: 5%;
 .selected {
   outline: 4px solid #3c78d8;
   outline-offset: -2px;
+}
+
+.filters {
+
+  * {
+    margin-right: .6em;
+    margin-top: .2em;
+    font-size: .95em;
+  }
+  input, select {
+    align-items: baseline;
+  }
 }
 
 table {

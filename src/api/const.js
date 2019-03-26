@@ -1,8 +1,17 @@
+const imgWarrior = require('../assets/classes/Warrior.png');
+const imgMage = require('../assets/classes/Mage.png');
+const imgMarksman = require('../assets/classes/Marksman.png');
+const imgEngineer = require('../assets/classes/Engineer.png');
+const imgSupport = require('../assets/classes/Support.png');
+
+const classImages = ['', imgWarrior, imgMage, imgMarksman, imgEngineer, imgSupport];
+
 const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
 elements[16] = 'Light';
 
 
 module.exports = {
+  classImages,
   elements,
   //            0         1       2          3          4         5             6
   itemSlots: ['Head', 'Chest', 'Weapon', 'Off-hand', 'Boots', 'Necklace', 'Consummable'],
