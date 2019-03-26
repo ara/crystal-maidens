@@ -38,4 +38,30 @@ export default {
 
 }
 
+$p-dark: #333;
+$p-medium: #777;
+$p-ml: #bbb;
+$p-light: #eee;
+
+.cm {
+  width: auto !important;
+  font-size: 14px;
+  font-weight: 600;
+  ul {
+    padding: 0px !important;
+    color: $p-dark;
+    background-color: $p-light;
+    li {
+      padding: 4px 8px !important;
+      &:hover {
+        background: $p-medium !important;
+        color: $p-light !important;
+      }
+    }
+    li + li {
+      border-top: 1px solid $p-ml;
+    }
+  }
+}
+
 </style>
