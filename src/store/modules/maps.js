@@ -43,37 +43,41 @@ const noz = v => v || '';
  * @property {string} [defaults.name] - defaults to capitalized 'col' field
  */
 const mapCols = [
-  { visible:true, val: 'name', name: 'Map\t   ', align:'center' },
+  { visible:true, val: 'name', caption: 'Map\t   ', align:'center' },
   // { visible:true, val: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
   { visible:true, val: 'energy' },
-  { visible:true, val: 'fodder', func:fix2 },
-  { visible:true, val: 'coinsPerEnergy', name: 'Coins/E', func:fix0 },
-  { visible:true, val: 'maidenXPPerEnergy', name: 'M.XP/E', func:fix0 },
-  { visible:true, val: 'fodderCoins', name:'Fod/Coins', func:fix0 },
+  { visible:true, val: 'fodder', fmt:fix2 },
+  { visible:true, val: 'coinsPerEnergy', caption: 'Coins/E', fmt:fix0 },
+  { visible:true, val: 'maidenXPPerEnergy', caption: 'M.XP/E', fmt:fix0 },
+  { visible:true, val: 'fodderCoins', caption:'Fod/Coins', fmt:fix0 },
   { visible:true, val: 'crystal', align: 'center' },
-  { val: 'dustDamage', func:fix2noz, name: 'DMG dust' },
-  { val: 'dustHealth', func:fix2noz, name: 'HP dust' },
-  { val: 'dustCrit', func:fix2noz, name: 'Crit dust' },
-  { val: 'dustAS', func:fix2noz, name: 'AS dust' },
-  { val: 'dustDodge', func:fix2noz, name: 'Dodge dust' },
-  { val: 'dustDEF', func:fix2noz, name: 'DEF dust' },
-  { val: 'dustCDR', func:fix2noz, name: 'CDR dust' },
-  { val: 'Fire', func:noz, name: 'Fire' },
-  { val: 'Nature', func:noz, name: 'Nature' },
-  { val: 'Water', func:noz, name: 'Water' },
-  { val: 'Light', func:noz, name: 'Light' },
-  { val: 'Dark', func:noz, name: 'Dark' },
-  { val: 'Warrior', func:noz, name: 'Warrior' },
-  { val: 'Mage', func:noz, name: 'Mage' },
-  { val: 'Marksman', func:noz, name: 'Marksman' },
-  { val: 'Engineer', func:noz, name: 'Engineer' },
-  { val: 'Support', func:noz, name: 'Support' },
-  { val: 'total', func:noz },
+  { val: 'dustDamage', fmt:fix2noz, caption: 'DMG dust' },
+  { val: 'dustHealth', fmt:fix2noz, caption: 'HP dust' },
+  { val: 'dustCrit', fmt:fix2noz, caption: 'Crit dust' },
+  { val: 'dustAS', fmt:fix2noz, caption: 'AS dust' },
+  { val: 'dustDodge', fmt:fix2noz, caption: 'Dodge dust' },
+  { val: 'dustDEF', fmt:fix2noz, caption: 'DEF dust' },
+  { val: 'dustCDR', fmt:fix2noz, caption: 'CDR dust' },
+  { val: 'Fire', fmt:noz, caption: 'Fire' },
+  { val: 'Nature', fmt:noz, caption: 'Nature' },
+  { val: 'Water', fmt:noz, caption: 'Water' },
+  { val: 'Light', fmt:noz, caption: 'Light' },
+  { val: 'Dark', fmt:noz, caption: 'Dark' },
+  { val: 'Warrior', fmt:noz, caption: 'Warrior' },
+  { val: 'Mage', fmt:noz, caption: 'Mage' },
+  { val: 'Marksman', fmt:noz, caption: 'Marksman' },
+  { val: 'Engineer', fmt:noz, caption: 'Engineer' },
+  { val: 'Support', fmt:noz, caption: 'Support' },
+  { val: 'total', fmt:noz },
 ];
-mapCols.forEach( c => {
-  c.name = c.name || cap(c.val);
+mapCols.forEach( (c, i) => {
+  const isField = typeof c.val === 'string';
+  c.caption = c.caption || (isField ? cap(c.val) : 'Col#'+i);
   /** add visible state for reactive Vue changes */
   c.visible = c.visible || false;
+  c.index = i;
+  c.dataField = isField ? c.val : 'col'+i;
+  c.displayField = c.fmt ? 'colfmt'+i : c.dataField;
 });
 
 const colProfiles = [
@@ -127,9 +131,7 @@ const getters = {
         ret = ret.filter( c => c.campaignID == state.filterCampaign );
       }
     }
-    const s = state.sorting;
-    return ret.sort(
-      sortFunc( s.col1, s.col1Asc, s.col2, s.col2Asc ) );
+    return ret;
   },
 
   filteredCols (state) {
@@ -140,12 +142,6 @@ const getters = {
 
 
 const mutations = {
-  sortMaps (state) {
-    const s = state.sorting;
-    state.maps = state.maps.sort(
-      sortFunc( s.col1, s.col1Asc, s.col2, s.col2Asc )
-    );
-  },
   updateMaxEntries (state, val) {
     state.maxEntries = val;
   },
@@ -163,7 +159,7 @@ const mutations = {
   updateFilterBossesOnly (state, val) {
     state.filterBossesOnly = val;
   },
-  columnClicked (state, args) {
+  updateSort (state, args) {
     const [col, event] = args;
     const s = state.sorting;
     if( event.ctrlKey && col !== s.col1 ) {
