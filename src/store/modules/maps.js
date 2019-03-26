@@ -159,7 +159,7 @@ const mutations = {
   updateFilterBossesOnly (state, val) {
     state.filterBossesOnly = val;
   },
-  updateSort (state, args) {
+  updateMapsSort (state, args) {
     const [col, event] = args;
     const s = state.sorting;
     if( event.ctrlKey && col !== s.col1 ) {
