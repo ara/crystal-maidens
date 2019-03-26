@@ -1,6 +1,11 @@
-import { elements, rarities, classes } from '../../api/const';
+//const imgClasses = require('../../assets/classes/');
+
+import { elements, rarities, classes, classImages } from '../../api/const';
+
+
 const heroes = require('../../assets/heroes.json');
 
+const cap = (str) => str.replace( /(\b[a-z](?!\s))/g, x => x.toUpperCase() );
 
 const skillArgs = (m) => ([
   (state.skillLevel || 29) - 1,
@@ -63,7 +68,7 @@ const heroCols = [
   { val:'skillCD', caption:'CD' },
   { val:skillTicks, caption:'#Ticks', align:'center' },
 ];
-const cap = (str) => str.replace( /(\b[a-z](?!\s))/g, x => x.toUpperCase() );
+
 heroCols.forEach( (c,i) => {
   const isField = typeof c.val === 'string';
   c.caption = c.caption || (isField ? cap(c.val) : 'Col#'+i);
@@ -92,51 +97,12 @@ for( const hero of heroes ) {
   }
 }
 
-
-
-
-const compute = (maiden, col) => {
-  let val;
-  switch( typeof col.val ) {
-    case 'function':
-      val = col.val(maiden); break;
-    case 'string':
-      val = maiden[col.val]; break;
-    default:
-      throw new Error(`Unknown 'val' attribute: [type="${typeof col.val}"] "${col.val.toString()}"`);
-  }
-  if( col.func ) {
-    val = col.func( val, maiden );
-  }
-  let display = val;
-  //if( col.fmt ) {
-  //  display = col.fmt( val, maiden );
-  //}
-  //return [display, val];
-  return val;
-}
-
-const sortHeroesFunc = (field, asc, field2, asc2) => (a,b) => {
-  if( a[field] !== b[field] ) {
-    if( asc ) { [a, b] = [b, a]; }
-    return typeof a[field] === 'string'
-      ? a[field].localeCompare( b[field] )
-      : b[field] - a[field];
-  } else {
-    if( asc2 ) { [a, b] = [b, a]; }
-    return typeof a[field2] === 'string'
-      ? a[field2].localeCompare( b[field2] )
-      : b[field2] - a[field2];
-  }
-};
-
-
 const state = {
   sorting: {
     col1: 'id',
-    col2: 'name',
+    col2: null,
     col1Asc: true,
-    col2Asc: false,
+    col2Asc: null,
   },
   filters: {
     class: 'All',
@@ -147,6 +113,7 @@ const state = {
   skillLevel: 29,
   cdr: 40,
   heroLevel: 85,
+  classImages,
 };
 
 const validElement = (hero) => state.filters.element === 'All' || hero.sElement === state.filters.element;
@@ -195,8 +162,10 @@ const mutations = {
   updateHeroColVisibility (state, payload) {
     payload.col.visible = payload.visible;
   },
-  updateSort (state, col) {
+  updateHeroesSort (state, payload) {
     const s = state.sorting;
+    const col = payload.dataField;
+    const order = payload.sortOrderAsc;
     if( col === s.col1 ) {
       s.col1Asc = !s.col1Asc;
     } else if( col === s.col2 ) {
@@ -204,7 +173,7 @@ const mutations = {
       [s.col1Asc, s.col2Asc] = [s.col2Asc, s.col1Asc];
     } else {
       [s.col1, s.col2] = [col, s.col1];
-      [s.col1Asc, s.col2Asc] = [false, s.col1Asc];
+      [s.col1Asc, s.col2Asc] = [order, s.col1Asc];
     }
   },
   // sortHeroes (state) {
