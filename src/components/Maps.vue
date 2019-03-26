@@ -212,27 +212,6 @@ $p-light: #eee;
   width:-moz-available;
 }
 
-.cm {
-  width: auto !important;
-  font-size: 14px;
-  font-weight: 600;
-  ul {
-    padding: 0px !important;
-    color: $p-dark;
-    background-color: $p-light;
-    li {
-      padding: 4px 8px !important;
-      &:hover {
-        background: $p-medium !important;
-        color: $p-light !important;
-      }
-    }
-    li + li {
-      border-top: 1px solid $p-ml;
-    }
-  }
-}
-
 .disabled {
     pointer-events:none; //This makes it not clickable
     opacity:0.6;         //This grays it out to look disabled
