@@ -8,11 +8,11 @@
       @input="fCrystal=$event.target.value"
       @mousewheel.passive="selectWheel($event,'fCrystal')">
       <option value="">All</option>
-      <option value="Dark">Dark</option>
       <option value="Fire">Fire</option>
-      <option value="Light">Light</option>
       <option value="Nature">Nature</option>
       <option value="Water">Water</option>
+      <option value="Light">Light</option>
+      <option value="Dark">Dark</option>
     </select>
     <button
       :enabled="fCrystal"
