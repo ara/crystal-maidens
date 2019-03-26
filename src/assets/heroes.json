@@ -37,7 +37,7 @@
     "skillCoef": 2.4,
     "hp": {
       "base": 960,
-      "inc": 55
+      "inc": 54
     },
     "respawnCD": 10,
     "vision": 7,
@@ -47,7 +47,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 100,
       "damageInc": 3,
@@ -58,10 +58,17 @@
       "CD": 7,
       "name": "Bash",
       "desc": "Jumps and deals a powerful strike on a single target.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 180,
+      "skillDMGInc": 305,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -82,8 +89,8 @@
     "as": 80,
     "crit": 1,
     "dodge": 2,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "hpCoef": 2.08,
+    "dmgCoef": 2.08,
     "skillCoef": 2.55,
     "hp": {
       "base": 720,
@@ -97,7 +104,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 100,
       "damageInc": 5,
@@ -108,10 +115,17 @@
       "CD": 7,
       "name": "Fire Strike",
       "desc": "Casts a fireball dealing damage to a single target.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 210,
+      "skillDMGInc": 170,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -129,7 +143,7 @@
     "element": 16,
     "class": 5,
     "moveSpeed": 4,
-    "as": 40,
+    "as": 60,
     "crit": 1,
     "dodge": 2,
     "hpCoef": 2.11,
@@ -137,7 +151,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 480,
-      "inc": 30
+      "inc": 40
     },
     "respawnCD": 12,
     "vision": 7,
@@ -147,10 +161,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 60,
-      "damageInc": 3,
+      "damageInc": 4,
       "aoe": 0
     },
     "skill": {
@@ -158,10 +172,17 @@
       "CD": 10,
       "name": "Divine Force",
       "desc": "Casts a spell healing all allies on the map.",
+      "radius": 255,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 350,
+      "skillHEALInc": 330,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -197,7 +218,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 72,
       "damageInc": 4,
@@ -208,10 +229,17 @@
       "CD": 11,
       "name": "Call of the Wild",
       "desc": "Casts a medium natural explosion, damaging enemies and healing allies inside of it.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 250,
+      "skillDMGInc": 350,
+      "skillHEAL": 250,
+      "skillHEALInc": 400,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -253,7 +281,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 60,
       "damageInc": 6,
@@ -264,10 +292,17 @@
       "CD": 12.5,
       "name": "Cursed Void",
       "desc": "Casts a large void dealing damage to enemies inside.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 240,
+      "skillDMGInc": 550,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -293,7 +328,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 500,
-      "inc": 32
+      "inc": 40
     },
     "respawnCD": 10,
     "vision": 7,
@@ -303,7 +338,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 80,
       "damageInc": 4,
@@ -314,10 +349,17 @@
       "CD": 10,
       "name": "Dark Aura",
       "desc": "Boosts her damage to show her true power.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 10,
       "walkDelay": 0.8,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 10,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
@@ -354,7 +396,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 70,
       "damageInc": 3,
@@ -365,10 +407,17 @@
       "CD": 10,
       "name": "Glacial Shot",
       "desc": "Throws her biggest arrow that stuns and deals damage to the target.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -392,7 +441,7 @@
     "element": 1,
     "class": 4,
     "moveSpeed": 3,
-    "as": 100,
+    "as": 120,
     "crit": 2,
     "dodge": 0,
     "hpCoef": 2.11,
@@ -400,7 +449,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 800,
-      "inc": 30
+      "inc": 37
     },
     "respawnCD": 15,
     "vision": 8,
@@ -410,10 +459,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 63,
-      "damageInc": 4,
+      "damageInc": 5,
       "aoe": 2
     },
     "skill": {
@@ -421,10 +470,17 @@
       "CD": 10,
       "name": "Sayonara",
       "desc": "Shoots a powerful explosive, dealing massive damage to enemies, but damaging herself with the recoil",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 500,
+      "skillDMGInc": 750,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -456,7 +512,7 @@
     "skillCoef": 2.23,
     "hp": {
       "base": 720,
-      "inc": 45
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 9,
@@ -466,10 +522,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 60,
-      "damageInc": 5,
+      "damageInc": 6,
       "aoe": 0
     },
     "skill": {
@@ -477,10 +533,17 @@
       "CD": 10,
       "name": "Tempest",
       "desc": "Casts a tempest that deals damage over 8 seconds to enemies staying under it.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 10,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 40,
+      "skillDMGInc": 75,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -506,7 +569,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 300,
-      "inc": 30
+      "inc": 40
     },
     "respawnCD": 12,
     "vision": 9,
@@ -516,7 +579,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 45,
       "damageInc": 3,
@@ -527,10 +590,17 @@
       "CD": 5,
       "name": "Bull's Eye",
       "desc": "Fires a fire arrow in the sky, falling down and dealing damage to enemies in a small AOE.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 1,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 600,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -566,10 +636,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 250,
-      "damageInc": 8,
+      "damageInc": 9,
       "aoe": 0
     },
     "skill": {
@@ -577,10 +647,17 @@
       "CD": 13,
       "name": "All for One",
       "desc": "Casts a healing circle around herself. Allies that have been through it are healed 16 times over 8 seconds.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 20,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 16,
+      "skillHEALInc": 31,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -616,7 +693,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 250,
       "damageInc": 8,
@@ -627,10 +704,17 @@
       "CD": 12.5,
       "name": "One for All",
       "desc": "Casts an epic dark area of effect dealing massive damage to enemies inside of it.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 300,
+      "skillDMGInc": 445,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -653,10 +737,10 @@
     "dodge": 20,
     "hpCoef": 2.11,
     "dmgCoef": 2.09,
-    "skillCoef": 2.65,
+    "skillCoef": 2.09,
     "hp": {
       "base": 650,
-      "inc": 40
+      "inc": 45
     },
     "respawnCD": 10,
     "vision": 9,
@@ -666,7 +750,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 75,
       "damageInc": 4,
@@ -677,23 +761,30 @@
       "CD": 4,
       "name": "Soul Stealer",
       "desc": "Stabs the nearest enemy, dealing damage and reducing its damage for a duration.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 100,
-          "damageInc": 60
+          "damageInc": 200
         },
         {
           "type": "DamageAlterEffect",
           "target": "enemy",
           "damagealter": -150,
-          "damagealterInc": -50,
-          "duration": 40
+          "damagealterInc": -230,
+          "duration": 50
         }
       ]
     }
@@ -709,7 +800,7 @@
     "crit": 15,
     "dodge": 10,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.14,
     "skillCoef": 2.23,
     "hp": {
       "base": 350,
@@ -723,7 +814,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 50,
       "damageInc": 3,
@@ -734,10 +825,17 @@
       "CD": 12,
       "name": "Poison Arrows",
       "desc": "Shoots poisonous arrows in a circle that deals damage every second during 10 seconds.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 30,
+      "skillDMGInc": 55,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 10,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -765,7 +863,7 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 500,
-      "inc": 40
+      "inc": 46
     },
     "respawnCD": 12,
     "vision": 9,
@@ -775,10 +873,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 25,
-      "damageInc": 3,
+      "damageInc": 4,
       "aoe": 0
     },
     "skill": {
@@ -786,10 +884,17 @@
       "CD": 15,
       "name": "Reverse Chronology",
       "desc": "Calls the goddess of time to reduce the cooldown of all allies on the map.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 255,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "MinusCooldownEffect",
@@ -815,7 +920,7 @@
     "skillCoef": 2.4,
     "hp": {
       "base": 500,
-      "inc": 42
+      "inc": 45
     },
     "respawnCD": 10,
     "vision": 9,
@@ -825,7 +930,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 100,
       "damageInc": 4,
@@ -836,10 +941,17 @@
       "CD": 9,
       "name": "Fire Domination",
       "desc": "Spins around, dealing damage and stunning enemies close.",
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 50,
+      "skillDMGInc": 240,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -870,7 +982,7 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 400,
-      "inc": 33
+      "inc": 45
     },
     "respawnCD": 10,
     "vision": 9,
@@ -880,7 +992,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 150,
       "damageInc": 7,
@@ -891,15 +1003,24 @@
       "CD": 10,
       "name": "Solid Rock",
       "desc": "Summons a small golem helping her tank damage.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5009,
+          "heroids": [
+            5009
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "destroyfirst": 1
@@ -922,7 +1043,7 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 650,
-      "inc": 47
+      "inc": 51
     },
     "respawnCD": 10,
     "vision": 9,
@@ -932,7 +1053,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 150,
       "damageInc": 4,
@@ -943,15 +1064,26 @@
       "CD": 7,
       "name": "Beast call",
       "desc": "Calls a random spirit that heals an ally, heavily damages an enemy or stuns and damages enemies in a small AOE.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5010,
+          "heroids": [
+            5010,
+            5011,
+            5012
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "destroyfirst": 1
@@ -966,7 +1098,7 @@
     "element": 8,
     "class": 3,
     "moveSpeed": 6,
-    "as": 87,
+    "as": 90,
     "crit": 10,
     "dodge": 1,
     "hpCoef": 2.11,
@@ -984,7 +1116,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 200,
       "damageInc": 5,
@@ -995,10 +1127,17 @@
       "CD": 16,
       "name": "Void of Destruction",
       "desc": "Jumps high in the air, shooting arrows that damage enemies over time in a small area.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 30,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 40,
+      "skillDMGInc": 100,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 3,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1026,7 +1165,7 @@
     "skillCoef": 2.4,
     "hp": {
       "base": 800,
-      "inc": 50
+      "inc": 52
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1036,7 +1175,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 60,
       "damageInc": 7,
@@ -1047,10 +1186,17 @@
       "CD": 7.5,
       "name": "Glorious Spin",
       "desc": "Spins, creating a little tornado that she throws at an enemy, damaging it and others around.",
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 90,
+      "skillDMGInc": 350,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1086,7 +1232,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 118,
       "damageInc": 5,
@@ -1097,15 +1243,24 @@
       "CD": 7,
       "name": "Rising of the Dead",
       "desc": "Summons skeletons, ready to fight your enemies.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5004,
+          "heroids": [
+            5004
+          ],
           "maxconcurrent": 2,
           "level": -1,
           "destroyfirst": 1
@@ -1124,11 +1279,11 @@
     "crit": 5,
     "dodge": 2,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.11,
     "skillCoef": 2.11,
     "hp": {
       "base": 400,
-      "inc": 28
+      "inc": 37
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1138,7 +1293,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 22,
       "damageInc": 3,
@@ -1149,15 +1304,24 @@
       "CD": 4,
       "name": "Builder",
       "desc": "Builds a little turret that will fight for you and die over time.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5006,
+          "heroids": [
+            5006
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "destroyfirst": 1
@@ -1190,7 +1354,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 75,
       "damageInc": 6,
@@ -1201,10 +1365,17 @@
       "CD": 16,
       "name": "Thunderstrike",
       "desc": "Casts an epic thunder that will damage and stun enemies.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 260,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1236,7 +1407,7 @@
     "skillCoef": 2.23,
     "hp": {
       "base": 350,
-      "inc": 25
+      "inc": 38
     },
     "respawnCD": 12,
     "vision": 7,
@@ -1246,7 +1417,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 18,
       "damageInc": 6,
@@ -1257,17 +1428,24 @@
       "CD": 7,
       "name": "Fire Helper",
       "desc": "Boosts an ally's damage for a duration.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
           "target": "ally",
           "damagealter": 50,
           "duration": 60,
-          "damagealterInc": 90
+          "damagealterInc": 200
         }
       ]
     }
@@ -1279,7 +1457,7 @@
     "element": 8,
     "class": 4,
     "moveSpeed": 7,
-    "as": 35,
+    "as": 40,
     "crit": 2,
     "dodge": 0,
     "hpCoef": 2.11,
@@ -1287,7 +1465,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 200,
-      "inc": 35
+      "inc": 38
     },
     "respawnCD": 12,
     "vision": 7,
@@ -1297,10 +1475,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 7,
       "damage": 100,
-      "damageInc": 8,
+      "damageInc": 12,
       "aoe": 2
     },
     "skill": {
@@ -1308,10 +1486,17 @@
       "CD": 10,
       "name": "Mystical Shot",
       "desc": "After a short charging period, fires a big bullet that causes an explosion in a large area.",
-      "walkDelay": 2.5,
-      "actDelay": 1,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2.5,
+      "actDelay": 1,
+      "skillDMG": 400,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1347,7 +1532,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 50,
       "damageInc": 7,
@@ -1358,10 +1543,17 @@
       "CD": 10,
       "name": "Bubble Trap",
       "desc": "Throws a bubble that will stun the enemies for a short duration.",
-      "walkDelay": 2,
-      "actDelay": 2,
+      "radius": 2,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 2,
+      "skillDMG": 100,
+      "skillDMGInc": 250,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1389,11 +1581,11 @@
     "crit": 10,
     "dodge": 5,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.11,
     "skillCoef": 2.3,
     "hp": {
       "base": 250,
-      "inc": 25
+      "inc": 35
     },
     "respawnCD": 12,
     "vision": 8,
@@ -1403,7 +1595,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 50,
       "damageInc": 4,
@@ -1414,10 +1606,17 @@
       "CD": 7,
       "name": "Godesses' Rain",
       "desc": "Fires an arrow to the sky dealing damage to random enemies in a large area as it falls.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 8,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 250,
+      "skillDMGInc": 550,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1435,7 +1634,7 @@
     "element": 16,
     "class": 5,
     "moveSpeed": 5,
-    "as": 90,
+    "as": 110,
     "crit": 10,
     "dodge": 5,
     "hpCoef": 2.11,
@@ -1443,7 +1642,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 400,
-      "inc": 50
+      "inc": 48
     },
     "respawnCD": 10,
     "vision": 8,
@@ -1453,7 +1652,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 50,
       "damageInc": 4,
@@ -1464,10 +1663,17 @@
       "CD": 7,
       "name": "Tornado",
       "desc": "Spins around healing allies and damaging enemies hit.",
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 350,
+      "skillHEAL": 200,
+      "skillHEALInc": 350,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -1491,7 +1697,7 @@
     "element": 8,
     "class": 5,
     "moveSpeed": 5,
-    "as": 80,
+    "as": 90,
     "crit": 2,
     "dodge": 2,
     "hpCoef": 2.11,
@@ -1499,7 +1705,7 @@
     "skillCoef": 2.65,
     "hp": {
       "base": 400,
-      "inc": 48
+      "inc": 50
     },
     "respawnCD": 10,
     "vision": 8,
@@ -1509,7 +1715,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 7,
       "damage": 80,
       "damageInc": 5,
@@ -1517,13 +1723,20 @@
     },
     "skill": {
       "castTime": 0.8,
-      "CD": 5,
+      "CD": 4,
       "name": "Cursed Kiss",
       "desc": "Curses an enemy, causing the target to take damage over time.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 8,
+      "skillDMGInc": 10,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 333,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1531,7 +1744,7 @@
           "damage": 8,
           "damageInc": 10,
           "overtimeduration": 5000,
-          "overtimeinterval": 10
+          "overtimeinterval": 15
         }
       ]
     }
@@ -1551,7 +1764,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 600,
-      "inc": 40
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1561,7 +1774,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 80,
       "damageInc": 5,
@@ -1572,16 +1785,23 @@
       "CD": 0.4,
       "name": "Ultimate Fire Bolt",
       "desc": "Throws a big fire bolt. This ability has a reduced cooldown.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 50,
+      "skillDMGInc": 70,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 50,
-          "damageInc": 80
+          "damageInc": 70
         }
       ]
     }
@@ -1601,7 +1821,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 650,
-      "inc": 40
+      "inc": 45
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1611,7 +1831,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 125,
       "damageInc": 3,
@@ -1622,10 +1842,17 @@
       "CD": 8,
       "name": "Trident's blow",
       "desc": "Throws a water shot with her trident, dealing damage if the target is an enemy, or healing it if it's an ally.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 125,
+      "skillDMGInc": 160,
+      "skillHEAL": 300,
+      "skillHEALInc": 180,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1657,7 +1884,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 800,
-      "inc": 49
+      "inc": 51
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1667,7 +1894,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 110,
       "damageInc": 4,
@@ -1678,10 +1905,17 @@
       "CD": 10,
       "name": "ONE PUNCH",
       "desc": "Punches an enemy, dealing damage and reducing its attack speed.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1705,7 +1939,7 @@
     "element": 2,
     "class": 2,
     "moveSpeed": 5,
-    "as": 79,
+    "as": 80,
     "crit": 1,
     "dodge": 2,
     "hpCoef": 2.11,
@@ -1713,7 +1947,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 500,
-      "inc": 37
+      "inc": 45
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1723,10 +1957,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 200,
-      "damageInc": 5,
+      "damageInc": 6,
       "aoe": 0
     },
     "skill": {
@@ -1734,10 +1968,17 @@
       "CD": 10,
       "name": "Wave Destroyer",
       "desc": "Calls the power of the sea, stunning everyone else on the map, while doing damage to every enemy.",
+      "radius": 255,
+      "ticks": 1,
+      "duration": 20,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0.75,
-      "duration": 15,
+      "skillDMG": 150,
+      "skillDMGInc": 225,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1763,12 +2004,12 @@
     "as": 100,
     "crit": 0,
     "dodge": 10,
-    "hpCoef": 2.11,
+    "hpCoef": 2.15,
     "dmgCoef": 2.09,
     "skillCoef": 2.65,
     "hp": {
       "base": 500,
-      "inc": 36
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1778,7 +2019,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 60,
       "damageInc": 4,
@@ -1797,10 +2038,17 @@
       "CD": 12,
       "name": "Super Chord",
       "desc": "Plays music that will boost the damage of allies and reduce the damage of enemies that heard the song.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
@@ -1851,7 +2099,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 50,
       "damageInc": 2,
@@ -1862,16 +2110,23 @@
       "CD": 7,
       "name": "Cocobomb Roll",
       "desc": "Rolls a coconut that explodes after 3 seconds, dealing damage and slowing enemies affected by its AOE",
+      "radius": 3,
+      "ticks": 1,
+      "duration": 150,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 1.5,
-      "duration": 120,
+      "skillDMG": 400,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 400,
-          "damageInc": 300
+          "damageInc": 400
         }
       ]
     }
@@ -1883,7 +2138,7 @@
     "element": 1,
     "class": 3,
     "moveSpeed": 6,
-    "as": 75,
+    "as": 50,
     "crit": 5,
     "dodge": 4,
     "hpCoef": 2.11,
@@ -1891,7 +2146,7 @@
     "skillCoef": 2.65,
     "hp": {
       "base": 290,
-      "inc": 25
+      "inc": 34
     },
     "respawnCD": 10,
     "vision": 7,
@@ -1901,10 +2156,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 50,
-      "damageInc": 3,
+      "damageInc": 5,
       "aoe": 0
     },
     "skill": {
@@ -1912,10 +2167,17 @@
       "CD": 7,
       "name": "Flaming Shot",
       "desc": "Jumps in the air and shoots flaming balls in a straight line, dealing damage to enemies hit.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 2,
       "ticks": 1,
       "duration": 6,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 350,
+      "skillDMGInc": 235,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -1951,7 +2213,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 4,
       "damage": 150,
       "damageInc": 3,
@@ -1962,10 +2224,17 @@
       "CD": 9,
       "name": "Black Crow",
       "desc": "Sends a raven that stuns and reduces the attack speed of its target for a duration.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -2008,10 +2277,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 35,
-      "damageInc": 6,
+      "damageInc": 5,
       "aoe": 2
     },
     "skill": {
@@ -2019,16 +2288,23 @@
       "CD": 8,
       "name": "Water Pulse",
       "desc": "Shoots with her water shotgun in a large area in front of her.",
-      "walkDelay": 2,
-      "actDelay": 0.4,
+      "radius": 3,
       "ticks": 1,
       "duration": 8,
+      "walkDelay": 2,
+      "actDelay": 0.4,
+      "skillDMG": 180,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 180,
-          "damageInc": 475
+          "damageInc": 400
         }
       ]
     }
@@ -2040,15 +2316,15 @@
     "element": 4,
     "class": 2,
     "moveSpeed": 6,
-    "as": 120,
+    "as": 85,
     "crit": 5,
     "dodge": 1,
-    "hpCoef": 2.11,
+    "hpCoef": 2.15,
     "dmgCoef": 2.09,
     "skillCoef": 2.3,
     "hp": {
       "base": 600,
-      "inc": 35
+      "inc": 38
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2058,7 +2334,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 150,
       "damageInc": 5,
@@ -2069,10 +2345,17 @@
       "CD": 10,
       "name": "Lucky Charm",
       "desc": "Casts a lucky AOE, boosting attack speed and reducing cooldown of allies, and damaging enemies in it.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
@@ -2102,7 +2385,7 @@
     "element": 4,
     "class": 3,
     "moveSpeed": 6,
-    "as": 90,
+    "as": 95,
     "crit": 5,
     "dodge": 1,
     "hpCoef": 2.11,
@@ -2110,7 +2393,7 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 960,
-      "inc": 45
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2120,7 +2403,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 150,
       "damageInc": 4,
@@ -2130,11 +2413,18 @@
       "castTime": 0.5,
       "CD": 14,
       "name": "Infinite Rage",
-      "desc": "Becomes enraged, throwing 5 tomahawks to the enemy.",
+      "desc": "Becomes enraged, throwing 5 tomahawks at the enemy.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0.5,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
@@ -2161,7 +2451,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 525,
-      "inc": 37
+      "inc": 44
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2171,27 +2461,34 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 150,
-      "damageInc": 4,
+      "damageInc": 5,
       "aoe": 0
     },
     "skill": {
       "castTime": 0.1,
-      "CD": 5,
+      "CD": 7,
       "name": "Blade Fury",
       "desc": "Uses her katana to slash a target 3 times.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 1,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 60,
+      "skillDMGInc": 75,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 3,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 60,
-          "damageInc": 170,
+          "damageInc": 75,
           "overtimeduration": 12,
           "overtimeinterval": 4
         }
@@ -2205,10 +2502,10 @@
     "element": 8,
     "class": 2,
     "moveSpeed": 7,
-    "as": 110,
+    "as": 190,
     "crit": 5,
     "dodge": 1,
-    "hpCoef": 2.11,
+    "hpCoef": 2.15,
     "dmgCoef": 2.09,
     "skillCoef": 2.11,
     "hp": {
@@ -2223,7 +2520,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 205,
       "damageInc": 2,
@@ -2234,15 +2531,24 @@
       "CD": 7.5,
       "name": "Loa's Blessing",
       "desc": "Summons a little voodoo doll that will explode, dealing damage to enemies in a small area.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5013,
+          "heroids": [
+            5013
+          ],
           "maxconcurrent": 2,
           "level": -1,
           "destroyfirst": 1
@@ -2257,7 +2563,7 @@
     "element": 8,
     "class": 1,
     "moveSpeed": 4,
-    "as": 220,
+    "as": 200,
     "crit": 10,
     "dodge": 2,
     "hpCoef": 2.11,
@@ -2265,7 +2571,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 525,
-      "inc": 48
+      "inc": 55
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2275,7 +2581,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 105,
       "damageInc": 4,
@@ -2286,10 +2592,17 @@
       "CD": 10,
       "name": "Yami",
       "desc": "Unleashes the darkness in her sword, and slashes in a straight line using its power.",
+      "radius": 1,
+      "ticks": 1,
+      "duration": 6,
       "walkDelay": 3,
       "actDelay": 0.4,
-      "ticks": 0.3333333333333333,
-      "duration": 2,
+      "skillDMG": 180,
+      "skillDMGInc": 350,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -2325,7 +2638,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 65,
       "damageInc": 2,
@@ -2357,7 +2670,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 100,
       "damageInc": 3,
@@ -2389,7 +2702,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 150,
       "damageInc": 4,
@@ -2411,7 +2724,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 900,
-      "inc": 54
+      "inc": 52
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2421,10 +2734,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 250,
-      "damageInc": 7,
+      "damageInc": 8,
       "aoe": 0
     },
     "skill": {
@@ -2432,10 +2745,17 @@
       "CD": 10,
       "name": "Laser Beam",
       "desc": "Charges and releases a laser beam that hits every enemy in a straight line.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 2,
       "ticks": 1,
       "duration": 45,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 450,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -2453,7 +2773,7 @@
     "element": 1,
     "class": 3,
     "moveSpeed": 4,
-    "as": 80,
+    "as": 90,
     "crit": 5,
     "dodge": 1,
     "hpCoef": 2.11,
@@ -2471,7 +2791,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 150,
       "damageInc": 5,
@@ -2482,10 +2802,17 @@
       "CD": 12,
       "name": "Ace in the Hole",
       "desc": "Throws a card in straight line stunning and dealing damage to every enemy.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 1,
       "ticks": 1,
       "duration": 25,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 80,
+      "skillDMGInc": 350,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -2517,7 +2844,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 600,
-      "inc": 37
+      "inc": 39
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2527,7 +2854,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 120,
       "damageInc": 3,
@@ -2537,11 +2864,18 @@
       "castTime": 0.8,
       "CD": 13,
       "name": "Fire Chaos",
-      "desc": "Cast a large AoE healing allies and damaging ennemies in it for 8 seconds",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "desc": "Casts a large AoE healing allies and damaging enemies in it for 8 seconds",
+      "radius": 4,
       "ticks": 20,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 15,
+      "skillDMGInc": 45,
+      "skillHEAL": 15,
+      "skillHEALInc": 25,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
@@ -2583,7 +2917,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 210,
       "damageInc": 2,
@@ -2615,7 +2949,7 @@
     "attack": {
       "walkDelay": 1.4,
       "actDelay": 0,
-      "castingtime": 0.6,
+      "castTime": 0.6,
       "range": 1,
       "damage": 255,
       "damageInc": 6,
@@ -2626,10 +2960,17 @@
       "CD": 16,
       "name": "Electric Frenzy",
       "desc": "Shoots water in an area and hits it with a powerful electric blow, damaging and stunning enemies.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 250,
+      "skillDMGInc": 350,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -2653,7 +2994,7 @@
     "element": 4,
     "class": 3,
     "moveSpeed": 3,
-    "as": 80,
+    "as": 75,
     "crit": 10,
     "dodge": 5,
     "hpCoef": 2.11,
@@ -2671,10 +3012,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 100,
-      "damageInc": 4,
+      "damageInc": 5,
       "aoe": 2
     },
     "skill": {
@@ -2682,10 +3023,17 @@
       "CD": 12,
       "name": "Boomerang Storm",
       "desc": "Throw her boomerang in a small area dealing damage to enemies and boost the attack speed from allies",
+      "radius": 2,
+      "ticks": 8,
+      "duration": 60,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 7.5,
-      "duration": 60,
+      "skillDMG": 60,
+      "skillDMGInc": 80,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
@@ -2713,12 +3061,12 @@
     "as": 50,
     "crit": 12,
     "dodge": 0,
-    "hpCoef": 2.11,
+    "hpCoef": 2.15,
     "dmgCoef": 2.09,
     "skillCoef": 2.55,
     "hp": {
       "base": 500,
-      "inc": 35
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2728,10 +3076,10 @@
     "attack": {
       "walkDelay": 2.1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 300,
-      "damageInc": 11,
+      "damageInc": 10,
       "aoe": 2
     },
     "skill": {
@@ -2739,10 +3087,17 @@
       "CD": 6.5,
       "name": "Wave Crush",
       "desc": "Uses her sword to create waves and damaging enemies in a big AOE in front of her.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 180,
+      "skillDMGInc": 325,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -2778,7 +3133,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 118,
       "damageInc": 4,
@@ -2792,7 +3147,7 @@
     "element": 8,
     "class": 3,
     "moveSpeed": 4,
-    "as": 170,
+    "as": 160,
     "crit": 1,
     "dodge": 10,
     "hpCoef": 2.11,
@@ -2810,7 +3165,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 90,
       "damageInc": 3,
@@ -2826,19 +3181,26 @@
     },
     "skill": {
       "castTime": 0.2,
-      "CD": 6,
+      "CD": 8,
       "name": "Cursed Leech",
       "desc": "Shoots an arrow at an enemy, cursing him and healing back some health.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 0,
       "ticks": 1,
       "duration": 10,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 36,
+      "skillDMGInc": 225,
+      "skillHEAL": 180,
+      "skillHEALInc": 200,
+      "dmgTicks": 5,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 36,
-          "damageInc": 250,
+          "damageInc": 225,
           "overtimeduration": 50,
           "overtimeinterval": 10
         },
@@ -2846,7 +3208,7 @@
           "type": "HealEffect",
           "target": "self",
           "hp": 180,
-          "hpInc": 275
+          "hpInc": 200
         }
       ]
     }
@@ -2876,7 +3238,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 110,
       "damageInc": 4,
@@ -2898,7 +3260,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 900,
-      "inc": 50
+      "inc": 48
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2908,7 +3270,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 200,
       "damageInc": 4,
@@ -2919,10 +3281,17 @@
       "CD": 13,
       "name": "Death From Above",
       "desc": "Fly into the air and unleash flames all over the map that deals damage every second during 6 seconds.",
+      "radius": 255,
+      "ticks": 1,
+      "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 5,
-      "duration": 50,
+      "skillDMG": 160,
+      "skillDMGInc": 60,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -2958,7 +3327,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 1,
       "damageInc": 0,
@@ -2969,10 +3338,17 @@
       "CD": 7,
       "name": "Polymorphing",
       "desc": "Polymorph into another gacha character at the beginning of combat.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "MorphEffect",
@@ -3006,7 +3382,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 72,
       "damageInc": 6,
@@ -3017,22 +3393,29 @@
       "CD": 8,
       "name": "Xmas Tornado",
       "desc": "Casts a winter explosion, dealing damage and slowing enemies, and healing allies.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 370,
+      "skillHEAL": 300,
+      "skillHEALInc": 370,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
           "target": "ally",
           "hp": 300,
-          "hpInc": 400
+          "hpInc": 370
         },
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 200,
-          "damageInc": 400
+          "damageInc": 370
         }
       ]
     }
@@ -3047,12 +3430,12 @@
     "as": 90,
     "crit": 5,
     "dodge": 1,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "hpCoef": 2.15,
+    "dmgCoef": 2.11,
     "skillCoef": 2.11,
     "hp": {
       "base": 400,
-      "inc": 42
+      "inc": 45
     },
     "respawnCD": 10,
     "vision": 7,
@@ -3062,7 +3445,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 50,
       "damageInc": 4,
@@ -3073,15 +3456,24 @@
       "CD": 16,
       "name": "Bear a Grudge",
       "desc": "Uses her water power to summon a huge teddy bear.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0.2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5019,
+          "heroids": [
+            5019
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "destroyfirst": 1
@@ -3096,7 +3488,7 @@
     "element": 4,
     "class": 5,
     "moveSpeed": 7,
-    "as": 55,
+    "as": 60,
     "crit": 2,
     "dodge": 3,
     "hpCoef": 2.11,
@@ -3104,7 +3496,7 @@
     "skillCoef": 2.4,
     "hp": {
       "base": 350,
-      "inc": 31
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 7,
@@ -3114,10 +3506,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 4,
       "damage": 45,
-      "damageInc": 5,
+      "damageInc": 6,
       "aoe": 0
     },
     "skill": {
@@ -3125,10 +3517,17 @@
       "CD": 8,
       "name": "Deadly Trap",
       "desc": "Uses her bond with nature to make roots emerge from the ground, stunning everybody and damaging enemies.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -3159,7 +3558,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 800,
-      "inc": 55
+      "inc": 50
     },
     "respawnCD": 10,
     "vision": 7,
@@ -3169,7 +3568,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 45,
       "damageInc": 3,
@@ -3180,10 +3579,17 @@
       "CD": 9,
       "name": "Ink Blaster",
       "desc": "Use a secret spell to make her octopus bigger, throwing ink in an AOE damaging and confusing enemies.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 45,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 475,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3214,7 +3620,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 1000,
-      "inc": 50
+      "inc": 60
     },
     "respawnCD": 10,
     "vision": 9,
@@ -3224,7 +3630,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 200,
       "damageInc": 6,
@@ -3235,10 +3641,17 @@
       "CD": 12,
       "name": "Maiden's Harvest",
       "desc": "Jumps in the air and unleashes a powerful scythe attack.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 3.5,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 400,
+      "skillDMGInc": 425,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3265,7 +3678,7 @@
     "crit": 12,
     "dodge": 1,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.11,
     "skillCoef": 2.11,
     "hp": {
       "base": 1300,
@@ -3279,7 +3692,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 150,
       "damageInc": 4,
@@ -3290,15 +3703,24 @@
       "CD": 5,
       "name": "Breakfast Club",
       "desc": "Deals direct damage to an enemy and summon an angry student",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 0,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5018,
+          "heroids": [
+            5018
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "destroyfirst": 1
@@ -3313,10 +3735,10 @@
     "element": 4,
     "class": 5,
     "moveSpeed": 4,
-    "as": 70,
+    "as": 80,
     "crit": 1,
     "dodge": 2.4,
-    "hpCoef": 2.11,
+    "hpCoef": 2.15,
     "dmgCoef": 2.09,
     "skillCoef": 2.11,
     "hp": {
@@ -3331,7 +3753,7 @@
     "attack": {
       "walkDelay": 3,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 175,
       "damageInc": 6,
@@ -3342,10 +3764,17 @@
       "CD": 7,
       "name": "Saving Private Maiden",
       "desc": "Use her nature powered serum to heal an ally and also immunize her from auto attacks for 3 seconds",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 750,
+      "skillHEALInc": 1600,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DefenseModifierEffect",
@@ -3357,7 +3786,7 @@
           "type": "HealEffect",
           "target": "ally",
           "hp": 750,
-          "hpInc": 1250
+          "hpInc": 1600
         }
       ]
     }
@@ -3377,7 +3806,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 400,
-      "inc": 36
+      "inc": 45
     },
     "respawnCD": 12,
     "vision": 6,
@@ -3387,27 +3816,34 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 100,
-      "damageInc": 3,
+      "damageInc": 5,
       "aoe": 0
     },
     "skill": {
       "castTime": 1.5,
-      "CD": 9,
+      "CD": 10,
       "name": "Moon Crushing",
       "desc": "Calls the moon and uses the pressure to crush and slow enemies. The effect is repeated when the moon leaves.",
+      "radius": 6,
+      "ticks": 2,
+      "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 1.2244897959183674,
-      "duration": 60,
+      "skillDMG": 50,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 50,
-          "damageInc": 300
+          "damageInc": 200
         }
       ]
     }
@@ -3427,7 +3863,7 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 400,
-      "inc": 37
+      "inc": 46
     },
     "respawnCD": 12,
     "vision": 6,
@@ -3437,7 +3873,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 55,
       "damageInc": 5,
@@ -3448,10 +3884,17 @@
       "CD": 13,
       "name": "We Stand United",
       "desc": "Boosts the damage and the defense of herself and all allies for a duration.",
-      "walkDelay": 1,
-      "actDelay": 0,
+      "radius": 255,
       "ticks": 1,
       "duration": 40,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
@@ -3478,12 +3921,12 @@
     "element": 4,
     "class": 3,
     "moveSpeed": 4,
-    "as": 85,
+    "as": 95,
     "crit": 15,
     "dodge": 12.5,
     "hpCoef": 2.11,
     "dmgCoef": 2.09,
-    "skillCoef": 2.11,
+    "skillCoef": 2.4,
     "hp": {
       "base": 450,
       "inc": 38
@@ -3496,7 +3939,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 120,
       "damageInc": 5,
@@ -3507,10 +3950,17 @@
       "CD": 14,
       "name": "Playball",
       "desc": "Calls the power of nature, stunning and damaging enemies in a large area",
+      "radius": 3,
+      "ticks": 1,
+      "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0.625,
-      "duration": 50,
+      "skillDMG": 600,
+      "skillDMGInc": 350,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3538,7 +3988,7 @@
     "crit": 8,
     "dodge": 1,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.11,
     "skillCoef": 2.11,
     "hp": {
       "base": 1200,
@@ -3552,7 +4002,7 @@
     "attack": {
       "walkDelay": 1.5,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 175,
       "damageInc": 4,
@@ -3563,10 +4013,17 @@
       "CD": 10,
       "name": "Hemorrhage",
       "desc": "Curse an enemy healing herself and dealing damage overtime",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 240,
+      "skillHEAL": 175,
+      "skillHEALInc": 200,
+      "dmgTicks": 6,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3598,7 +4055,7 @@
     "element": 8,
     "class": 1,
     "moveSpeed": 4,
-    "as": 100,
+    "as": 95,
     "crit": 1.5,
     "dodge": 2,
     "hpCoef": 2.11,
@@ -3606,7 +4063,7 @@
     "skillCoef": 2.55,
     "hp": {
       "base": 800,
-      "inc": 52
+      "inc": 55
     },
     "respawnCD": 10,
     "vision": 8,
@@ -3614,9 +4071,9 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
-      "walkDelay": 4,
+      "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.4,
+      "castTime": 0.4,
       "range": 1,
       "damage": 180,
       "damageInc": 5,
@@ -3627,10 +4084,17 @@
       "CD": 12,
       "name": "Skull Homerun",
       "desc": "Swings her bat to hit a skull aimed at the furthest target of her range.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 180,
+      "skillDMGInc": 375,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3653,7 +4117,7 @@
     "element": 16,
     "class": 1,
     "moveSpeed": 5,
-    "as": 75,
+    "as": 80,
     "crit": 7,
     "dodge": 0,
     "hpCoef": 2.11,
@@ -3661,7 +4125,7 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 1000,
-      "inc": 78
+      "inc": 60
     },
     "respawnCD": 15,
     "vision": 8,
@@ -3671,7 +4135,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 320,
       "damageInc": 7,
@@ -3680,10 +4144,19 @@
     "skill": {
       "castTime": 0.2,
       "CD": 12,
+      "name": "Meet me in Valhalla",
+      "desc": "Uses her goddess power to increase her attack speed and reflect a part of the damage received to the attacker",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0.2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "ChangeSkillEffect",
@@ -3716,7 +4189,7 @@
     "skillCoef": 2.4,
     "hp": {
       "base": 800,
-      "inc": 40
+      "inc": 42
     },
     "respawnCD": 10,
     "vision": 7,
@@ -3726,7 +4199,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 150,
       "damageInc": 4,
@@ -3737,10 +4210,17 @@
       "CD": 6,
       "name": "Piercing Blade",
       "desc": "Charges her sword and pierces through her enemy.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 315,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3776,7 +4256,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 94,
       "damageInc": 4,
@@ -3785,10 +4265,15 @@
     "skill": {
       "castTime": 0.6,
       "CD": 6,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3830,7 +4315,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 80,
       "damageInc": 5,
@@ -3839,10 +4324,17 @@
     "skill": {
       "castTime": 0.4,
       "CD": 6,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 210,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -3878,7 +4370,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 48,
       "damageInc": 3,
@@ -3887,10 +4379,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 10,
+      "radius": 255,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 350,
+      "skillHEALInc": 1650,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -3926,7 +4425,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 36,
       "damageInc": 4,
@@ -3935,10 +4434,17 @@
     "skill": {
       "castTime": 0.8,
       "CD": 11,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 350,
+      "skillHEAL": 250,
+      "skillHEALInc": 400,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -3980,7 +4486,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 30,
       "damageInc": 6,
@@ -3989,10 +4495,17 @@
     "skill": {
       "castTime": 0.8,
       "CD": 12.5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 240,
+      "skillDMGInc": 550,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4028,7 +4541,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 64,
       "damageInc": 4,
@@ -4037,10 +4550,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 10,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0.5,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
@@ -4077,7 +4597,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 56,
       "damageInc": 3,
@@ -4086,10 +4606,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 10,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4131,7 +4658,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 50,
       "damageInc": 4,
@@ -4140,10 +4667,17 @@
     "skill": {
       "castTime": 1,
       "CD": 10,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 500,
+      "skillDMGInc": 650,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4185,7 +4719,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 48,
       "damageInc": 5,
@@ -4194,10 +4728,17 @@
     "skill": {
       "castTime": 0.8,
       "CD": 10,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 10,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 40,
+      "skillDMGInc": 50,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4233,7 +4774,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 36,
       "damageInc": 3,
@@ -4242,10 +4783,17 @@
     "skill": {
       "castTime": 0.8,
       "CD": 5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 1,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4281,7 +4829,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 200,
       "damageInc": 8,
@@ -4290,10 +4838,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 13,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 20,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 16,
+      "skillHEALInc": 36,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -4329,7 +4884,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 200,
       "damageInc": 8,
@@ -4338,10 +4893,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 300,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4377,7 +4939,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 60,
       "damageInc": 4,
@@ -4386,10 +4948,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 3,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 90,
+      "skillDMGInc": 60,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4432,7 +5001,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 40,
       "damageInc": 3,
@@ -4441,10 +5010,17 @@
     "skill": {
       "castTime": 0.8,
       "CD": 12,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 10,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 30,
+      "skillDMGInc": 55,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 10,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4482,7 +5058,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 14,
       "damageInc": 3,
@@ -4491,10 +5067,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 15,
+      "radius": 255,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "MinusCooldownEffect",
@@ -4530,7 +5113,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 80,
       "damageInc": 4,
@@ -4539,10 +5122,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 9,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 50,
+      "skillDMGInc": 240,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4584,7 +5174,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 120,
       "damageInc": 7,
@@ -4593,15 +5183,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 10,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5009,
+          "heroids": [
+            5009
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "destroyfirst": 1
@@ -4634,7 +5233,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 200,
       "damageInc": 5,
@@ -4643,10 +5242,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 16,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 30,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 40,
+      "skillDMGInc": 83,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 3,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4684,7 +5290,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 48,
       "damageInc": 7,
@@ -4693,10 +5299,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 7.5,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 90,
+      "skillDMGInc": 325,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4732,7 +5345,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 94,
       "damageInc": 5,
@@ -4741,15 +5354,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 7,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5004,
+          "heroids": [
+            5004
+          ],
           "maxconcurrent": 2,
           "level": -1,
           "destroyfirst": 1
@@ -4782,7 +5404,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 18,
       "damageInc": 3,
@@ -4791,15 +5413,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 4,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5006,
+          "heroids": [
+            5006
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "destroyfirst": 1
@@ -4832,7 +5463,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 60,
       "damageInc": 6,
@@ -4841,10 +5472,17 @@
     "skill": {
       "castTime": 1,
       "CD": 12.5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 260,
+      "skillDMGInc": 450,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -4886,7 +5524,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 14,
       "damageInc": 6,
@@ -4895,10 +5533,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 7,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
@@ -4935,7 +5580,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 7,
       "damage": 80,
       "damageInc": 8,
@@ -4944,10 +5589,17 @@
     "skill": {
       "castTime": 2.5,
       "CD": 10,
-      "walkDelay": 2.5,
-      "actDelay": 1,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2.5,
+      "actDelay": 1,
+      "skillDMG": 400,
+      "skillDMGInc": 500,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -4983,7 +5635,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 50,
       "damageInc": 7,
@@ -4992,10 +5644,17 @@
     "skill": {
       "castTime": 1,
       "CD": 10,
-      "walkDelay": 0,
-      "actDelay": 2,
+      "radius": 2,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 0,
+      "actDelay": 2,
+      "skillDMG": 100,
+      "skillDMGInc": 250,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5037,7 +5696,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 40,
       "damageInc": 4,
@@ -5046,10 +5705,17 @@
     "skill": {
       "castTime": 1,
       "CD": 7,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 8,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 250,
+      "skillDMGInc": 500,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5085,7 +5751,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 50,
       "damageInc": 4,
@@ -5094,10 +5760,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 7,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 200,
+      "skillHEAL": 200,
+      "skillHEALInc": 350,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -5139,7 +5812,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 7,
       "damage": 80,
       "damageInc": 5,
@@ -5148,10 +5821,17 @@
     "skill": {
       "castTime": 0.8,
       "CD": 5,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 5,
+      "skillDMGInc": 5,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 500,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5189,7 +5869,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 80,
       "damageInc": 5,
@@ -5200,16 +5880,23 @@
       "CD": 0.4,
       "name": "Ultimate Fire Bolt",
       "desc": "Throws a big fire bolt. This ability has a reduced cooldown.",
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 50,
+      "skillDMGInc": 70,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 50,
-          "damageInc": 80
+          "damageInc": 70
         }
       ]
     }
@@ -5239,7 +5926,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 100,
       "damageInc": 4,
@@ -5248,10 +5935,17 @@
     "skill": {
       "castTime": 1,
       "CD": 8,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 125,
+      "skillDMGInc": 320,
+      "skillHEAL": 300,
+      "skillHEALInc": 800,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5293,7 +5987,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 88,
       "damageInc": 4,
@@ -5302,10 +5996,17 @@
     "skill": {
       "castTime": 0.6,
       "CD": 10,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 500,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5347,19 +6048,26 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 50,
-      "damageInc": 3,
+      "damageInc": 5,
       "aoe": 0
     },
     "skill": {
       "castTime": 1.5,
       "CD": 7,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 2,
       "ticks": 1,
       "duration": 6,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 300,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5395,7 +6103,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 150,
       "damageInc": 5,
@@ -5406,10 +6114,17 @@
       "CD": 10,
       "name": "Lucky Charm",
       "desc": "Casts a lucky AOE, boosting attack speed and reducing cooldown of allies, and damaging enemies in it.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
@@ -5457,7 +6172,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 94,
       "damageInc": 4,
@@ -5466,10 +6181,17 @@
     "skill": {
       "castTime": 0.1,
       "CD": 5,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 1,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 60,
+      "skillDMGInc": 166,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 3,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5507,7 +6229,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 205,
       "damageInc": 2,
@@ -5516,15 +6238,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 8.5,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5013,
+          "heroids": [
+            5013
+          ],
           "maxconcurrent": 2,
           "level": -1,
           "destroyfirst": 1
@@ -5557,7 +6288,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 72,
       "damageInc": 6,
@@ -5568,22 +6299,29 @@
       "CD": 8,
       "name": "Xmas Tornado",
       "desc": "Casts a winter explosion, dealing damage and slowing enemies, and healing allies.",
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 370,
+      "skillHEAL": 300,
+      "skillHEALInc": 370,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
           "target": "ally",
           "hp": 300,
-          "hpInc": 400
+          "hpInc": 370
         },
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 200,
-          "damageInc": 400
+          "damageInc": 370
         }
       ]
     }
@@ -5613,7 +6351,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 6,
       "damage": 30,
       "damageInc": 6,
@@ -5622,10 +6360,17 @@
     "skill": {
       "castTime": 0.9,
       "CD": 8,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 120,
+      "skillDMGInc": 500,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5661,7 +6406,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 40,
       "damageInc": 3,
@@ -5693,7 +6438,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 100,
       "damageInc": 20,
@@ -5702,10 +6447,17 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "radius": 4,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 50,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5747,7 +6499,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 2,
       "damage": 100,
       "damageInc": 5,
@@ -5756,10 +6508,17 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 150,
+      "skillDMGInc": 50,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5795,7 +6554,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 2,
       "damage": 1000,
       "damageInc": 5,
@@ -5804,10 +6563,17 @@
     "skill": {
       "castTime": 1,
       "CD": 20,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 1500,
+      "skillDMGInc": 800,
+      "skillHEAL": 1500,
+      "skillHEALInc": 1000,
+      "dmgTicks": 0,
+      "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5849,7 +6615,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 2,
       "damage": 400,
       "damageInc": 7,
@@ -5858,10 +6624,17 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 1500,
+      "skillDMGInc": 150,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5897,7 +6670,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 2,
       "damage": 100,
       "damageInc": 25,
@@ -5906,10 +6679,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 500,
+      "skillDMGInc": 60,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5945,7 +6725,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 2,
       "damage": 100,
       "damageInc": 5,
@@ -5954,10 +6734,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 500,
+      "skillDMGInc": 50,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -5993,7 +6780,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 2,
       "damage": 150,
       "damageInc": 5,
@@ -6002,10 +6789,17 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 1800,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6041,7 +6835,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.4,
+      "castTime": 0.4,
       "range": 2,
       "damage": 800,
       "damageInc": 10,
@@ -6050,10 +6844,17 @@
     "skill": {
       "castTime": 3.2,
       "CD": 9,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 2500,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6089,7 +6890,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.6,
+      "castTime": 0.6,
       "range": 2,
       "damage": 400,
       "damageInc": 4,
@@ -6098,10 +6899,17 @@
     "skill": {
       "castTime": 3,
       "CD": 12,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 100,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 100,
+      "skillDMG": 2000,
+      "skillDMGInc": 250,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6137,7 +6945,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 200,
       "damageInc": 8,
@@ -6146,10 +6954,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 300,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6185,7 +7000,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.4,
+      "castTime": 0.4,
       "range": 2,
       "damage": 800,
       "damageInc": 10,
@@ -6194,10 +7009,17 @@
     "skill": {
       "castTime": 3.2,
       "CD": 9,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 2500,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6233,7 +7055,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.4,
+      "castTime": 0.4,
       "range": 2,
       "damage": 400,
       "damageInc": 4,
@@ -6242,10 +7064,17 @@
     "skill": {
       "castTime": 1,
       "CD": 12,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 2000,
+      "skillDMGInc": 250,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6288,7 +7117,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.6,
+      "castTime": 0.6,
       "range": 2,
       "damage": 1200,
       "damageInc": 10,
@@ -6297,10 +7126,17 @@
     "skill": {
       "castTime": 3,
       "CD": 12,
+      "radius": 5,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 5000,
+      "skillDMGInc": 800,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6336,7 +7172,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.6,
+      "castTime": 0.6,
       "range": 2,
       "damage": 400,
       "damageInc": 4,
@@ -6345,10 +7181,17 @@
     "skill": {
       "castTime": 2,
       "CD": 12,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 6,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 2000,
+      "skillDMGInc": 250,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6384,7 +7227,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 8,
       "damage": 500,
       "damageInc": 8,
@@ -6393,10 +7236,17 @@
     "skill": {
       "castTime": 1,
       "CD": 5,
-      "walkDelay": 2,
-      "actDelay": 5,
+      "radius": 4,
       "ticks": 2,
       "duration": 20,
+      "walkDelay": 2,
+      "actDelay": 5,
+      "skillDMG": 3500,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6432,7 +7282,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 500,
       "damageInc": 8,
@@ -6441,10 +7291,17 @@
     "skill": {
       "castTime": 0.5,
       "CD": 7.5,
-      "walkDelay": 2,
-      "actDelay": 5,
+      "radius": 4,
       "ticks": 1,
       "duration": 10,
+      "walkDelay": 2,
+      "actDelay": 5,
+      "skillDMG": 3500,
+      "skillDMGInc": 300,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6492,7 +7349,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 2,
       "damage": 200,
       "damageInc": 8,
@@ -6501,15 +7358,24 @@
     "skill": {
       "castTime": 0.5,
       "CD": 7,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5015,
+          "heroids": [
+            5015
+          ],
           "maxconcurrent": 4,
           "level": -1,
           "destroyfirst": 1
@@ -6542,7 +7408,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 1.5,
+      "castTime": 1.5,
       "range": 7,
       "damage": 25,
       "damageInc": 3,
@@ -6551,10 +7417,17 @@
     "skill": {
       "castTime": 2,
       "CD": 10,
+      "radius": 255,
+      "ticks": 1,
+      "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 4,
-      "duration": 40,
+      "skillDMG": 1500,
+      "skillDMGInc": 20,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6590,7 +7463,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 500,
       "damageInc": 8,
@@ -6599,10 +7472,17 @@
     "skill": {
       "castTime": 3,
       "CD": 5,
-      "walkDelay": 3,
-      "actDelay": 0,
+      "radius": 3,
       "ticks": 1,
       "duration": 255,
+      "walkDelay": 3,
+      "actDelay": 0,
+      "skillDMG": 4000,
+      "skillDMGInc": 50,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6638,7 +7518,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 100,
       "damageInc": 30,
@@ -6647,10 +7527,17 @@
     "skill": {
       "castTime": 3,
       "CD": 10,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -6685,10 +7572,17 @@
     "skill": {
       "castTime": 1,
       "CD": 8,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 2,
       "ticks": 1,
       "duration": 45,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 50,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 6,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6726,7 +7620,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 2000,
       "damageInc": 10,
@@ -6735,10 +7629,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 10,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0.75,
-      "duration": 60,
+      "skillDMG": 1000,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6779,7 +7680,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 200,
       "damageInc": 8,
@@ -6788,10 +7689,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 300,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6827,7 +7735,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 1,
       "damage": 200,
       "damageInc": 8,
@@ -6836,10 +7744,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
-      "walkDelay": 2,
-      "actDelay": 0,
+      "radius": 5,
       "ticks": 1,
       "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "skillDMG": 300,
+      "skillDMGInc": 400,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -6875,15 +7790,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1001,
+          "heroids": [
+            1001
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -6916,15 +7840,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1002,
+          "heroids": [
+            1002
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -6957,15 +7890,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1003,
+          "heroids": [
+            1003
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -6998,15 +7940,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1004,
+          "heroids": [
+            1004
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7039,15 +7990,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1005,
+          "heroids": [
+            1005
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7080,15 +8040,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1006,
+          "heroids": [
+            1006
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7121,15 +8090,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1007,
+          "heroids": [
+            1007
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7162,15 +8140,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1008,
+          "heroids": [
+            1008
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7203,15 +8190,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1009,
+          "heroids": [
+            1009
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7244,15 +8240,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1010,
+          "heroids": [
+            1010
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7285,15 +8290,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1011,
+          "heroids": [
+            1011
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7326,15 +8340,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1012,
+          "heroids": [
+            1012
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7367,15 +8390,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1013,
+          "heroids": [
+            1013
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7408,15 +8440,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1014,
+          "heroids": [
+            1014
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7449,15 +8490,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1015,
+          "heroids": [
+            1015
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7490,15 +8540,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1016,
+          "heroids": [
+            1016
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7531,15 +8590,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1017,
+          "heroids": [
+            1017
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7572,15 +8640,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1018,
+          "heroids": [
+            1018
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7613,15 +8690,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1019,
+          "heroids": [
+            1019
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7654,15 +8740,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1020,
+          "heroids": [
+            1020
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7695,15 +8790,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1021,
+          "heroids": [
+            1021
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7736,15 +8840,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1022,
+          "heroids": [
+            1022
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7777,15 +8890,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1023,
+          "heroids": [
+            1023
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7818,15 +8940,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1024,
+          "heroids": [
+            1024
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7859,15 +8990,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1025,
+          "heroids": [
+            1025
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7900,15 +9040,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1026,
+          "heroids": [
+            1026
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7941,15 +9090,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1027,
+          "heroids": [
+            1027
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -7982,15 +9140,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1028,
+          "heroids": [
+            1028
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8023,15 +9190,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1029,
+          "heroids": [
+            1029
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8064,15 +9240,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1030,
+          "heroids": [
+            1030
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8105,15 +9290,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1031,
+          "heroids": [
+            1031
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8146,15 +9340,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1032,
+          "heroids": [
+            1032
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8187,15 +9390,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1033,
+          "heroids": [
+            1033
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8228,15 +9440,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1034,
+          "heroids": [
+            1034
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8269,15 +9490,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1035,
+          "heroids": [
+            1035
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8310,15 +9540,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1036,
+          "heroids": [
+            1036
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8351,15 +9590,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1037,
+          "heroids": [
+            1037
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8392,15 +9640,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1038,
+          "heroids": [
+            1038
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8433,15 +9690,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1039,
+          "heroids": [
+            1039
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8474,15 +9740,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1040,
+          "heroids": [
+            1040
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -8584,7 +9859,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 50,
       "damageInc": 9,
@@ -8606,7 +9881,7 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 300,
-      "inc": 200
+      "inc": 420
     },
     "respawnCD": 10,
     "vision": 7,
@@ -8616,10 +9891,10 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 6,
       "damage": 50,
-      "damageInc": 200,
+      "damageInc": 300,
       "aoe": 0
     }
   },
@@ -8648,7 +9923,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 40,
       "damageInc": 150,
@@ -8657,10 +9932,17 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -8696,15 +9978,25 @@
     "skill": {
       "castTime": 0.5,
       "CD": 5,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5004,
+          "heroids": [
+            5004,
+            5005
+          ],
           "maxconcurrent": 1,
           "level": -1
         }
@@ -8736,7 +10028,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 6,
       "damage": 50,
       "damageInc": 50,
@@ -8745,10 +10037,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 10000,
+      "skillDMGInc": 10000,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -8784,7 +10083,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 2,
       "damage": 100,
       "damageInc": 25,
@@ -8793,10 +10092,17 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 500,
+      "skillDMGInc": 60,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -8832,7 +10138,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 1,
       "damageInc": 1,
@@ -8841,10 +10147,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 5000,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -8885,7 +10198,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 1,
       "damageInc": 1,
@@ -8894,10 +10207,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 100,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -8943,10 +10263,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 200,
+      "skillHEALInc": 2000,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -8972,31 +10299,43 @@
     "as": 0,
     "crit": 0,
     "dodge": 0,
-    "hpCoef": 2.11,
+    "hpCoef": 2.5,
     "dmgCoef": 2.09,
     "skillCoef": 2.3,
     "hp": {
       "base": 300,
-      "inc": 225
+      "inc": 500
     },
     "respawnCD": 0,
     "vision": 11,
     "affection": "",
     "dropRate": 0,
     "eventDropRate": 0,
-    "attack": {
+    "skill": {
+      "castTime": 1,
+      "CD": 0.1,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "castingtime": 1,
-      "range": 1,
-      "damage": 180,
-      "damageInc": 2500,
-      "aoe": 2,
+      "skillDMG": 180,
+      "skillDMGInc": 1000,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
+          "target": "enemy",
+          "damage": 180,
+          "damageInc": 1000
+        },
+        {
+          "type": "DamageEffect",
           "target": "self",
-          "damage": 1000000
+          "damage": 50000000
         }
       ]
     }
@@ -9026,27 +10365,34 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 5,
       "damage": 100,
-      "damageInc": 3,
+      "damageInc": 5,
       "aoe": 0
     },
     "skill": {
       "castTime": 1.5,
-      "CD": 9,
+      "CD": 10,
       "name": "Moon Crushing",
       "desc": "Calls the moon and uses the pressure to crush and slow enemies. The effect is repeated when the moon leaves.",
+      "radius": 6,
+      "ticks": 2,
+      "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 1.2244897959183674,
-      "duration": 60,
+      "skillDMG": 50,
+      "skillDMGInc": 200,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemy",
           "damage": 50,
-          "damageInc": 300
+          "damageInc": 200
         }
       ]
     }
@@ -9076,7 +10422,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 6,
       "damage": 50,
       "damageInc": 20,
@@ -9108,7 +10454,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 50,
       "damageInc": 9,
@@ -9140,7 +10486,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 65,
       "damageInc": 12,
@@ -9172,7 +10518,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 9,
       "damage": 250,
       "damageInc": 350,
@@ -9204,7 +10550,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 400,
       "damageInc": 50,
@@ -9213,10 +10559,17 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -9252,15 +10605,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1001,
+          "heroids": [
+            1001,
+            1011,
+            1012
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -9293,15 +10657,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1007,
+          "heroids": [
+            1007,
+            1010,
+            1014
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -9334,15 +10709,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1003,
+          "heroids": [
+            1003,
+            1024,
+            1026
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -9375,15 +10761,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1006,
+          "heroids": [
+            1006,
+            1013,
+            1020
+          ],
           "maxconcurrent": 3,
           "level": -1,
           "skilllevel": -1
@@ -9416,15 +10813,24 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 5004,
+          "heroids": [
+            5004
+          ],
           "maxconcurrent": 2,
           "level": -1,
           "skilllevel": -1
@@ -9457,15 +10863,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1001,
+          "heroids": [
+            1001,
+            1011,
+            1012
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "skilllevel": -1
@@ -9498,15 +10915,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1007,
+          "heroids": [
+            1007,
+            1010,
+            1014
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "skilllevel": -1
@@ -9539,15 +10967,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1003,
+          "heroids": [
+            1003,
+            1024,
+            1026
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "skilllevel": -1
@@ -9580,15 +11019,26 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "self",
-          "heroids": 1006,
+          "heroids": [
+            1006,
+            1013,
+            1020
+          ],
           "maxconcurrent": 1,
           "level": -1,
           "skilllevel": -1
@@ -9621,7 +11071,7 @@
     "attack": {
       "walkDelay": 1.5,
       "actDelay": 0,
-      "castingtime": 0.7,
+      "castTime": 0.7,
       "range": 6,
       "damage": 2000,
       "damageInc": 600,
@@ -9653,7 +11103,7 @@
     "attack": {
       "walkDelay": 1.5,
       "actDelay": 0,
-      "castingtime": 0.7,
+      "castTime": 0.7,
       "range": 6,
       "damage": 2000,
       "damageInc": 800,
@@ -9685,7 +11135,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.5,
+      "castTime": 0.5,
       "range": 6,
       "damage": 1000,
       "damageInc": 650,
@@ -9717,7 +11167,7 @@
     "attack": {
       "walkDelay": 2,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 10,
       "damage": 3000,
       "damageInc": 1200,
@@ -9749,7 +11199,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 10,
       "damage": 2000,
       "damageInc": 500,
@@ -9781,7 +11231,7 @@
     "attack": {
       "walkDelay": 2,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 10,
       "damage": 100,
       "damageInc": 35,
@@ -9813,7 +11263,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 12,
       "damage": 200,
       "damageInc": 42,
@@ -9852,7 +11302,7 @@
     "attack": {
       "walkDelay": 2,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 12,
       "damage": 250,
       "damageInc": 45,
@@ -9884,7 +11334,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 12,
       "damage": 250,
       "damageInc": 35,
@@ -9924,7 +11374,7 @@
     "attack": {
       "walkDelay": 2,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 12,
       "damage": 140,
       "damageInc": 55,
@@ -9956,7 +11406,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 20,
       "damageInc": 3,
@@ -9965,10 +11415,17 @@
     "skill": {
       "castTime": 0.6,
       "CD": 7,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 20,
+      "skillDMGInc": 30,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10004,7 +11461,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 10,
       "damageInc": 4,
@@ -10013,10 +11470,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 9,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 30,
+      "skillDMGInc": 240,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10057,7 +11521,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 1,
       "damage": 28,
       "damageInc": 4,
@@ -10066,10 +11530,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 10,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 10,
       "walkDelay": 0.8,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 10,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageAlterEffect",
@@ -10106,7 +11577,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 10,
       "damageInc": 7,
@@ -10115,10 +11586,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 7.5,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 35,
+      "skillDMGInc": 350,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10154,7 +11632,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 8,
       "damage": 500,
       "damageInc": 8,
@@ -10232,7 +11710,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 100,
       "damageInc": 3,
@@ -10241,10 +11719,17 @@
     "skill": {
       "castTime": 0.6,
       "CD": 7,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 180,
+      "skillDMGInc": 305,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10280,7 +11765,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.6,
+      "castTime": 0.6,
       "range": 2,
       "damage": 400,
       "damageInc": 4,
@@ -10289,10 +11774,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 3,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10328,7 +11820,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 50,
       "damageInc": 9,
@@ -10360,7 +11852,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 6,
       "damage": 50,
       "damageInc": 200,
@@ -10392,7 +11884,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 7,
       "damage": 40,
       "damageInc": 20,
@@ -10401,10 +11893,17 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10440,7 +11939,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.2,
+      "castTime": 0.2,
       "range": 2,
       "damage": 100,
       "damageInc": 25,
@@ -10449,10 +11948,17 @@
     "skill": {
       "castTime": 0.2,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 25,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10488,7 +11994,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 1,
       "damageInc": 1,
@@ -10497,10 +12003,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 200,
+      "skillDMGInc": 1100,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
@@ -10541,7 +12054,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 1,
       "damage": 1,
       "damageInc": 1,
@@ -10550,10 +12063,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 100,
+      "skillDMGInc": 100,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
@@ -10599,10 +12119,17 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 200,
+      "skillHEALInc": 2000,
+      "dmgTicks": 1,
+      "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
@@ -10643,7 +12170,7 @@
     "attack": {
       "walkDelay": 2,
       "actDelay": 0.5,
-      "castingtime": 1,
+      "castTime": 1,
       "range": 1,
       "damage": 180,
       "damageInc": 350,
@@ -10682,7 +12209,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 9,
       "damage": 250,
       "damageInc": 350,
@@ -10714,7 +12241,7 @@
     "attack": {
       "walkDelay": 1,
       "actDelay": 0,
-      "castingtime": 0.3,
+      "castTime": 0.3,
       "range": 2,
       "damage": 400,
       "damageInc": 50,
@@ -10723,10 +12250,17 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
       "walkDelay": 0,
       "actDelay": 0,
-      "ticks": 0,
-      "duration": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
+      "skillHEAL": 0,
+      "skillHEALInc": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
