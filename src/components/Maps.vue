@@ -8,9 +8,9 @@
           v-for="(c,i) in filteredCols"
           :key="i"
           @click.middle.exact.prevent="onColMiddleClick($event,c)"
-          @click.left.ctrl="updateSort([c.val,$event]);currPage=1"
-          @click.left.shift="updateSort([c.val,$event]);currPage=1"
-          @click.left.exact="updateSort([c.val,$event]);currPage=1"
+          @click.left.ctrl="updateMapsSort([c.val,$event]);currPage=1"
+          @click.left.shift="updateMapsSort([c.val,$event]);currPage=1"
+          @click.left.exact="updateMapsSort([c.val,$event]);currPage=1"
           :class="i==filteredCols.length-1?'longth':''"
         >{{ c.caption }}<span
           :class="sortArrowClasses(c.val)" class="sort-arrow"
@@ -165,7 +165,7 @@ export default {
       this.updateColVisibility( { col, visible:!col.visible } );
     },
 
-    ...mapMutations(['updateSort','updateColVisibility']),
+    ...mapMutations(['updateMapsSort','updateColVisibility']),
 
     sortArrow (col) {
       const asc = '▲';
