@@ -1,18 +1,25 @@
-const imgWarrior = require('../assets/classes/Warrior.png');
-const imgMage = require('../assets/classes/Mage.png');
-const imgMarksman = require('../assets/classes/Marksman.png');
-const imgEngineer = require('../assets/classes/Engineer.png');
-const imgSupport = require('../assets/classes/Support.png');
+const heroImages = new Map([]);
 
-const classImages = ['', imgWarrior, imgMage, imgMarksman, imgEngineer, imgSupport];
+heroImages.set('Warrior', require('../assets/classes/Warrior.png'));
+heroImages.set('Mage', require('../assets/classes/Mage.png'));
+heroImages.set('Marksman', require('../assets/classes/Marksman.png'));
+heroImages.set('Engineer', require('../assets/classes/Engineer.png'));
+heroImages.set('Support', require('../assets/classes/Support.png'));
+
+heroImages.set('Fire', require('../assets/elements/Fire.png'));
+heroImages.set('Nature', require('../assets/elements/Nature.png'));
+heroImages.set('Water', require('../assets/elements/Water.png'));
+heroImages.set('Light', require('../assets/elements/Light.png'));
+heroImages.set('Dark', require('../assets/elements/Dark.png'));
 
 const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
 elements[16] = 'Light';
 
 
 module.exports = {
-  classImages,
+  heroImages,
   elements,
+  campBonuses: [1, 1.05, 1.1, 1.2, 1.3, 1.45, 1.6, 1.8, 2, 2.25, 3, 3.25, 3.5, 3.75, 4, 4.5],
   //            0         1       2          3          4         5             6
   itemSlots: ['Head', 'Chest', 'Weapon', 'Off-hand', 'Boots', 'Necklace', 'Consummable'],
   //            0       1         2         3           4          5
