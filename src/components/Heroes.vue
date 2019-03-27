@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="filters">
-      <div class="grid-row">
-        <div>
+      <div class="col">
+
+        <div style="justify-content:flex-end">
           <label for="selClass">Class</label>
           <select id="selClass" @input="setFilterClass($event)">
             <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']"
               :key="heroClass">{{ heroClass }}</option>
           </select>
         </div>
-      </div>
-      <div class="grid-row">
+
         <div>
           <label for="selEle">Element</label>
           <select id="selEle" @input="setFilterElem($event)">
@@ -20,9 +20,10 @@
             >{{ ele }}</option>
           </select>
         </div>
-        <div></div>
+
       </div>
-      <div class="grid-row">
+
+      <div class="col">
         <div>
           <label for="txSkillLevel">Skill Level</label>
           <input type="number" min="1" max="29" id="txSkillLevel"
@@ -30,17 +31,15 @@
             @input="setSkillLevel($event)"
             :value="skillLevel"
           >
-        </div><div></div>
-      </div>
-      <div class="grid-row">
-        <div>
-          <label for="txCDR">CDR</label>
+        </div>
+        <div style="display:flex;justify-content:flex-end;">
+          <label for="txCDR" style="align-self:center">CDR</label>
           <input type="number" min="0" max="50" maxlength="2" step="5" id="txCDR"
             style="width:3em"
             @input="setCDR($event)"
             :value="cdr"
           >
-        </div><div></div>
+        </div>
       </div>
     </div>
     <br>
@@ -221,6 +220,25 @@ $dark: #d9d2e9;
 
 $darkenBy: 5%;
 
+.filters {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  * {
+    margin-right: .6em;
+    margin-top: .2em;
+    font-size: .95em;
+  }
+  input, select {
+    align-items: baseline;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 .hlCol {
   background: $p-ml;
 }
@@ -258,18 +276,6 @@ $darkenBy: 5%;
 .selected {
   outline: 4px solid #3c78d8;
   outline-offset: -2px;
-}
-
-.filters {
-
-  * {
-    margin-right: .6em;
-    margin-top: .2em;
-    font-size: .95em;
-  }
-  input, select {
-    align-items: baseline;
-  }
 }
 
 table {
