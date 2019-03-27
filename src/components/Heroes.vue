@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="filters">
-      <div class="col">
+    <div class="flex-row filters">
+      <div class="flex-col">
 
-        <div style="justify-content:flex-end">
+        <div>
           <label for="selClass">Class</label>
           <select id="selClass" @input="setFilterClass($event)">
             <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']"
@@ -23,26 +23,43 @@
 
       </div>
 
-      <div class="col">
-        <div>
-          <label for="txSkillLevel">Skill Level</label>
+      <div class="flex-col">
+        <div class="flexitem-right">
+          <label for="txHeroLevel">Maiden Lvl</label>
+          <input type="number" min="1" max="85" id="txHeroLevel"
+            style="width:3em"
+            @input="setHeroLevel($event)"
+            :value="heroLevel"
+          >
+        </div>
+        <div class="flexitem-right">
+          <label for="txSkillLevel">Skill Lvl</label>
           <input type="number" min="1" max="29" id="txSkillLevel"
             style="width:3em"
             @input="setSkillLevel($event)"
             :value="skillLevel"
           >
         </div>
-        <div style="display:flex;justify-content:flex-end;">
-          <label for="txCDR" style="align-self:center">CDR</label>
-          <input type="number" min="0" max="50" maxlength="2" step="5" id="txCDR"
+        <div class="flexitem-right">
+          <label for="txCDR">CDR</label>
+          <input type="number" min="0" max="50" step="5" id="txCDR"
             style="width:3em"
             @input="setCDR($event)"
             :value="cdr"
           >
         </div>
+        <div class="flexitem-right">
+          <label for="txCamp">Camp Lvl</label>
+          <input type="number" min="0" max="15" step="1" id="txCamp"
+            style="width:3em"
+            @input="setCampLevel($event)"
+            :value="campLevel"
+          >
+        </div>
       </div>
     </div>
     <br>
+    <hero-card v-if="selectedHero !== null" :hero="selectedHero"></hero-card>
     <table>
       <thead @contextmenu.prevent="$refs.colMenu.open">
         <th v-for="c in filteredHeroCols" :key="c.id"
@@ -61,22 +78,16 @@
           :class="'h'+m.sElement"
           @click.prevent="select(m)"
         >
-          <td v-for="col in heroCols.filter( c => c.visible )" :key="col.index"
+          <td v-for="col in heroCols.filter(c => c.visible)" :key="col.index"
             :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
             :style="'text-align:'+(col.align || 'right')"
-          ><img v-if="col.dataField==='name'" :title="m.sClass" :src="classImages[m.class]" style="width: 18px; height: 18px; vertical-align: bottom; margin-right:.2em;"
-          >{{ m[col.displayField] }}</td>
-          <!-- <td
-            v-for="([displayData,sortData],i) in m.slice(1)"
-            :key="i"
-            :class="i===sorting.col1?'hl'+m.sElement:''"
-            :style="'text-align:'+(filteredHeroCols[i].align || 'right')"
-          ><span>{{ displayData }}</span>
-          </td> -->
-            <!-- <img :title="m.sClass" :src="classIcon(m)" style="width: 16px; height: 16px;"> -->
+          >
+          <img v-if="col.dataField==='name'" :title="m.sClass"
+            :src="getImage(m.sClass)"
+            style="width: 18px; height: 18px; vertical-align: bottom; margin-right:.2em;"
+          ><span style="display:inline-flex;justify-self:flex-end">{{ m[col.displayField] }}</span></td>
         </tr>
       </tbody>
-
     </table>
 
     <vue-context :closeOnClick="false" ref="colMenu" class="cm">
@@ -97,18 +108,22 @@
 </template>
 
 <script>
+import HeroCard from './HeroCard';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { VueContext } from 'vue-context';
+import { heroImages } from '../api/const.js';
 
 export default {
-  state: {
-    selected: null,
-  },
+  data() { return {
+    selectedHero: null,
+  }},
 
   computed: {
     ...mapState({
+      heroLevel: state => state.heroes.heroLevel,
       skillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
+      campLevel: state => state.heroes.campLevel,
       heroCols: state => state.heroes.heroCols,
       sorting: state => state.heroes.sorting,
       classImages: state => state.heroes.classImages,
@@ -129,6 +144,9 @@ export default {
   },
 
   methods: {
+    getImage (key) {
+      return heroImages.get(key);
+    },
     computeMaiden (maiden) {
       for( const col of this.heroCols ) {
         if( col.dataField.startsWith('col') ) {
@@ -143,12 +161,18 @@ export default {
     sort (maidens, ...args) {
       return maidens.sort( this.sortHeroesFunc(...args) );
     },
+    setHeroLevel (event) {
+      this.$store.dispatch('setHeroLevel', parseInt(event.target.value));
+    },
     setSkillLevel (event) {
       this.$store.dispatch('setSkillLevel', parseInt(event.target.value));
       //this.$store.commit('updateSkillLevel', event.target.value);
     },
     setCDR (event) {
       this.$store.dispatch('setCDR', parseInt(event.target.value));
+    },
+    setCampLevel (event) {
+      this.$store.dispatch('setCampLevel', parseInt(event.target.value));
     },
     setFilterClass (event) {
       this.$store.commit('updateFilterHeroClass', event.target.value);
@@ -166,14 +190,21 @@ export default {
       return this.classImages[hero.class];
     },
     select (hero) {
-      const el = window.document.getElementById('m'+hero.id);
-      if( this.selected ) {
-        this.selected.classList.remove('selected');
+      if( this.selectedHero ) {
+        const el = window.document.getElementById('m'+this.selectedHero.id);
+        if( el ) {
+          el.classList.remove('selected');
+        }
       }
-      if( el !== this.selected ) {
-        el.classList.add('selected');
+      if( hero !== this.selectedHero ) {
+        const el = window.document.getElementById('m'+hero.id);
+        if( el ) {
+          el.classList.add('selected');
+        }
+        this.selectedHero = hero;
+      } else {
+        this.selectedHero = null;
       }
-      this.selected = el;
     },
 
     ...mapMutations(['updateHeroColVisibility','computeMaidens','updateHeroesSort']),
@@ -196,11 +227,7 @@ export default {
 
   components: {
     VueContext,
-  },
-
-
-  created() {
-    // this.selected = 'Heet';
+    HeroCard,
   },
 
 }
@@ -222,8 +249,6 @@ $darkenBy: 5%;
 
 .filters {
   justify-content: center;
-  display: flex;
-  flex-direction: row;
   * {
     margin-right: .6em;
     margin-top: .2em;
@@ -234,9 +259,27 @@ $darkenBy: 5%;
   }
 }
 
-.col {
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.flexitem-right {
+  display: flex;
+  justify-content: flex-end;
+  label {
+    align-self: center;
+  }
+}
+
+.flexitem-left {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .hlCol {

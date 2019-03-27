@@ -1,7 +1,6 @@
 //const imgClasses = require('../../assets/classes/');
 
-import { elements, rarities, classes, classImages } from '../../api/const';
-
+import { elements, rarities, classes, campBonuses } from '../../api/const';
 
 const heroes = require('../../assets/heroes.json');
 
@@ -13,7 +12,16 @@ const skillArgs = (m) => ([
 ]);
 
 const heroHealth = (m) => {
-  return m.hp.base + m.hp.inc * (state.heroLevel-1) ** m.hpCoef;
+  let val = m.hp.base + m.hp.inc * (state.heroLevel-1) ** m.hpCoef;
+  val *= m.id === 4 ? 1.2 : 1.3; // Nuka only has 3 'hearts'
+  return val;
+};
+
+const heroDamage = (m) => {
+  let val = m.attack.damage + m.attack.damageInc * (state.heroLevel-1) ** m.dmgCoef;
+  val *= campBonuses[state.campLevel];
+  val *= m.id === 4 ? 1.2 : 1.3;
+  return val;
 };
 
 const skillDamage = (m) => {
@@ -59,6 +67,7 @@ const heroCols = [
   { val:'id', caption:'ID', sortOrderAsc: true },
   { val:'name', caption:'Maiden', align:'left', sortOrderAsc: true },
   { val:heroHealth, fmt:_num, caption:'Health' },
+  { val:heroDamage, fmt:_num, caption:'Damage' },
   { val:skillDamage, fmt:txSkillDMG, caption:'Skill Damage' },
   { val:skillHeal, fmt:txSkillHEAL, caption:'Skill Heal' },
   { val:'skillRadius', fmt:_num, caption:'Radius' },
@@ -113,7 +122,7 @@ const state = {
   skillLevel: 29,
   cdr: 40,
   heroLevel: 85,
-  classImages,
+  campLevel: 15,
 };
 
 const validElement = (hero) => state.filters.element === 'All' || hero.sElement === state.filters.element;
@@ -147,11 +156,17 @@ const getters = {
 
 
 const mutations = {
+  updateHeroLevel (state, payload) {
+    state.heroLevel = payload;
+  },
   updateSkillLevel (state, payload) {
     state.skillLevel = payload;
   },
   updateCDR (state, payload) {
     state.cdr = payload;
+  },
+  updateCampLevel (state, payload) {
+    state.campLevel = payload;
   },
   updateFilterHeroClass (state, payload) {
     state.filters.class = payload;
@@ -184,11 +199,17 @@ const mutations = {
 }
 
 const actions = {
+  setHeroLevel ({ commit }, payload) {
+    commit('updateHeroLevel', payload);
+  },
   setSkillLevel ({ commit }, payload) {
     commit('updateSkillLevel', payload);
   },
   setCDR ({ commit }, payload) {
     commit('updateCDR', payload);
+  },
+  setCampLevel ({ commit }, payload) {
+    commit('updateCampLevel', payload);
   },
 }
 
