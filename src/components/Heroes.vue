@@ -200,16 +200,31 @@ export default {
     classIcon (hero) {
       return this.classImages[hero.class];
     },
-    clearSelection () {
-      for( const hero of this.selectedHeroes ) {
+    clearSelection (singleHero=null) {
+      const list = singleHero ? [singleHero] : this.selectedHeroes;
+      for( const hero of list ) {
         const el = window.document.getElementById('m'+hero.id);
         if( !el ) continue;
         el.classList.remove('selected');
       }
+      if( singleHero ) {
+        const heroIndex = this.selectedHeroes.indexOf(singleHero);
+        if( heroIndex >= 0 ) {
+          this.selectedHeroes.splice(heroIndex, 1);
+        }
+      } else {
       this.selectedHeroes.splice(0, this.selectedHeroes.length);
+      }
     },
     select (hero, multiSelect=false) {
+      /* Normal clicks don't multi select.
+         But if you click on a selected hero that is
+         part of a multi select, it will deselect it. */
       if( !multiSelect ) {
+        if( this.selectedHeroes.length > 1 && this.selectedHeroes.includes(hero) ) {
+          this.clearSelection(hero);
+          return;
+        }
         this.clearSelection();
       }
       if( !this.selectedHeroes.includes(hero) ) {
