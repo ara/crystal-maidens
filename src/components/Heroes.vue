@@ -59,7 +59,7 @@
       </div>
     </div>
     <br>
-    <div class="flex-row">
+    <div class="flex-row vcenter">
       <div>
 
         <table>
@@ -78,7 +78,9 @@
               :key="m.id"
               :id="'m'+m.id"
               :class="'h'+m.sElement"
-              @click.prevent="select(m)"
+              @click.exact="select(m)"
+              @click.ctrl.exact="select(m,true)"
+              @click.shift.exact="select(m,true)"
             >
               <td v-for="col in heroCols.filter(c => c.visible)" :key="col.index"
                 :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
@@ -94,8 +96,8 @@
         </table>
 
       </div>
-      <div style="margin-left:.8em">
-        <hero-card v-if="selectedHero !== null" :hero="selectedHero"></hero-card>
+      <div style="margin-left:1.2em">
+        <hero-card v-for="hero in selectedHeroes" :key="hero.id" :hero="hero"></hero-card>
       </div>
     </div>
 
@@ -124,7 +126,7 @@ import { heroImages } from '../api/const.js';
 
 export default {
   data() { return {
-    selectedHero: null,
+    selectedHeroes: [],
   }},
 
   computed: {
@@ -198,21 +200,24 @@ export default {
     classIcon (hero) {
       return this.classImages[hero.class];
     },
-    select (hero) {
-      if( this.selectedHero ) {
-        const el = window.document.getElementById('m'+this.selectedHero.id);
-        if( el ) {
-          el.classList.remove('selected');
-        }
+    clearSelection () {
+      for( const hero of this.selectedHeroes ) {
+        const el = window.document.getElementById('m'+hero.id);
+        if( !el ) continue;
+        el.classList.remove('selected');
       }
-      if( hero !== this.selectedHero ) {
+      this.selectedHeroes.splice(0, this.selectedHeroes.length);
+    },
+    select (hero, multiSelect=false) {
+      if( !multiSelect ) {
+        this.clearSelection();
+      }
+      if( !this.selectedHeroes.includes(hero) ) {
+        this.selectedHeroes.push(hero);
         const el = window.document.getElementById('m'+hero.id);
         if( el ) {
           el.classList.add('selected');
         }
-        this.selectedHero = hero;
-      } else {
-        this.selectedHero = null;
       }
     },
 
@@ -232,6 +237,10 @@ export default {
       }
     },
 
+  },
+
+  mounted () {
+    this.select(this.maidens[0]);
   },
 
   components: {
@@ -397,7 +406,9 @@ table {
     }
   }
 }
-
+.vcenter {
+  justify-content: center;
+}
 body {
   margin: 0 !important;
   padding: 0 !important;
