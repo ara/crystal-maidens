@@ -23,7 +23,7 @@
       @input="fCampaign=$event.target.value"
       @mousewheel.passive="selectWheel($event,'fCampaign')"
     >
-      <option :value="-2">All</option>
+      <option value="-2">All</option>
       <option value="-1" selected>All Campaigns</option>
       <option v-for="c in campaigns" :key="c.id"
         :value="c.id">{{ c.name }}</option>
