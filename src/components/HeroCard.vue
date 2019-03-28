@@ -18,8 +18,8 @@
             <li><span class="cell-cap">CDR</span><span class="cell-data">{{ heroCDR }}</span></li>
           </ul>
           <ul>
-            <li><span class="cell-cap">DPS</span><span class="cell-data">{{ heroDPS }}</span></li>
             <li><span class="cell-cap">EHP</span><span class="cell-data">{{ heroEHP }}</span></li>
+            <li><span class="cell-cap">DPS</span><span class="cell-data">{{ heroDPS }}</span></li>
             <li><span class="cell-cap">Range</span><span class="cell-data">{{ heroRange }}</span></li>
             <li><span class="cell-cap">Vision</span><span class="cell-data">{{ heroVision }}</span></li>
             <li><span class="cell-cap">Movement</span><span class="cell-data">{{ heroMoveSpeed }}</span></li>
