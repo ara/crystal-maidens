@@ -59,36 +59,45 @@
       </div>
     </div>
     <br>
-    <hero-card v-if="selectedHero !== null" :hero="selectedHero"></hero-card>
-    <table>
-      <thead @contextmenu.prevent="$refs.colMenu.open">
-        <th v-for="c in filteredHeroCols" :key="c.id"
-          :class="c.dataField===sorting.col1?'hlCol':''"
-          @click.middle.exact.prevent="onColMiddleClick($event,c)"
-          @click.left.exact="updateHeroesSort(c)"
-        >{{ c.caption }}</th>
-      </thead>
+    <div class="flex-row">
+      <div>
 
-      <tbody>
-        <!-- (sorting.col1, sorting.col1Asc, sorting.col2, sorting.col2Asc) -->
-        <tr
-          v-for="m in sortedMaidens"
-          :key="m.id"
-          :id="'m'+m.id"
-          :class="'h'+m.sElement"
-          @click.prevent="select(m)"
-        >
-          <td v-for="col in heroCols.filter(c => c.visible)" :key="col.index"
-            :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
-            :style="'text-align:'+(col.align || 'right')"
-          >
-          <img v-if="col.dataField==='name'" :title="m.sClass"
-            :src="getImage(m.sClass)"
-            style="width: 18px; height: 18px; vertical-align: bottom; margin-right:.2em;"
-          ><span style="display:inline-flex;justify-self:flex-end">{{ m[col.displayField] }}</span></td>
-        </tr>
-      </tbody>
-    </table>
+        <table>
+          <thead @contextmenu.prevent="$refs.colMenu.open">
+            <th v-for="c in filteredHeroCols" :key="c.id"
+              :class="c.dataField===sorting.col1?'hlCol':''"
+              @click.middle.exact.prevent="onColMiddleClick($event,c)"
+              @click.left.exact="updateHeroesSort(c)"
+            >{{ c.caption }}</th>
+          </thead>
+
+          <tbody>
+            <!-- (sorting.col1, sorting.col1Asc, sorting.col2, sorting.col2Asc) -->
+            <tr
+              v-for="m in sortedMaidens"
+              :key="m.id"
+              :id="'m'+m.id"
+              :class="'h'+m.sElement"
+              @click.prevent="select(m)"
+            >
+              <td v-for="col in heroCols.filter(c => c.visible)" :key="col.index"
+                :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
+                :style="'text-align:'+(col.align || 'right')"
+              >
+              <img v-if="col.dataField==='name'" :title="m.sClass"
+                :src="getImage(m.sClass)"
+                style="width: 18px; height: 18px; vertical-align: bottom; margin-right:.2em;"
+              ><span style="display:inline-flex;justify-self:flex-end">{{ m[col.displayField] }}</span></td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+      <div style="margin-left:.8em">
+        <hero-card v-if="selectedHero !== null" :hero="selectedHero"></hero-card>
+      </div>
+    </div>
 
     <vue-context :closeOnClick="false" ref="colMenu" class="cm">
       <ul class="cm">
@@ -324,6 +333,7 @@ $darkenBy: 5%;
 table {
   box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
   cursor: default;
+  margin-left: .5em;
 
   font-size: smaller;
   background-color: $p-dark;
