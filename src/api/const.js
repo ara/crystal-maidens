@@ -1,16 +1,18 @@
 const heroImages = new Map([]);
 
-heroImages.set('Warrior', require('../assets/classes/Warrior.png'));
-heroImages.set('Mage', require('../assets/classes/Mage.png'));
-heroImages.set('Marksman', require('../assets/classes/Marksman.png'));
-heroImages.set('Engineer', require('../assets/classes/Engineer.png'));
-heroImages.set('Support', require('../assets/classes/Support.png'));
+try {
+  heroImages.set('Warrior', require('../assets/classes/Warrior.png'));
+  heroImages.set('Mage', require('../assets/classes/Mage.png'));
+  heroImages.set('Marksman', require('../assets/classes/Marksman.png'));
+  heroImages.set('Engineer', require('../assets/classes/Engineer.png'));
+  heroImages.set('Support', require('../assets/classes/Support.png'));
 
-heroImages.set('Fire', require('../assets/elements/Fire.png'));
-heroImages.set('Nature', require('../assets/elements/Nature.png'));
-heroImages.set('Water', require('../assets/elements/Water.png'));
-heroImages.set('Light', require('../assets/elements/Light.png'));
-heroImages.set('Dark', require('../assets/elements/Dark.png'));
+  heroImages.set('Fire', require('../assets/elements/Fire.png'));
+  heroImages.set('Nature', require('../assets/elements/Nature.png'));
+  heroImages.set('Water', require('../assets/elements/Water.png'));
+  heroImages.set('Light', require('../assets/elements/Light.png'));
+  heroImages.set('Dark', require('../assets/elements/Dark.png'));
+} catch(err) { console.log(err); }
 
 const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
 elements[16] = 'Light';
