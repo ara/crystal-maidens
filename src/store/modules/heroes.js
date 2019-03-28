@@ -64,10 +64,10 @@ const skillTicks = (m,v) => {
 }
 
 const heroCols = [
-  { val:'id', caption:'ID', sortOrderAsc: true },
-  { val:'name', caption:'Maiden', align:'left', sortOrderAsc: true },
-  { val:heroHealth, fmt:_num, caption:'Health' },
-  { val:heroDamage, fmt:_num, caption:'Damage' },
+  { val:'id', caption:'ID', sortOrderAsc:true, visible:true },
+  { val:'name', caption:'Maiden', align:'left', sortOrderAsc:true, visible:true },
+  { val:heroHealth, fmt:_num, caption:'Health', visible:true },
+  { val:heroDamage, fmt:_num, caption:'Damage', visible:true },
   { val:skillDamage, fmt:txSkillDMG, caption:'Skill Damage' },
   { val:skillHeal, fmt:txSkillHEAL, caption:'Skill Heal' },
   { val:'skillRadius', fmt:_num, caption:'Radius' },
@@ -81,7 +81,7 @@ const heroCols = [
 heroCols.forEach( (c,i) => {
   const isField = typeof c.val === 'string';
   c.caption = c.caption || (isField ? cap(c.val) : 'Col#'+i);
-  c.visible = c.visible === undefined;
+  c.visible = c.visible || false;
   c.index = i;
   c.dataField = isField ? c.val : 'col'+i;
   c.displayField = c.fmt ? 'colfmt'+i : c.dataField;
