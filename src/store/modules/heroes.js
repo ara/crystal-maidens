@@ -123,6 +123,8 @@ const state = {
   cdr: 40,
   heroLevel: 85,
   campLevel: 15,
+  /** for testing while items are being added */
+  heroExtraAS: 0,
 };
 
 const validElement = (hero) => state.filters.element === 'All' || hero.sElement === state.filters.element;
@@ -156,6 +158,9 @@ const getters = {
 
 
 const mutations = {
+  updateHeroExtraAS (state, payload) {
+    state.heroExtraAS = payload;
+  },
   updateHeroLevel (state, payload) {
     state.heroLevel = payload;
   },
@@ -199,6 +204,9 @@ const mutations = {
 }
 
 const actions = {
+  setHeroExtraAS ({ commit }, payload) {
+    commit('updateHeroExtraAS', payload);
+  },
   setHeroLevel ({ commit }, payload) {
     commit('updateHeroLevel', payload);
   },
