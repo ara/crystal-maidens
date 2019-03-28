@@ -45,7 +45,7 @@ export default {
 
   data () {
     return {
-      moveSpeeds: ['', '', '', 'V.Fast', 'Fast', 'Medium', 'Slow', 'V.Slow'],
+      moveSpeeds: ['', '', '', 'V.Fast', 'Fast', 'Med', 'Slow', 'V.Slow'],
     };
   },
 
@@ -165,7 +165,7 @@ li {
   text-align: right;
   font-weight: 700;
   font-size: .8em;
-  padding-right: 1em;
+  // padding-right: 1em;
 }
 
 .cell-data {
@@ -173,6 +173,7 @@ li {
   font-size: .9em;
   text-align: right;
   margin-left: 2em;
+  min-width: 5em;
 }
 
 img, h4, span {
@@ -189,7 +190,7 @@ h4 {
 }
 
 .container {
-  margin: 0;
+  margin: 0 0 1.2em;
   background: #eee;
   border-radius: .4em;
   padding: 0 .4em .4em .4em;
