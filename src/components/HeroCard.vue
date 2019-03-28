@@ -37,7 +37,6 @@
 import { mapState } from 'vuex';
 import { campBonuses, heroImages } from '../api/const.js';
 
-
 export default {
   props: {
     hero: Object,
@@ -97,13 +96,17 @@ export default {
       let val = this.cdr;
       return this.digit1(val)+'%';
     },
+    AS () {
+      console.log('total AS:', this.$store.state.heroes.heroExtraAS + this.hero.as);
+      return this.$store.state.heroes.heroExtraAS + this.hero.as;
+    },
     heroDPS () {
       const m = this.hero;
       let val = m.attack.damage + m.attack.damageInc * (this.heroLevel-1) ** m.dmgCoef;
       val *= this.campBonus;
       val *= m.id === 4 ? 1.2 : 1.3;
       /* vvv   attacks per second   vvv */
-      val *= Math.floor(m.as/10)/10 + m.attack.castTime;
+      val *= Math.floor(this.AS/10)/10 + m.attack.castTime;
       return Math.round(val).toLocaleString();
     },
     heroEHP () {

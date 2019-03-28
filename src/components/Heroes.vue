@@ -21,6 +21,15 @@
           </select>
         </div>
 
+        <div class="flexitem-right">
+          <label for="txHeroAS">Atk Spd test</label>
+          <input type="number" min="0" max="200" step="20" id="txHeroAS"
+            style="width:3em"
+            v-model="heroExtraAS"
+          >
+      </div>
+
+
       </div>
 
       <div class="flex-col">
@@ -96,8 +105,10 @@
         </table>
 
       </div>
-      <div style="margin-left:1.2em">
-        <hero-card v-for="hero in selectedHeroes" :key="hero.id" :hero="hero"></hero-card>
+      <div style="margin-left:1.2em;">
+        <hero-card :hero="hero"
+          v-for="hero in selectedHeroes" :key="hero.id"
+          style="box-shadow: .2em .2em .2em 0 #777"></hero-card>
       </div>
     </div>
 
@@ -139,6 +150,15 @@ export default {
       sorting: state => state.heroes.sorting,
       classImages: state => state.heroes.classImages,
     }),
+
+    heroExtraAS: {
+      get () {
+        return this.$store.state.heroes.heroExtraAS;
+      },
+      set (val) {
+        this.$store.commit('updateHeroExtraAS', parseInt(val));
+      },
+    },
 
     computedMaidens () {
       const time = Date.now();
