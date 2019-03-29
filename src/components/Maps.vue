@@ -111,9 +111,9 @@ export default {
       return data;
     },
 
-    sortedMaps () {
+    sortedMaps (state) {
       const s = this.sorting;
-      return this.maps.sort(
+      return state.maps.sort(
         this.sortMapsFunc( s.col1, s.col1Asc, s.col2, s.col2Asc )
       );
     },
@@ -227,7 +227,7 @@ $p-light: #eee;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding-top: 4px;
+  padding-top: 2px;
   vertical-align: baseline;
 
   > div {
