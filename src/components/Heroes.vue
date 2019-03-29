@@ -160,18 +160,20 @@ export default {
       },
     },
 
-    computedMaidens () {
+    computedMaidens (state) {
       const time = Date.now();
-      const data = this.maidens.map( m => this.computeMaiden(m) );
+      const data = state.maidens.map( m => this.computeMaiden(m) );
       console.log(`Maidens computed in ${Date.now()-time} ms.`);
       return data;
     },
 
-    sortedMaidens () { return this.computedMaidens.sort(
-      this.sortHeroesFunc( this.sorting.col1, this.sorting.col1Asc, this.sorting.col2, this.sorting.col2Asc )
-    ); },
+    sortedMaidens (state) {
+      return state.computedMaidens.sort(
+        this.sortHeroesFunc( this.sorting.col1, this.sorting.col1Asc, this.sorting.col2, this.sorting.col2Asc )
+      );
+    },
 
-    ...mapGetters(['maidens','filteredHeroCols','cSkillLevel']),
+    ...mapGetters(['maidens','filteredHeroCols']),
   },
 
   methods: {
@@ -221,8 +223,8 @@ export default {
     },
     select (hero, multiSelect=false) {
       /* Normal clicks don't multi select.
-         But if you click on a selected hero that is
-         part of a multi select, it will deselect it. */
+        But if you click on a selected hero that is
+        part of a multi select, it will deselect it. */
       if( !multiSelect ) {
         if( this.selectedHeroes.length > 1 &&
             this.selectedHeroes.includes(hero)
