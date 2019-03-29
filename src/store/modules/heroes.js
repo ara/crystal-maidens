@@ -125,6 +125,7 @@ const state = {
   campLevel: 15,
   /** for testing while items are being added */
   heroExtraAS: 0,
+  selectedHeroes: [],
 };
 
 const validElement = (hero) => state.filters.element === 'All' || hero.sElement === state.filters.element;
@@ -151,13 +152,41 @@ const getters = {
     return heroCols.filter( c => c.visible );
   },
 
-  cSkillLevel: (state) => (state.skillLevel || 29) - 1,
   //cCD: m.skill.castTime + Math.ceil( (100-state.cdr) * m.skill.CD / 10 ) / 10,
 
 }
 
 
 const mutations = {
+  selectMaiden(state, payload) {
+    state.selectedHeroes.push(payload);
+    const el = document.getElementById('m'+payload.id);
+    if( el ) {
+      el.classList.add('selected');
+    }
+    payload.selected = true;
+  },
+  deselectMaiden(state, payload) {
+    const maidenIndex = state.selectedHeroes.indexOf(payload);
+    if( maidenIndex >= 0 ) {
+      const el = document.getElementById('m'+payload.id);
+      if( el ) {
+        el.classList.remove('selected');
+      }
+      state.selectedHeroes.splice(maidenIndex, 1);
+      payload.selected = false;
+    }
+  },
+  deselectAllMaidens(state, payload) {
+    state.selectedHeroes.forEach( m => {
+      m.selected = false;
+      const el = document.getElementById('m'+m.id);
+      if( el ) {
+        el.classList.remove('selected');
+      }
+    });
+    state.selectedHeroes.splice(0, state.selectedHeroes.length);
+  },
   updateHeroExtraAS (state, payload) {
     state.heroExtraAS = payload;
   },

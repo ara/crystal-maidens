@@ -1,12 +1,13 @@
 <template>
-  <div class="container" >
+  <div class="container" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
     <div class="flex-row">
       <div class="flex-col">
         <div class="flex-row align-center">
           <h4>{{ hero.name }}</h4>
-          <img :src="getImage(hero.sClass)" alt="hero.sClass" class="class-icon">
-          <img :src="getImage(hero.sElement)" alt="hero.sElement" class="class-icon">
+          <img :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+          <img :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
         </div>
+        <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
         <div class="flex-row wrap align-center">
           <ul class="border-right">
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
@@ -27,7 +28,7 @@
             <li><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
           </ul>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -54,6 +55,7 @@ export default {
       skillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
+      selectedHeroes: state => state.heroes.selectedHeroes,
     }),
     campBonus () {
       return campBonuses[this.campLevel];
@@ -72,8 +74,7 @@ export default {
       return Math.round(val).toLocaleString();
     },
     heroAS () {
-      const m = this.hero;
-      let val = m.as;
+      let val = this.AS;
       return this.digit2(val);
     },
     heroCrit () {
@@ -136,11 +137,24 @@ export default {
   },
 
   methods: {
+    setColor(color) {
+      if( this.selectedHeroes.length === 1 ) return;
+      document.getElementById('close'+this.hero.id).style.color = color;
+    },
     getImage(key) {
       return heroImages.get(key);
     },
     digit1: val => Math.round(val*10)/10,
     digit2: val => Math.round(val*100)/100,
+    showCloseButton(event) {
+      this.setColor('#aaa');
+    },
+    hideCloseButton(event) {
+      this.setColor('#eee');
+    },
+    deselectHero() {
+      this.$store.commit('deselectMaiden', this.hero);
+    }
   }
 
 }
@@ -168,7 +182,6 @@ li {
   text-align: right;
   font-weight: 700;
   font-size: .8em;
-  // padding-right: 1em;
 }
 
 .cell-data {
@@ -217,5 +230,25 @@ h4 {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  align-self: flex-end;
+  border: none;
+  width: 25px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 1.3em;
+  background: transparent;
+  margin: .3em .6em 0 0;
+  padding: 0;
+  color: #eee;
+  &:hover {
+      color: #555 !important;
+      box-shadow: 0px 0px 1px 1px #777;
+      background: #ccc;
+  }
 }
 </style>

@@ -81,15 +81,13 @@
           </thead>
 
           <tbody>
-            <!-- (sorting.col1, sorting.col1Asc, sorting.col2, sorting.col2Asc) -->
             <tr
               v-for="m in sortedMaidens"
               :key="m.id"
               :id="'m'+m.id"
-              :class="'h'+m.sElement"
+              :class="['h'+m.sElement, m.selected?'selected':'']"
               @click.exact="select(m)"
               @click.ctrl.exact="select(m,true)"
-              @click.shift.exact="select(m,true)"
             >
               <td v-for="col in heroCols.filter(c => c.visible)" :key="col.index"
                 :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
@@ -136,9 +134,10 @@ import { VueContext } from 'vue-context';
 import { heroImages } from '../api/const.js';
 
 export default {
-  data() { return {
-    selectedHeroes: [],
-  }},
+  data() {
+    return {
+    }
+  },
 
   computed: {
     ...mapState({
@@ -149,6 +148,7 @@ export default {
       heroCols: state => state.heroes.heroCols,
       sorting: state => state.heroes.sorting,
       classImages: state => state.heroes.classImages,
+      selectedHeroes: state => state.heroes.selectedHeroes,
     }),
 
     heroExtraAS: {
@@ -197,7 +197,6 @@ export default {
     },
     setSkillLevel (event) {
       this.$store.dispatch('setSkillLevel', parseInt(event.target.value));
-      //this.$store.commit('updateSkillLevel', event.target.value);
     },
     setCDR (event) {
       this.$store.dispatch('setCDR', parseInt(event.target.value));
@@ -220,39 +219,20 @@ export default {
     classIcon (hero) {
       return this.classImages[hero.class];
     },
-    clearSelection (singleHero=null) {
-      const list = singleHero ? [singleHero] : this.selectedHeroes;
-      for( const hero of list ) {
-        const el = window.document.getElementById('m'+hero.id);
-        if( !el ) continue;
-        el.classList.remove('selected');
-      }
-      if( singleHero ) {
-        const heroIndex = this.selectedHeroes.indexOf(singleHero);
-        if( heroIndex >= 0 ) {
-          this.selectedHeroes.splice(heroIndex, 1);
-        }
-      } else {
-      this.selectedHeroes.splice(0, this.selectedHeroes.length);
-      }
-    },
     select (hero, multiSelect=false) {
       /* Normal clicks don't multi select.
          But if you click on a selected hero that is
          part of a multi select, it will deselect it. */
       if( !multiSelect ) {
-        if( this.selectedHeroes.length > 1 && this.selectedHeroes.includes(hero) ) {
-          this.clearSelection(hero);
-          return;
+        if( this.selectedHeroes.length > 1 &&
+            this.selectedHeroes.includes(hero)
+        ) {
+          return this.$store.commit('deselectMaiden', hero);
         }
-        this.clearSelection();
+        this.$store.commit('deselectAllMaidens');
       }
       if( !this.selectedHeroes.includes(hero) ) {
-        this.selectedHeroes.push(hero);
-        const el = window.document.getElementById('m'+hero.id);
-        if( el ) {
-          el.classList.add('selected');
-        }
+        this.$store.commit('selectMaiden', hero);
       }
     },
 
@@ -382,7 +362,6 @@ table {
   font-size: smaller;
   background-color: $p-dark;
   display: inline-block;
-  // white-space: pre;
   vertical-align: top;
 
   border-collapse: collapse;
@@ -390,41 +369,21 @@ table {
 
   table-layout: auto;
 
-  // tbody tr:hover {
-  //   outline: 3px solid #3c78d8;
-  // }
-
-  thead, tfoot {
+  tfoot, thead {
     background-color: $p-light;
   }
 
   th {
+    // position: sticky; top: 0;
+    background-color: $p-light;
     padding: .3em .1em .2em .4em;
     text-align: left;
     width: auto;
     cursor: pointer;
     border: 1px solid $p-medium;
-
-    .sort-arrow {
-      float: right;
-    }
-    .nosort {
-      opacity: 0;
-    }
-    .sort1 {
-      /* color: black; */
-      opacity: 1;
-    }
-    .sort2 {
-      /* color: #aaa; */
-      opacity: .4;
-    }
   }
-
   td {
-    // border-collapse: collapse;
-    //border: 1px solid $p-light;
-    border: 1px solid $p-ml;// hsla(0,0%,80%,.5);
+    border: 1px solid $p-ml;
     padding: .1em .3em;
     &:first-child {
       border-left-color: $p-medium;
