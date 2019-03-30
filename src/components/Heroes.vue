@@ -23,7 +23,7 @@
 
         <div class="flexitem-right">
           <label for="txHeroAS">Atk Spd test</label>
-          <input type="number" min="0" max="200" step="20" id="txHeroAS"
+          <input type="number" min="0" max="1000" step="20" id="txHeroAS"
             style="width:3em"
             v-model="heroExtraAS"
           >
