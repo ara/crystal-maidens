@@ -13,6 +13,7 @@
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
             <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
             <li><span class="cell-cap">Atk Spd</span><span class="cell-data">{{ heroAS }}</span></li>
+            <li><span class="cell-cap">Atk /sec</span><span class="cell-data">{{ atkSec }}</span></li>
             <li><span class="cell-cap">Crit</span><span class="cell-data">{{ heroCrit }}</span></li>
             <li><span class="cell-cap">Dodge</span><span class="cell-data">{{ heroDodge }}</span></li>
             <li><span class="cell-cap">Defense</span><span class="cell-data">{{ heroDefense }}</span></li>
@@ -98,7 +99,6 @@ export default {
       return this.digit1(val)+'%';
     },
     AS () {
-      console.log('total AS:', this.$store.state.heroes.heroExtraAS + this.hero.as);
       return this.$store.state.heroes.heroExtraAS + this.hero.as;
     },
     heroDPS () {
@@ -107,8 +107,12 @@ export default {
       val *= this.campBonus;
       val *= m.id === 4 ? 1.2 : 1.3;
       /* vvv   attacks per second   vvv */
-      val *= Math.floor(this.AS/10)/10 + m.attack.castTime;
+      val *= 1 / (Math.ceil(1000/this.AS)/10 + m.attack.castTime);
       return Math.round(val).toLocaleString();
+    },
+    atkSec () {
+      const m = this.hero;
+      return (1 / (Math.ceil(1000/this.AS)/10 + m.attack.castTime)).toFixed(3);
     },
     heroEHP () {
       const m = this.hero;
