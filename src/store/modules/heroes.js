@@ -6,6 +6,10 @@ const heroes = require('../../assets/heroes.json');
 
 const cap = (str) => str.replace( /(\b[a-z](?!\s))/g, x => x.toUpperCase() );
 
+const AS = (m) => {
+  return state.heroExtraAS + m.as;
+}
+
 const skillArgs = (m) => ([
   (state.skillLevel || 29) - 1,
   m.skill.castTime + Math.ceil( (100-state.cdr) * m.skill.CD / 10 ) / 10,
@@ -23,6 +27,30 @@ const heroDamage = (m) => {
   val *= m.id === 4 ? 1.2 : 1.3;
   return val;
 };
+
+const heroDPS = (m) => {
+  let val = m.attack.damage + m.attack.damageInc * (state.heroLevel-1) ** m.dmgCoef;
+  val *= campBonuses[state.campLevel];
+  console.log('heroes AS', AS(m));
+  val *= m.id === 4 ? 1.2 : 1.3;
+  /* vvv   attacks per second   vvv */
+  val *= 1/(Math.ceil(1000/AS(m))/10 + m.attack.castTime);
+  return val;
+};
+
+const atkSec = (m) => {
+  let val = 1/(Math.ceil(1000/AS(m))/10 + m.attack.castTime);
+  return val.toFixed(3);
+}
+
+const heroEHP = (m) => {
+  let val = m.hp.base + m.hp.inc * (state.heroLevel-1) ** m.hpCoef;
+  val *= Math.min(2, 1+(m.defense || 300)/10000);
+  val *= 100/(100-Math.min(m.dodge,80));
+  val *= m.id === 4 ? 1.2 : 1.3; // Nuka only has 3 'hearts'
+  return val;
+};
+
 
 const skillDamage = (m) => {
   const skillLevel = (state.skillLevel || 29) - 1;
@@ -66,8 +94,11 @@ const skillTicks = (m,v) => {
 const heroCols = [
   { val:'id', caption:'ID', sortOrderAsc:true, visible:true },
   { val:'name', caption:'Maiden', align:'left', sortOrderAsc:true, visible:true },
-  { val:heroHealth, fmt:_num, caption:'Health', visible:true },
-  { val:heroDamage, fmt:_num, caption:'Damage', visible:true },
+  { val:heroHealth, fmt:_num, caption:'Health', visible:false },
+  { val:heroDamage, fmt:_num, caption:'Damage', visible:false },
+  { val:heroEHP, fmt:_num, caption:'EHP', visible:true },
+  { val:heroDPS, fmt:_num, caption:'DPS', visible:true },
+  { val:atkSec, caption:'atk/s', visible:true },
   { val:skillDamage, fmt:txSkillDMG, caption:'Skill Damage' },
   { val:skillHeal, fmt:txSkillHEAL, caption:'Skill Heal' },
   { val:'skillRadius', fmt:_num, caption:'Radius' },
