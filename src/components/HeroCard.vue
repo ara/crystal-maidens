@@ -8,7 +8,7 @@
           <img :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
         </div>
         <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
-        <div class="flex-row wrap align-center">
+        <div class="flex-row wrap align-center flex-top">
           <ul class="border-right">
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
             <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
@@ -159,7 +159,7 @@ export default {
     deselectHero() {
       this.$store.commit('deselectMaiden', this.hero);
     }
-  }
+  },
 
 }
 </script>
@@ -217,6 +217,10 @@ h4 {
   color: #444;
 }
 
+.flex-top {
+  align-items: flex-start;
+}
+
 .border-right {
   border-right: 1px solid #bbb;
   margin-right: .5em;
@@ -249,7 +253,9 @@ h4 {
   margin: .3em .6em 0 0;
   padding: 0;
   color: #eee;
+  transition: color .4s ease;
   &:hover {
+    transition: background .4s ease;
       color: #555 !important;
       box-shadow: 0px 0px 1px 1px #777;
       background: #ccc;
