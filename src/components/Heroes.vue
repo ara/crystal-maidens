@@ -213,6 +213,9 @@ export default {
       this.$store.commit('updateFilterHeroElement', event.target.value);
     },
     onColMiddleClick (event, col) {
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      event.preventDefault();
       this.updateHeroColVisibility( { col, visible:false } );
     },
     onCMClick (col) {
