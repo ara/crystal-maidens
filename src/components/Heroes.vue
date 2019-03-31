@@ -27,7 +27,12 @@
             style="width:3em"
             v-model="heroExtraAS"
           >
-      </div>
+        </div>
+
+        <div>
+          <label for="ckSkillDetails">Show skill details by default</label>
+          <input type="checkbox" id="ckSkillDetails" v-model="showSkillDetails">
+        </div>
 
 
       </div>
@@ -68,14 +73,14 @@
       </div>
     </div>
     <br>
-    <div class="flex-row vcenter">
+    <div class="flex-row vcenter reverse-wrap">
       <div>
 
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
             <th v-for="c in filteredHeroCols" :key="c.id"
               :class="c.dataField===sorting.col1?'hlCol':''"
-              @click.middle.exact.prevent="onColMiddleClick($event,c)"
+              @click.middle.prevent="onColMiddleClick($event,c)"
               @click.left.exact="updateHeroesSort(c)"
             >{{ c.caption }}</th>
           </thead>
@@ -94,8 +99,7 @@
                 :style="'text-align:'+(col.align || 'right')"
               >
               <img v-if="col.dataField==='name'" :title="m.sClass"
-                :src="getImage(m.sClass)"
-                style="width: 18px; height: 18px; vertical-align: bottom; margin-right:.2em;"
+                :src="getImage(m.sClass)" class="class-icon"
               ><span style="display:inline-flex;justify-self:flex-end">{{ m[col.displayField] }}</span></td>
             </tr>
           </tbody>
@@ -158,6 +162,15 @@ export default {
       set (val) {
         this.$store.commit('updateHeroExtraAS', parseInt(val));
       },
+    },
+
+    showSkillDetails: {
+      get () {
+        return this.$store.state.heroes.openSkillDetails;
+      },
+      set (val) {
+        this.$store.commit('updateOpenSkillDetails', val);
+      }
     },
 
     computedMaidens (state) {
@@ -305,6 +318,7 @@ $darkenBy: 5%;
 .flex-col {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .flexitem-right {
@@ -363,6 +377,7 @@ table {
   box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
   cursor: default;
   margin-left: .5em;
+  white-space: nowrap;
 
   font-size: smaller;
   background-color: $p-dark;
