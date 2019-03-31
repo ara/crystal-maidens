@@ -23,15 +23,21 @@ const heroHealth = (m) => {
 
 const heroDamage = (m) => {
   let val = m.attack.damage + m.attack.damageInc * (state.heroLevel-1) ** m.dmgCoef;
-  val *= campBonuses[state.campLevel];
+  val *= campBonuses[state.campLevel] * m.attack.hits;
   val *= m.id === 4 ? 1.2 : 1.3;
   return val;
 };
 
+const txDamage = (m,v) => {
+  if( m.attack.hits === 1 ) {
+    return Math.round(v).toLocaleString();
+  }
+  return `[${m.attack.hits}x] ${Math.round(v/m.attack.hits).toLocaleString()}`;
+}
+
 const heroDPS = (m) => {
   let val = m.attack.damage + m.attack.damageInc * (state.heroLevel-1) ** m.dmgCoef;
-  val *= campBonuses[state.campLevel];
-  console.log('heroes AS', AS(m));
+  val *= campBonuses[state.campLevel] * m.attack.hits;
   val *= m.id === 4 ? 1.2 : 1.3;
   /* vvv   attacks per second   vvv */
   val *= 1/(Math.ceil(1000/AS(m))/10 + m.attack.castTime);
@@ -95,7 +101,7 @@ const heroCols = [
   { val:'id', caption:'ID', sortOrderAsc:true, visible:true },
   { val:'name', caption:'Maiden', align:'left', sortOrderAsc:true, visible:true },
   { val:heroHealth, fmt:_num, caption:'Health', visible:false },
-  { val:heroDamage, fmt:_num, caption:'Damage', visible:false },
+  { val:heroDamage, fmt:txDamage, caption:'Damage', visible:false },
   { val:heroEHP, fmt:_num, caption:'EHP', visible:true },
   { val:heroDPS, fmt:_num, caption:'DPS', visible:true },
   { val:atkSec, caption:'atk/s', visible:true },
