@@ -405,6 +405,15 @@ table {
 .vcenter {
   justify-content: center;
 }
+.reverse-wrap {
+  flex-wrap: wrap-reverse;
+}
+.class-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: bottom;
+  margin-right: .2em;
+}
 body {
   margin: 0 !important;
   padding: 0 !important;
