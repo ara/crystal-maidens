@@ -30,13 +30,14 @@
             <li><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
           </ul>
         </div>
-
+        <hero-skill :hero="hero" :show-info="openSkillDetails"></hero-skill>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import HeroSkill from './HeroSkill';
 import { mapState } from 'vuex';
 import { campBonuses, heroImages } from '../api/const.js';
 
