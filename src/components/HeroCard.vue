@@ -44,6 +44,7 @@ import { campBonuses, heroImages } from '../api/const.js';
 export default {
   props: {
     hero: Object,
+    showDetails: Boolean,
   },
 
   data () {
@@ -59,6 +60,7 @@ export default {
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
       selectedHeroes: state => state.heroes.selectedHeroes,
+      openSkillDetails: state => state.heroes.openSkillDetails,
     }),
     campBonus () {
       return campBonuses[this.campLevel];
