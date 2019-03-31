@@ -162,6 +162,10 @@ export default {
     }
   },
 
+  components: {
+    HeroSkill,
+  },
+
 }
 </script>
 
