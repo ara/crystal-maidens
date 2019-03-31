@@ -45,6 +45,7 @@
     "dropRate": 250,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -58,21 +59,23 @@
       "CD": 7,
       "name": "Bash",
       "desc": "Jumps and deals a powerful strike on a single target.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 180,
-      "skillDMGInc": 305,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 305
         }
@@ -102,6 +105,7 @@
     "dropRate": 300,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -115,21 +119,23 @@
       "CD": 7,
       "name": "Fire Strike",
       "desc": "Casts a fireball dealing damage to a single target.",
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 210,
-      "skillDMGInc": 170,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 210,
           "damageInc": 170
         }
@@ -159,6 +165,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -172,6 +179,8 @@
       "CD": 10,
       "name": "Divine Force",
       "desc": "Casts a spell healing all allies on the map.",
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 0,
@@ -186,7 +195,7 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 350,
           "hpInc": 330
         }
@@ -216,6 +225,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -229,27 +239,29 @@
       "CD": 11,
       "name": "Call of the Wild",
       "desc": "Casts a medium natural explosion, damaging enemies and healing allies inside of it.",
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 250,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 250,
       "skillHEALInc": 400,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 250,
           "hpInc": 400
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 250,
           "damageInc": 350
         }
@@ -279,6 +291,7 @@
     "dropRate": 400,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -292,21 +305,23 @@
       "CD": 12.5,
       "name": "Cursed Void",
       "desc": "Casts a large void dealing damage to enemies inside.",
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 240,
-      "skillDMGInc": 550,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 240,
           "damageInc": 550
         }
@@ -336,6 +351,7 @@
     "dropRate": 500,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -349,6 +365,8 @@
       "CD": 10,
       "name": "Dark Aura",
       "desc": "Boosts her damage to show her true power.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 10,
@@ -363,7 +381,7 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "self",
+          "target": "yourself",
           "damagealter": 40,
           "damagealterInc": 120,
           "duration": 60
@@ -394,6 +412,7 @@
     "dropRate": 500,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -407,27 +426,29 @@
       "CD": 10,
       "name": "Glacial Shot",
       "desc": "Throws her biggest arrow that stuns and deals damage to the target.",
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 200
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 1
         }
@@ -457,6 +478,7 @@
     "dropRate": 250,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -470,27 +492,29 @@
       "CD": 10,
       "name": "Sayonara",
       "desc": "Shoots a powerful explosive, dealing massive damage to enemies, but damaging herself with the recoil",
+      "range": 5,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 500,
-      "skillDMGInc": 750,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 500,
           "damageInc": 750
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 500,
           "damageInc": 200
         }
@@ -520,6 +544,7 @@
     "dropRate": 400,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -533,21 +558,23 @@
       "CD": 10,
       "name": "Tempest",
       "desc": "Casts a tempest that deals damage over 8 seconds to enemies staying under it.",
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 10,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 40,
-      "skillDMGInc": 75,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 40,
           "damageInc": 75
         }
@@ -577,6 +604,7 @@
     "dropRate": 200,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -590,21 +618,23 @@
       "CD": 5,
       "name": "Bull's Eye",
       "desc": "Fires a fire arrow in the sky, falling down and dealing damage to enemies in a small AOE.",
+      "range": 7,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 200,
-      "skillDMGInc": 600,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 600
         }
@@ -634,6 +664,7 @@
     "dropRate": 500,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -647,6 +678,8 @@
       "CD": 13,
       "name": "All for One",
       "desc": "Casts a healing circle around herself. Allies that have been through it are healed 16 times over 8 seconds.",
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 20,
       "duration": 80,
@@ -661,7 +694,7 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 16,
           "hpInc": 31
         }
@@ -691,6 +724,7 @@
     "dropRate": 250,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -704,21 +738,23 @@
       "CD": 12.5,
       "name": "One for All",
       "desc": "Casts an epic dark area of effect dealing massive damage to enemies inside of it.",
+      "range": 6,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 300,
-      "skillDMGInc": 445,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 300,
           "damageInc": 445
         }
@@ -748,6 +784,7 @@
     "dropRate": 300,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -761,27 +798,29 @@
       "CD": 4,
       "name": "Soul Stealer",
       "desc": "Stabs the nearest enemy, dealing damage and reducing its damage for a duration.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 200
         },
         {
           "type": "DamageAlterEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damagealter": -150,
           "damagealterInc": -230,
           "duration": 50
@@ -812,6 +851,7 @@
     "dropRate": 250,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -825,21 +865,23 @@
       "CD": 12,
       "name": "Poison Arrows",
       "desc": "Shoots poisonous arrows in a circle that deals damage every second during 10 seconds.",
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 30,
-      "skillDMGInc": 55,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 10,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 30,
           "damageInc": 55,
           "overtimeduration": 100,
@@ -871,6 +913,7 @@
     "dropRate": 250,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -884,6 +927,8 @@
       "CD": 15,
       "name": "Reverse Chronology",
       "desc": "Calls the goddess of time to reduce the cooldown of all allies on the map.",
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 80,
@@ -898,7 +943,7 @@
       "effects": [
         {
           "type": "MinusCooldownEffect",
-          "target": "ally",
+          "target": "your allies",
           "percent": 1000,
           "percentInc": 200
         }
@@ -928,6 +973,7 @@
     "dropRate": 300,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -941,27 +987,29 @@
       "CD": 9,
       "name": "Fire Domination",
       "desc": "Spins around, dealing damage and stunning enemies close.",
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 50,
-      "skillDMGInc": 240,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 50,
           "damageInc": 240
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 10
         }
       ]
@@ -990,6 +1038,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1003,6 +1052,8 @@
       "CD": 10,
       "name": "Solid Rock",
       "desc": "Summons a small golem helping her tank damage.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -1017,7 +1068,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5009
           ],
@@ -1051,6 +1102,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -1064,6 +1116,8 @@
       "CD": 7,
       "name": "Beast call",
       "desc": "Calls a random spirit that heals an ally, heavily damages an enemy or stuns and damages enemies in a small AOE.",
+      "range": 5,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -1078,7 +1132,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5010,
             5011,
@@ -1114,6 +1168,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1127,21 +1182,23 @@
       "CD": 16,
       "name": "Void of Destruction",
       "desc": "Jumps high in the air, shooting arrows that damage enemies over time in a small area.",
+      "range": 8,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 30,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 40,
-      "skillDMGInc": 100,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 40,
           "damageInc": 100,
           "overtimeduration": 30,
@@ -1173,6 +1230,7 @@
     "dropRate": 350,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -1186,21 +1244,23 @@
       "CD": 7.5,
       "name": "Glorious Spin",
       "desc": "Spins, creating a little tornado that she throws at an enemy, damaging it and others around.",
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 90,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 90,
           "damageInc": 350
         }
@@ -1230,6 +1290,7 @@
     "dropRate": 100,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1243,6 +1304,8 @@
       "CD": 7,
       "name": "Rising of the Dead",
       "desc": "Summons skeletons, ready to fight your enemies.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -1257,7 +1320,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5004
           ],
@@ -1291,6 +1354,7 @@
     "dropRate": 400,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1304,6 +1368,8 @@
       "CD": 4,
       "name": "Builder",
       "desc": "Builds a little turret that will fight for you and die over time.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -1318,7 +1384,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5006
           ],
@@ -1352,6 +1418,7 @@
     "dropRate": 200,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1365,27 +1432,29 @@
       "CD": 16,
       "name": "Thunderstrike",
       "desc": "Casts an epic thunder that will damage and stun enemies.",
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 260,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 260,
           "damageInc": 300
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 8,
           "durationInc": 1
         }
@@ -1415,6 +1484,7 @@
     "dropRate": 400,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1428,6 +1498,8 @@
       "CD": 7,
       "name": "Fire Helper",
       "desc": "Boosts an ally's damage for a duration.",
+      "range": 4,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -1442,7 +1514,7 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "ally",
+          "target": "your allies",
           "damagealter": 50,
           "duration": 60,
           "damagealterInc": 200
@@ -1473,6 +1545,7 @@
     "dropRate": 200,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -1486,21 +1559,23 @@
       "CD": 10,
       "name": "Mystical Shot",
       "desc": "After a short charging period, fires a big bullet that causes an explosion in a large area.",
+      "range": 9,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2.5,
       "actDelay": 1,
-      "skillDMG": 400,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 400,
           "damageInc": 300
         }
@@ -1530,6 +1605,7 @@
     "dropRate": 300,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1543,27 +1619,29 @@
       "CD": 10,
       "name": "Bubble Trap",
       "desc": "Throws a bubble that will stun the enemies for a short duration.",
+      "range": 8,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 2,
-      "skillDMG": 100,
-      "skillDMGInc": 250,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 250
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 2
         }
@@ -1593,6 +1671,7 @@
     "dropRate": 100,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1606,21 +1685,23 @@
       "CD": 7,
       "name": "Godesses' Rain",
       "desc": "Fires an arrow to the sky dealing damage to random enemies in a large area as it falls.",
+      "range": 10,
+      "missChance": 5000,
       "radius": 8,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 250,
-      "skillDMGInc": 550,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 250,
           "damageInc": 550
         }
@@ -1650,6 +1731,7 @@
     "dropRate": 400,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -1663,27 +1745,29 @@
       "CD": 7,
       "name": "Tornado",
       "desc": "Spins around healing allies and damaging enemies hit.",
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 200,
       "skillHEALInc": 350,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 200,
           "hpInc": 350
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 350
         }
@@ -1713,6 +1797,7 @@
     "dropRate": 150,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -1726,21 +1811,23 @@
       "CD": 4,
       "name": "Cursed Kiss",
       "desc": "Curses an enemy, causing the target to take damage over time.",
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 8,
-      "skillDMGInc": 10,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 333,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 8,
           "damageInc": 10,
           "overtimeduration": 5000,
@@ -1772,6 +1859,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1785,21 +1873,23 @@
       "CD": 0.4,
       "name": "Ultimate Fire Bolt",
       "desc": "Throws a big fire bolt. This ability has a reduced cooldown.",
+      "range": 6,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 50,
-      "skillDMGInc": 70,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 50,
           "damageInc": 70
         }
@@ -1829,6 +1919,7 @@
     "dropRate": 400,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1842,27 +1933,29 @@
       "CD": 8,
       "name": "Trident's blow",
       "desc": "Throws a water shot with her trident, dealing damage if the target is an enemy, or healing it if it's an ally.",
+      "range": 6,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 125,
-      "skillDMGInc": 160,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 300,
       "skillHEALInc": 180,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 125,
           "damageInc": 160
         },
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 300,
           "hpInc": 180
         }
@@ -1892,6 +1985,7 @@
     "dropRate": 300,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -1905,27 +1999,29 @@
       "CD": 10,
       "name": "ONE PUNCH",
       "desc": "Punches an enemy, dealing damage and reducing its attack speed.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 200
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "enemy",
+          "target": "enemies",
           "percent": -5000,
           "duration": 40
         }
@@ -1955,6 +2051,7 @@
     "dropRate": 200,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -1968,27 +2065,29 @@
       "CD": 10,
       "name": "Wave Destroyer",
       "desc": "Calls the power of the sea, stunning everyone else on the map, while doing damage to every enemy.",
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 20,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 225,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 225
         },
         {
           "type": "StunEffect",
-          "target": "6",
+          "target": "everyone except yourself",
           "duration": 15
         }
       ]
@@ -2017,6 +2116,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2027,7 +2127,7 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 50,
           "hpInc": 2
         }
@@ -2038,6 +2138,8 @@
       "CD": 12,
       "name": "Super Chord",
       "desc": "Plays music that will boost the damage of allies and reduce the damage of enemies that heard the song.",
+      "range": 5,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
@@ -2052,21 +2154,21 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damagealter": -150,
           "damagealterInc": -28,
           "duration": 60
         },
         {
           "type": "DamageAlterEffect",
-          "target": "ally",
+          "target": "your allies",
           "damagealter": 150,
           "damagealterInc": 28,
           "duration": 60
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "ally",
+          "target": "your allies",
           "percent": 2000,
           "percentInc": 525,
           "duration": 60
@@ -2097,6 +2199,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2110,21 +2213,23 @@
       "CD": 7,
       "name": "Cocobomb Roll",
       "desc": "Rolls a coconut that explodes after 3 seconds, dealing damage and slowing enemies affected by its AOE",
+      "range": 9,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 150,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 400,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 400,
           "damageInc": 400
         }
@@ -2154,6 +2259,7 @@
     "dropRate": 200,
     "eventDropRate": 0,
     "attack": {
+      "hits": 2,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2167,21 +2273,23 @@
       "CD": 7,
       "name": "Flaming Shot",
       "desc": "Jumps in the air and shoots flaming balls in a straight line, dealing damage to enemies hit.",
+      "range": 100,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 6,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 350,
-      "skillDMGInc": 235,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 350,
           "damageInc": 235
         }
@@ -2211,6 +2319,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2224,6 +2333,8 @@
       "CD": 9,
       "name": "Black Crow",
       "desc": "Sends a raven that stuns and reduces the attack speed of its target for a duration.",
+      "range": 4,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -2238,13 +2349,13 @@
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 1,
           "durationInc": 1
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "enemy",
+          "target": "enemies",
           "percent": -4750,
           "percentInc": -20,
           "duration": 50
@@ -2275,6 +2386,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2288,21 +2400,23 @@
       "CD": 8,
       "name": "Water Pulse",
       "desc": "Shoots with her water shotgun in a large area in front of her.",
+      "range": 8,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 8,
       "walkDelay": 2,
       "actDelay": 0.4,
-      "skillDMG": 180,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 400
         }
@@ -2332,6 +2446,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2345,33 +2460,35 @@
       "CD": 10,
       "name": "Lucky Charm",
       "desc": "Casts a lucky AOE, boosting attack speed and reducing cooldown of allies, and damaging enemies in it.",
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "ally",
+          "target": "your allies",
           "percent": 1500,
           "percentInc": 80,
           "duration": 30
         },
         {
           "type": "MinusCooldownEffect",
-          "target": "ally",
+          "target": "your allies",
           "percent": 3000
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 400
         }
@@ -2401,6 +2518,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2414,6 +2532,8 @@
       "CD": 14,
       "name": "Infinite Rage",
       "desc": "Becomes enraged, throwing 5 tomahawks at the enemy.",
+      "range": 5,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -2428,7 +2548,7 @@
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "self",
+          "target": "yourself",
           "percent": 10000,
           "percentInc": 270,
           "duration": 40
@@ -2459,6 +2579,7 @@
     "dropRate": 350,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2472,21 +2593,23 @@
       "CD": 7,
       "name": "Blade Fury",
       "desc": "Uses her katana to slash a target 3 times.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 1,
-      "skillDMG": 60,
-      "skillDMGInc": 75,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 60,
           "damageInc": 75,
           "overtimeduration": 12,
@@ -2518,6 +2641,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2531,6 +2655,8 @@
       "CD": 7.5,
       "name": "Loa's Blessing",
       "desc": "Summons a little voodoo doll that will explode, dealing damage to enemies in a small area.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -2545,7 +2671,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5013
           ],
@@ -2579,6 +2705,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2592,21 +2719,23 @@
       "CD": 10,
       "name": "Yami",
       "desc": "Unleashes the darkness in her sword, and slashes in a straight line using its power.",
+      "range": 2,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 6,
       "walkDelay": 3,
       "actDelay": 0.4,
-      "skillDMG": 180,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 350
         }
@@ -2636,6 +2765,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2668,6 +2798,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2700,6 +2831,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2732,6 +2864,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2745,21 +2878,23 @@
       "CD": 10,
       "name": "Laser Beam",
       "desc": "Charges and releases a laser beam that hits every enemy in a straight line.",
+      "range": 45,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 45,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 450,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 450
         }
@@ -2789,6 +2924,7 @@
     "dropRate": 0,
     "eventDropRate": 600,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2802,27 +2938,29 @@
       "CD": 12,
       "name": "Ace in the Hole",
       "desc": "Throws a card in straight line stunning and dealing damage to every enemy.",
+      "range": 25,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 25,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 80,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 1
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 80,
           "damageInc": 350
         }
@@ -2852,6 +2990,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2865,27 +3004,29 @@
       "CD": 13,
       "name": "Fire Chaos",
       "desc": "Casts a large AoE healing allies and damaging enemies in it for 8 seconds",
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 20,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 15,
-      "skillDMGInc": 45,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 15,
       "skillHEALInc": 25,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 15,
           "damageInc": 45
         },
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 15,
           "hpInc": 25
         }
@@ -2915,6 +3056,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -2947,6 +3089,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1.4,
       "actDelay": 0,
       "castTime": 0.6,
@@ -2960,27 +3103,29 @@
       "CD": 16,
       "name": "Electric Frenzy",
       "desc": "Shoots water in an area and hits it with a powerful electric blow, damaging and stunning enemies.",
+      "range": 4,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 250,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 250,
           "damageInc": 350
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 1
         }
@@ -3010,6 +3155,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3023,28 +3169,30 @@
       "CD": 12,
       "name": "Boomerang Storm",
       "desc": "Throw her boomerang in a small area dealing damage to enemies and boost the attack speed from allies",
+      "range": 9,
+      "missChance": 0,
       "radius": 2,
       "ticks": 8,
       "duration": 60,
       "walkDelay": 1,
       "actDelay": 0,
-      "skillDMG": 60,
-      "skillDMGInc": 80,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "team",
+          "target": "your allies and yourself",
           "percent": 2000,
           "percentInc": 12,
           "duration": 60
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 60,
           "damageInc": 80
         }
@@ -3074,6 +3222,7 @@
     "dropRate": 0,
     "eventDropRate": 600,
     "attack": {
+      "hits": 1,
       "walkDelay": 2.1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3087,21 +3236,23 @@
       "CD": 6.5,
       "name": "Wave Crush",
       "desc": "Uses her sword to create waves and damaging enemies in a big AOE in front of her.",
+      "range": 1,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 180,
-      "skillDMGInc": 325,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 325
         }
@@ -3131,6 +3282,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3163,6 +3315,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3173,7 +3326,7 @@
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 90,
           "damageInc": 1
         }
@@ -3184,21 +3337,23 @@
       "CD": 8,
       "name": "Cursed Leech",
       "desc": "Shoots an arrow at an enemy, cursing him and healing back some health.",
+      "range": 5,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 36,
-      "skillDMGInc": 225,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 180,
       "skillHEALInc": 200,
-      "dmgTicks": 5,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 36,
           "damageInc": 225,
           "overtimeduration": 50,
@@ -3206,7 +3361,7 @@
         },
         {
           "type": "HealEffect",
-          "target": "self",
+          "target": "yourself",
           "hp": 180,
           "hpInc": 200
         }
@@ -3236,6 +3391,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3268,6 +3424,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3281,21 +3438,23 @@
       "CD": 13,
       "name": "Death From Above",
       "desc": "Fly into the air and unleash flames all over the map that deals damage every second during 6 seconds.",
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 160,
-      "skillDMGInc": 60,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 160,
           "damageInc": 60
         }
@@ -3325,6 +3484,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -3338,6 +3498,8 @@
       "CD": 7,
       "name": "Polymorphing",
       "desc": "Polymorph into another gacha character at the beginning of combat.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -3352,7 +3514,7 @@
       "effects": [
         {
           "type": "MorphEffect",
-          "target": "self"
+          "target": "yourself"
         }
       ]
     }
@@ -3380,6 +3542,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3393,27 +3556,29 @@
       "CD": 8,
       "name": "Xmas Tornado",
       "desc": "Casts a winter explosion, dealing damage and slowing enemies, and healing allies.",
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 200,
-      "skillDMGInc": 370,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 300,
       "skillHEALInc": 370,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 300,
           "hpInc": 370
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 370
         }
@@ -3443,6 +3608,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3456,6 +3622,8 @@
       "CD": 16,
       "name": "Bear a Grudge",
       "desc": "Uses her water power to summon a huge teddy bear.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -3470,7 +3638,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5019
           ],
@@ -3504,6 +3672,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3517,26 +3686,28 @@
       "CD": 8,
       "name": "Deadly Trap",
       "desc": "Uses her bond with nature to make roots emerge from the ground, stunning everybody and damaging enemies.",
+      "range": 6,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 200,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
-          "target": "6",
+          "target": "everyone except yourself",
           "duration": 20
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 300
         }
@@ -3566,6 +3737,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3579,27 +3751,29 @@
       "CD": 9,
       "name": "Ink Blaster",
       "desc": "Use a secret spell to make her octopus bigger, throwing ink in an AOE damaging and confusing enemies.",
+      "range": 6,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 45,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 475,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 475
         },
         {
           "type": "ConfuseEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 300
         }
       ]
@@ -3628,6 +3802,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -3641,27 +3816,29 @@
       "CD": 12,
       "name": "Maiden's Harvest",
       "desc": "Jumps in the air and unleashes a powerful scythe attack.",
+      "range": 9,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 3.5,
       "actDelay": 0,
-      "skillDMG": 400,
-      "skillDMGInc": 425,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 400,
           "damageInc": 425
         },
         {
           "type": "ConfuseEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 200
         }
       ]
@@ -3690,6 +3867,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -3703,6 +3881,8 @@
       "CD": 5,
       "name": "Breakfast Club",
       "desc": "Deals direct damage to an enemy and summon an angry student",
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 80,
@@ -3717,7 +3897,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5018
           ],
@@ -3751,6 +3931,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 3,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3764,6 +3945,8 @@
       "CD": 7,
       "name": "Saving Private Maiden",
       "desc": "Use her nature powered serum to heal an ally and also immunize her from auto attacks for 3 seconds",
+      "range": 2,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -3778,13 +3961,13 @@
       "effects": [
         {
           "type": "DefenseModifierEffect",
-          "target": "ally",
+          "target": "your allies",
           "defense": 10000,
           "duration": 30
         },
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 750,
           "hpInc": 1600
         }
@@ -3814,6 +3997,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3827,21 +4011,23 @@
       "CD": 10,
       "name": "Moon Crushing",
       "desc": "Calls the moon and uses the pressure to crush and slow enemies. The effect is repeated when the moon leaves.",
+      "range": 8,
+      "missChance": 0,
       "radius": 6,
       "ticks": 2,
       "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 50,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 50,
           "damageInc": 200
         }
@@ -3871,6 +4057,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3884,6 +4071,8 @@
       "CD": 13,
       "name": "We Stand United",
       "desc": "Boosts the damage and the defense of herself and all allies for a duration.",
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 40,
@@ -3898,14 +4087,14 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "damagealter": 25,
           "duration": 50,
           "damagealterInc": 45
         },
         {
           "type": "DefenseModifierEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "defense": 100,
           "defenseInc": 55,
           "duration": 30,
@@ -3937,6 +4126,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -3950,27 +4140,29 @@
       "CD": 14,
       "name": "Playball",
       "desc": "Calls the power of nature, stunning and damaging enemies in a large area",
+      "range": 9,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 600,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 600,
           "damageInc": 350
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 1
         }
@@ -4000,6 +4192,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1.5,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4013,21 +4206,23 @@
       "CD": 10,
       "name": "Hemorrhage",
       "desc": "Curse an enemy healing herself and dealing damage overtime",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 240,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 175,
       "skillHEALInc": 200,
-      "dmgTicks": 6,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 240,
           "overtimeduration": 30,
@@ -4035,13 +4230,13 @@
         },
         {
           "type": "HealEffect",
-          "target": "self",
+          "target": "yourself",
           "hp": 175,
           "hpInc": 200
         },
         {
           "type": "MinusCooldownEffect",
-          "target": "self",
+          "target": "yourself",
           "percent": 900,
           "percentInc": 200
         }
@@ -4071,6 +4266,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.4,
@@ -4084,27 +4280,29 @@
       "CD": 12,
       "name": "Skull Homerun",
       "desc": "Swings her bat to hit a skull aimed at the furthest target of her range.",
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "skillDMG": 180,
-      "skillDMGInc": 375,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 375
         },
         {
           "type": "ConfuseEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 200
         }
       ]
@@ -4133,6 +4331,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -4146,6 +4345,8 @@
       "CD": 12,
       "name": "Meet me in Valhalla",
       "desc": "Uses her goddess power to increase her attack speed and reflect a part of the damage received to the attacker",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -4160,13 +4361,14 @@
       "effects": [
         {
           "type": "ChangeSkillEffect",
-          "target": "self",
+          "target": "yourself",
           "percent": 3000,
+          "percentInc": 75,
           "duration": 50
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "self",
+          "target": "yourself",
           "percent": 15000,
           "percentInc": 500,
           "duration": 50
@@ -4197,6 +4399,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -4210,21 +4413,23 @@
       "CD": 6,
       "name": "Piercing Blade",
       "desc": "Charges her sword and pierces through her enemy.",
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 200,
-      "skillDMGInc": 315,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 315
         }
@@ -4254,6 +4459,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -4265,25 +4471,29 @@
     "skill": {
       "castTime": 0.6,
       "CD": 6,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 400
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "percent": 5000,
           "duration": 20
         }
@@ -4313,6 +4523,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4324,21 +4535,23 @@
     "skill": {
       "castTime": 0.4,
       "CD": 6,
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 210,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 210,
           "damageInc": 300
         }
@@ -4368,6 +4581,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4379,6 +4593,8 @@
     "skill": {
       "castTime": 0.2,
       "CD": 10,
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 0,
@@ -4393,7 +4609,7 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 350,
           "hpInc": 1650
         }
@@ -4423,6 +4639,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4434,27 +4651,29 @@
     "skill": {
       "castTime": 0.8,
       "CD": 11,
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 250,
       "skillHEALInc": 400,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 250,
           "hpInc": 400
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 350
         }
@@ -4484,6 +4703,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4495,21 +4715,23 @@
     "skill": {
       "castTime": 0.8,
       "CD": 12.5,
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 240,
-      "skillDMGInc": 550,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 240,
           "damageInc": 550
         }
@@ -4539,6 +4761,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4550,6 +4773,8 @@
     "skill": {
       "castTime": 0.2,
       "CD": 10,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -4564,7 +4789,7 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "self",
+          "target": "yourself",
           "damagealter": 40,
           "damagealterInc": 100,
           "duration": 40
@@ -4595,6 +4820,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4606,27 +4832,29 @@
     "skill": {
       "castTime": 0.3,
       "CD": 10,
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 200
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 1
         }
@@ -4656,6 +4884,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4667,27 +4896,29 @@
     "skill": {
       "castTime": 1,
       "CD": 10,
+      "range": 5,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 500,
-      "skillDMGInc": 650,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 500,
           "damageInc": 650
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 500,
           "damageInc": 650
         }
@@ -4717,6 +4948,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4728,21 +4960,23 @@
     "skill": {
       "castTime": 0.8,
       "CD": 10,
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 10,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 40,
-      "skillDMGInc": 50,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 40,
           "damageInc": 50
         }
@@ -4772,6 +5006,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4783,21 +5018,23 @@
     "skill": {
       "castTime": 0.8,
       "CD": 5,
+      "range": 7,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 200,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 400
         }
@@ -4827,6 +5064,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -4838,6 +5076,8 @@
     "skill": {
       "castTime": 0.2,
       "CD": 13,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 20,
       "duration": 80,
@@ -4852,7 +5092,7 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 16,
           "hpInc": 36
         }
@@ -4882,6 +5122,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -4893,21 +5134,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
+      "range": 6,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 300,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 300,
           "damageInc": 400
         }
@@ -4937,6 +5180,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4948,27 +5192,29 @@
     "skill": {
       "castTime": 0.2,
       "CD": 3,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 90,
-      "skillDMGInc": 60,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 90,
           "damageInc": 60
         },
         {
           "type": "DamageAlterEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damagealter": -150,
           "damagealterInc": -25,
           "duration": 30
@@ -4999,6 +5245,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5010,21 +5257,23 @@
     "skill": {
       "castTime": 0.8,
       "CD": 12,
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 30,
-      "skillDMGInc": 55,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 10,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 30,
           "damageInc": 55,
           "overtimeduration": 100,
@@ -5056,6 +5305,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5067,6 +5317,8 @@
     "skill": {
       "castTime": 0.2,
       "CD": 15,
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 0,
@@ -5081,7 +5333,7 @@
       "effects": [
         {
           "type": "MinusCooldownEffect",
-          "target": "ally",
+          "target": "your allies",
           "percent": 1000,
           "percentInc": 200
         }
@@ -5111,6 +5363,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -5122,27 +5375,29 @@
     "skill": {
       "castTime": 0.3,
       "CD": 9,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 50,
-      "skillDMGInc": 240,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 50,
           "damageInc": 240
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 3,
           "durationInc": 1
         }
@@ -5172,6 +5427,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5183,6 +5439,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 10,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -5197,7 +5455,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5009
           ],
@@ -5231,6 +5489,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5242,21 +5501,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 16,
+      "range": 8,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 30,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 40,
-      "skillDMGInc": 83,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 40,
           "damageInc": 83,
           "overtimeduration": 30,
@@ -5288,6 +5549,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -5299,21 +5561,23 @@
     "skill": {
       "castTime": 0.3,
       "CD": 7.5,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 90,
-      "skillDMGInc": 325,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 90,
           "damageInc": 325
         }
@@ -5343,6 +5607,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5354,6 +5619,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 7,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -5368,7 +5635,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5004
           ],
@@ -5402,6 +5669,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5413,6 +5681,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 4,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -5427,7 +5697,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5006
           ],
@@ -5461,6 +5731,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5472,27 +5743,29 @@
     "skill": {
       "castTime": 1,
       "CD": 12.5,
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 260,
-      "skillDMGInc": 450,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 1
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 260,
           "damageInc": 450
         }
@@ -5522,6 +5795,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5533,6 +5807,8 @@
     "skill": {
       "castTime": 0.2,
       "CD": 7,
+      "range": 4,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -5547,7 +5823,7 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "ally",
+          "target": "your allies",
           "damagealter": 50,
           "duration": 30,
           "damagealterInc": 60
@@ -5578,6 +5854,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -5589,21 +5866,23 @@
     "skill": {
       "castTime": 2.5,
       "CD": 10,
+      "range": 9,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2.5,
       "actDelay": 1,
-      "skillDMG": 400,
-      "skillDMGInc": 500,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 400,
           "damageInc": 500
         }
@@ -5633,6 +5912,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5644,27 +5924,29 @@
     "skill": {
       "castTime": 1,
       "CD": 10,
+      "range": 8,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 0,
       "actDelay": 2,
-      "skillDMG": 100,
-      "skillDMGInc": 250,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 250
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5,
           "durationInc": 2
         }
@@ -5694,6 +5976,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5705,21 +5988,23 @@
     "skill": {
       "castTime": 1,
       "CD": 7,
+      "range": 10,
+      "missChance": 5000,
       "radius": 8,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 250,
-      "skillDMGInc": 500,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 250,
           "damageInc": 500
         }
@@ -5749,6 +6034,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -5760,27 +6046,29 @@
     "skill": {
       "castTime": 0.3,
       "CD": 7,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 200,
       "skillHEALInc": 350,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 200,
           "hpInc": 350
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 200
         }
@@ -5810,6 +6098,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -5821,21 +6110,23 @@
     "skill": {
       "castTime": 0.8,
       "CD": 5,
+      "range": 7,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 5,
-      "skillDMGInc": 5,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 500,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 5,
           "damageInc": 5,
           "overtimeduration": 5000,
@@ -5867,6 +6158,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5880,21 +6172,23 @@
       "CD": 0.4,
       "name": "Ultimate Fire Bolt",
       "desc": "Throws a big fire bolt. This ability has a reduced cooldown.",
+      "range": 6,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 50,
-      "skillDMGInc": 70,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 50,
           "damageInc": 70
         }
@@ -5924,6 +6218,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -5935,27 +6230,29 @@
     "skill": {
       "castTime": 1,
       "CD": 8,
+      "range": 6,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 125,
-      "skillDMGInc": 320,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 300,
       "skillHEALInc": 800,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 125,
           "damageInc": 320
         },
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 300,
           "hpInc": 800
         }
@@ -5985,6 +6282,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -5996,27 +6294,29 @@
     "skill": {
       "castTime": 0.6,
       "CD": 10,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 500,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 500
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "enemy",
+          "target": "enemies",
           "percent": -5000,
           "duration": 20
         }
@@ -6046,6 +6346,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6057,21 +6358,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 7,
+      "range": 100,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 6,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 300,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 300,
           "damageInc": 300
         }
@@ -6101,6 +6404,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6114,33 +6418,35 @@
       "CD": 10,
       "name": "Lucky Charm",
       "desc": "Casts a lucky AOE, boosting attack speed and reducing cooldown of allies, and damaging enemies in it.",
+      "range": 7,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "ally",
+          "target": "your allies",
           "percent": 1500,
           "percentInc": 80,
           "duration": 30
         },
         {
           "type": "MinusCooldownEffect",
-          "target": "ally",
+          "target": "your allies",
           "percent": 3000
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 400
         }
@@ -6170,6 +6476,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6181,21 +6488,23 @@
     "skill": {
       "castTime": 0.1,
       "CD": 5,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 1,
-      "skillDMG": 60,
-      "skillDMGInc": 166,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 60,
           "damageInc": 166,
           "overtimeduration": 12,
@@ -6227,6 +6536,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6238,6 +6548,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 8.5,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -6252,7 +6564,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5013
           ],
@@ -6286,6 +6598,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6299,27 +6612,29 @@
       "CD": 8,
       "name": "Xmas Tornado",
       "desc": "Casts a winter explosion, dealing damage and slowing enemies, and healing allies.",
+      "range": 7,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 200,
-      "skillDMGInc": 370,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 300,
       "skillHEALInc": 370,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "HealEffect",
-          "target": "ally",
+          "target": "your allies",
           "hp": 300,
           "hpInc": 370
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 370
         }
@@ -6349,6 +6664,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6360,21 +6676,23 @@
     "skill": {
       "castTime": 0.9,
       "CD": 8,
+      "range": 7,
+      "missChance": 10000,
       "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 120,
-      "skillDMGInc": 500,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 120,
           "damageInc": 500
         }
@@ -6404,6 +6722,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6436,6 +6755,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -6447,27 +6767,29 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "range": 2,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 50,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 150,
           "hpInc": 100
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 50
         }
@@ -6497,6 +6819,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -6508,21 +6831,23 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 150,
-      "skillDMGInc": 50,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 150,
           "damageInc": 50
         }
@@ -6552,6 +6877,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -6563,27 +6889,29 @@
     "skill": {
       "castTime": 1,
       "CD": 20,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 1500,
-      "skillDMGInc": 800,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 1500,
       "skillHEALInc": 1000,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 1500,
           "damageInc": 800
         },
         {
           "type": "HealEffect",
-          "target": "self",
+          "target": "yourself",
           "hp": 1500,
           "hpInc": 1000
         }
@@ -6613,6 +6941,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -6624,21 +6953,23 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 1500,
-      "skillDMGInc": 150,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 1500,
           "damageInc": 150
         }
@@ -6668,6 +6999,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6679,21 +7011,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 500,
-      "skillDMGInc": 60,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 500,
           "damageInc": 60
         }
@@ -6723,6 +7057,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6734,21 +7069,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 500,
-      "skillDMGInc": 50,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 500,
           "damageInc": 50
         }
@@ -6778,6 +7115,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -6789,21 +7127,23 @@
     "skill": {
       "castTime": 2.2,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 1800,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 1800,
           "damageInc": 200
         }
@@ -6833,6 +7173,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.4,
@@ -6844,21 +7185,23 @@
     "skill": {
       "castTime": 3.2,
       "CD": 9,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 2500,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 2500,
           "damageInc": 400
         }
@@ -6888,6 +7231,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.6,
@@ -6899,21 +7243,23 @@
     "skill": {
       "castTime": 3,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 100,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 2000,
-      "skillDMGInc": 250,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 2000,
           "damageInc": 250
         }
@@ -6943,6 +7289,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -6954,21 +7301,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
+      "range": 6,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 300,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 300,
           "damageInc": 400
         }
@@ -6998,6 +7347,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.4,
@@ -7009,21 +7359,23 @@
     "skill": {
       "castTime": 3.2,
       "CD": 9,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 2500,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 2500,
           "damageInc": 400
         }
@@ -7053,6 +7405,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.4,
@@ -7064,27 +7417,29 @@
     "skill": {
       "castTime": 1,
       "CD": 12,
+      "range": 2,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 2000,
-      "skillDMGInc": 250,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 2000,
           "damageInc": 250
         },
         {
           "type": "DamageAlterEffect",
-          "target": "self",
+          "target": "yourself",
           "damagealter": 400,
           "damagealterInc": 12,
           "duration": 100
@@ -7115,6 +7470,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.6,
@@ -7126,21 +7482,23 @@
     "skill": {
       "castTime": 3,
       "CD": 12,
+      "range": 2,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 5000,
-      "skillDMGInc": 800,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 5000,
           "damageInc": 800
         }
@@ -7170,6 +7528,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.6,
@@ -7181,21 +7540,23 @@
     "skill": {
       "castTime": 2,
       "CD": 12,
+      "range": 6,
+      "missChance": 0,
       "radius": 6,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 2000,
-      "skillDMGInc": 250,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 2000,
           "damageInc": 250
         }
@@ -7225,6 +7586,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -7236,21 +7598,23 @@
     "skill": {
       "castTime": 1,
       "CD": 5,
+      "range": 2,
+      "missChance": 0,
       "radius": 4,
       "ticks": 2,
       "duration": 20,
       "walkDelay": 2,
       "actDelay": 5,
-      "skillDMG": 3500,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 3500,
           "damageInc": 300
         }
@@ -7280,6 +7644,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -7291,33 +7656,35 @@
     "skill": {
       "castTime": 0.5,
       "CD": 7.5,
+      "range": 3,
+      "missChance": 0,
       "radius": 4,
       "ticks": 1,
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 5,
-      "skillDMG": 3500,
-      "skillDMGInc": 300,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 3500,
           "damageInc": 300
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 20,
           "durationInc": 1
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "hp": 2000,
           "hpInc": 2500
         }
@@ -7347,6 +7714,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -7358,6 +7726,8 @@
     "skill": {
       "castTime": 0.5,
       "CD": 7,
+      "range": 10,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -7372,7 +7742,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5015
           ],
@@ -7406,6 +7776,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 1.5,
@@ -7417,21 +7788,23 @@
     "skill": {
       "castTime": 2,
       "CD": 10,
+      "range": 255,
+      "missChance": 0,
       "radius": 255,
       "ticks": 1,
       "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 1500,
-      "skillDMGInc": 20,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 1500,
           "damageInc": 20
         }
@@ -7461,6 +7834,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -7472,21 +7846,23 @@
     "skill": {
       "castTime": 3,
       "CD": 5,
+      "range": 255,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 255,
       "walkDelay": 3,
       "actDelay": 0,
-      "skillDMG": 4000,
-      "skillDMGInc": 50,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 4000,
           "damageInc": 50
         }
@@ -7516,6 +7892,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -7527,6 +7904,8 @@
     "skill": {
       "castTime": 3,
       "CD": 10,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -7541,7 +7920,7 @@
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 500
         }
       ]
@@ -7572,21 +7951,23 @@
     "skill": {
       "castTime": 1,
       "CD": 8,
+      "range": 18,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 45,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 50,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 6,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 50,
           "overtimeduration": 30,
@@ -7618,6 +7999,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -7629,27 +8011,29 @@
     "skill": {
       "castTime": 1.5,
       "CD": 10,
+      "range": 12,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 1000,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 1000,
           "damageInc": 200
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 300
         }
       ]
@@ -7678,6 +8062,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -7689,21 +8074,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
+      "range": 6,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 300,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 300,
           "damageInc": 400
         }
@@ -7733,6 +8120,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -7744,21 +8132,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12.5,
+      "range": 6,
+      "missChance": 0,
       "radius": 5,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 300,
-      "skillDMGInc": 400,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 300,
           "damageInc": 400
         }
@@ -7790,6 +8180,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -7804,7 +8196,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1001
           ],
@@ -7840,6 +8232,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -7854,7 +8248,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1002
           ],
@@ -7890,6 +8284,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -7904,7 +8300,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1003
           ],
@@ -7940,6 +8336,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -7954,7 +8352,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1004
           ],
@@ -7990,6 +8388,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8004,7 +8404,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1005
           ],
@@ -8040,6 +8440,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8054,7 +8456,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1006
           ],
@@ -8090,6 +8492,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8104,7 +8508,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1007
           ],
@@ -8140,6 +8544,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8154,7 +8560,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1008
           ],
@@ -8190,6 +8596,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8204,7 +8612,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1009
           ],
@@ -8240,6 +8648,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8254,7 +8664,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1010
           ],
@@ -8290,6 +8700,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8304,7 +8716,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1011
           ],
@@ -8340,6 +8752,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8354,7 +8768,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1012
           ],
@@ -8390,6 +8804,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8404,7 +8820,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1013
           ],
@@ -8440,6 +8856,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8454,7 +8872,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1014
           ],
@@ -8490,6 +8908,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8504,7 +8924,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1015
           ],
@@ -8540,6 +8960,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8554,7 +8976,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1016
           ],
@@ -8590,6 +9012,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8604,7 +9028,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1017
           ],
@@ -8640,6 +9064,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8654,7 +9080,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1018
           ],
@@ -8690,6 +9116,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8704,7 +9132,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1019
           ],
@@ -8740,6 +9168,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8754,7 +9184,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1020
           ],
@@ -8790,6 +9220,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8804,7 +9236,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1021
           ],
@@ -8840,6 +9272,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8854,7 +9288,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1022
           ],
@@ -8890,6 +9324,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8904,7 +9340,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1023
           ],
@@ -8940,6 +9376,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -8954,7 +9392,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1024
           ],
@@ -8990,6 +9428,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9004,7 +9444,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1025
           ],
@@ -9040,6 +9480,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9054,7 +9496,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1026
           ],
@@ -9090,6 +9532,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9104,7 +9548,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1027
           ],
@@ -9140,6 +9584,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9154,7 +9600,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1028
           ],
@@ -9190,6 +9636,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9204,7 +9652,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1029
           ],
@@ -9240,6 +9688,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9254,7 +9704,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1030
           ],
@@ -9290,6 +9740,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9304,7 +9756,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1031
           ],
@@ -9340,6 +9792,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9354,7 +9808,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1032
           ],
@@ -9390,6 +9844,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9404,7 +9860,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1033
           ],
@@ -9440,6 +9896,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9454,7 +9912,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1034
           ],
@@ -9490,6 +9948,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9504,7 +9964,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1035
           ],
@@ -9540,6 +10000,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9554,7 +10016,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1036
           ],
@@ -9590,6 +10052,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9604,7 +10068,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1037
           ],
@@ -9640,6 +10104,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9654,7 +10120,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1038
           ],
@@ -9690,6 +10156,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9704,7 +10172,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1039
           ],
@@ -9740,6 +10208,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 60,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -9754,7 +10224,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1040
           ],
@@ -9857,6 +10327,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -9889,6 +10360,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -9921,6 +10393,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -9932,6 +10405,8 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -9946,7 +10421,7 @@
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 50,
           "damageInc": 15
         }
@@ -9978,6 +10453,8 @@
     "skill": {
       "castTime": 0.5,
       "CD": 5,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -9992,7 +10469,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5004,
             5005
@@ -10026,6 +10503,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10037,21 +10515,23 @@
     "skill": {
       "castTime": 0.3,
       "CD": 1,
+      "range": 6,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "skillDMG": 10000,
-      "skillDMGInc": 10000,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 10000,
           "damageInc": 10000
         }
@@ -10081,6 +10561,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -10092,21 +10573,23 @@
     "skill": {
       "castTime": 1.5,
       "CD": 12,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 500,
-      "skillDMGInc": 60,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 500,
           "damageInc": 60
         }
@@ -10136,6 +10619,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10147,27 +10631,29 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "skillDMG": 200,
-      "skillDMGInc": 5000,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 5000
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         }
       ]
@@ -10196,6 +10682,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10207,31 +10694,33 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "skillDMG": 100,
-      "skillDMGInc": 100,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 30
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 100
         }
@@ -10263,6 +10752,8 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
@@ -10277,13 +10768,13 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 200,
           "hpInc": 2000
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         }
       ]
@@ -10314,27 +10805,29 @@
     "skill": {
       "castTime": 1,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "skillDMG": 180,
-      "skillDMGInc": 1000,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 1000
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 50000000
         }
       ]
@@ -10363,6 +10856,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -10376,21 +10870,23 @@
       "CD": 10,
       "name": "Moon Crushing",
       "desc": "Calls the moon and uses the pressure to crush and slow enemies. The effect is repeated when the moon leaves.",
+      "range": 8,
+      "missChance": 0,
       "radius": 6,
       "ticks": 2,
       "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 50,
-      "skillDMGInc": 200,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 50,
           "damageInc": 200
         }
@@ -10420,6 +10916,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10452,6 +10949,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10484,6 +10982,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10516,6 +11015,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10548,6 +11048,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -10559,6 +11060,8 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -10573,7 +11076,7 @@
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 50,
           "damageInc": 100
         }
@@ -10605,6 +11108,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10619,7 +11124,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1001,
             1011,
@@ -10657,6 +11162,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10671,7 +11178,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1007,
             1010,
@@ -10709,6 +11216,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10723,7 +11232,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1003,
             1024,
@@ -10761,6 +11270,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10775,7 +11286,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1006,
             1013,
@@ -10813,6 +11324,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10827,7 +11340,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             5004
           ],
@@ -10863,6 +11376,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10877,7 +11392,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1001,
             1011,
@@ -10915,6 +11430,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10929,7 +11446,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1007,
             1010,
@@ -10967,6 +11484,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -10981,7 +11500,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1003,
             1024,
@@ -11019,6 +11538,8 @@
     "skill": {
       "castTime": 1.2,
       "CD": 100,
+      "range": 1,
+      "missChance": 0,
       "radius": 1,
       "ticks": 1,
       "duration": 0,
@@ -11033,7 +11554,7 @@
       "effects": [
         {
           "type": "SummonEffect",
-          "target": "self",
+          "target": "yourself",
           "heroids": [
             1006,
             1013,
@@ -11069,6 +11590,7 @@
     "dropRate": 100,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1.5,
       "actDelay": 0,
       "castTime": 0.7,
@@ -11101,6 +11623,7 @@
     "dropRate": 100,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1.5,
       "actDelay": 0,
       "castTime": 0.7,
@@ -11133,6 +11656,7 @@
     "dropRate": 100,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.5,
@@ -11165,6 +11689,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 2,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11197,6 +11722,7 @@
     "dropRate": 100,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11229,6 +11755,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 2,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11261,6 +11788,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11271,7 +11799,7 @@
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 100
         }
       ]
@@ -11300,6 +11828,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 2,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11332,6 +11861,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11342,7 +11872,7 @@
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "enemy",
+          "target": "enemies",
           "percent": -500,
           "duration": 20
         }
@@ -11372,6 +11902,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 2,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11404,6 +11935,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -11415,21 +11947,23 @@
     "skill": {
       "castTime": 0.6,
       "CD": 7,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 20,
-      "skillDMGInc": 30,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 20,
           "damageInc": 30
         }
@@ -11459,6 +11993,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -11470,27 +12005,29 @@
     "skill": {
       "castTime": 0.3,
       "CD": 9,
+      "range": 1,
+      "missChance": 0,
       "radius": 3,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 30,
-      "skillDMGInc": 240,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 30,
           "damageInc": 240
         },
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 5
         }
       ]
@@ -11519,6 +12056,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11530,6 +12068,8 @@
     "skill": {
       "castTime": 0.2,
       "CD": 10,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 10,
@@ -11544,7 +12084,7 @@
       "effects": [
         {
           "type": "DamageAlterEffect",
-          "target": "self",
+          "target": "yourself",
           "damagealter": 20,
           "damagealterInc": 100,
           "duration": 40
@@ -11575,6 +12115,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -11586,21 +12127,23 @@
     "skill": {
       "castTime": 0.3,
       "CD": 7.5,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 35,
-      "skillDMGInc": 350,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 35,
           "damageInc": 350
         }
@@ -11630,6 +12173,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11708,6 +12252,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -11719,21 +12264,23 @@
     "skill": {
       "castTime": 0.6,
       "CD": 7,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "skillDMG": 180,
-      "skillDMGInc": 305,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 180,
           "damageInc": 305
         }
@@ -11763,6 +12310,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.6,
@@ -11774,21 +12322,23 @@
     "skill": {
       "castTime": 0.3,
       "CD": 1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 3,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 3
         }
@@ -11818,6 +12368,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -11850,6 +12401,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -11882,6 +12434,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11893,6 +12446,8 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -11907,7 +12462,7 @@
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 50,
           "damageInc": 15
         }
@@ -11937,6 +12492,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -11948,21 +12504,23 @@
     "skill": {
       "castTime": 0.2,
       "CD": 1,
+      "range": 2,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "skillDMG": 100,
-      "skillDMGInc": 25,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 25
         }
@@ -11992,6 +12550,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -12003,27 +12562,29 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "skillDMG": 200,
-      "skillDMGInc": 1100,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 200,
           "damageInc": 1100
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         }
       ]
@@ -12052,6 +12613,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -12063,31 +12625,33 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "skillDMG": 100,
-      "skillDMGInc": 100,
+      "skillDMG": 0,
+      "skillDMGInc": 0,
       "skillHEAL": 0,
       "skillHEALInc": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "StunEffect",
-          "target": "enemy",
+          "target": "enemies",
           "duration": 30
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         },
         {
           "type": "DamageEffect",
-          "target": "enemy",
+          "target": "enemies",
           "damage": 100,
           "damageInc": 100
         }
@@ -12119,6 +12683,8 @@
     "skill": {
       "castTime": 0.3,
       "CD": 0.1,
+      "range": 1,
+      "missChance": 0,
       "radius": 2,
       "ticks": 1,
       "duration": 0,
@@ -12133,13 +12699,13 @@
       "effects": [
         {
           "type": "HealEffect",
-          "target": "team",
+          "target": "your allies and yourself",
           "hp": 200,
           "hpInc": 2000
         },
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         }
       ]
@@ -12168,6 +12734,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 2,
       "actDelay": 0.5,
       "castTime": 1,
@@ -12178,7 +12745,7 @@
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 1000000
         }
       ]
@@ -12207,6 +12774,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -12239,6 +12807,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
+      "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.3,
@@ -12250,6 +12819,8 @@
     "skill": {
       "castTime": 0.1,
       "CD": 1,
+      "range": 1,
+      "missChance": 0,
       "radius": 0,
       "ticks": 1,
       "duration": 0,
@@ -12264,7 +12835,7 @@
       "effects": [
         {
           "type": "DamageEffect",
-          "target": "self",
+          "target": "yourself",
           "damage": 50,
           "damageInc": 100
         }
