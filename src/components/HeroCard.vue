@@ -3,12 +3,13 @@
     <div class="flex-row">
       <div class="flex-col">
         <div class="flex-row align-center">
-          <h4>{{ hero.name }}</h4>
+          <span class="hero-name">{{ hero.name }}</span>
           <img :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
           <img :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
+          <span style="white-space:pre"> (Level {{ heroLevel }})</span>
         </div>
         <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
-        <div class="flex-row wrap align-center flex-top">
+        <div class="flex-row flex-top">
           <ul class="border-right">
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
             <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
