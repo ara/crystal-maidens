@@ -19,6 +19,8 @@ elements[16] = 'Light';
 
 
 module.exports = {
+  maxSkillLevel: 29,
+  maxStunDuration: 2.5,
   heroImages,
   elements,
   campBonuses: [1, 1.05, 1.1, 1.2, 1.3, 1.45, 1.6, 1.8, 2, 2.25, 3, 3.25, 3.5, 3.75, 4, 4.5],
@@ -49,14 +51,34 @@ module.exports = {
 
   targetTypes: {
     0: '',
-    1: 'self',
-    2: 'ally',//"Allies (targetted)",
-    3: 'team',//"Allies (untargetted)",
-    4: 'enemy',//"Enemies",
-    //6:"everyone",
+    1: 'yourself',
+    2: 'your allies',
+    3: 'your allies and yourself',
+    4: 'enemies',
     5: 'self_and_enemies',
+    6: 'everyone except yourself',
     7: 'everyone',
-  }
+  },
+
+  effects: new Map([
+    ['DamageEffect', 'Deals <color=red>#VALUE</color> damage to #TARGET.'],
+    ['DamageAlterEffect', '#ALTER damage dealt by #TARGET by <color=teal>#VALUE</color> for <color=orange>#DURATION</color> seconds.'],
+    ['HealEffect', 'Heals #TARGET for <color=green>#VALUE</color> health.'],
+    ['HealthBoostEffect', 'Boosts #TARGET health by <color=teal>#VALUE</color> for <color=orange>#DURATION</color> seconds.'],
+    ['AlterAttackSpeed', 'Alter the Attack Speed of #TARGET by #VALUE % for <color=orange>#DURATION</color> seconds.'],
+    ['SlowMovementEffect', 'Reduces the speed of #TARGET by #VALUE % for <color=orange>#DURATION</color> sec.'],
+    ['StealEffect', 'Steals <color=yellow>#VALUE</color> coins from #TARGET.'], // 6
+    ['StunEffect', 'Stuns #TARGET for <color=orange>#DURATION</color> seconds.'],
+    ['SummonEffect', 'The summon will be level #LEVEL. A maximum of #VALUE summon can be called at the same time.'],
+    ['MinusCooldownEffect', 'Reduces the cooldown of #TARGET\'s skill by #VALUE %.'],
+    ['Unknown2', ''],
+    ['DefenseModifierEffect', 'Alter defense by #VALUE to #TARGET for <color=orange>#DURATION</color> seconds.'],
+    ['ConfuseEffect', 'Confuse #TARGET during <color=orange>#DURATION</color> seconds.'],
+    ['ChangeSkillEffect', 'Change skills among the following options.'],
+    ['MorphEffect', 'Common: <color=orange>#PERCENT1%</color>, Rare: <color=orange>#PERCENT2%</color>, Epic: <color=orange>#PERCENT3%</color>, Legendary: <color=orange>#PERCENT4%</color>'],
+    ['ReflectEffect', 'Gives a buff that reflect #VALUE% of the damage received to the attacker.'],
+    ['ticks', 'Repeats #TICKS times every #TICKS_INTERVALs:'],
+  ]),
 
 
 }
