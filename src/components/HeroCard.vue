@@ -166,8 +166,8 @@ export default {
 
 <style lang="scss" scoped>
 .class-icon {
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   margin-right: .2em;
 }
 
@@ -192,16 +192,19 @@ li {
   display: table-cell;
   font-size: .9em;
   text-align: right;
-  margin-left: 2em;
-  min-width: 5em;
+  // margin-left: 2em;
+  min-width: 6.2em;
 }
 
 img, h4, span {
   display: table-cell;
 }
 
-h4 {
-  margin: .7em .5em;
+.hero-name {
+  margin: .5em;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-shadow: 0 0 4px #aaa;
 }
 
 .align-center {
@@ -214,7 +217,8 @@ h4 {
   background: #eee;
   border-radius: .4em;
   padding: 0 .4em .4em .4em;
-  color: #444;
+  color: #555;
+  // max-width: 24em;
 }
 
 .flex-top {
@@ -223,7 +227,7 @@ h4 {
 
 .border-right {
   border-right: 1px solid #bbb;
-  margin-right: .5em;
+  // margin-right: .5em;
   padding-right: .5em;
 }
 
@@ -231,9 +235,7 @@ h4 {
   display: flex;
   flex-direction: row;
   padding: 0;
-}
-.wrap {
-  flex-wrap: wrap;
+  text-shadow: 0 0 1px #c8c8c8;
 }
 .flex-col {
   display: flex;
