@@ -46,6 +46,23 @@ import { mapState } from 'vuex';
 import { effectTypes, targetTypes as targets, effects,
   maxStunDuration, maxSkillLevel } from '../api/const.js';
 
+const formatValue = (value, color) =>
+  `<span style="color:${color};font-weight:700;text-shadow:.5px .5px .2px #000;">${value}</span>`;
+
+const TEXT_COLOR_MULTI_HITS = '#777';
+const TEXT_COLOR_DURATION = 'orange';
+
+const setOverTimeEffect = (str, ticks, duration) => {
+  if( ticks > 1 ) {
+    str = str.replace('#VALUE', formatValue(ticks+' x', TEXT_COLOR_MULTI_HITS)+' #VALUE');
+    if( duration > 0 ) {
+      str = str.slice(0, str.length-1) +
+        ` over ${formatValue(duration/10, TEXT_COLOR_DURATION)} seconds.`;
+    }
+  }
+  return str;
+}
+
 export default {
   props: {
     hero: Object,
@@ -74,21 +91,24 @@ export default {
     toggleDetails () {
       this.showDetails = !this.showDetails;
     },
-    formatEffect (effect) {
-      let str = effects.get(effect.type);
-      // text-shadow: 1px 1px 1px #000
-      // text-shadow: .5px .5px .2px #000c
-      // str = str.replace(/<color=([^>]+)>([^<]+)<\/color>/g, '<span style="color:$1;font-weight:600;">$2</span>');
-      str = str.replace(/<color=([^>]+)>([^<]+)<\/color>/g, '<span style="color:$1;font-weight:700;text-shadow: .5px .5px .2px #000;">$2</span>');
-      // str = str.replace(/orange/g, '#e70');
-      str = str.replace('#TARGET', effect.target);
-      let val = 0;
+    formatEffect (hero, effect) {
       const mul = (this.skillLevel-1) ** this.hero.skillCoef;
+      let val = 0;
+      let str = effects.get(effect.type);
+      
+      str = str.replace(/<color=([^>]+)>([^<]+)<\/color>/g,
+        '<span style="color:$1;font-weight:700;text-shadow: .5px .5px .2px #000;">$2</span>');
+      str = str.replace('#TARGET', effect.target);
+      
       if( effect.damage ) {
         val = effect.damage + (effect.damageInc || 0) * mul;
+        str = setOverTimeEffect( str, hero.dmgTicks,
+          hero.skill.dmgDuration || hero.skill.duration || 0 );
       }
       if( effect.hp ) {
         val = effect.hp + (effect.hpInc || 0) * mul;
+        str = setOverTimeEffect( str, hero.healTicks,
+          hero.skill.healDuration || hero.skill.duration || 0 );
       }
       if( effect.damagealter ) {
         val = Math.abs( effect.damagealter + (effect.damagealterInc || 0) * mul );
