@@ -71,7 +71,7 @@ const txSkillDMG = (m,v) => {
 
 const skillHeal = (m) => {
   const skillLevel = (state.skillLevel || 29) - 1;
-  return m.healTicks * (m.skill.skillHEAL + m.skill.skillHEALInc * skillLevel ** m.skillCoef);
+  return m.healTicks * (m.skillHEAL + m.skillHEALInc * skillLevel ** m.skillCoef);
 };
 
 const txSkillHEAL = (m,v) => {
@@ -82,12 +82,12 @@ const txSkillHEAL = (m,v) => {
 
 const skillDPS = (m) => {
   const [skillLevel, cd] = skillArgs(m);
-  return (m.skill.skillDMG + m.skill.skillDMGInc * skillLevel ** m.skillCoef) * m.dmgTicks / cd;
+  return (m.skillDMG + m.skillDMGInc * skillLevel ** m.skillCoef) * m.dmgTicks / cd;
 };
 
 const skillHPS = (m) => {
   const [skillLevel, cd] = skillArgs(m);
-  return (m.skill.skillHEAL + m.skill.skillHEALInc * skillLevel ** m.skillCoef) * m.healTicks / cd;
+  return (m.skillHEAL + m.skillHEALInc * skillLevel ** m.skillCoef) * m.healTicks / cd;
 };
 const _num = (m,v) => v === 0 ? '' : Math.round( v ).toLocaleString();
 const _txt = (m,v) => v === '0' ? '' : v;
@@ -125,7 +125,26 @@ heroCols.forEach( (c,i) => {
 });
 
 
-for( const hero of heroes ) {
+const setSkillDMGandHEAL = (hero) => {
+  hero.skillDMG = hero.skillDMGInc = 0;
+  hero.skillHEAL = hero.skillHEALInc = 0;
+  for( const ef of hero.skill.effects ) {
+    switch( ef.type ) {
+      case 'DamageEffect':
+        if( ef.target === 'enemies' ) {
+          hero.skillDMG = ef.damage;
+          hero.skillDMGInc = ef.damageInc;
+        }
+        break;
+      case 'HealEffect':
+        hero.skillHEAL = ef.hp;
+        hero.skillHEALInc = ef.hpInc;
+        break;
+    }
+  }
+}
+
+for( let hero of heroes ) {
   hero.sElement = elements[hero.element] || '';
   hero.sRarity = rarities[hero.rarity] || '';
   hero.sClass = classes[hero.class] || '';
@@ -136,6 +155,8 @@ for( const hero of heroes ) {
     hero.skillRadius = hero.skill.radius;
     hero.skillCastTime = hero.skill.castTime;
     hero.skillCD = hero.skill.CD;
+    setSkillDMGandHEAL(hero);
+  }
   }
 
   if( hero.id >= 1 && hero.id <= 100 && hero.skill && hero.skill.effects ) { // maiden
