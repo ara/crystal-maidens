@@ -1,11 +1,17 @@
 <template>
-  <div class="wrapper" @click.exact="toggleDetails"
-    @mousewheel.exact="changeSkillLevel($event)"
-    @mousewheel.shift="changeSkillLevel($event,true)"
-    @mousewheel.ctrl="changeSkillLevel($event,true)">
-    <div>
+  <div class="wrapper"
+    @click="toggleDetails"
+    @mousedown.left="mousedown=true"
+    @mouseup.left="mousedown=false;clearTimer()"
+    @mouseout="mousedown=false;clearTimer()"
+  >
+    <div class="headline">
       <span class="skill-name">{{ hero.skill.name }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
+    </div>
+    <div class="skill-buttons" @click="$event.stopPropagation()">
+      <button @mousedown.left="updateSkillLevel(-1)">-</button>
+      <button @mousedown.left="updateSkillLevel(1)">+</button>
     </div>
     <div v-if="showDetails" class="card">
       <div class="flex-row border-top border-bottom desc">
@@ -50,6 +56,7 @@ export default {
     return {
       showDetails: this.showInfo,
       skill: this.hero.skill,
+      mousedown: false,
     };
   },
 
@@ -122,13 +129,18 @@ export default {
       }
       return str;
     },
-    changeSkillLevel (event, unlimited) {
-      if( this.showDetails ) event.preventDefault();
-      else return;
-      const upperLimit = unlimited ? 100 : maxSkillLevel;
-      let newSkillLevel = this.skillLevel + (event.wheelDelta > 0 ? -1 : 1);
-      newSkillLevel = Math.min( upperLimit, Math.max( 1, newSkillLevel ) );
+    updateSkillLevel (by, unrestricted, timer=420) {
+      const upperLimit = unrestricted ? 100 : maxSkillLevel;
+      const newSkillLevel = Math.min( upperLimit,
+        Math.max(1, this.skillLevel+by) );
       this.$store.commit('updateSkillLevel', newSkillLevel );
+      const accelTimer = Math.max(20, .6 * timer);
+      this.timerID = setTimeout( (val, unlimited, lt) => {
+        if( this.mousedown ) this.updateSkillLevel( val, unlimited, lt );
+      }, timer, by, unrestricted, accelTimer );
+    },
+    clearTimer () {
+      clearTimeout(this.timerID);
     },
   },
 
@@ -202,18 +214,48 @@ li {
   font-size: .95em;
   margin-left: .4em;
 }
-.flex-top {
-  align-items: flex-start;
-}
 .wrapper {
+  position: relative;
   cursor: pointer;
   border-radius: .3em;
-  padding: .2em;
+  padding: 0.2em 0.4em 0 0.4em;
   margin-top: .2em;
   background: #ddd;
-  // width: 21em;
+  border: 1px solid #aaa;
+  width: 20em;
+  &:hover button {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
 }
-div {
-  display:block;
+.skill-buttons {
+  position: absolute;
+  right: .25em;
+  top: .2em;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-radius: .2em;
+  margin: 0 .15em;
+  width: 18px;
+  height: 18px;
+  font-weight: 500;
+  font-size: 1em;
+  background: #ccc;
+  padding: 0;
+  transition: color .5s ease;
+  opacity: 0;
+  color: #555;
+}
+button:hover {
+  background-color: #bbb !important;
+}
+button:focus {
+  outline: 0;
+}
+.headline {
+  padding-bottom: .2em;
 }
 </style>
