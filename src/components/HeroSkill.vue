@@ -125,7 +125,7 @@ export default {
         str = str.replace('#DURATION', dur );
       }
       if( effect.percent ) {
-        val = Math.abs(effect.percent + (effect.percentInc || 0) * (this.skillLevel-1)) / 100;
+        val = Math.abs(effect.percent + (effect.percentInc || 0) * this.skillLevel) / 100;
       }
       if( effect.heroids ) {
         val = effect.maxconcurrent;
