@@ -45,7 +45,7 @@ module.exports = {
     10: null,
     11:'DefenseModifierEffect',
     12:'ConfuseEffect',
-    13:'ChangeSkillEffect',
+    13:'ReflectEffect',
     14:'MorphEffect',
   },
 
