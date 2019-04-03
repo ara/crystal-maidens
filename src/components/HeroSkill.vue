@@ -31,7 +31,7 @@
       <div class="flex-row border-top">
         <ul>
           <li v-for="(effect, i) in skill.effects" :key="i">
-            <div v-html="formatEffect(effect)" class="effect"></div>
+            <div v-html="formatEffect(hero, effect)" class="effect"></div>
           </li>
         </ul>
       </div>
