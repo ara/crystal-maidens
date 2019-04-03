@@ -12,7 +12,7 @@ try {
   heroImages.set('Water', require('../assets/elements/Water.png'));
   heroImages.set('Light', require('../assets/elements/Light.png'));
   heroImages.set('Dark', require('../assets/elements/Dark.png'));
-} catch(err) { console.log(err); }
+} catch(err) { ; }
 
 const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
 elements[16] = 'Light';
