@@ -144,8 +144,9 @@ export default {
           .replace('#PERCENT3', epic)
           .replace('#PERCENT4', leg);
       }
-      if( val !== 0 ) {
-        str = str.replace('#VALUE', Math.round(val).toLocaleString());
+      if( val ) {
+        val = typeof val === 'number' ? Math.round(val).toLocaleString() : val;
+        str = str.replace('#VALUE', val);
       }
       return str;
     },
