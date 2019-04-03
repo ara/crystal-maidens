@@ -157,12 +157,8 @@ for( let hero of heroes ) {
     hero.skillCD = hero.skill.CD;
     setSkillDMGandHEAL(hero);
   }
-  }
-
-  if( hero.id >= 1 && hero.id <= 100 && hero.skill && hero.skill.effects ) { // maiden
-    //
-  }
 }
+
 
 const state = {
   sorting: {
@@ -201,18 +197,9 @@ const getters = {
     );
   },
 
-  // sortedMaidens: (state, getters) => {
-  //   return getters.maidens.sort(
-  //     sortHeroesFunc(state.sorting.col1, state.sorting.col1Asc, state.sorting.col2, state.sorting.col2Asc)
-  //   )
-  // },
-
   filteredHeroCols: () => {
     return heroCols.filter( c => c.visible );
   },
-
-  //cCD: m.skill.castTime + Math.ceil( (100-state.cdr) * m.skill.CD / 10 ) / 10,
-
 }
 
 
@@ -287,11 +274,6 @@ const mutations = {
       [s.col1Asc, s.col2Asc] = [order, s.col1Asc];
     }
   },
-  // sortHeroes (state) {
-  //   state.heroes = state.heroes.sort(
-  //     sortHeroesFunc( state.sortedCol1, state.sortedCol1Asc, state.sortedCol2, state.sortedCol2Asc )
-  //   );
-  // },
 }
 
 const actions = {
