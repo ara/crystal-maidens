@@ -14,21 +14,24 @@
       <button @mousedown.left="updateSkillLevel(1)">+</button>
     </div>
     <div v-if="showDetails" class="card">
-      <div class="flex-row border-top border-bottom desc">
+      <div class="desc border-top border-bottom">
         <span>{{ skill.desc }}</span>
       </div>
-      <div class="flex-row flex-top">
-        <ul class="border-right stats-list">
-          <li><span class="cell-cap">CD (Base)</span><span class="cell-data">{{ currentCD }}s ({{ skill.CD }}s)</span></li>
-          <li><span class="cell-cap">Cast Time</span><span class="cell-data">{{ skill.castTime }}s</span></li>
-          <li><span class="cell-cap">Range</span><span class="cell-data">{{ skill.range }}</span></li>
-          <li><span class="cell-cap">After Cast</span><span class="cell-data">{{ skill.actDelay }}</span></li>
-          <li><span class="cell-cap">Walk Delay</span><span class="cell-data">{{ skill.walkDelay }}</span></li>
-          <li><span class="cell-cap">Ticks/Hits</span><span class="cell-data">{{ skill.ticks }}</span></li>
+      <div class="wrapper-skill-stats">
+        <ul class="border-right stats-list" id="skill-ul-1" style="text-align:end;">
+          <li v-html="stat2('CD (s)', currentCD)"></li>
+          <li v-html="stat2('Cast Time (s)', skill.castTime)"></li>
+          <li v-html="stat2('Range', skill.range)"></li>
+          <li v-html="stat2('Walk Delay', skill.walkDelay)"></li>
+        </ul>
+        <ul class="border-right stats-list" style="text-align:left;">
+          <li v-html="stat2('Base CD (s)', skill.CD, true)"></li>
+          <li v-html="stat2('After Cast (s)', skill.actDelay, true)"></li>
+          <li v-html="stat2('Radius', skill.radius, true)"></li>
         </ul>
       </div>
 
-      <div class="flex-row border-top">
+      <div class="effects border-top">
         <ul>
           <li v-for="(effect, i) in skill.effects" :key="i">
             <div v-html="formatEffect(hero, effect)" class="effect"></div>
@@ -88,6 +91,20 @@ export default {
   },
 
   methods: {
+    stat2 (title, val, swap) {
+      const part1 = Math.floor(val);
+      let part2 = val - part1;
+      part2 = Math.round(part2 * 10);
+      let alignStart = 'text-align: start;';
+      let data = `<span style="display: table-cell; width: 1.8em; font-size: .9em; text-align: end;">${part1}</span>`;
+      if( part2 !== 0 ) {
+        data += `<span style="display: table-cell; width: .8em; font-size: .9em; text-align: start;">.${part2}</span>`;
+      } else {
+        data += `<span style="display: table-cell; width: .8em"></span>`;
+      }
+      const caption = `<span style="display: table-cell; text-align: ${swap?'start':'end'}; padding-${swap?'left':'right'}:.8em; font-weight: 600; font-size: .75em;">${title}</span>`;
+      return swap ? data+caption : caption+data;
+    },
     toggleDetails () {
       this.showDetails = !this.showDetails;
     },
@@ -174,8 +191,11 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  margin-top: .2em;
-  text-shadow: 0 0 1px #bbb;
+  text-shadow: 0 0 1px #ccc;
+}
+.wrapper-skill-stats {
+  display: flex;
+  justify-content:center;
 }
 .desc {
   display: table-cell;
@@ -191,9 +211,8 @@ export default {
   margin-top: .2em;
   text-align: start;
 }
-.flex-row {
-  max-width: 20em;
-  // display: flow-root;
+.effects {
+  text-align: start;
 }
 .border-top {
   border-top: 1px solid #bbb;
@@ -202,8 +221,13 @@ export default {
   border-bottom: 1px solid #bbb;
 }
 ul {
+  display: inline-table;
   margin: .3em;
   padding: 0;
+}
+#skill-ul-1 {
+  border-right: 1px solid #aaa;
+  padding-right: .9em;
 }
 li {
   display: table-row;
@@ -212,19 +236,6 @@ li {
 .align-center {
   align-items: center;
   justify-content: center;
-}
-.cell-cap {
-  display: table-cell;
-  text-align: end;
-  font-weight: 600;
-  font-size: .75em;
-}
-.cell-data {
-  display: table-cell;
-  font-size: .9em;
-  text-align: right;
-  margin-left: 2em;
-  min-width: 5em;
 }
 .skill-name {
   font-size: .95em;
@@ -246,7 +257,11 @@ li {
   width: 20em;
   &:hover button {
     opacity: 1;
-    transition: opacity .3s ease;
+    transition: opacity .4s ease;
+  }
+  &:not(:hover) button {
+    opacity: 0;
+    transition: opacity .4s ease;
   }
 }
 .skill-buttons {
@@ -262,12 +277,10 @@ button {
   margin: 0 .15em;
   width: 18px;
   height: 18px;
-  font-weight: 500;
-  font-size: 1em;
+  font-size: .9em;
+  font-weight: 600;
   background: #ccc;
   padding: 0;
-  transition: color .5s ease;
-  opacity: 0;
   color: #555;
 }
 button:hover {
