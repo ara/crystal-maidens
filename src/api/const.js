@@ -77,7 +77,6 @@ module.exports = {
     ['ChangeSkillEffect', 'Change skills among the following options.'],
     ['MorphEffect', 'Common: <color=orange>#PERCENT1%</color>, Rare: <color=orange>#PERCENT2%</color>, Epic: <color=orange>#PERCENT3%</color>, Legendary: <color=orange>#PERCENT4%</color>'],
     ['ReflectEffect', 'Gives a buff that reflect #VALUE% of the damage received to the attacker.'],
-    ['ticks', 'Repeats #TICKS times every #TICKS_INTERVALs:'],
   ]),
 
 
