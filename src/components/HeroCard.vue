@@ -1,6 +1,6 @@
 <template>
   <div class="container" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
-    <div class="flex-row">
+    <!-- <div class="flex-row"> -->
       <div class="flex-col">
         <div class="flex-row align-center">
           <span class="hero-name">{{ hero.name }}</span>
@@ -32,7 +32,7 @@
         </div>
         <hero-skill :hero="hero" :show-info="openSkillDetails"></hero-skill>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -191,7 +191,7 @@ li {
 
 .cell-cap {
   display: table-cell;
-  text-align: right;
+  text-align: end;
   font-weight: 700;
   font-size: .8em;
 }
@@ -199,8 +199,7 @@ li {
 .cell-data {
   display: table-cell;
   font-size: .9em;
-  text-align: right;
-  // margin-left: 2em;
+  text-align: center;
   min-width: 6.2em;
 }
 
@@ -212,7 +211,7 @@ img, h4, span {
   margin: .5em;
   font-size: 1.1em;
   font-weight: 600;
-  text-shadow: 0 0 4px #aaa;
+  text-shadow: 0 0 3px #bbb;
 }
 
 .align-center {
@@ -226,7 +225,7 @@ img, h4, span {
   border-radius: .4em;
   padding: 0 .4em .4em .4em;
   color: #555;
-  // max-width: 24em;
+  border: 1px solid #aaa;
 }
 
 .flex-top {
@@ -235,7 +234,6 @@ img, h4, span {
 
 .border-right {
   border-right: 1px solid #bbb;
-  // margin-right: .5em;
   padding-right: .5em;
 }
 
@@ -243,7 +241,7 @@ img, h4, span {
   display: flex;
   flex-direction: row;
   padding: 0;
-  text-shadow: 0 0 1px #c8c8c8;
+  text-shadow: 0 0 1px #ddd;
 }
 .flex-col {
   display: flex;
@@ -259,16 +257,17 @@ img, h4, span {
   height: 24px;
   font-weight: 600;
   font-size: 1.3em;
-  background: transparent;
+  background: #eee;
   margin: .3em .6em 0 0;
   padding: 0;
   color: #eee;
   transition: color .4s ease;
   &:hover {
-    transition: background .4s ease;
-      color: #555 !important;
-      box-shadow: 0px 0px 1px 1px #777;
-      background: #ccc;
+    transition: background .4s ease,
+                color .4s ease;
+    color: #555 !important;
+    box-shadow: 0px 0px 1px 1px #777;
+    background: #ccc;
   }
 }
 </style>
