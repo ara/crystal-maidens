@@ -30,8 +30,8 @@
         </div>
 
         <div>
-          <label for="ckSkillDetails">Show skill details by default</label>
           <input type="checkbox" id="ckSkillDetails" v-model="showSkillDetails">
+          <label for="ckSkillDetails" style="cursor:pointer;">Show skill details by default</label>
         </div>
 
 
