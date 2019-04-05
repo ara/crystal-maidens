@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper"
+  <div class="wrapper" :class="isMinion?'ww-minion':'ww'"
     @click="toggleDetails"
     @mousedown.left="mousedown=true"
     @mouseup.left="mousedown=false;clearTimer()"
@@ -9,12 +9,13 @@
       <span class="skill-name">{{ hero.skill.name || '' }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
     </div>
-    <div class="skill-buttons" @click="$event.stopPropagation()">
+    <div v-if="!isMinion" class="skill-buttons" @click="$event.stopPropagation()">
       <button @mousedown.left="updateSkillLevel(-1)">-</button>
       <button @mousedown.left="updateSkillLevel(1)">+</button>
     </div>
     <div v-if="showDetails" class="card">
-      <div class="desc border-top border-bottom">
+      <div v-if="isMinion" class="border-top" style="width:100%"></div>
+      <div v-else class="desc border-top border-bottom">
         <span>{{ skill.desc }}</span>
       </div>
       <div class="wrapper-skill-stats">
@@ -39,12 +40,19 @@
         </ul>
       </div>
 
+      <div v-if="skill.effects[0].heroids">
+        <hero-card :hero="heroFromID(minionID)" :level="skillLevel"
+          v-for="minionID in skill.effects[0].heroids" :key="minionID"
+        ></hero-card>
+      </div>
+
     </div>
 
   </div>
 </template>
 
 <script>
+import HeroCard from './HeroCard';
 import { mapState } from 'vuex';
 import { effectTypes, targetTypes as targets, effects,
   maxStunDuration, maxSkillLevel } from '../api/const.js';
@@ -70,6 +78,7 @@ export default {
   props: {
     hero: Object,
     showInfo: Boolean,
+    level: Number,
   },
 
   data () {
@@ -82,15 +91,30 @@ export default {
 
   computed: {
     ...mapState({
-      skillLevel: state => state.heroes.skillLevel,
+      globalSkillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
+      heroes: state => state.heroes.heroes,
     }),
-    currentCD () {
-      return this.skill.CD * (100-this.cdr)/100;
+    heroCDR () {
+      return this.isMinion ? 0 : this.cdr;
     },
+    currentCD () {
+      return this.skill.CD * (100-this.heroCDR)/100;
+    },
+    isMinion () {
+      return this.hero.id > 100;
+    },
+    skillLevel () {
+      return this.isMinion
+        ? Math.floor( (this.level-1) / 3 ) + 1
+        : this.globalSkillLevel;
+    }
   },
 
   methods: {
+    heroFromID (id) {
+      return this.heroes.find( h => h.id === id );
+    },
     stat2 (title, val, swap) {
       const part1 = Math.floor(val);
       let part2 = val - part1;
@@ -182,6 +206,10 @@ export default {
     },
   },
 
+  components: {
+    HeroCard,
+  },
+
   created() {
     this.showDetails = this.$store.state.heroes.openSkillDetails;
   },
@@ -254,7 +282,6 @@ li {
   margin-top: .2em;
   background: #ddd;
   border: 1px solid #aaa;
-  width: 20em;
   &:hover button {
     opacity: 1;
     transition: opacity .4s ease;
@@ -263,6 +290,12 @@ li {
     opacity: 0;
     transition: opacity .4s ease;
   }
+}
+.ww {
+  width: 20em;
+}
+.ww-minion {
+  width: 18em;
 }
 .skill-buttons {
   position: absolute;

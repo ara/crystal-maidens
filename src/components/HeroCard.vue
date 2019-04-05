@@ -18,7 +18,7 @@
             <li><span class="cell-cap">Crit</span><span class="cell-data">{{ heroCrit }}</span></li>
             <li><span class="cell-cap">Dodge</span><span class="cell-data">{{ heroDodge }}</span></li>
             <li><span class="cell-cap">Defense</span><span class="cell-data">{{ heroDefense }}</span></li>
-            <li><span class="cell-cap">CDR</span><span class="cell-data">{{ heroCDR }}</span></li>
+            <li v-if="!isMinion"><span class="cell-cap">CDR</span><span class="cell-data">{{ heroCDR }}</span></li>
           </ul>
           <ul>
             <li><span class="cell-cap">EHP</span><span class="cell-data">{{ heroEHP }}</span></li>
@@ -26,18 +26,18 @@
             <li><span class="cell-cap">Range</span><span class="cell-data">{{ heroRange }}</span></li>
             <li><span class="cell-cap">Vision</span><span class="cell-data">{{ heroVision }}</span></li>
             <li><span class="cell-cap">Movement</span><span class="cell-data">{{ heroMoveSpeed }}</span></li>
-            <li><span class="cell-cap">Swing Time</span><span class="cell-data">{{ heroSwingTime }}</span></li>
-            <li><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
+            <li><span class="cell-cap">{{ isMinion ? 'Swing T.':'Swing Time' }}</span><span class="cell-data">{{ heroSwingTime }}</span></li>
+            <li v-if="!isMinion"><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
           </ul>
         </div>
-        <hero-skill :hero="hero" :show-info="openSkillDetails"></hero-skill>
+        <hero-skill v-if="hero.skill"
+          :hero="hero" :level="heroLevel" :show-info="openSkillDetails"></hero-skill>
       </div>
     <!-- </div> -->
   </div>
 </template>
 
 <script>
-import HeroSkill from './HeroSkill';
 import { mapState } from 'vuex';
 import { campBonuses, heroImages } from '../api/const.js';
 
@@ -45,6 +45,7 @@ export default {
   props: {
     hero: Object,
     showDetails: Boolean,
+    level: Number,
   },
 
   data () {
@@ -55,13 +56,19 @@ export default {
 
   computed: {
     ...mapState({
-      heroLevel: state => state.heroes.heroLevel,
+      globalLevel: state => state.heroes.heroLevel,
       skillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
       selectedHeroes: state => state.heroes.selectedHeroes,
       openSkillDetails: state => state.heroes.openSkillDetails,
     }),
+    isMinion () {
+      return this.hero.id > 100;
+    },
+    heroLevel () {
+      return this.isMinion ? this.level : this.globalLevel;
+    },
     campBonus () {
       return campBonuses[this.campLevel];
     },
@@ -95,16 +102,16 @@ export default {
     },
     heroDefense () {
       const m = this.hero;
-      let val = m.id === 4 ? 200 : 300;
+      let val = this.isMinion ? 0 : m.id === 4 ? 200 : 300;
       return this.digit1(val/100).toLocaleString()+'%';
     },
     heroCDR () {
-      const m = this.hero;
-      let val = this.cdr;
+      // const m = this.hero;
+      let val = this.isMinion ? 0 : this.cdr;
       return this.digit1(val)+'%';
     },
     AS () {
-      return this.$store.state.heroes.heroExtraAS + this.hero.as;
+      return (this.isMinion ? 0 : this.$store.state.heroes.heroExtraAS) + this.hero.as;
     },
     heroDPS () {
       const m = this.hero;
@@ -169,7 +176,7 @@ export default {
   },
 
   components: {
-    HeroSkill,
+    HeroSkill: () => import('./HeroSkill.vue'),
   },
 
 }
@@ -223,7 +230,7 @@ img, h4, span {
 }
 
 .container {
-  margin: 0 0 1.2em;
+  margin: 0 0 .35em;
   background: #eee;
   border-radius: .4em;
   padding: 0 .4em .4em .4em;
