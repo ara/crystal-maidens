@@ -4,16 +4,16 @@
       <div class="flex-col">
 
         <div>
-          <label for="selClass">Class</label>
-          <select id="selClass" @input="setFilterClass($event)">
+          <label for="selClass" @click="setFilterClass('All')">Class</label>
+          <select id="selClass" @input="setFilterClass($event.target.value)" :value="$store.state.heroes.filters.class">
             <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']"
               :key="heroClass">{{ heroClass }}</option>
           </select>
         </div>
 
         <div>
-          <label for="selEle">Element</label>
-          <select id="selEle" @input="setFilterElem($event)">
+          <label for="selEle" @click="setFilterElem('All')">Element</label>
+          <select id="selEle" @input="setFilterElem($event.target.value)" :value="$store.state.heroes.filters.element">
             <option
               v-for="ele in ['All','Fire','Nature','Water','Light','Dark']"
               :key="ele.id"
@@ -22,7 +22,7 @@
         </div>
 
         <div class="flexitem-right">
-          <label for="txHeroAS">Atk Spd test</label>
+          <label for="txHeroAS" @click="$store.commit('updateHeroExtraAS',0)">Atk Spd test</label>
           <input type="number" min="0" max="1000" step="20" id="txHeroAS"
             style="width:3em"
             v-model="heroExtraAS"
@@ -219,11 +219,11 @@ export default {
     setCampLevel (event) {
       this.$store.dispatch('setCampLevel', parseInt(event.target.value));
     },
-    setFilterClass (event) {
-      this.$store.commit('updateFilterHeroClass', event.target.value);
+    setFilterClass (val) {
+      this.$store.commit('updateFilterHeroClass', val);
     },
-    setFilterElem (event) {
-      this.$store.commit('updateFilterHeroElement', event.target.value);
+    setFilterElem (val) {
+      this.$store.commit('updateFilterHeroElement', val);
     },
     onColMiddleClick (event, col) {
       event.stopPropagation();
@@ -308,6 +308,10 @@ $darkenBy: 5%;
   input, select {
     align-items: baseline;
   }
+}
+
+label {
+  cursor: pointer;
 }
 
 .flex-row {
