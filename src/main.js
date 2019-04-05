@@ -21,6 +21,14 @@ var vm = new Vue({
   render: h => h(App),
   store,
   router,
+  beforeCreate() {
+    // load store from localStorage
+    this.$store.commit('loadStore');
+  },
+  mounted() {
+    // save store changes to localStorage
+    this.$store.commit('watchStore');
+  }
 })
 
 //vm.$mount('#app');
