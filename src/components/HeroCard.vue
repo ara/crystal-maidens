@@ -4,8 +4,8 @@
       <div class="flex-col">
         <div class="flex-row align-center">
           <span class="hero-name">{{ hero.name }}</span>
-          <img :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
-          <img :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
+          <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+          <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
           <span style="white-space:pre"> (Level {{ heroLevel }})</span>
         </div>
         <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
@@ -49,7 +49,7 @@ export default {
 
   data () {
     return {
-      moveSpeeds: ['', '', '', 'V.Fast', 'Fast', 'Med', 'Slow', 'V.Slow'],
+      moveSpeeds: ['Immob.', 'Ultra F.', 'V.Fast', 'V.Fast', 'Fast', 'Med', 'Slow', 'V.Slow'],
     };
   },
 
@@ -73,6 +73,7 @@ export default {
     },
     heroDamage () {
       const m = this.hero;
+      if( !m.attack ) return '-';
       let val = m.attack.damage + m.attack.damageInc * (this.heroLevel-1) ** m.dmgCoef;
       val *= this.campBonus;
       val *= m.id === 4 ? 1.2 : 1.3;
@@ -107,6 +108,7 @@ export default {
     },
     heroDPS () {
       const m = this.hero;
+      if( !m.attack ) return '-';
       let val = m.attack.damage + m.attack.damageInc * (this.heroLevel-1) ** m.dmgCoef;
       val *= this.campBonus;
       val *= m.id === 4 ? 1.2 : 1.3;
@@ -116,6 +118,7 @@ export default {
     },
     atkSec () {
       const m = this.hero;
+      if( !m.attack ) return '-';
       return (1 / (Math.ceil(1000/this.AS)/10 + m.attack.castTime)).toFixed(3);
     },
     heroEHP () {
@@ -127,19 +130,19 @@ export default {
       return Math.round(val).toLocaleString();
     },
     heroRange () {
-      return this.hero.attack.range;
+      return this.hero.attack ? this.hero.attack.range : 0;
     },
     heroVision () {
-      return this.hero.vision;
+      return this.hero.vision || 0;
     },
     heroMoveSpeed () {
-      return `${this.hero.moveSpeed} (${this.moveSpeeds[this.hero.moveSpeed]})`;
+      return `${this.hero.moveSpeed || 0} (${this.moveSpeeds[this.hero.moveSpeed]})`;
     },
     heroRespawn () {
       return this.hero.respawnCD+'s';
     },
     heroSwingTime () {
-      return this.hero.attack.castTime+'s';
+      return this.hero.attack ? this.hero.attack.castTime+'s' : '-';
     },
 
   },

@@ -6,7 +6,7 @@
     @mouseout="mousedown=false;clearTimer()"
   >
     <div class="headline">
-      <span class="skill-name">{{ hero.skill.name }}</span>
+      <span class="skill-name">{{ hero.skill.name || '' }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
     </div>
     <div class="skill-buttons" @click="$event.stopPropagation()">
