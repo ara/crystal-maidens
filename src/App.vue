@@ -63,4 +63,20 @@ $p-light: #eee;
   }
 }
 
+button {
+  // background: linear-gradient(#eee,#ddd);
+  background: linear-gradient(#f2f2f2,#dcdcdc);
+  border: 1px solid #999;
+  padding: .15em .5em;
+  &:active {
+    background: linear-gradient(#dcdcdc,#f2f2f2);
+  }
+  &:hover {
+    border-color: #777;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
 </style>
