@@ -99,7 +99,7 @@ export default {
       return this.isMinion ? 0 : this.cdr;
     },
     currentCD () {
-      return this.skill.CD * (100-this.heroCDR)/100;
+      return Math.ceil(this.skill.CD * (100-this.heroCDR) / 10) / 10;
     },
     isMinion () {
       return this.hero.id > 100;
