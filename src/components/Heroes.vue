@@ -160,7 +160,7 @@ export default {
         return this.$store.state.heroes.heroExtraAS;
       },
       set (val) {
-        this.$store.commit('updateHeroExtraAS', parseInt(val));
+        this.$store.commit('updateHeroExtraAS', parseFloat(val));
       },
     },
 
