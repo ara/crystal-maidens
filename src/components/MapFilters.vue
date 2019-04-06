@@ -103,6 +103,9 @@ export default {
   box-sizing: border-box;
 }
 .selected {
-  background: #da9;
+  background: linear-gradient(#f2f2f2,#da9);
+  &:active {
+    background: linear-gradient(#da9,#f2f2f2);
+  }
 }
 </style>
