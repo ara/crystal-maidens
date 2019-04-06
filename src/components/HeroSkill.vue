@@ -167,6 +167,11 @@ export default {
       }
       if( effect.percent ) {
         val = Math.abs(effect.percent + (effect.percentInc || 0) * this.skillLevel) / 100;
+        if( effect.type === 'AlterAttackSpeed' && effect.target === 'yourself' ) {
+          const buffedAS = (val/100+1) * (this.hero.as + this.$store.state.heroes.heroExtraAS);
+          str += ' (=<span style="color:orange;font-weight:700;text-shadow: .5px .5px .2px #000;">'+
+            buffedAS.toFixed(1) + '</span> AS)';
+        }
       }
       if( effect.heroids ) {
         val = effect.maxconcurrent;
