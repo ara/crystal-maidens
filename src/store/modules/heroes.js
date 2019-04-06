@@ -104,6 +104,7 @@ const heroCols = [
   { val:heroDamage, fmt:txDamage, caption:'Damage' },
   { val:heroEHP, fmt:_num, caption:'EHP', visible:true },
   { val:heroDPS, fmt:_num, caption:'DPS', visible:true },
+  { val:'as', caption:'Base AS' },
   { val:atkSec, caption:'atk/s' },
   { val:skillDamage, fmt:txSkillDMG, caption:'Skill Damage' },
   { val:skillHeal, fmt:txSkillHEAL, caption:'Skill Heal' },
