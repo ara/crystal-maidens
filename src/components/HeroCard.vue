@@ -102,8 +102,8 @@ export default {
     },
     heroDefense () {
       const m = this.hero;
-      let val = this.isMinion ? 0 : m.id === 4 ? 200 : 300;
-      return this.digit1(val/100).toLocaleString()+'%';
+      let val = this.isMinion ? 0 : m.id === 4 ? 2 : 3;
+      return this.digit1(m.def+val).toLocaleString()+'%';
     },
     heroCDR () {
       // const m = this.hero;
