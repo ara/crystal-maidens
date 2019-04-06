@@ -1,0 +1,576 @@
+[
+  {
+    "id": 1,
+    "name": "Burning Knight's set",
+    "desc": "Burning Knight's",
+    "items": [
+      6001,
+      6002,
+      6003,
+      6004,
+      6005,
+      6006
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstNature": 1000
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "reflect": 1000
+      },
+      {
+        "dmgAgainstNature": 500,
+        "crystalOnMap": 2500,
+        "reflect": 1000,
+        "attackSpd": 500
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Burning Wizard's set",
+    "desc": "Burning Wizard's",
+    "items": [
+      6007,
+      6008,
+      6009,
+      6010,
+      6011,
+      6012
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstNature": 1000
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "reflect": 1000
+      },
+      {
+        "dmgAgainstNature": 500,
+        "crystalOnMap": 2500,
+        "reflect": 1000,
+        "attackSpd": 500
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Burning Sniper's set",
+    "desc": "Burning Sniper's",
+    "items": [
+      6013,
+      6014,
+      6015,
+      6016,
+      6017,
+      6018
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstNature": 1000
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "reflect": 1000
+      },
+      {
+        "dmgAgainstNature": 500,
+        "crystalOnMap": 2500,
+        "reflect": 1000,
+        "attackSpd": 500
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Burning Architect's set",
+    "desc": "Burning Architect's",
+    "items": [
+      6019,
+      6020,
+      6021,
+      6022,
+      6023,
+      6024
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstNature": 1000
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "reflect": 1000
+      },
+      {
+        "dmgAgainstNature": 500,
+        "crystalOnMap": 2500,
+        "reflect": 1000,
+        "attackSpd": 500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Burning Protector's set",
+    "desc": "Burning Protector's",
+    "items": [
+      6025,
+      6026,
+      6027,
+      6028,
+      6029,
+      6030
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstNature": 1000
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "attackSpd": 250
+      },
+      {
+        "reflect": 1000
+      },
+      {
+        "dmgAgainstNature": 500,
+        "crystalOnMap": 2500,
+        "reflect": 1000,
+        "attackSpd": 500
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tempest Knight's set",
+    "desc": "Tempest Knight's",
+    "items": [
+      6031,
+      6032,
+      6033,
+      6034,
+      6035,
+      6036
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstFire": 1000
+      },
+      {
+        "critChance": 250
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "dmgAgainstFire": 500,
+        "critChance": 2500,
+        "coinOnMap ": 1000,
+        " lifesteal ": 300
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Tempest Wizard's set",
+    "desc": "Tempest Wizard's",
+    "items": [
+      6037,
+      6038,
+      6039,
+      6040,
+      6041,
+      6042
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstFire": 1000
+      },
+      {
+        "critChance": 250
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "dmgAgainstFire": 500,
+        "critChance": 2500,
+        "coinOnMap ": 1000,
+        " lifesteal ": 300
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Tempest Sniper's set",
+    "desc": "Tempest Sniper's",
+    "items": [
+      6043,
+      6044,
+      6045,
+      6046,
+      6047,
+      6048
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstFire": 1500
+      },
+      {
+        "critChance": 350
+      },
+      {
+        "lifesteal": 500
+      },
+      {
+        "lifesteal": 500
+      },
+      {
+        "lifesteal": 500,
+        "dmgAgainstFire": 500,
+        "critChance": 2500,
+        "coinOnMap": 1000
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Tempest Architect's set",
+    "desc": "Tempest Architect's",
+    "items": [
+      6049,
+      6050,
+      6051,
+      6052,
+      6053,
+      6054
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstFire": 1000
+      },
+      {
+        "critChance": 250
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "dmgAgainstFire": 500,
+        "critChance": 2500,
+        "coinOnMap ": 1000,
+        " lifesteal ": 300
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Tempest Protector's set",
+    "desc": "Tempest Protector's",
+    "items": [
+      6055,
+      6056,
+      6057,
+      6058,
+      6059,
+      6060
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstFire": 1000
+      },
+      {
+        "critChance": 250
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "lifesteal": 100
+      },
+      {
+        "dmgAgainstFire": 500,
+        "critChance": 2500,
+        "coinOnMap ": 1000,
+        " lifesteal ": 300
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Forest Knight's set",
+    "desc": "Forest Knight's",
+    "items": [
+      6061,
+      6062,
+      6063,
+      6064,
+      6065,
+      6066
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstWater": 1000
+      },
+      {
+        "def": 100
+      },
+      {
+        "hpAfterItems": 500
+      },
+      {
+        "def": 100
+      },
+      {
+        "dmgAgainstWater": 500,
+        "dropChanceOnMap ": 10000,
+        "def": 300,
+        "hpAfterItems": 500
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Forest Wizard's set",
+    "desc": "Forest Wizard's",
+    "items": [
+      6067,
+      6068,
+      6069,
+      6070,
+      6071,
+      6072
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstWater": 1000
+      },
+      {
+        "def": 100
+      },
+      {
+        "hpAfterItems": 500
+      },
+      {
+        "def": 100
+      },
+      {
+        "dmgAgainstWater": 500,
+        "dropChanceOnMap ": 10000,
+        "def": 300,
+        "hpAfterItems": 500
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Forest Sniper's set",
+    "desc": "Forest Sniper's",
+    "items": [
+      6073,
+      6074,
+      6075,
+      6076,
+      6077,
+      6078
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstWater": 1000
+      },
+      {
+        "def": 100
+      },
+      {
+        "hpAfterItems": 500
+      },
+      {
+        "def": 100
+      },
+      {
+        "dmgAgainstWater": 500,
+        "dropChanceOnMap ": 10000,
+        "def": 300,
+        "hpAfterItems": 500
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Forest Architect's set",
+    "desc": "Forest Architect's",
+    "items": [
+      6079,
+      6080,
+      6081,
+      6082,
+      6083,
+      6084
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstWater": 1000
+      },
+      {
+        "def": 100
+      },
+      {
+        "hpAfterItems": 500
+      },
+      {
+        "def": 100
+      },
+      {
+        "dmgAgainstWater": 500,
+        "dropChanceOnMap ": 10000,
+        "def": 300,
+        "hpAfterItems": 500
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Forest Protector's set",
+    "desc": "Forest Protector's",
+    "items": [
+      6085,
+      6086,
+      6087,
+      6088,
+      6089,
+      6090
+    ],
+    "bonuses": [
+      null,
+      {
+        "dmgAgainstWater": 1000
+      },
+      {
+        "def": 100
+      },
+      {
+        "hpAfterItems": 500
+      },
+      {
+        "def": 100
+      },
+      {
+        "dmgAgainstWater": 500,
+        "dropChanceOnMap ": 10000,
+        "def": 300,
+        "hpAfterItems": 500
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Royal Crushing set",
+    "desc": "Royal Crushing",
+    "items": [
+      6091,
+      6092,
+      6093,
+      6094
+    ],
+    "bonuses": [
+      null,
+      {
+        "stepPerTiles": -2
+      },
+      {
+        "attackSpd": 1000
+      },
+      {
+        "respawn": -2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Diamond set",
+    "desc": "Diamond",
+    "items": [
+      6095,
+      6096,
+      6097
+    ],
+    "bonuses": [
+      null,
+      {
+        "cooldownOverCap": 1000
+      },
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Dark set",
+    "desc": "Dark",
+    "items": [
+      6098,
+      6099
+    ],
+    "bonuses": [
+      null,
+      {
+        "xp": 5000
+      },
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+]
