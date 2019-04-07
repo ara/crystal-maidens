@@ -1,6 +1,18 @@
+const itemImages = new Map([]);
 const heroImages = new Map([]);
 
+function importItemImages (req) {
+  req.keys().forEach( key =>
+    itemImages.set(
+      parseInt( /([0-9]+)\.png$/i.exec(key)[1] ),
+      req(key)
+    )
+  );
+}
+
 try {
+  importItemImages( require.context('../assets/items/', false, /\.png$/) );
+
   heroImages.set('Warrior', require('../assets/classes/Warrior.png'));
   heroImages.set('Mage', require('../assets/classes/Mage.png'));
   heroImages.set('Marksman', require('../assets/classes/Marksman.png'));
@@ -22,6 +34,7 @@ module.exports = {
   maxSkillLevel: 29,
   maxStunDuration: 2.5,
   heroImages,
+  itemImages,
   elements,
   campBonuses: [1, 1.05, 1.1, 1.2, 1.3, 1.45, 1.6, 1.8, 2, 2.25, 3, 3.25, 3.5, 3.75, 4, 4.5],
   //            0         1       2          3          4         5             6
