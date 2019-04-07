@@ -57,10 +57,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.6,
-      "CD": 7,
+      "id": 2,
       "name": "Bash",
       "desc": "Jumps and deals a powerful strike on a single target.",
+      "castTime": 0.6,
+      "CD": 7,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -115,10 +116,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.4,
-      "CD": 7,
+      "id": 4,
       "name": "Fire Strike",
       "desc": "Casts a fireball dealing damage to a single target.",
+      "castTime": 0.4,
+      "CD": 7,
       "range": 7,
       "missChance": 0,
       "radius": 0,
@@ -173,10 +175,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 10,
+      "id": 6,
       "name": "Divine Force",
       "desc": "Casts a spell healing all allies on the map.",
+      "castTime": 0.2,
+      "CD": 10,
       "range": 255,
       "missChance": 0,
       "radius": 255,
@@ -231,10 +234,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 11,
+      "id": 8,
       "name": "Call of the Wild",
       "desc": "Casts a medium natural explosion, damaging enemies and healing allies inside of it.",
+      "castTime": 0.8,
+      "CD": 11,
       "range": 7,
       "missChance": 0,
       "radius": 3,
@@ -296,10 +300,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 12.5,
+      "id": 10,
       "name": "Cursed Void",
       "desc": "Casts a large void dealing damage to enemies inside.",
+      "castTime": 0.8,
+      "CD": 12.5,
       "range": 7,
       "missChance": 0,
       "radius": 4,
@@ -354,10 +359,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 10,
+      "id": 12,
       "name": "Dark Aura",
       "desc": "Boosts her damage to show her true power.",
+      "castTime": 0.2,
+      "CD": 10,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -412,10 +418,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.3,
-      "CD": 10,
+      "id": 14,
       "name": "Glacial Shot",
       "desc": "Throws her biggest arrow that stuns and deals damage to the target.",
+      "castTime": 0.3,
+      "CD": 10,
       "range": 7,
       "missChance": 0,
       "radius": 0,
@@ -476,10 +483,11 @@
       "aoe": 2
     },
     "skill": {
-      "castTime": 1,
-      "CD": 10,
+      "id": 16,
       "name": "Sayonara",
       "desc": "Shoots a powerful explosive, dealing massive damage to enemies, but damaging herself with the recoil",
+      "castTime": 1,
+      "CD": 10,
       "range": 5,
       "missChance": 0,
       "radius": 4,
@@ -540,10 +548,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 10,
+      "id": 18,
       "name": "Tempest",
       "desc": "Casts a tempest that deals damage over 8 seconds to enemies staying under it.",
+      "castTime": 0.8,
+      "CD": 10,
       "range": 7,
       "missChance": 0,
       "radius": 3,
@@ -598,10 +607,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 5,
+      "id": 20,
       "name": "Bull's Eye",
       "desc": "Fires a fire arrow in the sky, falling down and dealing damage to enemies in a small AOE.",
+      "castTime": 0.8,
+      "CD": 5,
       "range": 7,
       "missChance": 0,
       "radius": 1,
@@ -656,10 +666,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 13,
+      "id": 22,
       "name": "All for One",
       "desc": "Casts a healing circle around herself. Allies that have been through it are healed 16 times over 8 seconds.",
+      "castTime": 0.2,
+      "CD": 13,
       "range": 1,
       "missChance": 0,
       "radius": 3,
@@ -714,10 +725,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.5,
-      "CD": 12.5,
+      "id": 24,
       "name": "One for All",
       "desc": "Casts an epic dark area of effect dealing massive damage to enemies inside of it.",
+      "castTime": 1.5,
+      "CD": 12.5,
       "range": 6,
       "missChance": 0,
       "radius": 5,
@@ -772,10 +784,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 4,
+      "id": 26,
       "name": "Soul Stealer",
       "desc": "Stabs the nearest enemy, dealing damage and reducing its damage for a duration.",
+      "castTime": 0.2,
+      "CD": 4,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -837,10 +850,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 12,
+      "id": 28,
       "name": "Poison Arrows",
       "desc": "Shoots poisonous arrows in a circle that deals damage every second during 10 seconds.",
+      "castTime": 0.8,
+      "CD": 12,
       "range": 7,
       "missChance": 0,
       "radius": 3,
@@ -897,10 +911,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 15,
+      "id": 30,
       "name": "Reverse Chronology",
       "desc": "Calls the goddess of time to reduce the cooldown of all allies on the map.",
+      "castTime": 0.2,
+      "CD": 15,
       "range": 255,
       "missChance": 0,
       "radius": 255,
@@ -954,10 +969,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.3,
-      "CD": 9,
+      "id": 32,
       "name": "Fire Domination",
       "desc": "Spins around, dealing damage and stunning enemies close.",
+      "castTime": 0.3,
+      "CD": 9,
       "range": 1,
       "missChance": 0,
       "radius": 3,
@@ -1017,10 +1033,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 10,
+      "id": 34,
       "name": "Solid Rock",
       "desc": "Summons a small golem helping her tank damage.",
+      "castTime": 1.2,
+      "CD": 10,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -1078,10 +1095,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 7,
+      "id": 36,
       "name": "Beast call",
       "desc": "Calls a random spirit that heals an ally, heavily damages an enemy or stuns and damages enemies in a small AOE.",
+      "castTime": 1.2,
+      "CD": 7,
       "range": 5,
       "missChance": 0,
       "radius": 0,
@@ -1141,10 +1159,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.5,
-      "CD": 16,
+      "id": 38,
       "name": "Void of Destruction",
       "desc": "Jumps high in the air, shooting arrows that damage enemies over time in a small area.",
+      "castTime": 1.5,
+      "CD": 16,
       "range": 8,
       "missChance": 0,
       "radius": 3,
@@ -1201,10 +1220,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.3,
-      "CD": 7.5,
+      "id": 40,
       "name": "Glorious Spin",
       "desc": "Spins, creating a little tornado that she throws at an enemy, damaging it and others around.",
+      "castTime": 0.3,
+      "CD": 7.5,
       "range": 1,
       "missChance": 0,
       "radius": 2,
@@ -1259,10 +1279,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 7,
+      "id": 42,
       "name": "Rising of the Dead",
       "desc": "Summons skeletons, ready to fight your enemies.",
+      "castTime": 1.2,
+      "CD": 7,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -1320,10 +1341,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 4,
+      "id": 44,
       "name": "Builder",
       "desc": "Builds a little turret that will fight for you and die over time.",
+      "castTime": 1.2,
+      "CD": 4,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -1381,10 +1403,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 16,
+      "id": 46,
       "name": "Thunderstrike",
       "desc": "Casts an epic thunder that will damage and stun enemies.",
+      "castTime": 1,
+      "CD": 16,
       "range": 7,
       "missChance": 0,
       "radius": 4,
@@ -1445,10 +1468,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 7,
+      "id": 48,
       "name": "Fire Helper",
       "desc": "Boosts an ally's damage for a duration.",
+      "castTime": 0.2,
+      "CD": 7,
       "range": 4,
       "missChance": 0,
       "radius": 0,
@@ -1503,10 +1527,11 @@
       "aoe": 2
     },
     "skill": {
-      "castTime": 2.5,
-      "CD": 10,
+      "id": 50,
       "name": "Mystical Shot",
       "desc": "After a short charging period, fires a big bullet that causes an explosion in a large area.",
+      "castTime": 2.5,
+      "CD": 10,
       "range": 9,
       "missChance": 0,
       "radius": 5,
@@ -1561,10 +1586,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 10,
+      "id": 52,
       "name": "Bubble Trap",
       "desc": "Throws a bubble that will stun the enemies for a short duration.",
+      "castTime": 1,
+      "CD": 10,
       "range": 8,
       "missChance": 0,
       "radius": 2,
@@ -1625,10 +1651,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 7,
+      "id": 54,
       "name": "Godesses' Rain",
       "desc": "Fires an arrow to the sky dealing damage to random enemies in a large area as it falls.",
+      "castTime": 1,
+      "CD": 7,
       "range": 10,
       "missChance": 5000,
       "radius": 8,
@@ -1683,10 +1710,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.3,
-      "CD": 7,
+      "id": 56,
       "name": "Tornado",
       "desc": "Spins around healing allies and damaging enemies hit.",
+      "castTime": 0.3,
+      "CD": 7,
       "range": 1,
       "missChance": 0,
       "radius": 2,
@@ -1748,10 +1776,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 4,
+      "id": 58,
       "name": "Cursed Kiss",
       "desc": "Curses an enemy, causing the target to take damage over time.",
+      "castTime": 0.8,
+      "CD": 4,
       "range": 7,
       "missChance": 0,
       "radius": 0,
@@ -1808,10 +1837,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.1,
-      "CD": 0.4,
+      "id": 60,
       "name": "Ultimate Fire Bolt",
       "desc": "Throws a big fire bolt. This ability has a reduced cooldown.",
+      "castTime": 0.1,
+      "CD": 0.4,
       "range": 6,
       "missChance": 0,
       "radius": 0,
@@ -1866,10 +1896,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 8,
+      "id": 62,
       "name": "Trident's blow",
       "desc": "Throws a water shot with her trident, dealing damage if the target is an enemy, or healing it if it's an ally.",
+      "castTime": 1,
+      "CD": 8,
       "range": 6,
       "missChance": 0,
       "radius": 0,
@@ -1931,10 +1962,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.6,
-      "CD": 10,
+      "id": 64,
       "name": "ONE PUNCH",
       "desc": "Punches an enemy, dealing damage and reducing its attack speed.",
+      "castTime": 0.6,
+      "CD": 10,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -1995,10 +2027,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 10,
+      "id": 66,
       "name": "Wave Destroyer",
       "desc": "Calls the power of the sea, stunning everyone else on the map, while doing damage to every enemy.",
+      "castTime": 1.2,
+      "CD": 10,
       "range": 255,
       "missChance": 0,
       "radius": 255,
@@ -2066,10 +2099,11 @@
       ]
     },
     "skill": {
-      "castTime": 1,
-      "CD": 12,
+      "id": 68,
       "name": "Super Chord",
       "desc": "Plays music that will boost the damage of allies and reduce the damage of enemies that heard the song.",
+      "castTime": 1,
+      "CD": 12,
       "range": 5,
       "missChance": 0,
       "radius": 5,
@@ -2138,10 +2172,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.5,
-      "CD": 7,
+      "id": 70,
       "name": "Cocobomb Roll",
       "desc": "Rolls a coconut that explodes after 3 seconds, dealing damage and slowing enemies affected by its AOE",
+      "castTime": 0.5,
+      "CD": 7,
       "range": 9,
       "missChance": 0,
       "radius": 3,
@@ -2196,10 +2231,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.5,
-      "CD": 7,
+      "id": 72,
       "name": "Flaming Shot",
       "desc": "Jumps in the air and shoots flaming balls in a straight line, dealing damage to enemies hit.",
+      "castTime": 1.5,
+      "CD": 7,
       "range": 100,
       "missChance": 0,
       "radius": 2,
@@ -2254,10 +2290,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 9,
+      "id": 74,
       "name": "Black Crow",
       "desc": "Sends a raven that stuns and reduces the attack speed of its target for a duration.",
+      "castTime": 0.2,
+      "CD": 9,
       "range": 4,
       "missChance": 0,
       "radius": 0,
@@ -2318,10 +2355,11 @@
       "aoe": 2
     },
     "skill": {
-      "castTime": 0.5,
-      "CD": 8,
+      "id": 76,
       "name": "Water Pulse",
       "desc": "Shoots with her water shotgun in a large area in front of her.",
+      "castTime": 0.5,
+      "CD": 8,
       "range": 8,
       "missChance": 0,
       "radius": 3,
@@ -2376,10 +2414,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 10,
+      "id": 78,
       "name": "Lucky Charm",
       "desc": "Casts a lucky AOE, boosting attack speed and reducing cooldown of allies, and damaging enemies in it.",
+      "castTime": 0.8,
+      "CD": 10,
       "range": 7,
       "missChance": 0,
       "radius": 4,
@@ -2446,10 +2485,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.5,
-      "CD": 14,
+      "id": 80,
       "name": "Infinite Rage",
       "desc": "Becomes enraged, throwing 5 tomahawks at the enemy.",
+      "castTime": 0.5,
+      "CD": 14,
       "range": 5,
       "missChance": 0,
       "radius": 0,
@@ -2504,10 +2544,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.1,
-      "CD": 7,
+      "id": 82,
       "name": "Blade Fury",
       "desc": "Uses her katana to slash a target 3 times.",
+      "castTime": 0.1,
+      "CD": 7,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -2564,10 +2605,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 7.5,
+      "id": 84,
       "name": "Loa's Blessing",
       "desc": "Summons a little voodoo doll that will explode, dealing damage to enemies in a small area.",
+      "castTime": 1.2,
+      "CD": 7.5,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -2625,10 +2667,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 10,
+      "id": 86,
       "name": "Yami",
       "desc": "Unleashes the darkness in her sword, and slashes in a straight line using its power.",
+      "castTime": 1,
+      "CD": 10,
       "range": 2,
       "missChance": 0,
       "radius": 1,
@@ -2785,10 +2828,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 10,
+      "id": 94,
       "name": "Laser Beam",
       "desc": "Charges and releases a laser beam that hits every enemy in a straight line.",
+      "castTime": 1,
+      "CD": 10,
       "range": 45,
       "missChance": 0,
       "radius": 2,
@@ -2843,10 +2887,11 @@
       "aoe": 1
     },
     "skill": {
-      "castTime": 1,
-      "CD": 12,
+      "id": 96,
       "name": "Ace in the Hole",
       "desc": "Throws a card in straight line stunning and dealing damage to every enemy.",
+      "castTime": 1,
+      "CD": 12,
       "range": 25,
       "missChance": 0,
       "radius": 1,
@@ -2907,10 +2952,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 13,
+      "id": 98,
       "name": "Fire Chaos",
       "desc": "Casts a large AoE healing allies and damaging enemies in it for 8 seconds",
+      "castTime": 0.8,
+      "CD": 13,
       "range": 7,
       "missChance": 0,
       "radius": 4,
@@ -3006,10 +3052,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 2,
-      "CD": 16,
+      "id": 102,
       "name": "Electric Frenzy",
       "desc": "Shoots water in an area and hits it with a powerful electric blow, damaging and stunning enemies.",
+      "castTime": 2,
+      "CD": 16,
       "range": 4,
       "missChance": 0,
       "radius": 3,
@@ -3070,10 +3117,11 @@
       "aoe": 2
     },
     "skill": {
-      "castTime": 0.5,
-      "CD": 12,
+      "id": 104,
       "name": "Boomerang Storm",
       "desc": "Throw her boomerang in a small area dealing damage to enemies and boost the attack speed from allies",
+      "castTime": 0.5,
+      "CD": 12,
       "range": 9,
       "missChance": 0,
       "radius": 2,
@@ -3135,10 +3183,11 @@
       "aoe": 2
     },
     "skill": {
-      "castTime": 1.5,
-      "CD": 6.5,
+      "id": 106,
       "name": "Wave Crush",
       "desc": "Uses her sword to create waves and damaging enemies in a big AOE in front of her.",
+      "castTime": 1.5,
+      "CD": 6.5,
       "range": 1,
       "missChance": 0,
       "radius": 5,
@@ -3235,10 +3284,11 @@
       ]
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 8,
+      "id": 110,
       "name": "Cursed Leech",
       "desc": "Shoots an arrow at an enemy, cursing him and healing back some health.",
+      "castTime": 0.2,
+      "CD": 8,
       "range": 5,
       "missChance": 0,
       "radius": 0,
@@ -3336,10 +3386,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.2,
-      "CD": 13,
+      "id": 114,
       "name": "Death From Above",
       "desc": "Fly into the air and unleash flames all over the map that deals damage every second during 6 seconds.",
+      "castTime": 1.2,
+      "CD": 13,
       "range": 255,
       "missChance": 0,
       "radius": 255,
@@ -3394,10 +3445,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.6,
-      "CD": 7,
+      "id": 116,
       "name": "Polymorphing",
       "desc": "Polymorph into another gacha character at the beginning of combat.",
+      "castTime": 0.6,
+      "CD": 7,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -3449,10 +3501,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 8,
+      "id": 118,
       "name": "Xmas Tornado",
       "desc": "Casts a winter explosion, dealing damage and slowing enemies, and healing allies.",
+      "castTime": 0.8,
+      "CD": 8,
       "range": 7,
       "missChance": 0,
       "radius": 3,
@@ -3514,10 +3567,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 3.2,
-      "CD": 16,
+      "id": 120,
       "name": "Bear a Grudge",
       "desc": "Uses her water power to summon a huge teddy bear.",
+      "castTime": 3.2,
+      "CD": 16,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -3575,10 +3629,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 2,
-      "CD": 8,
+      "id": 122,
       "name": "Deadly Trap",
       "desc": "Uses her bond with nature to make roots emerge from the ground, stunning everybody and damaging enemies.",
+      "castTime": 2,
+      "CD": 8,
       "range": 6,
       "missChance": 0,
       "radius": 5,
@@ -3638,10 +3693,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 2,
-      "CD": 9,
+      "id": 124,
       "name": "Ink Blaster",
       "desc": "Use a secret spell to make her octopus bigger, throwing ink in an AOE damaging and confusing enemies.",
+      "castTime": 2,
+      "CD": 9,
       "range": 6,
       "missChance": 0,
       "radius": 3,
@@ -3701,10 +3757,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.4,
-      "CD": 12,
+      "id": 130,
       "name": "Maiden's Harvest",
       "desc": "Jumps in the air and unleashes a powerful scythe attack.",
+      "castTime": 1.4,
+      "CD": 12,
       "range": 9,
       "missChance": 0,
       "radius": 0,
@@ -3764,10 +3821,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 5,
+      "id": 132,
       "name": "Breakfast Club",
       "desc": "Deals direct damage to an enemy and summon an angry student",
+      "castTime": 0.8,
+      "CD": 5,
       "range": 7,
       "missChance": 0,
       "radius": 0,
@@ -3825,10 +3883,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 7,
+      "id": 138,
       "name": "Saving Private Maiden",
       "desc": "Use her nature powered serum to heal an ally and also immunize her from auto attacks for 3 seconds",
+      "castTime": 1,
+      "CD": 7,
       "range": 2,
       "missChance": 0,
       "radius": 0,
@@ -3889,10 +3948,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.5,
-      "CD": 10,
+      "id": 142,
       "name": "Moon Crushing",
       "desc": "Calls the moon and uses the pressure to crush and slow enemies. The effect is repeated when the moon leaves.",
+      "castTime": 1.5,
+      "CD": 10,
       "range": 8,
       "missChance": 0,
       "radius": 6,
@@ -3947,10 +4007,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 13,
+      "id": 144,
       "name": "We Stand United",
       "desc": "Boosts the damage and the defense of herself and all allies for a duration.",
+      "castTime": 0.8,
+      "CD": 13,
       "range": 255,
       "missChance": 0,
       "radius": 255,
@@ -4013,10 +4074,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 2,
-      "CD": 14,
+      "id": 146,
       "name": "Playball",
       "desc": "Calls the power of nature, stunning and damaging enemies in a large area",
+      "castTime": 2,
+      "CD": 14,
       "range": 9,
       "missChance": 0,
       "radius": 3,
@@ -4077,10 +4139,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.6,
-      "CD": 10,
+      "id": 148,
       "name": "Hemorrhage",
       "desc": "Curse an enemy healing herself and dealing damage overtime",
+      "castTime": 0.6,
+      "CD": 10,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -4150,10 +4213,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1,
-      "CD": 12,
+      "id": 150,
       "name": "Skull Homerun",
       "desc": "Swings her bat to hit a skull aimed at the furthest target of her range.",
+      "castTime": 1,
+      "CD": 12,
       "range": 7,
       "missChance": 0,
       "radius": 0,
@@ -4213,10 +4277,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.2,
-      "CD": 12,
+      "id": 152,
       "name": "Meet me in Valhalla",
       "desc": "Uses her goddess power to increase her attack speed and reflect a part of the damage received to the attacker",
+      "castTime": 0.2,
+      "CD": 12,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -4278,10 +4343,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.6,
-      "CD": 6,
+      "id": 200,
       "name": "Piercing Blade",
       "desc": "Charges her sword and pierces through her enemy.",
+      "castTime": 0.6,
+      "CD": 6,
       "range": 1,
       "missChance": 0,
       "radius": 0,
@@ -4336,6 +4402,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1002,
       "castTime": 0.6,
       "CD": 6,
       "range": 1,
@@ -4398,6 +4465,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1004,
       "castTime": 0.4,
       "CD": 6,
       "range": 7,
@@ -4454,6 +4522,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1006,
       "castTime": 0.2,
       "CD": 10,
       "range": 255,
@@ -4510,6 +4579,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1008,
       "castTime": 0.8,
       "CD": 11,
       "range": 7,
@@ -4573,6 +4643,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1010,
       "castTime": 0.8,
       "CD": 12.5,
       "range": 7,
@@ -4629,6 +4700,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1012,
       "castTime": 0.2,
       "CD": 10,
       "range": 1,
@@ -4685,6 +4757,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1014,
       "castTime": 0.3,
       "CD": 10,
       "range": 7,
@@ -4747,6 +4820,7 @@
       "aoe": 2
     },
     "skill": {
+      "id": 1016,
       "castTime": 1,
       "CD": 10,
       "range": 5,
@@ -4809,6 +4883,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1018,
       "castTime": 0.8,
       "CD": 10,
       "range": 7,
@@ -4865,6 +4940,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1020,
       "castTime": 0.8,
       "CD": 5,
       "range": 7,
@@ -4921,6 +4997,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1022,
       "castTime": 0.2,
       "CD": 13,
       "range": 1,
@@ -4977,6 +5054,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1024,
       "castTime": 1.5,
       "CD": 12.5,
       "range": 6,
@@ -5033,6 +5111,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1026,
       "castTime": 0.2,
       "CD": 3,
       "range": 1,
@@ -5096,6 +5175,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1028,
       "castTime": 0.8,
       "CD": 12,
       "range": 7,
@@ -5154,6 +5234,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1030,
       "castTime": 0.2,
       "CD": 15,
       "range": 255,
@@ -5209,6 +5290,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1032,
       "castTime": 0.3,
       "CD": 9,
       "range": 1,
@@ -5271,6 +5353,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1034,
       "castTime": 1.2,
       "CD": 10,
       "range": 1,
@@ -5330,6 +5413,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1038,
       "castTime": 1.5,
       "CD": 16,
       "range": 8,
@@ -5388,6 +5472,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1040,
       "castTime": 0.3,
       "CD": 7.5,
       "range": 1,
@@ -5444,6 +5529,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1042,
       "castTime": 1.2,
       "CD": 7,
       "range": 1,
@@ -5503,6 +5589,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1044,
       "castTime": 1.2,
       "CD": 4,
       "range": 1,
@@ -5562,6 +5649,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1046,
       "castTime": 1,
       "CD": 12.5,
       "range": 7,
@@ -5624,6 +5712,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1048,
       "castTime": 0.2,
       "CD": 7,
       "range": 4,
@@ -5680,6 +5769,7 @@
       "aoe": 2
     },
     "skill": {
+      "id": 1050,
       "castTime": 2.5,
       "CD": 10,
       "range": 9,
@@ -5736,6 +5826,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1052,
       "castTime": 1,
       "CD": 10,
       "range": 8,
@@ -5798,6 +5889,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1054,
       "castTime": 1,
       "CD": 7,
       "range": 10,
@@ -5854,6 +5946,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1056,
       "castTime": 0.3,
       "CD": 7,
       "range": 1,
@@ -5917,6 +6010,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1058,
       "castTime": 0.8,
       "CD": 5,
       "range": 7,
@@ -5975,10 +6069,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.1,
-      "CD": 0.4,
+      "id": 60,
       "name": "Ultimate Fire Bolt",
       "desc": "Throws a big fire bolt. This ability has a reduced cooldown.",
+      "castTime": 0.1,
+      "CD": 0.4,
       "range": 6,
       "missChance": 0,
       "radius": 0,
@@ -6033,6 +6128,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1062,
       "castTime": 1,
       "CD": 8,
       "range": 6,
@@ -6096,6 +6192,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1064,
       "castTime": 0.6,
       "CD": 10,
       "range": 1,
@@ -6158,6 +6255,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1072,
       "castTime": 1.5,
       "CD": 7,
       "range": 100,
@@ -6214,10 +6312,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 10,
+      "id": 78,
       "name": "Lucky Charm",
       "desc": "Casts a lucky AOE, boosting attack speed and reducing cooldown of allies, and damaging enemies in it.",
+      "castTime": 0.8,
+      "CD": 10,
       "range": 7,
       "missChance": 0,
       "radius": 4,
@@ -6284,6 +6383,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1082,
       "castTime": 0.1,
       "CD": 5,
       "range": 1,
@@ -6342,6 +6442,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1084,
       "castTime": 1.2,
       "CD": 8.5,
       "range": 1,
@@ -6401,10 +6502,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 0.8,
-      "CD": 8,
+      "id": 118,
       "name": "Xmas Tornado",
       "desc": "Casts a winter explosion, dealing damage and slowing enemies, and healing allies.",
+      "castTime": 0.8,
+      "CD": 8,
       "range": 7,
       "missChance": 0,
       "radius": 3,
@@ -6466,6 +6568,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 998,
       "castTime": 0.9,
       "CD": 8,
       "range": 7,
@@ -6556,6 +6659,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3002,
       "castTime": 2.2,
       "CD": 12,
       "range": 2,
@@ -6618,6 +6722,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3004,
       "castTime": 2.2,
       "CD": 12,
       "range": 1,
@@ -6674,6 +6779,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3006,
       "castTime": 1,
       "CD": 20,
       "range": 1,
@@ -6737,6 +6843,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3008,
       "castTime": 2.2,
       "CD": 12,
       "range": 1,
@@ -6793,6 +6900,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3010,
       "castTime": 1.5,
       "CD": 12,
       "range": 1,
@@ -6849,6 +6957,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3012,
       "castTime": 1.5,
       "CD": 12,
       "range": 1,
@@ -6905,6 +7014,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3014,
       "castTime": 2.2,
       "CD": 12,
       "range": 1,
@@ -6961,6 +7071,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3016,
       "castTime": 3.2,
       "CD": 9,
       "range": 1,
@@ -7017,6 +7128,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3018,
       "castTime": 3,
       "CD": 12,
       "range": 1,
@@ -7073,6 +7185,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1024,
       "castTime": 1.5,
       "CD": 12.5,
       "range": 6,
@@ -7129,6 +7242,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3016,
       "castTime": 3.2,
       "CD": 9,
       "range": 1,
@@ -7185,6 +7299,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3024,
       "castTime": 1,
       "CD": 12,
       "range": 2,
@@ -7248,6 +7363,7 @@
       "aoe": 3
     },
     "skill": {
+      "id": 3026,
       "castTime": 3,
       "CD": 12,
       "range": 2,
@@ -7304,6 +7420,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3028,
       "castTime": 2,
       "CD": 12,
       "range": 6,
@@ -7360,6 +7477,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3030,
       "castTime": 1,
       "CD": 5,
       "range": 2,
@@ -7416,6 +7534,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3032,
       "castTime": 0.5,
       "CD": 7.5,
       "range": 3,
@@ -7484,6 +7603,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3034,
       "castTime": 0.5,
       "CD": 7,
       "range": 10,
@@ -7543,6 +7663,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3036,
       "castTime": 2,
       "CD": 10,
       "range": 255,
@@ -7599,6 +7720,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3038,
       "castTime": 3,
       "CD": 5,
       "range": 255,
@@ -7655,6 +7777,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3040,
       "castTime": 3,
       "CD": 10,
       "range": 1,
@@ -7699,6 +7822,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 3042,
       "castTime": 1,
       "CD": 8,
       "range": 18,
@@ -7757,6 +7881,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3044,
       "castTime": 1.5,
       "CD": 10,
       "range": 12,
@@ -7818,6 +7943,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3046,
       "castTime": 1.5,
       "CD": 12.5,
       "range": 6,
@@ -7874,6 +8000,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3048,
       "castTime": 1.5,
       "CD": 12.5,
       "range": 6,
@@ -7920,6 +8047,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4001,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -7969,6 +8097,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4002,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8018,6 +8147,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4003,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8067,6 +8197,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4004,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8116,6 +8247,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4005,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8165,6 +8297,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4006,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8214,6 +8347,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4007,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8263,6 +8397,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4008,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8312,6 +8447,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4009,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8361,6 +8497,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4010,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8410,6 +8547,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4011,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8459,6 +8597,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4012,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8508,6 +8647,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4013,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8557,6 +8697,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4014,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8606,6 +8747,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4015,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8655,6 +8797,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4016,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8704,6 +8847,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4017,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8753,6 +8897,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4018,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8802,6 +8947,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4019,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8851,6 +8997,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4020,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8900,6 +9047,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4021,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8949,6 +9097,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4022,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -8998,6 +9147,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4023,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9047,6 +9197,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4024,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9096,6 +9247,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4025,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9145,6 +9297,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4026,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9194,6 +9347,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4027,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9243,6 +9397,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4028,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9292,6 +9447,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4029,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9341,6 +9497,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4030,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9390,6 +9547,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4031,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9439,6 +9597,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4032,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9488,6 +9647,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4033,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9537,6 +9697,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4034,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9586,6 +9747,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4035,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9635,6 +9797,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4036,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9684,6 +9847,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4037,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9733,6 +9897,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4038,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9782,6 +9947,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4039,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -9831,6 +9997,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 4040,
       "castTime": 1.2,
       "CD": 60,
       "range": 1,
@@ -10030,6 +10197,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 5012,
       "castTime": 0.1,
       "CD": 1,
       "range": 1,
@@ -10075,6 +10243,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 5014,
       "castTime": 0.5,
       "CD": 5,
       "range": 1,
@@ -10134,6 +10303,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 5016,
       "castTime": 0.3,
       "CD": 1,
       "range": 6,
@@ -10190,6 +10360,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 3010,
       "castTime": 1.5,
       "CD": 12,
       "range": 1,
@@ -10246,6 +10417,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 5020,
       "castTime": 0.3,
       "CD": 0.1,
       "range": 1,
@@ -10307,6 +10479,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 5022,
       "castTime": 0.3,
       "CD": 0.1,
       "range": 1,
@@ -10363,6 +10536,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 5024,
       "castTime": 0.3,
       "CD": 0.1,
       "range": 1,
@@ -10414,6 +10588,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 5026,
       "castTime": 1,
       "CD": 0.1,
       "range": 1,
@@ -10475,10 +10650,11 @@
       "aoe": 0
     },
     "skill": {
-      "castTime": 1.5,
-      "CD": 10,
+      "id": 142,
       "name": "Moon Crushing",
       "desc": "Calls the moon and uses the pressure to crush and slow enemies. The effect is repeated when the moon leaves.",
+      "castTime": 1.5,
+      "CD": 10,
       "range": 8,
       "missChance": 0,
       "radius": 6,
@@ -10669,6 +10845,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 5038,
       "castTime": 0.1,
       "CD": 1,
       "range": 1,
@@ -10714,6 +10891,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6000,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -10765,6 +10943,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6001,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -10816,6 +10995,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6002,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -10867,6 +11047,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6003,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -10918,6 +11099,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6004,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -10967,6 +11149,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6100,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -11018,6 +11201,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6101,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -11069,6 +11253,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6102,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -11120,6 +11305,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 6103,
       "castTime": 1.2,
       "CD": 100,
       "range": 1,
@@ -11536,6 +11722,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 8002,
       "castTime": 0.6,
       "CD": 7,
       "range": 1,
@@ -11592,6 +11779,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 8004,
       "castTime": 0.3,
       "CD": 9,
       "range": 1,
@@ -11653,6 +11841,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 8006,
       "castTime": 0.2,
       "CD": 10,
       "range": 1,
@@ -11709,6 +11898,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 8008,
       "castTime": 0.3,
       "CD": 7.5,
       "range": 1,
@@ -11847,6 +12037,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 10096,
       "castTime": 0.6,
       "CD": 7,
       "range": 1,
@@ -11903,6 +12094,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 1,
       "castTime": 0.3,
       "CD": 1,
       "range": 1,
@@ -12027,6 +12219,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 15012,
       "castTime": 0.1,
       "CD": 1,
       "range": 1,
@@ -12082,6 +12275,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 15017,
       "castTime": 0.2,
       "CD": 1,
       "range": 2,
@@ -12138,6 +12332,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 15020,
       "castTime": 0.3,
       "CD": 0.1,
       "range": 1,
@@ -12199,6 +12394,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 15022,
       "castTime": 0.3,
       "CD": 0.1,
       "range": 1,
@@ -12255,6 +12451,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "skill": {
+      "id": 15024,
       "castTime": 0.3,
       "CD": 0.1,
       "range": 1,
@@ -12391,6 +12588,7 @@
       "aoe": 0
     },
     "skill": {
+      "id": 15038,
       "castTime": 0.1,
       "CD": 1,
       "range": 1,
