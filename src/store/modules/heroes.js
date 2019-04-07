@@ -181,7 +181,8 @@ const state = {
   /** for testing while items are being added */
   heroExtraAS: 0,
   selectedHeroes: [],
-  openSkillDetails: true,
+  showSkillDetails: true,
+  showMinionDetails: false,
 };
 
 const validElement = (hero) => state.filters.element === 'All' || hero.sElement === state.filters.element;
@@ -237,8 +238,11 @@ const mutations = {
   updateHeroExtraAS (state, payload) {
     state.heroExtraAS = payload;
   },
-  updateOpenSkillDetails (state, payload) {
-    state.openSkillDetails = payload;
+  updateShowSkillDetails (state, payload) {
+    state.showSkillDetails = payload;
+  },
+  updateShowMinionDetails (state, payload) {
+    state.showMinionDetails = payload;
   },
   updateHeroLevel (state, payload) {
     state.heroLevel = payload;

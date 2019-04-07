@@ -1,19 +1,19 @@
 <template>
   <div class="wrapper" :class="isMinion?'ww-minion':'ww'"
-    @click="toggleDetails"
     @mousedown.left="mousedown=true"
     @mouseup.left="mousedown=false;clearTimer()"
     @mouseout="mousedown=false;clearTimer()"
   >
-    <div class="headline">
-      <span class="skill-name">{{ hero.skill.name || '' }}</span>
+    <div class="headline" @click="toggleDetails">
+      <img v-if="skillIcon" :src="skillIcon" class="skill-icon">
+      <span class="skill-name">{{ hero.skill.name || '#'+hero.skill.id }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
     </div>
     <div v-if="!isMinion" class="skill-buttons" @click="$event.stopPropagation()">
       <button @mousedown.left="updateSkillLevel(-1)">-</button>
       <button @mousedown.left="updateSkillLevel(1)">+</button>
     </div>
-    <div v-if="showDetails" class="card">
+    <div v-show="showDetails" class="card">
       <div v-if="isMinion" class="border-top" style="width:100%"></div>
       <div v-else class="desc border-top border-bottom">
         <span>{{ skill.desc }}</span>
@@ -216,7 +216,7 @@ export default {
   },
 
   created() {
-    this.showDetails = this.$store.state.heroes.openSkillDetails;
+    this.showDetails = this.$store.state.heroes.showSkillDetails;
   },
 
 }
@@ -281,7 +281,6 @@ li {
 }
 .wrapper {
   position: relative;
-  cursor: pointer;
   border-radius: .3em;
   padding: 0.2em 0.4em 0 0.4em;
   margin-top: .2em;

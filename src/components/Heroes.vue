@@ -31,7 +31,12 @@
 
         <div>
           <input type="checkbox" id="ckSkillDetails" v-model="showSkillDetails">
-          <label for="ckSkillDetails" style="cursor:pointer;">Show skill details by default</label>
+          <label for="ckSkillDetails" style="cursor:pointer;">Show skill details</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ckMinionDetails" v-model="showMinionDetails">
+          <label for="ckMinionDetails" style="cursor:pointer;">Show minion details</label>
         </div>
 
 
@@ -166,10 +171,19 @@ export default {
 
     showSkillDetails: {
       get () {
-        return this.$store.state.heroes.openSkillDetails;
+        return this.$store.state.heroes.showSkillDetails;
       },
       set (val) {
-        this.$store.commit('updateOpenSkillDetails', val);
+        this.$store.commit('updateShowSkillDetails', val);
+      }
+    },
+
+    showMinionDetails: {
+      get () {
+        return this.$store.state.heroes.showMinionDetails;
+      },
+      set (val) {
+        this.$store.commit('updateShowMinionDetails', val);
       }
     },
 

@@ -3,13 +3,19 @@
     <!-- <div class="flex-row"> -->
       <div class="flex-col">
         <div class="flex-row align-center">
+          @click="toggleDetails"
+          :style="(isMinion?'cursor:pointer;':'')+(showDetails?'':'margin-bottom:-0.5em;')"
+        >
+          <img v-if="getImage(hero.id)"
+            :src="getImage(hero.id)" :alt="hero.name"
+            class="hero-icon border-rarity" :class="'r'+hero.rarity">
           <span class="hero-name">{{ hero.name }}</span>
           <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
           <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
           <span style="white-space:pre"> (Level {{ heroLevel }})</span>
         </div>
         <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
-        <div class="flex-row flex-top">
+        <div v-show="showDetails" class="flex-row flex-top">
           <ul class="border-right">
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
             <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
@@ -30,8 +36,8 @@
             <li v-if="!isMinion"><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
           </ul>
         </div>
-        <hero-skill v-if="hero.skill"
-          :hero="hero" :level="heroLevel" :show-info="openSkillDetails"></hero-skill>
+        <hero-skill v-show="hero.skill && showDetails"
+          :hero="hero" :level="heroLevel" :show-info="showSkillDetails"></hero-skill>
       </div>
     <!-- </div> -->
   </div>
@@ -44,12 +50,12 @@ import { campBonuses, heroImages } from '../api/const.js';
 export default {
   props: {
     hero: Object,
-    showDetails: Boolean,
     level: Number,
   },
 
   data () {
     return {
+      showDetails: false,
       moveSpeeds: ['Immob.', 'Ultra F.', 'V.Fast', 'V.Fast', 'Fast', 'Med', 'Slow', 'V.Slow'],
     };
   },
@@ -61,7 +67,7 @@ export default {
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
       selectedHeroes: state => state.heroes.selectedHeroes,
-      openSkillDetails: state => state.heroes.openSkillDetails,
+      showSkillDetails: state => state.heroes.showSkillDetails,
     }),
     isMinion () {
       return this.hero.id > 100;
@@ -155,6 +161,11 @@ export default {
   },
 
   methods: {
+    toggleDetails () {
+      if( this.isMinion ) {
+        this.showDetails = !this.showDetails;
+      }
+    },
     setColor(color) {
       if( this.selectedHeroes.length === 1 ) return;
       document.getElementById('close'+this.hero.id).style.color = color;
@@ -173,6 +184,10 @@ export default {
     deselectHero() {
       this.$store.commit('deselectMaiden', this.hero);
     }
+  },
+
+  created() {
+    this.showDetails = !this.isMinion || this.$store.state.heroes.showMinionDetails;
   },
 
   components: {
