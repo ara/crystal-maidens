@@ -1,17 +1,21 @@
 <template>
   <div class="wrapper" :class="isMinion?'ww-minion':'ww'"
     @mousedown.left="mousedown=true"
-    @mouseup.left="mousedown=false;clearTimer()"
-    @mouseout="mousedown=false;clearTimer()"
+    @mouseup.left="clearTimer()"
+    @mouseout="clearTimer()"
   >
     <div class="headline" @click="toggleDetails">
       <img v-if="skillIcon" :src="skillIcon" class="skill-icon">
       <span class="skill-name">{{ hero.skill.name || '#'+hero.skill.id }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
-    </div>
-    <div v-if="!isMinion" class="skill-buttons" @click="$event.stopPropagation()">
-      <button @mousedown.left="updateSkillLevel(-1)">-</button>
-      <button @mousedown.left="updateSkillLevel(1)">+</button>
+      <div v-if="!isMinion" class="skill-buttons" @click="$event.stopPropagation()">
+        <button class="skill-bt"
+          @mousedown.left="updateSkillLevel(-1)"
+        >-</button>
+        <button class="skill-bt"
+          @mousedown.left="updateSkillLevel(1)"
+        >+</button>
+      </div>
     </div>
     <div v-show="showDetails" class="card">
       <div v-if="isMinion" class="border-top" style="width:100%"></div>
@@ -201,17 +205,18 @@ export default {
       }
       return str;
     },
-    updateSkillLevel (by, unrestricted, timer=420) {
+    updateSkillLevel (by, unrestricted, timer=300) {
       const upperLimit = unrestricted ? 100 : maxSkillLevel;
       const newSkillLevel = Math.min( upperLimit,
         Math.max(1, this.skillLevel+by) );
       this.$store.commit('updateSkillLevel', newSkillLevel );
-      const accelTimer = Math.max(20, .6 * timer);
+      const accelTimer = Math.max(25, .6 * timer);
       this.timerID = setTimeout( (val, unlimited, lt) => {
         if( this.mousedown ) this.updateSkillLevel( val, unlimited, lt );
       }, timer, by, unrestricted, accelTimer );
     },
     clearTimer () {
+      this.mousedown = false;
       clearTimeout(this.timerID);
     },
   },
@@ -297,14 +302,6 @@ li {
   margin-top: .2em;
   background: #ddd;
   border: 1px solid #aaa;
-  &:hover button {
-    opacity: 1;
-    transition: opacity .4s ease;
-  }
-  &:not(:hover) button {
-    opacity: 0;
-    transition: opacity .4s ease;
-  }
 }
 .ww {
   width: 20em;
@@ -316,31 +313,41 @@ li {
   position: absolute;
   right: .25em;
   top: .2em;
+  display: flex;
+  flex-direction: column-reverse;
   margin: 0;
 }
-button {
+.skill-bt {
   cursor: pointer;
   border: 1px solid #aaa;
   border-radius: .2em;
-  margin: 0 .15em;
+  margin: .1em .15em 0;
   width: 18px;
-  height: 18px;
+  height: 16px;
   font-size: .9em;
   font-weight: 600;
   background: #ccc;
   padding: 0;
   color: #555;
-}
-button:hover {
-  background-color: #bbb !important;
-}
-button:focus {
-  outline: 0;
+  &:hover {
+    background-color: #bbb !important;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 .headline {
   display: flex;
   align-items: center;
   padding-bottom: .2em;
   cursor: pointer;
+    &:hover button {
+    opacity: 1;
+    transition: opacity .4s ease;
+  }
+  &:not(:hover) button {
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
 }
 </style>
