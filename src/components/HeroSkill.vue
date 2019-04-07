@@ -55,7 +55,7 @@
 import HeroCard from './HeroCard';
 import { mapState } from 'vuex';
 import { effectTypes, targetTypes as targets, effects,
-  maxStunDuration, maxSkillLevel } from '../api/const.js';
+  maxStunDuration, maxSkillLevel, skillIcons } from '../api/const.js';
 
 const formatValue = (value, color) =>
   `<span style="color:${color};font-weight:700;text-shadow:.5px .5px .2px #000;">${value}</span>`;
@@ -95,6 +95,11 @@ export default {
       cdr: state => state.heroes.cdr,
       heroes: state => state.heroes.heroes,
     }),
+    skillIcon () {
+      // console.log(this.hero.skill.id, skillIcons.get(this.hero.skill.id));
+      console.log(this.skill);//skillIcons.get(this.skill.id));
+      return skillIcons.get(this.skill.id);
+    },
     heroCDR () {
       return this.isMinion ? 0 : this.cdr;
     },
@@ -230,6 +235,12 @@ export default {
   display: flex;
   justify-content:center;
 }
+.skill-icon {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: .5em;
+  margin-right: .4em;
+}
 .desc {
   display: table-cell;
   width: 10%;
@@ -327,6 +338,9 @@ button:focus {
   outline: 0;
 }
 .headline {
+  display: flex;
+  align-items: center;
   padding-bottom: .2em;
+  cursor: pointer;
 }
 </style>
