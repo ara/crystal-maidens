@@ -2,7 +2,7 @@
   <div class="container" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
     <!-- <div class="flex-row"> -->
       <div class="flex-col">
-        <div class="flex-row align-center">
+        <div class="flex-row headline"
           @click="toggleDetails"
           :style="(isMinion?'cursor:pointer;':'')+(showDetails?'':'margin-bottom:-0.5em;')"
         >
@@ -204,6 +204,21 @@ export default {
   margin-right: .2em;
 }
 
+.hero-icon {
+  width: 3.2em;
+  height: 3.2em;
+  margin: .3em 0 .2em
+}
+.border-rarity {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: .4em;
+}
+.r0 { border-color: #a87; }
+.r1 { border-color: #36c; }
+.r2 { border-color: #d4d; }
+.r3 { border-color: #dc0; }
+
 ul {
   margin: .15em .35em;
   padding: 0;
@@ -239,11 +254,6 @@ img, h4, span {
   text-shadow: 0 0 3px #bbb;
 }
 
-.align-center {
-  align-items: center;
-  justify-content: center;
-}
-
 .container {
   margin: 0 0 .35em;
   background: #eee;
@@ -267,6 +277,10 @@ img, h4, span {
   flex-direction: row;
   padding: 0;
   text-shadow: 0 0 1px #ddd;
+}
+.headline {
+  align-items: center;
+  justify-content: start;
 }
 .flex-col {
   display: flex;
