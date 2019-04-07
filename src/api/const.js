@@ -1,29 +1,25 @@
 const itemImages = new Map([]);
 const heroImages = new Map([]);
+const skillIcons = new Map([]);
 
-function importItemImages (req) {
+function importImages (mapObj, keyIsNumber, req) {
   req.keys().forEach( key =>
-    itemImages.set(
-      parseInt( /([0-9]+)\.png$/i.exec(key)[1] ),
+    mapObj.set(
+      keyIsNumber
+        ? parseInt( /\d+/.exec(key)[0] )
+        : /\.\/([^.]+)/.exec(key)[1],
       req(key)
     )
   );
 }
 
 try {
-  importItemImages( require.context('../assets/items/', false, /\.png$/) );
+  importImages( heroImages, true, require.context('../assets/hero-icons/') );
+  importImages( heroImages, false, require.context('../assets/classes/') );
+  importImages( heroImages, false, require.context('../assets/elements/') );
 
-  heroImages.set('Warrior', require('../assets/classes/Warrior.png'));
-  heroImages.set('Mage', require('../assets/classes/Mage.png'));
-  heroImages.set('Marksman', require('../assets/classes/Marksman.png'));
-  heroImages.set('Engineer', require('../assets/classes/Engineer.png'));
-  heroImages.set('Support', require('../assets/classes/Support.png'));
-
-  heroImages.set('Fire', require('../assets/elements/Fire.png'));
-  heroImages.set('Nature', require('../assets/elements/Nature.png'));
-  heroImages.set('Water', require('../assets/elements/Water.png'));
-  heroImages.set('Light', require('../assets/elements/Light.png'));
-  heroImages.set('Dark', require('../assets/elements/Dark.png'));
+  importImages( skillIcons, true, require.context('../assets/skills/') );
+  importImages( itemImages, true, require.context('../assets/items/') );
 } catch(err) { ; }
 
 const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
@@ -34,6 +30,7 @@ module.exports = {
   maxSkillLevel: 29,
   maxStunDuration: 2.5,
   heroImages,
+  skillIcons,
   itemImages,
   elements,
   campBonuses: [1, 1.05, 1.1, 1.2, 1.3, 1.45, 1.6, 1.8, 2, 2.25, 3, 3.25, 3.5, 3.75, 4, 4.5],
