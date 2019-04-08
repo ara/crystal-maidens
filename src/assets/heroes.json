@@ -26,6 +26,7 @@
   {
     "id": 1,
     "name": "Helen",
+    "title": "THE SWORDSWOMAN",
     "rarity": 0,
     "element": 1,
     "class": 1,
@@ -85,6 +86,7 @@
   {
     "id": 2,
     "name": "Roxelana",
+    "title": "THE FIREMAGUS",
     "rarity": 1,
     "element": 1,
     "class": 2,
@@ -144,6 +146,7 @@
   {
     "id": 3,
     "name": "Althea",
+    "title": "THE CLERIC",
     "rarity": 0,
     "element": 16,
     "class": 5,
@@ -203,6 +206,7 @@
   {
     "id": 4,
     "name": "Nuka",
+    "title": "THE SHAMAN",
     "rarity": 0,
     "element": 4,
     "class": 2,
@@ -269,6 +273,7 @@
   {
     "id": 5,
     "name": "Edana",
+    "title": "THE DARK WITCH",
     "rarity": 0,
     "element": 8,
     "class": 2,
@@ -328,6 +333,7 @@
   {
     "id": 6,
     "name": "Suzume",
+    "title": "THE VOIDTHIEF",
     "rarity": 0,
     "element": 8,
     "class": 1,
@@ -387,6 +393,7 @@
   {
     "id": 7,
     "name": "Ava",
+    "title": "THE NORTH'S PRODIGY",
     "rarity": 1,
     "element": 2,
     "class": 3,
@@ -452,6 +459,7 @@
   {
     "id": 8,
     "name": "Heet",
+    "title": "THE BOMB MAKER",
     "rarity": 3,
     "element": 1,
     "class": 4,
@@ -517,6 +525,7 @@
   {
     "id": 9,
     "name": "Coral",
+    "title": "THE ICE SORCERESS",
     "rarity": 0,
     "element": 2,
     "class": 2,
@@ -576,6 +585,7 @@
   {
     "id": 10,
     "name": "Zera",
+    "title": "THE FLAME KILLER",
     "rarity": 3,
     "element": 1,
     "class": 3,
@@ -635,6 +645,7 @@
   {
     "id": 11,
     "name": "Eli",
+    "title": "THE GUARDIAN",
     "rarity": 1,
     "element": 16,
     "class": 1,
@@ -694,6 +705,7 @@
   {
     "id": 12,
     "name": "Kade ",
+    "title": "THE DARK NIGHT",
     "rarity": 1,
     "element": 8,
     "class": 1,
@@ -753,6 +765,7 @@
   {
     "id": 13,
     "name": "Isana",
+    "title": "THE SOUL SLAYER",
     "rarity": 1,
     "element": 2,
     "class": 1,
@@ -819,6 +832,7 @@
   {
     "id": 14,
     "name": "Aria",
+    "title": "THE NATURE LOVER",
     "rarity": 1,
     "element": 4,
     "class": 3,
@@ -880,6 +894,7 @@
   {
     "id": 15,
     "name": "Lily",
+    "title": "THE PIXIE",
     "rarity": 2,
     "element": 4,
     "class": 5,
@@ -938,6 +953,7 @@
   {
     "id": 16,
     "name": "Camilla",
+    "title": "THE SOLDIER",
     "rarity": 1,
     "element": 1,
     "class": 1,
@@ -1002,6 +1018,7 @@
   {
     "id": 17,
     "name": "Ivy",
+    "title": "THE EASTER HUNTRESS",
     "rarity": 2,
     "element": 4,
     "class": 4,
@@ -1064,6 +1081,7 @@
   {
     "id": 18,
     "name": "Faye",
+    "title": "THE SPIRIT CALLER",
     "rarity": 2,
     "element": 16,
     "class": 1,
@@ -1128,6 +1146,7 @@
   {
     "id": 19,
     "name": "Ophelia",
+    "title": "THE PURPLE DEMON",
     "rarity": 2,
     "element": 8,
     "class": 3,
@@ -1189,6 +1208,7 @@
   {
     "id": 20,
     "name": "Beatrix",
+    "title": "THE ORC",
     "rarity": 2,
     "element": 4,
     "class": 1,
@@ -1248,6 +1268,7 @@
   {
     "id": 21,
     "name": "Daphne",
+    "title": "THE LICH QUEEN",
     "rarity": 3,
     "element": 8,
     "class": 2,
@@ -1310,6 +1331,7 @@
   {
     "id": 22,
     "name": "Lapis",
+    "title": "THE BUILDER",
     "rarity": 0,
     "element": 2,
     "class": 4,
@@ -1372,6 +1394,7 @@
   {
     "id": 23,
     "name": "Dawn",
+    "title": "THE LITTLE WITCH",
     "rarity": 1,
     "element": 16,
     "class": 2,
@@ -1437,6 +1460,7 @@
   {
     "id": 24,
     "name": "Agni",
+    "title": "THE FIREFLY",
     "rarity": 0,
     "element": 1,
     "class": 5,
@@ -1496,6 +1520,7 @@
   {
     "id": 25,
     "name": "Luna",
+    "title": "THE SHOOTER",
     "rarity": 2,
     "element": 8,
     "class": 4,
@@ -1555,6 +1580,7 @@
   {
     "id": 26,
     "name": "Billie",
+    "title": "THE BUBBLEGIRL",
     "rarity": 2,
     "element": 2,
     "class": 5,
@@ -1620,6 +1646,7 @@
   {
     "id": 27,
     "name": "Micah",
+    "title": "THE CHOSEN ONE",
     "rarity": 3,
     "element": 16,
     "class": 3,
@@ -1679,6 +1706,7 @@
   {
     "id": 28,
     "name": "Mei-Li",
+    "title": "THE DRAGON'S DAUGHTER",
     "rarity": 0,
     "element": 16,
     "class": 5,
@@ -1745,6 +1773,7 @@
   {
     "id": 29,
     "name": "Asuka",
+    "title": "THE DARK LOVER",
     "rarity": 2,
     "element": 8,
     "class": 5,
@@ -1806,6 +1835,7 @@
   {
     "id": 30,
     "name": "Arang",
+    "title": "THE FIREFOX",
     "rarity": 2,
     "element": 1,
     "class": 2,
@@ -1865,6 +1895,7 @@
   {
     "id": 31,
     "name": "Dana",
+    "title": "THE DEFENDER",
     "rarity": 0,
     "element": 2,
     "class": 1,
@@ -1931,6 +1962,7 @@
   {
     "id": 32,
     "name": "Litza",
+    "title": "THE ONE PUNCH GIRL",
     "rarity": 0,
     "element": 16,
     "class": 4,
@@ -1996,6 +2028,7 @@
   {
     "id": 33,
     "name": "Taki",
+    "title": "THE OCEAN QUEEN",
     "rarity": 3,
     "element": 2,
     "class": 2,
@@ -2060,6 +2093,7 @@
   {
     "id": 34,
     "name": "Melody",
+    "title": "THE MUSICIAN",
     "rarity": 3,
     "element": 4,
     "class": 5,
@@ -2141,6 +2175,7 @@
   {
     "id": 35,
     "name": "Bamboo",
+    "title": "THE JUNGLE PRIDE",
     "rarity": 1,
     "element": 4,
     "class": 4,
@@ -2200,6 +2235,7 @@
   {
     "id": 36,
     "name": "Vanille",
+    "title": "THE OUTLAW",
     "rarity": 1,
     "element": 1,
     "class": 3,
@@ -2259,6 +2295,7 @@
   {
     "id": 37,
     "name": "Raven",
+    "title": "THE BIRD OF LIES",
     "rarity": 2,
     "element": 8,
     "class": 5,
@@ -2324,6 +2361,7 @@
   {
     "id": 38,
     "name": "Julia",
+    "title": "THE POOL PARTY GIRL",
     "rarity": 1,
     "element": 2,
     "class": 3,
@@ -2383,6 +2421,7 @@
   {
     "id": 39,
     "name": "Patricia",
+    "title": "THE DRUNKEST DANCER",
     "rarity": 2,
     "element": 4,
     "class": 2,
@@ -2454,6 +2493,7 @@
   {
     "id": 40,
     "name": "Nahame",
+    "title": "THE FORGOTTEN TOMAHAWK",
     "rarity": 1,
     "element": 4,
     "class": 3,
@@ -2513,6 +2553,7 @@
   {
     "id": 41,
     "name": "Ichi",
+    "title": "THE BLIND SAMURAI",
     "rarity": 0,
     "element": 16,
     "class": 1,
@@ -2574,6 +2615,7 @@
   {
     "id": 42,
     "name": "Eloe",
+    "title": "THE CURSED HUNTER",
     "rarity": 1,
     "element": 8,
     "class": 2,
@@ -2636,6 +2678,7 @@
   {
     "id": 43,
     "name": "Hikaru",
+    "title": "THE CHERRY BLOSSOM GIRL",
     "rarity": 3,
     "element": 8,
     "class": 1,
@@ -2695,6 +2738,7 @@
   {
     "id": 44,
     "name": "Navie",
+    "title": "THE SCUBA DIVER",
     "rarity": 0,
     "element": 2,
     "class": 4,
@@ -2729,6 +2773,7 @@
   {
     "id": 45,
     "name": "Kebi",
+    "title": "THE EGYPTIAN PRINCESS",
     "rarity": 2,
     "element": 16,
     "class": 2,
@@ -2763,6 +2808,7 @@
   {
     "id": 46,
     "name": "Chloe",
+    "title": "THE REBEL",
     "rarity": 0,
     "element": 8,
     "class": 4,
@@ -2797,6 +2843,7 @@
   {
     "id": 47,
     "name": "Jess",
+    "title": "THE TIME TRAVELER",
     "rarity": 3,
     "element": 16,
     "class": 4,
@@ -2856,6 +2903,7 @@
   {
     "id": 48,
     "name": "Kamiko",
+    "title": "THE DEVIL",
     "rarity": 2,
     "element": 1,
     "class": 3,
@@ -2921,6 +2969,7 @@
   {
     "id": 49,
     "name": "Shan",
+    "title": "THE PRINCESS ",
     "rarity": 1,
     "element": 1,
     "class": 5,
@@ -2987,6 +3036,7 @@
   {
     "id": 50,
     "name": "Reagan",
+    "title": "THE SAVAGE",
     "rarity": 0,
     "element": 8,
     "class": 1,
@@ -3021,6 +3071,7 @@
   {
     "id": 51,
     "name": "Katherine",
+    "title": "THE MECHANICIAN",
     "rarity": 0,
     "element": 2,
     "class": 4,
@@ -3086,6 +3137,7 @@
   {
     "id": 52,
     "name": "Clementine",
+    "title": "THE BOOMERANG MASTER",
     "rarity": 1,
     "element": 4,
     "class": 3,
@@ -3152,6 +3204,7 @@
   {
     "id": 53,
     "name": "Lola",
+    "title": "THE WAVE SLICER",
     "rarity": 2,
     "element": 2,
     "class": 1,
@@ -3211,6 +3264,7 @@
   {
     "id": 54,
     "name": "Captain Amira",
+    "title": "THE SAND PIRATE",
     "rarity": 0,
     "element": 16,
     "class": 3,
@@ -3245,6 +3299,7 @@
   {
     "id": 55,
     "name": "Ivory",
+    "title": "THE CORRUPTED ARROW",
     "rarity": 2,
     "element": 8,
     "class": 3,
@@ -3321,6 +3376,7 @@
   {
     "id": 56,
     "name": "Annie",
+    "title": "THE COOK",
     "rarity": 1,
     "element": 2,
     "class": 5,
@@ -3355,6 +3411,7 @@
   {
     "id": 57,
     "name": "Joy",
+    "title": "THE DRAGONISH",
     "rarity": 2,
     "element": 1,
     "class": 4,
@@ -3414,6 +3471,7 @@
   {
     "id": 58,
     "name": "Samael",
+    "title": "THE SUCCUBUS",
     "rarity": 2,
     "element": 8,
     "class": 2,
@@ -3470,6 +3528,7 @@
   {
     "id": 59,
     "name": "Naku",
+    "title": "THE GIFTS KEEPER",
     "rarity": 2,
     "element": 2,
     "class": 2,
@@ -3536,6 +3595,7 @@
   {
     "id": 60,
     "name": "Pebbles",
+    "title": "THE BEAR HUGGER",
     "rarity": 2,
     "element": 2,
     "class": 5,
@@ -3598,6 +3658,7 @@
   {
     "id": 61,
     "name": "Dahlia",
+    "title": "THE TRAPPED ROOT",
     "rarity": 1,
     "element": 4,
     "class": 5,
@@ -3662,6 +3723,7 @@
   {
     "id": 62,
     "name": "Meredith",
+    "title": "THE MYSTERIOUS ALCHEMIST",
     "rarity": 2,
     "element": 16,
     "class": 2,
@@ -3726,6 +3788,7 @@
   {
     "id": 65,
     "name": "Anabelle",
+    "title": "THE GREEN REAPER",
     "rarity": 3,
     "element": 4,
     "class": 1,
@@ -3790,6 +3853,7 @@
   {
     "id": 66,
     "name": "Alice",
+    "title": "THE TEACHER",
     "rarity": 2,
     "element": 4,
     "class": 4,
@@ -3852,6 +3916,7 @@
   {
     "id": 69,
     "name": "Becky",
+    "title": "THE CARETAKER",
     "rarity": 2,
     "element": 4,
     "class": 5,
@@ -3917,6 +3982,7 @@
   {
     "id": 71,
     "name": "Gaia",
+    "title": "THE EARTHEN SOUL",
     "rarity": 2,
     "element": 2,
     "class": 5,
@@ -3976,6 +4042,7 @@
   {
     "id": 72,
     "name": "Liberty",
+    "title": "The SYMBOL OF JUSTICE",
     "rarity": 2,
     "element": 16,
     "class": 5,
@@ -4043,6 +4110,7 @@
   {
     "id": 73,
     "name": "Gabriela",
+    "title": "THE NATURAL STRIKER",
     "rarity": 2,
     "element": 4,
     "class": 3,
@@ -4108,6 +4176,7 @@
   {
     "id": 74,
     "name": "Lexi",
+    "title": "THE ARENA GODDESS",
     "rarity": 3,
     "element": 1,
     "class": 2,
@@ -4182,6 +4251,7 @@
   {
     "id": 75,
     "name": "Quinn",
+    "title": "THE JOKESTER",
     "rarity": 2,
     "element": 8,
     "class": 1,
@@ -4246,6 +4316,7 @@
   {
     "id": 76,
     "name": "Freya",
+    "title": "THE VALKYRIE",
     "rarity": 3,
     "element": 16,
     "class": 1,
@@ -4312,6 +4383,7 @@
   {
     "id": 100,
     "name": "Selena",
+    "title": "THE BRILLIANT DUELIST",
     "rarity": 0,
     "element": 1,
     "class": 1,
@@ -11336,6 +11408,7 @@
   {
     "id": 7001,
     "name": "Celeste",
+    "title": "The Spirit of Gritt",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11370,6 +11443,7 @@
   {
     "id": 7002,
     "name": "Arielle",
+    "title": "The Spirit of Bazalt",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11404,6 +11478,7 @@
   {
     "id": 7003,
     "name": "Amethyst",
+    "title": "The Spirit of Abyss",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11438,6 +11513,7 @@
   {
     "id": 7004,
     "name": "Penelope",
+    "title": "The Spirit of Jaegar",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11472,6 +11548,7 @@
   {
     "id": 7005,
     "name": "Misty",
+    "title": "The Spirit of Glacius",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11506,6 +11583,7 @@
   {
     "id": 7006,
     "name": "Guardian 6",
+    "title": "The Sixth Guardian",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11540,6 +11618,7 @@
   {
     "id": 7007,
     "name": "Guardian 7",
+    "title": "The Seventh Guardian",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11581,6 +11660,7 @@
   {
     "id": 7008,
     "name": "Guardian 8",
+    "title": "The Eighth Guardian",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11615,6 +11695,7 @@
   {
     "id": 7009,
     "name": "Guardian 9",
+    "title": "The Ninth Guardian",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -11657,6 +11738,7 @@
   {
     "id": 7010,
     "name": "Guardian 10",
+    "title": "The Tenth Guardian",
     "rarity": 0,
     "element": 0,
     "class": 1,
