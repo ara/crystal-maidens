@@ -294,7 +294,7 @@ li {
 }
 .skill-level {
   font-size: .95em;
-  margin-left: .4em;
+  margin-left: .5em;
 }
 .wrapper {
   position: relative;
@@ -305,10 +305,10 @@ li {
   border: 1px solid #aaa;
 }
 .ww {
-  width: 20em;
+  width: 20.5em;
 }
 .ww-minion {
-  width: 18em;
+  width: 18.6em;
 }
 .skill-buttons {
   position: absolute;
