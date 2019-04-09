@@ -1,0 +1,178 @@
+<template>
+  <div class="flex-row">
+    <div v-for="slot in slots" :key="slot.caption">
+
+      <table>
+        <thead>
+          <th>{{ slot.caption }}</th>
+        </thead>
+
+        <tbody>
+          <tr
+            v-for="item in itemsBySlot(slot)" :key="item.key"
+            :id="'i'+item.id+'r'+item.rarity"
+            :class="['bg'+item.rarity, item.selected?'selected':'']"
+            @click.exact="select(m)"
+          >
+            <td>
+            <img :src="item.imageUrl" class="item-icon"
+            ><span class="item-name">{{ item.name }}</span></td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <div></div>
+          </tr>
+        </tfoot>
+      </table>
+    
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapState, mapGetters } from 'vuex';
+import { SLOT, RARITY, CLASS } from '../api/const.js';
+
+export default {
+  data () {
+    return {
+      slots: [
+        { caption:'Head', var:'filteredHeadItems' },
+        { caption:'Chest', var:'filteredChestItems' },
+        { caption:'Main Hand', var:'filteredMainHandItems' },
+        { caption:'Off Hand', var:'filteredOffHandItems' },
+        { caption:'Feet', var:'filteredFeetItems' },
+        { caption:'Neck', var:'filteredNeckItems' },
+      ],
+      classFilter: CLASS.MARKSMAN,
+      maidenFilter: 0,
+      rarityFilter: -1,
+    }
+  },
+
+  computed: {
+    ...mapState({
+      // items: state => state.items.items,
+    }),
+    ...mapGetters(['items','headItems','chestItems','mainHandItems','offHandItems','feetItems','neckItems']),
+    filteredHeadItems: function () {
+      return this.headItems.filter( this.filterItems ); },
+    filteredChestItems: function () {
+      return this.chestItems.filter( this.filterItems ); },
+    filteredMainHandItems: function () {
+      return this.mainHandItems.filter( this.filterItems ); },
+    filteredOffHandItems: function () {
+      return this.offHandItems.filter( this.filterItems ); },
+    filteredFeetItems: function () {
+      return this.feetItems.filter( this.filterItems ); },
+    filteredNeckItems: function () {
+      return this.neckItems.filter( this.filterItems ); },
+  },
+
+  methods: {
+    filterItems (item) {
+      return (!this.classFilter || item.class === this.classFilter) &&
+      (!this.maidenFilter || item.maiden === this.maidenFilter) &&
+      (this.rarityFilter === -1 || item.rarity === this.rarityFilter);
+    },
+    debugList () {
+      return this.chestItems
+        .filter( i => i.class === CLASS.MARKSMAN )
+        .map( i => i.name + '\r\n' )
+        .join('');
+    },
+    itemsBySlot (slot) {
+      return this[slot.var];
+    },
+  }
+
+}
+</script>
+
+<style lang="scss" scoped>
+
+$p-dark: #333;
+$p-medium: #777;
+$p-ml: #bbb;
+$p-light: #eee;
+
+$common: #eee;
+$rare: #a4c2f4;
+$rare2: rgb(112, 157, 247);
+$epic: #bd9ff0;
+$epic2: #aa97da;
+$leg: #ffe599;
+$set: #8e8;
+$set2: rgb(126, 214, 126);
+
+.bg0 { background-color: $common; }
+.bg1 { background-color: $rare; }
+.bg2 { background-color: $epic; }
+.bg3 { background-color: $leg; }
+.bg4 { background-color: $set; }
+
+.item-name {
+  display:inline-flex;
+  justify-self:flex-start;
+}
+.selected {
+  outline: 2px solid #3c78d8;
+  outline-offset: -1px;
+}
+
+table {
+  box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
+  cursor: default;
+  margin-left: .5em;
+  white-space: nowrap;
+
+  font-size: smaller;
+  background-color: $p-dark;
+  display: inline-block;
+  vertical-align: top;
+
+  border-collapse: collapse;
+  border-spacing: 0px;
+
+  table-layout: auto;
+
+  tfoot, thead {
+    background-color: $p-light;
+  }
+
+  th {
+    // position: sticky; top: 0;
+    background-color: $p-light;
+    padding: .3em .1em .2em .4em;
+    text-align: left;
+    width: auto;
+    cursor: pointer;
+    border: 1px solid $p-medium;
+  }
+  td {
+    border: 1px solid $p-ml;
+    padding: 0 .2em .1em;
+    &:first-child {
+      border-left-color: $p-medium;
+    }
+    &:last-child {
+      border-right-color: $p-medium;
+    }
+    text-align: left;
+  }
+
+  tr {
+    &:last-child td {
+      border-bottom-color: $p-medium;
+    }
+  }
+}
+.item-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: .2em;
+  vertical-align: text-bottom;
+}
+</style>
