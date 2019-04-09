@@ -22,7 +22,7 @@
         <div v-else class="flex-row text-shadow no-pad headline hero-pad"
           :style="showDetails?'':'margin-bottom:-0.5em;'"
         >
-        <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+          <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
           <img v-if="getImage(hero.id)"
             :src="getImage(hero.id)" :alt="hero.name"
             class="hero-icon border-rarity" :class="'r'+hero.rarity">
@@ -336,10 +336,6 @@ h4, span {
 .headline {
   align-items: center;
   justify-content: start;
-}
-.flex-col {
-  display: flex;
-  flex-direction: column;
 }
 
 .close {
