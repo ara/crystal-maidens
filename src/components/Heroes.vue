@@ -447,7 +447,7 @@ table {
 .class-icon {
   width: 18px;
   height: 18px;
-  vertical-align: bottom;
+  vertical-align: middle;
   margin-right: .2em;
 }
 body {
