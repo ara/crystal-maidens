@@ -111,7 +111,8 @@
       <div style="margin-left:1.2em;">
         <hero-card :hero="hero"
           v-for="hero in selectedHeroes" :key="hero.id"
-          style="box-shadow: .2em .2em .2em 0 #777"></hero-card>
+          style="box-shadow: .2em .2em .2em 0 #777"
+        ></hero-card>
       </div>
     </div>
 
