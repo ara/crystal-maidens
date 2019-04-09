@@ -40,6 +40,8 @@
             </div>
           </div>
         </div>
+        <transition name="slide-fade">
+        <div v-show="showDetails" class="stat-block">
           <ul class="border-right">
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
             <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
@@ -60,8 +62,10 @@
             <li v-if="!isMinion"><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
           </ul>
         </div>
+        </transition>
         <hero-skill v-show="hero.skill && showDetails"
-          :hero="hero" :level="heroLevel" :show-info="showSkillDetails"></hero-skill>
+          :hero="hero" :level="heroLevel" :show-info="showSkillDetails"
+        ></hero-skill>
       </div>
     <!-- </div> -->
   </div>
@@ -341,20 +345,20 @@ h4, span {
 .close {
   cursor: pointer;
   position: absolute;
-  align-self: flex-end;
   border: none;
   width: 25px;
   height: 24px;
+  top: 0;
+  right: -.2em;
   font-weight: 600;
   font-size: 1.3em;
-  background: #eee;
+  background: transparent;
   margin: .3em .6em 0 0;
   padding: 0;
   color: #eee;
-  transition: color .4s ease;
+  transition: all .4s ease;
   &:hover {
-    transition: background .4s ease,
-                color .4s ease;
+    transition: all .4s ease;
     color: #555 !important;
     box-shadow: 0px 0px 1px 1px #777;
     background: #ccc;
