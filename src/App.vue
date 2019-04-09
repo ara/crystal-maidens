@@ -88,4 +88,17 @@ button {
   }
 }
 
+
+.slide-fade-enter-active
+{
+  transition: all .3s ease;
+}
+// .slide-fade-leave-active {
+//   transition: opacity .3s ease;
+// }
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
 </style>

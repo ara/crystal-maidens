@@ -17,6 +17,7 @@
         >+</button>
       </div>
     </div>
+    <transition name="slide-fade">
     <div v-show="showDetails" class="card">
       <div v-if="isMinion" class="border-top" style="width:100%"></div>
       <div v-else class="desc border-top border-bottom">
@@ -51,7 +52,7 @@
       </div>
 
     </div>
-
+    </transition>
   </div>
 </template>
 
