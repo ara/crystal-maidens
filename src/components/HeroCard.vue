@@ -222,28 +222,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.class-icon {
-  width: 1.7em;
-  height: 1.7em;
-  margin-right: .2em;
-}
-
 .hero-icon {
   width: 3.2em;
   height: 3.2em;
-  margin: .3em 0 .2em
+  margin-right: .5em;
+}
+.class-icon {
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: .2em;
 }
 .border-rarity {
   border-width: 3px;
   border-style: solid;
   border-radius: .4em;
 }
-.r0 { border-color: #a87; }
-.r1 { border-color: #36c; }
-.r2 { border-color: #d4d; }
-.r3 { border-color: #dc0; }
+
+.attr {
+  font-size: .85em;
+  margin: 0 .5em 0 .1em;
+}
 
 ul {
+  display: inline-table;
   margin: .15em .35em;
   padding: 0;
 }
@@ -254,31 +255,57 @@ li {
 }
 
 .cell-cap {
-  display: table-cell;
   text-align: end;
   font-weight: 700;
   font-size: .8em;
 }
 
 .cell-data {
-  display: table-cell;
   font-size: .9em;
   text-align: center;
   min-width: 6.2em;
 }
 
-img, h4, span {
+h4, span {
   display: table-cell;
 }
 
+.lvl {
+  margin-left: .5em;
+  font-size: 1em;
+}
+
+.wide {
+  width: 100%;
+}
+.center {
+  align-items: center;
+}
+
 .hero-name {
-  margin: .5em;
+  margin: 0 .4em 0 0;
   font-size: 1.1em;
   font-weight: 600;
   text-shadow: 0 0 3px #bbb;
 }
 
+.hero-pad {
+  padding: .3em 0 .1em 0 !important; // my bad xD
+}
+
+.hero-title {
+  font-size: .9em;
+}
+
+.stat-block {
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
 .container {
+  display: flex;
+  position: relative;
   margin: 0 0 .35em;
   background: #eee;
   border-radius: .4em;
@@ -296,10 +323,10 @@ img, h4, span {
   padding-right: .5em;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
+.no-pad {
   padding: 0;
+}
+.text-shadow {
   text-shadow: 0 0 1px #ddd;
 }
 .headline {
