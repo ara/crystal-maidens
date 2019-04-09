@@ -36,11 +36,34 @@ module.exports = {
   campBonuses: [1, 1.05, 1.1, 1.2, 1.3, 1.45, 1.6, 1.8, 2, 2.25, 3, 3.25, 3.5, 3.75, 4, 4.5],
   //            0         1       2          3          4         5             6
   itemSlots: ['Head', 'Chest', 'Weapon', 'Off-hand', 'Boots', 'Necklace', 'Consummable'],
-  //            0       1         2         3           4          5
+  SLOT: {
+    HEAD: 0,
+    CHEST: 1,
+    WEAPON: 2,
+    OFFHAND: 3,
+    BOOTS: 4,
+    NECKLACE: 5,
+    CONSUMMABLE: 6,
+  },
+  //        0       1         2         3           4          5
   classes: ['', 'Warrior', 'Mage', 'Marksman', 'Engineer', 'Support'],
+  CLASS: {
+    NONE: 0,
+    WARRIOR: 1,
+    MAGE: 2,
+    MARKSMAN: 3,
+    ENGINEER: 4,
+    SUPPORT: 5,
+  },
   //             0       1       2          3            4
   rarities: ['Common', 'Rare', 'Epic', 'Legendary', 'Set Item'],
-
+  RARITY: {
+    COMMON: 0,
+    RARE: 1,
+    EPIC: 2,
+    LEGENDARY: 3,
+    SET_ITEM: 4,
+  },
   effectTypes: {
     0: 'DamageEffect',
     1: 'DamageAlterEffect',
