@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import heroes from './modules/heroes';
 import maps from './modules/maps';
-
+import items from './modules/items';
 
 Vue.use(Vuex);
 
@@ -11,6 +11,7 @@ export default new Vuex.Store({
   modules: {
     heroes,
     maps,
+    items,
   },
 
   mutations: {
