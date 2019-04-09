@@ -29,16 +29,12 @@
           >
         </div>
 
-        <div>
-          <input type="checkbox" id="ckSkillDetails" v-model="showSkillDetails">
-          <label for="ckSkillDetails" style="cursor:pointer;">Show skill details</label>
+        <div class="flexitem-right">
+          <app-switch v-model="showSkillDetails" checked>Show skill details</app-switch>
         </div>
-
-        <div>
-          <input type="checkbox" id="ckMinionDetails" v-model="showMinionDetails">
-          <label for="ckMinionDetails" style="cursor:pointer;">Show minion details</label>
+        <div class="flexitem-right">
+          <app-switch style="padding:0" v-model="showMinionDetails" checked>Show minion details</app-switch>
         </div>
-
 
       </div>
 
@@ -137,12 +133,20 @@
 </template>
 
 <script>
+import UISwitch from './UISwitch';
 import HeroCard from './HeroCard';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { VueContext } from 'vue-context';
 import { heroImages } from '../api/const.js';
 
 export default {
+  components: {
+    VueContext,
+    HeroCard,
+    'app-switch': UISwitch,
+  },
+
+
   data() {
     return {
     }
@@ -288,11 +292,6 @@ export default {
 
   mounted () {
     this.select(this.maidens[0]);
-  },
-
-  components: {
-    VueContext,
-    HeroCard,
   },
 
 }
