@@ -63,6 +63,15 @@ $p-light: #eee;
   }
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   // background: linear-gradient(#eee,#ddd);
   background: linear-gradient(#f2f2f2,#dcdcdc);
