@@ -3,6 +3,7 @@
     <router-link to='/' tag="li" exact exact-active-class="active">Home</router-link>
     <router-link to='/maps' tag="li" active-class="active">Maps</router-link>
     <router-link to="/maidens" tag="li" active-class="active">Maidens</router-link>
+    <router-link to="/items" tag="li" active-class="active">Items</router-link>
   </ul>
 </template>
 
