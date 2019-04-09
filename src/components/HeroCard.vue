@@ -1,21 +1,45 @@
 <template>
   <div class="container" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
     <!-- <div class="flex-row"> -->
-      <div class="flex-col">
-        <div class="flex-row headline"
+      <div class="flex-col wide">
+        <div v-if="isMinion" class="flex-row text-shadow headline"
           @click="toggleDetails"
-          :style="(isMinion?'cursor:pointer;':'')+(showDetails?'':'margin-bottom:-0.5em;')"
+          style="cursor:pointer;margin: .2em 0 -.2em 0;"
         >
+          <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
           <img v-if="getImage(hero.id)"
             :src="getImage(hero.id)" :alt="hero.name"
             class="hero-icon border-rarity" :class="'r'+hero.rarity">
+          <div v-else style="padding-left:.5em;"></div>
           <span class="hero-name">{{ hero.name }}</span>
+          <span class="hero-title" v-if="hero.title">{{ hero.title }}</span>
           <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+          <span class="attr">{{ hero.sClass }}</span>
           <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
-          <span style="white-space:pre"> (Level {{ heroLevel }})</span>
+          <span class="attr">{{ hero.sElement }}</span>
+          <span class="lvl">(Level {{ heroLevel }})</span>
         </div>
+        <div v-else class="flex-row text-shadow no-pad headline hero-pad"
+          :style="showDetails?'':'margin-bottom:-0.5em;'"
+        >
         <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
-        <div v-show="showDetails" class="flex-row flex-top">
+          <img v-if="getImage(hero.id)"
+            :src="getImage(hero.id)" :alt="hero.name"
+            class="hero-icon border-rarity" :class="'r'+hero.rarity">
+          <div class="flex-col">
+            <div class="flex-row center">
+              <span class="hero-name">{{ hero.name }}</span>
+              <span class="hero-title" v-if="hero.title">{{ hero.title }}</span>
+            </div>
+            <div class="flex-row center">
+              <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+              <span class="attr">{{ hero.sClass }}</span>
+              <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
+              <span class="attr">{{ hero.sElement }}</span>
+              <span class="lvl">(Level {{ heroLevel }})</span>
+            </div>
+          </div>
+        </div>
           <ul class="border-right">
             <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
             <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
