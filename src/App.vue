@@ -42,6 +42,12 @@ $p-medium: #777;
 $p-ml: #bbb;
 $p-light: #eee;
 
+$common: #a87;
+$rare: #36c;
+$epic: #d4d;
+$leg: #dc0;
+$set: #0c0;
+
 .cm {
   width: auto !important;
   font-size: 14px;
@@ -100,5 +106,10 @@ button {
   transform: translateY(-10px);
   opacity: 0;
 }
+
+.r0 { border-color: $common; }
+.r1 { border-color: $rare; }
+.r2 { border-color: $epic; }
+.r3 { border-color: $leg; }
 
 </style>
