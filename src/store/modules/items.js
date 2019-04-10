@@ -18,7 +18,7 @@ const getters = {
       // ok now we have [rarity, stats] for existing rarities
       .map( ([rarity, stats]) => (Object.assign( stats, {
         id: item.id,
-        key: item.id + 'r' + item.rarity,
+        key: item.id + 'r' + rarity,
         name: item.name,
         imageUrl: itemImages.get(item.id),
         set: rarity === RARITY.SET_ITEM

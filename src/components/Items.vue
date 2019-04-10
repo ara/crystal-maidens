@@ -10,7 +10,7 @@
         <tbody>
           <tr
             v-for="item in itemsBySlot(slot)" :key="item.key"
-            :id="'i'+item.id+'r'+item.rarity"
+            :id="item.key"
             :class="['bg'+item.rarity, item.selected?'selected':'']"
             @click.exact="select(m)"
           >
