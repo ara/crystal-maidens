@@ -13,6 +13,7 @@
             :id="item.key"
             :class="['bg'+item.rarity, item.selected?'selected':'']"
             @click.exact="select(m)"
+            v-tooltip="item.name"
           >
             <td>
             <img :src="item.imageUrl" class="item-icon"
@@ -26,7 +27,7 @@
           </tr>
         </tfoot>
       </table>
-    
+
     </div>
   </div>
 </template>
@@ -57,18 +58,12 @@ export default {
       // items: state => state.items.items,
     }),
     ...mapGetters(['items','headItems','chestItems','mainHandItems','offHandItems','feetItems','neckItems']),
-    filteredHeadItems: function () {
-      return this.headItems.filter( this.filterItems ); },
-    filteredChestItems: function () {
-      return this.chestItems.filter( this.filterItems ); },
-    filteredMainHandItems: function () {
-      return this.mainHandItems.filter( this.filterItems ); },
-    filteredOffHandItems: function () {
-      return this.offHandItems.filter( this.filterItems ); },
-    filteredFeetItems: function () {
-      return this.feetItems.filter( this.filterItems ); },
-    filteredNeckItems: function () {
-      return this.neckItems.filter( this.filterItems ); },
+    filteredHeadItems () { return this.headItems.filter( this.filterItems ); },
+    filteredChestItems () { return this.chestItems.filter( this.filterItems ); },
+    filteredMainHandItems () { return this.mainHandItems.filter( this.filterItems ); },
+    filteredOffHandItems () { return this.offHandItems.filter( this.filterItems ); },
+    filteredFeetItems () { return this.feetItems.filter( this.filterItems ); },
+    filteredNeckItems () { return this.neckItems.filter( this.filterItems ); },
   },
 
   methods: {
