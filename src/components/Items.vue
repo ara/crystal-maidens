@@ -77,12 +77,6 @@ export default {
       (!this.maidenFilter || item.maiden === this.maidenFilter) &&
       (this.rarityFilter === -1 || item.rarity === this.rarityFilter);
     },
-    debugList () {
-      return this.chestItems
-        .filter( i => i.class === CLASS.MARKSMAN )
-        .map( i => i.name + '\r\n' )
-        .join('');
-    },
     itemsBySlot (slot) {
       return this[slot.var];
     },
