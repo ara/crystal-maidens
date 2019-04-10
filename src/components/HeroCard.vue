@@ -63,7 +63,7 @@
           </ul>
         </div>
         </transition>
-        <hero-skill v-show="hero.skill && showDetails"
+        <hero-skill v-if="hero.skill && showDetails"
           :hero="hero" :level="heroLevel" :show-info="showSkillDetails"
         ></hero-skill>
       </div>
