@@ -4,10 +4,12 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import { routes } from './routes';
 import './registerServiceWorker'
+import tooltipDirective from './directives/tooltip-directive';
 
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+Vue.use(tooltipDirective);
 
 const router = new VueRouter({
   routes,
