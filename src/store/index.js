@@ -24,7 +24,6 @@ export default new Vuex.Store({
     watchStore(state) {
       // Subscribe to store updates
       this.subscribe((mutation, state) => {
-        console.log(mutation, state);
         switch( mutation.type ) {
           case 'updateFilterHeroClass':
           case 'updateFilterHeroElement':
