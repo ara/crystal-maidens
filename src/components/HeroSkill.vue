@@ -6,7 +6,7 @@
   >
     <div class="headline" @click="toggleDetails">
       <img v-if="skillIcon" :src="skillIcon" class="skill-icon">
-      <span class="skill-name">{{ hero.skill.name || '#'+hero.skill.id }}</span>
+      <span class="skill-name">{{ skillName }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
       <div v-if="!isMinion" class="skill-buttons" @click="$event.stopPropagation()">
         <button class="skill-bt"
@@ -101,9 +101,10 @@ export default {
       heroes: state => state.heroes.heroes,
     }),
     skillIcon () {
-      // console.log(this.hero.skill.id, skillIcons.get(this.hero.skill.id));
-      console.log(this.skill);//skillIcons.get(this.skill.id));
       return skillIcons.get(this.skill.id);
+    },
+    skillName () {
+      return this.skill.name || '#' + this.skill.id;
     },
     heroCDR () {
       return this.isMinion ? 0 : this.cdr;
