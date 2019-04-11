@@ -90,11 +90,13 @@ $p-light: #eee;
 $common: #eee;
 $rare: #a4c2f4;
 $rare2: rgb(112, 157, 247);
-$epic: #bd9ff0;
+$epic3: #bd9ff0;
 $epic2: #aa97da;
+$epic: #b9a0e4;
 $leg: #ffe599;
-$set: #8e8;
+$set3: #8e8;
 $set2: rgb(126, 214, 126);
+$set: #73ce73;
 
 .bg0 { background-color: $common; }
 .bg1 { background-color: $rare; }
@@ -163,5 +165,67 @@ table {
   height: 18px;
   margin-right: .2em;
   vertical-align: text-bottom;
+}
+
+/* Tooltip text */
+.ttt {
+  // visibility: hidden;
+  // width: 120px;
+  background-color: #eee;
+  color: #555;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  // transition: hidden .3 ease;
+}
+
+li {
+  display: table-row;
+}
+.tt-ul {
+  display:table-row;
+}
+
+
+.tt-grid{
+  display: grid;
+  grid-column-gap: .5em;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:"icon name"
+                      "icon type";
+}
+.tt-bg {
+  grid-area: icon;
+  width: 64px;
+  height: 64px;
+}
+.tt-icon {
+  grid-area: icon;
+  justify-self: center;
+  align-self: center;
+  width: 48px;
+  height: 48px;
+}
+.tt-name {
+  grid-area: name;
+}
+.tt-type {
+  grid-area: type;
+}
+
+.tt-statname {
+  display: table-cell;
+  // width: 6em;
+  text-align: right;
+  font-size: 1em;
+  margin-left: .4em;
+}
+.tt-stat {
+  display: table-cell;
+  width: 4em;
+  font-size: .95em;
+  text-align: right;
 }
 </style>
