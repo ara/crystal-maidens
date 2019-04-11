@@ -1,6 +1,7 @@
 <template>
   <div class="flex-row">
     <div v-for="slot in slots.slice(1,3)" :key="slot.caption">
+      <table style="position:relative" id="anchor">
         <thead>
           <th>{{ slot.caption }}</th>
         </thead>
@@ -9,9 +10,9 @@
           <tr
             v-for="item in itemsBySlot(slot)" :key="item.key"
             :id="item.key"
-            :class="['bg'+item.rarity, item.selected?'selected':'']"
-            @click.exact="select(m)"
-            v-tooltip="item.name"
+            :class="['bg'+item.rarity, item.selected?'selected':'', 'tt']"
+            @mouseover="showTT(item,$event)"
+            @mouseleave="hideTT($event)"
           >
             <td>
             <img :src="item.imageUrl" class="item-icon"
@@ -103,6 +104,42 @@ export default {
   },
 
   methods: {
+    showTT (item, e) {
+      const tt = document.getElementById('tp');
+      if( !tt ) return;
+      this.tparg = item;
+      for( const el of e.path ) {
+        if( el.tagName !== 'TR' ) continue;
+        const table = el.parentNode.parentNode;
+        let x = table.offsetLeft + el.offsetLeft;
+        let y = table.offsetTop + el.offsetTop;
+        
+        if( x + el.offsetWidth + table.offsetWidth > window.innerWidth ) {
+          // it overflows right, display on left side instead
+          x -= el.offsetWidth;
+        } else {
+          x += table.offsetWidth;
+        }
+
+        console.log( y + el.offsetHeight, window.innerHeight )
+        if( y + el.offsetHeight > window.innerHeight ) {
+          y -= window.innerHeight - y - el.offsetHeight;
+        }
+
+        tt.style.left = x +'px';
+        tt.style.top = y + 'px';
+        tt.hidden = false;
+      }
+    },
+    hideTT (e) {
+      const tt = document.getElementById('tp');
+      if( !tt ) return;
+      tt.hidden = true;
+    },
+    show (stat) {
+      // console.log(stat, this.tparg && this.tparg[stat]);
+      return this.tparg && this.tparg[stat];
+    },
     filterItems (item) {
       return (!this.classFilter || item.class === this.classFilter) &&
       (!this.maidenFilter || item.maiden === this.maidenFilter) &&
