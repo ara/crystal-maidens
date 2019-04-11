@@ -29,6 +29,44 @@
       </table>
 
     </div>
+      <div id="tp" class="ttt" v-show="tparg" @mouseenter="$event.target.hidden=true">
+          <div class="tt-grid">
+            <img :src="getBackground(tparg)" class="tt-bg">
+            <img :src="tparg.imageUrl" class="tt-icon">
+            <span class="tt-name">{{ tparg.name }}</span>
+            <span class="tt-type">{{ tparg.sSlot }}  Level 5</span>
+  </div>
+          <ul class="tt-ul">
+            <li v-if="show('hp')">
+              <span class="tt-statname">Health</span>
+              <span class="tt-stat">{{ getStat('hp') }}%</span>
+            </li>
+            <li v-if="show('dmg')">
+              <span class="tt-statname">Damage</span>
+              <span class="tt-stat">{{ getStat('dmg') }}%</span>
+            </li>
+            <li v-if="show('as')">
+              <span class="tt-statname">Atk Speed</span>
+              <span class="tt-stat">{{ getStat('as') }}</span>
+            </li>
+            <li v-if="show('crit')">
+              <span class="tt-statname">Crit</span>
+              <span class="tt-stat">{{ getStat('crit') }}%</span>
+            </li>
+            <li v-if="show('dodge')">
+              <span class="tt-statname">Dodge</span>
+              <span class="tt-stat">{{ getStat('dodge') }}%</span>
+            </li>
+            <li v-if="show('def')">
+              <span class="tt-statname">Defense</span>
+              <span class="tt-stat">{{ getStat('def') }}%</span>
+            </li>
+            <li v-if="show('cdr')">
+              <span class="tt-statname">CDR</span>
+              <span class="tt-stat">{{ getStat('cdr') }}%</span>
+            </li>
+          </ul>
+    </div>
   </div>
 </template>
 
