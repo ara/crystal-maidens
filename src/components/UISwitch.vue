@@ -31,11 +31,11 @@ export default {
     this.value = this.checked;
   },
   mounted() {
-    this.$emit("input", this.value);
+    this.$emit('input', this.value);
   },
   watch: {
     value(val) {
-      this.$emit("input", val);
+      this.$emit('input', val);
     },
     checked(val) {
       this.value = val;

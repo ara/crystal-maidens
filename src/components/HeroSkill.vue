@@ -147,11 +147,11 @@ export default {
       const mul = (this.skillLevel-1) ** this.hero.skillCoef;
       let val = 0;
       let str = effects.get(effect.type);
-      
+
       str = str.replace(/<color=([^>]+)>([^<]+)<\/color>/g,
         '<span style="color:$1;font-weight:700;text-shadow: .5px .5px .2px #000;">$2</span>');
       str = str.replace('#TARGET', effect.target);
-      
+
       if( effect.damage ) {
         val = effect.damage + (effect.damageInc || 0) * mul;
         str = setOverTimeEffect( str, hero.dmgTicks,
@@ -189,7 +189,9 @@ export default {
         str = str.replace('#LEVEL', this.skillLevel);
       }
       if( effect.type === 'MorphEffect' ) {
-        let leg = 8, epic = 20, rare = 72;
+        let leg = 8;
+        let epic = 20;
+        let rare = 72;
         const p1 = Math.min( 24, this.skillLevel-1 );
         [leg, epic, rare] = [leg+1*p1, epic+2*p1, rare-3*p1];
         if( this.skillLevel > 25 ) {
@@ -212,7 +214,7 @@ export default {
       const newSkillLevel = Math.min( upperLimit,
         Math.max(1, this.skillLevel+by) );
       this.$store.commit('updateSkillLevel', newSkillLevel );
-      const accelTimer = Math.max(25, .6 * timer);
+      const accelTimer = Math.max(25, 0.6 * timer);
       this.timerID = setTimeout( (val, unlimited, lt) => {
         if( this.mousedown ) this.updateSkillLevel( val, unlimited, lt );
       }, timer, by, unrestricted, accelTimer );
