@@ -20,11 +20,6 @@
           </tr>
         </tbody>
 
-        <tfoot>
-          <tr>
-            <div></div>
-          </tr>
-        </tfoot>
       </table>
 
     </div>
@@ -34,7 +29,7 @@
             <img :src="tparg.imageUrl" class="tt-icon">
             <span class="tt-name">{{ tparg.name }}</span>
             <span class="tt-type">{{ tparg.sSlot }}  Level 5</span>
-  </div>
+          </div>
           <ul class="tt-ul">
             <li v-if="show('hp')">
               <span class="tt-statname">Health</span>
@@ -71,7 +66,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
-import { SLOT, RARITY, CLASS } from '../api/const.js';
+import { SLOT, RARITY, CLASS, bgItems } from '../api/const.js';
 
 export default {
   data () {
@@ -87,6 +82,7 @@ export default {
       classFilter: CLASS.MARKSMAN,
       maidenFilter: 0,
       rarityFilter: -1,
+      tparg: {},
     }
   },
 
@@ -104,6 +100,9 @@ export default {
   },
 
   methods: {
+    getBackground (item) {
+      return bgItems.get(item.rarity);
+    },
     showTT (item, e) {
       const tt = document.getElementById('tp');
       if( !tt ) return;
@@ -139,6 +138,11 @@ export default {
     show (stat) {
       // console.log(stat, this.tparg && this.tparg[stat]);
       return this.tparg && this.tparg[stat];
+    },
+    getStat (stat) {
+      const base= this.tparg[stat];
+      const inc = this.tparg[stat+'Inc'] || 0;
+      return Math.round(1.45 * (base + inc * (this.tparg.maxLevel-1)) * 10)/10;
     },
     filterItems (item) {
       return (!this.classFilter || item.class === this.classFilter) &&
