@@ -233,7 +233,7 @@
         "dmgAgainstFire": 500,
         "critChance": 2500,
         "coinOnMap ": 1000,
-        " lifesteal ": 300
+        "lifesteal ": 300
       }
     ]
   },
@@ -548,7 +548,9 @@
       {
         "cooldownOverCap": 1000
       },
-      null,
+      {
+        "deathGateShield": 20
+      },
       null,
       null,
       null

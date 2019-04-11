@@ -3791,6 +3791,96 @@
     ]
   },
   {
+    "id": 3055,
+    "name": "Bunny Boots",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 4,
+        "cdrInc": 1.7,
+        "dodge": 1.9,
+        "dodgeInc": 0.4,
+        "as": 1.5,
+        "asInc": 1.5
+      },
+      {
+        "cdr": 8.5,
+        "cdrInc": 2.75,
+        "dodge": 3.25,
+        "dodgeInc": 0.75,
+        "as": 5,
+        "asInc": 2.2
+      },
+      null
+    ]
+  },
+  {
+    "id": 3056,
+    "name": "Carrot Armor",
+    "class": 4,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 60,
+        "hpInc": 7.5,
+        "def": 4.5,
+        "defInc": 1.75,
+        "cdr": 1.25,
+        "cdrInc": 1.25
+      },
+      {
+        "hp": 92.5,
+        "hpInc": 11,
+        "def": 9,
+        "defInc": 2.25,
+        "cdr": 3,
+        "cdrInc": 2.25
+      },
+      null
+    ]
+  },
+  {
+    "id": 3057,
+    "name": "Easter Glasses",
+    "class": 4,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 16.25,
+        "asInc": 5.7,
+        "dmg": 32.5,
+        "dmgInc": 10,
+        "cdr": 1.25,
+        "cdrInc": 0.9
+      },
+      {
+        "as": 24,
+        "asInc": 6.25,
+        "dmg": 48.5,
+        "dmgInc": 15,
+        "cdr": 3.2,
+        "cdrInc": 1.4
+      },
+      null
+    ]
+  },
+  {
     "id": 4001,
     "name": "Arena Helmet",
     "class": 1,
@@ -6535,6 +6625,90 @@
         "dmgInc": 13.5,
         "def": 3.5,
         "defInc": 1.75
+      },
+      null
+    ]
+  },
+  {
+    "id": 4093,
+    "name": "Easter Armor",
+    "class": 1,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 8.5,
+        "defInc": 1.6,
+        "hp": 14,
+        "hpInc": 12,
+        "dodge": 1.25,
+        "dodgeInc": 1.7
+      },
+      {
+        "def": 12.5,
+        "defInc": 3,
+        "hp": 55,
+        "hpInc": 22,
+        "dodge": 4.5,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  {
+    "id": 4094,
+    "name": "Easter Helmet",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 42.5,
+        "hpInc": 10,
+        "def": 4,
+        "defInc": 0.75,
+        "cdr": 1.5,
+        "cdrInc": 1.6
+      },
+      {
+        "hp": 60,
+        "hpInc": 20,
+        "def": 6,
+        "defInc": 1.5,
+        "cdr": 5.5,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  {
+    "id": 5004,
+    "tex": 10000,
+    "name": "Upgrade Material",
+    "class": 0,
+    "slot": 8,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      {
+        "hp": 0.01,
+        "hpInc": 0.01,
+        "def": 0.01,
+        "defInc": 0.01,
+        "crit": 0.01,
+        "critInc": 0.01
       },
       null
     ]

@@ -474,7 +474,7 @@
       "base": 800,
       "inc": 37
     },
-    "respawnCD": 15,
+    "respawnCD": 12,
     "vision": 8,
     "affection": "15 15 20 25 50 35 35 40 50 95 50 60 70 100 340",
     "dropRate": 250,
@@ -510,13 +510,13 @@
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 500,
-          "damageInc": 750
+          "damageInc": 775
         },
         {
           "type": "DamageEffect",
           "target": "yourself",
           "damage": 500,
-          "damageInc": 200
+          "damageInc": 175
         }
       ],
       "dmgDuration": 0
@@ -598,13 +598,13 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 300,
-      "inc": 40
+      "inc": 42
     },
     "respawnCD": 12,
     "vision": 9,
     "affection": "15 15 20 25 50 35 35 40 50 95 50 60 70 100 340",
     "dropRate": 200,
-    "eventDropRate": 0,
+    "eventDropRate": 200,
     "title": "The Flame Killer",
     "attack": {
       "hits": 1,
@@ -636,7 +636,7 @@
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 200,
-          "damageInc": 600
+          "damageInc": 665
         }
       ],
       "dmgDuration": 0
@@ -775,7 +775,7 @@
     "def": 0,
     "hpCoef": 2.11,
     "dmgCoef": 2.09,
-    "skillCoef": 2.09,
+    "skillCoef": 2.25,
     "hp": {
       "base": 650,
       "inc": 45
@@ -1037,7 +1037,7 @@
     "vision": 9,
     "affection": "10 15 20 25 30 15 20 25 35 50 25 35 45 55 150",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 200,
     "title": "The Easter Huntress",
     "attack": {
       "hits": 1,
@@ -1529,7 +1529,7 @@
     "dodge": 0,
     "def": 0,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.08,
     "skillCoef": 2.55,
     "hp": {
       "base": 200,
@@ -1539,7 +1539,7 @@
     "vision": 7,
     "affection": "5 7 8 10 20 10 20 25 35 80 25 35 70 100 250",
     "dropRate": 200,
-    "eventDropRate": 0,
+    "eventDropRate": 200,
     "title": "The Shooter",
     "attack": {
       "hits": 1,
@@ -1659,13 +1659,13 @@
     "skillCoef": 2.3,
     "hp": {
       "base": 250,
-      "inc": 35
+      "inc": 40
     },
     "respawnCD": 12,
     "vision": 8,
     "affection": "15 15 20 25 50 35 35 40 50 95 50 60 70 100 340",
     "dropRate": 100,
-    "eventDropRate": 0,
+    "eventDropRate": 200,
     "title": "The Chosen One",
     "attack": {
       "hits": 1,
@@ -1684,7 +1684,7 @@
       "castTime": 1,
       "CD": 7,
       "range": 10,
-      "missChance": 5000,
+      "missChance": 2500,
       "radius": 8,
       "ticks": 1,
       "duration": 80,
@@ -1792,7 +1792,7 @@
     "vision": 8,
     "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 150,
-    "eventDropRate": 0,
+    "eventDropRate": 150,
     "title": "The Dark Lover",
     "attack": {
       "hits": 1,
@@ -1824,7 +1824,7 @@
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 8,
-          "damageInc": 10,
+          "damageInc": 20,
           "overtimeduration": 5000,
           "overtimeinterval": 15
         }
@@ -1854,7 +1854,7 @@
     "vision": 7,
     "affection": "20 20 25 30 60 45 45 50 60 110 65 75 85 115 395",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 400,
     "title": "The Firefox",
     "attack": {
       "hits": 1,
@@ -2079,7 +2079,7 @@
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 150,
-          "damageInc": 225
+          "damageInc": 310
         },
         {
           "type": "StunEffect",
@@ -2096,7 +2096,7 @@
     "rarity": 3,
     "element": 4,
     "class": 5,
-    "moveSpeed": 6,
+    "moveSpeed": 5,
     "as": 100,
     "crit": 0,
     "dodge": 10,
@@ -2106,7 +2106,7 @@
     "skillCoef": 2.65,
     "hp": {
       "base": 500,
-      "inc": 42
+      "inc": 44
     },
     "respawnCD": 10,
     "vision": 7,
@@ -2119,7 +2119,7 @@
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
-      "range": 5,
+      "range": 3,
       "damage": 60,
       "damageInc": 4,
       "aoe": 0,
@@ -2244,7 +2244,7 @@
     "dodge": 4,
     "def": 0,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.075,
     "skillCoef": 2.65,
     "hp": {
       "base": 290,
@@ -2314,7 +2314,7 @@
     "vision": 7,
     "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 400,
     "title": "The Bird Of Lies",
     "attack": {
       "hits": 1,
@@ -2773,19 +2773,19 @@
   {
     "id": 45,
     "name": "Kebi",
-    "rarity": 2,
+    "rarity": 1,
     "element": 16,
-    "class": 2,
-    "moveSpeed": 6,
-    "as": 120,
-    "crit": 1,
-    "dodge": 1,
+    "class": 5,
+    "moveSpeed": 7,
+    "as": 115,
+    "crit": 2,
+    "dodge": 5,
     "def": 0,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
-    "skillCoef": 2.11,
+    "hpCoef": 2.19,
+    "dmgCoef": 2.07,
+    "skillCoef": 2.35,
     "hp": {
-      "base": 650,
+      "base": 700,
       "inc": 40
     },
     "respawnCD": 10,
@@ -2802,7 +2802,50 @@
       "range": 5,
       "damage": 100,
       "damageInc": 3,
-      "aoe": 2
+      "aoe": 0
+    },
+    "skill": {
+      "id": 90,
+      "castTime": 0.8,
+      "CD": 1,
+      "range": 7,
+      "missChance": 0,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 0,
+      "effects": [
+        {
+          "type": "DamageAlterEffect",
+          "target": "your allies and yourself",
+          "damagealter": -150,
+          "damagealterInc": -25,
+          "duration": 60
+        },
+        {
+          "type": "HealEffect",
+          "target": "your allies and yourself",
+          "hp": 350,
+          "hpInc": 330
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "target": "your allies and yourself",
+          "percent": 1500,
+          "percentInc": 80,
+          "duration": 60
+        },
+        {
+          "type": "StunEffect",
+          "target": "enemies",
+          "duration": 5,
+          "durationInc": 1
+        }
+      ],
+      "healDuration": 0
     }
   },
   {
@@ -2922,7 +2965,7 @@
     "vision": 8,
     "affection": "15 20 25 30 34 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 0,
-    "eventDropRate": 600,
+    "eventDropRate": 0,
     "title": "The Devil",
     "attack": {
       "hits": 1,
@@ -3223,7 +3266,7 @@
     "vision": 7,
     "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 0,
-    "eventDropRate": 600,
+    "eventDropRate": 0,
     "title": "The Wave Slicer",
     "attack": {
       "hits": 1,
@@ -3351,25 +3394,23 @@
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 5,
+      "dmgTicks": 0,
       "healTicks": 0,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 36,
-          "damageInc": 225,
-          "overtimeduration": 50,
-          "overtimeinterval": 10
+          "damageInc": 310
         },
         {
           "type": "HealEffect",
           "target": "yourself",
           "hp": 180,
-          "hpInc": 200
+          "hpInc": 185
         }
       ],
-      "dmgDuration": 50,
+      "dmgDuration": 0,
       "healDuration": 0
     }
   },
@@ -6235,7 +6276,7 @@
     "name": "#1032",
     "rarity": 0,
     "element": 16,
-    "class": 1,
+    "class": 4,
     "moveSpeed": 4,
     "as": 100,
     "crit": 5,
@@ -11426,7 +11467,7 @@
     "respawnCD": 10,
     "vision": 15,
     "affection": "120 120 120 120 120 180 180 180 180 180 300 300 300 300 300",
-    "dropRate": 100,
+    "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Spirit Of Gritt",
     "attack": {
@@ -11461,7 +11502,7 @@
     "respawnCD": 10,
     "vision": 15,
     "affection": "120 120 120 120 120 180 180 180 180 180 300 300 300 300 300",
-    "dropRate": 100,
+    "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Spirit Of Bazalt",
     "attack": {
@@ -11491,12 +11532,12 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 110000,
-      "inc": 30000
+      "inc": 31000
     },
     "respawnCD": 10,
     "vision": 15,
     "affection": "120 120 120 120 120 180 180 180 180 180 300 300 300 300 300",
-    "dropRate": 100,
+    "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Spirit Of Abyss",
     "attack": {
@@ -11532,7 +11573,7 @@
     "vision": 15,
     "affection": "120 120 120 120 120 180 180 180 180 180 300 300 300 300 300",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 800,
     "title": "The Spirit Of Jaegar",
     "attack": {
       "hits": 1,
@@ -11561,12 +11602,12 @@
     "skillCoef": 2.11,
     "hp": {
       "base": 100000,
-      "inc": 30500
+      "inc": 31500
     },
     "respawnCD": 10,
     "vision": 15,
     "affection": "120 120 120 120 120 180 180 180 180 180 300 300 300 300 300",
-    "dropRate": 100,
+    "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Spirit Of Glacius",
     "attack": {
