@@ -1,8 +1,6 @@
 <template>
   <div class="flex-row">
-    <div v-for="slot in slots" :key="slot.caption">
-
-      <table>
+    <div v-for="slot in slots.slice(1,3)" :key="slot.caption">
         <thead>
           <th>{{ slot.caption }}</th>
         </thead>
