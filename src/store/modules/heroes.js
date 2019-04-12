@@ -57,6 +57,9 @@ const heroEHP = (m) => {
   return val;
 };
 
+const attackRange = (m) => {
+  return m.attack.range;
+}
 
 const skillDamage = (m) => {
   const skillLevel = (state.skillLevel || 29) - 1;
@@ -104,6 +107,7 @@ const heroCols = [
   { val:heroDamage, fmt:txDamage, caption:'Damage' },
   { val:heroEHP, fmt:_num, caption:'EHP', visible:true },
   { val:heroDPS, fmt:_num, caption:'DPS', visible:true },
+  { val:attackRange, fmt:_num, caption:'Range' },
   { val:'as', caption:'Base AS' },
   { val:atkSec, caption:'atk/s' },
   { val:skillDamage, fmt:txSkillDMG, caption:'Skill Damage' },
