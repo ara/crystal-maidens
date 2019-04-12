@@ -2495,12 +2495,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Nurse's Scalpel",
+        "itemID": 4069,
+        "droprate": 5,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Epic"
       }
     ],
-    "fodder": 0.675,
+    "fodder": 1.3,
     "coinsPerEnergy": 87.5,
     "maidenXPPerEnergy": 1025,
-    "fodderCoins": 59.06250000000001,
+    "fodderCoins": 113.75,
     "dustDamage": 3,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -3411,12 +3420,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Grim Reaper",
+        "itemID": 4075,
+        "droprate": 5,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Epic"
       }
     ],
-    "fodder": 0.675,
+    "fodder": 1.3,
     "coinsPerEnergy": 100,
     "maidenXPPerEnergy": 1062.5,
-    "fodderCoins": 67.5,
+    "fodderCoins": 130,
     "dustDamage": 0,
     "dustHealth": 32.25,
     "dustCrit": 0,
@@ -4643,12 +4661,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Mask of deception",
+        "itemID": 4049,
+        "droprate": 5,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Epic"
       }
     ],
-    "fodder": 0.675,
+    "fodder": 1.3,
     "coinsPerEnergy": 112.5,
     "maidenXPPerEnergy": 1187.5,
-    "fodderCoins": 75.9375,
+    "fodderCoins": 146.25,
     "dustDamage": 30.75,
     "dustHealth": 0,
     "dustCrit": 29.25,
@@ -5329,12 +5356,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Rescue Can",
+        "itemID": 4059,
+        "droprate": 5,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Epic"
       }
     ],
-    "fodder": 0.675,
+    "fodder": 1.3,
     "coinsPerEnergy": 118.75,
     "maidenXPPerEnergy": 1250,
-    "fodderCoins": 80.15625,
+    "fodderCoins": 154.375,
     "dustDamage": 29.25,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -10511,12 +10547,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Rare"
+      },
+      {
+        "name": "Mask of deception",
+        "itemID": 4049,
+        "droprate": 1,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Legendary"
       }
     ],
-    "fodder": 0.8727272727272728,
+    "fodder": 1.1,
     "coinsPerEnergy": 127.27272727272727,
     "maidenXPPerEnergy": 2363.6363636363635,
-    "fodderCoins": 111.07438016528926,
+    "fodderCoins": 140,
     "dustDamage": 21.272727272727273,
     "dustHealth": 7.090909090909091,
     "dustCrit": 0,
@@ -11743,12 +11788,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Surfboard Shield",
+        "itemID": 3030,
+        "droprate": 5,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Epic"
       }
     ],
-    "fodder": 0.18000000000000002,
+    "fodder": 0.68,
     "coinsPerEnergy": 80,
     "maidenXPPerEnergy": 900,
-    "fodderCoins": 14.400000000000002,
+    "fodderCoins": 54.400000000000006,
     "dustDamage": 3.6,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -14514,12 +14568,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Nurse's Scalpel",
+        "itemID": 4069,
+        "droprate": 1,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Legendary"
       }
     ],
-    "fodder": 0.74,
+    "fodder": 0.99,
     "coinsPerEnergy": 170,
     "maidenXPPerEnergy": 1150,
-    "fodderCoins": 125.8,
+    "fodderCoins": 168.3,
     "dustDamage": 31.2,
     "dustHealth": 0,
     "dustCrit": 31.2,
@@ -16425,12 +16488,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Surfboard Shield",
+        "itemID": 3030,
+        "droprate": 1,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Legendary"
       }
     ],
-    "fodder": 0.4909090909090909,
+    "fodder": 0.7181818181818181,
     "coinsPerEnergy": 136.36363636363637,
     "maidenXPPerEnergy": 1909.090909090909,
-    "fodderCoins": 66.94214876033058,
+    "fodderCoins": 97.93388429752066,
     "dustDamage": 0,
     "dustHealth": 21.272727272727273,
     "dustCrit": 0,
@@ -17362,12 +17434,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Common"
+      },
+      {
+        "name": "Rescue Can",
+        "itemID": 4059,
+        "droprate": 1,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Legendary"
       }
     ],
-    "fodder": 0.44999999999999996,
+    "fodder": 0.6583333333333333,
     "coinsPerEnergy": 150,
     "maidenXPPerEnergy": 2000,
-    "fodderCoins": 67.5,
+    "fodderCoins": 98.75,
     "dustDamage": 0,
     "dustHealth": 19.5,
     "dustCrit": 1,
@@ -19102,12 +19183,21 @@
         "q2": 1,
         "quantity": 1,
         "rarity": "Rare"
+      },
+      {
+        "name": "Grim Reaper",
+        "itemID": 4075,
+        "droprate": 1,
+        "q1": 1,
+        "q2": 1,
+        "quantity": 1,
+        "rarity": "Legendary"
       }
     ],
-    "fodder": 1.3090909090909093,
+    "fodder": 1.5363636363636366,
     "coinsPerEnergy": 190.9090909090909,
     "maidenXPPerEnergy": 2000,
-    "fodderCoins": 249.91735537190087,
+    "fodderCoins": 293.305785123967,
     "dustDamage": 49.63636363636364,
     "dustHealth": 0,
     "dustCrit": 21.272727272727273,
