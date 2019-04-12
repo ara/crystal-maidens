@@ -1,4 +1,8 @@
 <template>
+      <select v-model="classFilter">
+        <option v-for="(sclass, index) in classes" :key="sclass" :value="index-1">{{ sclass }}</option>
+      </select>
+    </div>
   <div class="flex-row">
     <div v-for="slot in slots.slice(1,3)" :key="slot.caption">
       <table style="position:relative" id="anchor">
@@ -67,7 +71,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
-import { SLOT, RARITY, CLASS, bgItems } from '../api/const.js';
+import { SLOT, RARITY, CLASS, classes, bgItems } from '../api/const.js';
 
 export default {
   data () {
@@ -98,6 +102,7 @@ export default {
     filteredOffHandItems () { return this.offHandItems.filter( this.filterItems ); },
     filteredFeetItems () { return this.feetItems.filter( this.filterItems ); },
     filteredNeckItems () { return this.neckItems.filter( this.filterItems ); },
+    classes () { return ['All','Unrestricted', ...classes.slice(1)]; },
   },
 
   methods: {
