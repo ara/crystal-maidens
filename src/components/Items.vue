@@ -1,11 +1,12 @@
 <template>
+  <div class="flex-row">
+    <div>
       <select v-model="classFilter">
         <option v-for="(sclass, index) in classes" :key="sclass" :value="index-1">{{ sclass }}</option>
       </select>
     </div>
-  <div class="flex-row">
-    <div v-for="slot in slots.slice(1,3)" :key="slot.caption">
-      <table style="position:relative" id="anchor">
+    <div v-for="slot in slots" :key="slot.caption">
+      <table>
         <thead>
           <th>{{ slot.caption }}</th>
         </thead>
@@ -17,6 +18,7 @@
             :class="['bg'+item.rarity, item.selected?'selected':'', 'tt']"
             @mouseover="showTT(item,$event)"
             @mouseleave="hideTT($event)"
+            :ref="item.key"
           >
             <td>
             <img :src="item.imageUrl" class="item-icon"
@@ -29,42 +31,42 @@
     <div id="tp" class="ttt" ref="tt"
       v-show="hoveredItem"
       @mouseenter="$event.target.hidden=true">
-          <div class="tt-grid">
+      <div class="tt-grid">
         <img :src="getBackground(hoveredItem)" class="tt-bg">
         <img :src="hoveredItem.imageUrl" class="tt-icon">
         <span class="tt-name">{{ hoveredItem.name }}</span>
         <span class="tt-type">{{ hoveredItem.sSlot }}  Level 5</span>
-          </div>
-          <ul class="tt-ul">
+      </div>
+      <ul class="tt-ul">
         <li v-if="has('hp')">
-              <span class="tt-statname">Health</span>
-              <span class="tt-stat">{{ getStat('hp') }}%</span>
-            </li>
+          <span class="tt-statname">Health</span>
+          <span class="tt-stat">{{ getStat('hp') }}%</span>
+        </li>
         <li v-if="has('dmg')">
-              <span class="tt-statname">Damage</span>
-              <span class="tt-stat">{{ getStat('dmg') }}%</span>
-            </li>
+          <span class="tt-statname">Damage</span>
+          <span class="tt-stat">{{ getStat('dmg') }}%</span>
+        </li>
         <li v-if="has('as')">
-              <span class="tt-statname">Atk Speed</span>
-              <span class="tt-stat">{{ getStat('as') }}</span>
-            </li>
+          <span class="tt-statname">Atk Speed</span>
+          <span class="tt-stat">{{ getStat('as') }}</span>
+        </li>
         <li v-if="has('crit')">
-              <span class="tt-statname">Crit</span>
-              <span class="tt-stat">{{ getStat('crit') }}%</span>
-            </li>
+          <span class="tt-statname">Crit</span>
+          <span class="tt-stat">{{ getStat('crit') }}%</span>
+        </li>
         <li v-if="has('dodge')">
-              <span class="tt-statname">Dodge</span>
-              <span class="tt-stat">{{ getStat('dodge') }}%</span>
-            </li>
+          <span class="tt-statname">Dodge</span>
+          <span class="tt-stat">{{ getStat('dodge') }}%</span>
+        </li>
         <li v-if="has('def')">
-              <span class="tt-statname">Defense</span>
-              <span class="tt-stat">{{ getStat('def') }}%</span>
-            </li>
+          <span class="tt-statname">Defense</span>
+          <span class="tt-stat">{{ getStat('def') }}%</span>
+        </li>
         <li v-if="has('cdr')">
-              <span class="tt-statname">CDR</span>
-              <span class="tt-stat">{{ getStat('cdr') }}%</span>
-            </li>
-          </ul>
+          <span class="tt-statname">CDR</span>
+          <span class="tt-stat">{{ getStat('cdr') }}%</span>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -87,7 +89,10 @@ export default {
       classFilter: CLASS.MARKSMAN,
       maidenFilter: 0,
       rarityFilter: -1,
-      tparg: {},
+      hoveredItem: {},
+      x: 0,
+      y: 0,
+      prevNode: null,
     }
   },
 
@@ -110,36 +115,70 @@ export default {
       return bgItems.get(item.rarity);
     },
     showTT (item, e) {
-      const tt = document.getElementById('tp');
-      if( !tt ) return;
-      this.tparg = item;
-      for( const el of e.path ) {
-        if( el.tagName !== 'TR' ) continue;
-        const table = el.parentNode.parentNode;
-        let x = table.offsetLeft + el.offsetLeft;
-        let y = table.offsetTop + el.offsetTop;
-        
-        if( x + el.offsetWidth + table.offsetWidth > window.innerWidth ) {
-          // it overflows right, display on left side instead
-          x -= el.offsetWidth;
-        } else {
-          x += table.offsetWidth;
-        }
-
-        console.log( y + el.offsetHeight, window.innerHeight )
-        if( y + el.offsetHeight > window.innerHeight ) {
-          y -= window.innerHeight - y - el.offsetHeight;
-        }
-
-        tt.style.left = x +'px';
-        tt.style.top = y + 'px';
-        tt.hidden = false;
-      }
+      if( item === this.hoveredItem && !this.$refs.tt.hidden ) return;
+      this.hoveredItem = item;
+      this.$nextTick( this.setTooltipPos );
     },
     hideTT (e) {
-      const tt = document.getElementById('tp');
-      if( !tt ) return;
-      tt.hidden = true;
+      this.$refs.tt.hidden = true;
+    },
+    constains(ele, x, y) {
+      // if( ele. )
+    },
+    setTooltipPos () {
+        const item = this.hoveredItem;
+        const tt = this.$refs.tt;
+        const el = this.$refs[item.key][0];
+        const table = el.offsetParent;// el.parentNode.parentNode;
+        const maxWidth = window.innerWidth;// document.body.clientWidth; // window.innerWidth
+        const maxHeight = window.innerHeight;// document.body.clientHeight;
+        let x = table.offsetLeft + el.offsetLeft;
+        let y = table.offsetTop + el.offsetTop;
+        // show below ?
+        //y += el.clientHeight + 1;
+        // show right ?
+        x += el.clientWidth + 1;
+        if( x + tt.clientWidth > maxWidth ) {
+          console.log('width was superior, switching...');
+          x -= el.clientWidth + 1 + tt.clientWidth + 1;
+        }
+
+
+        // if( true || tt.offsetHeight !== 0 ) {
+
+        //   if(
+        //     x + el.offsetWidth + table.offsetWidth > maxWidth ||
+        //     tt.offsetHeight === 0 ||
+            
+        //   ) {
+        //     // it overflows right, display on left side instead
+        //     //x -= tt.offsetWidth;
+        //     x -= tt.offsetWidth;
+        //   } else {
+        //     x += table.offsetWidth;
+        //   }
+
+        // }
+
+        // if( true || tt.offsetHeight !== 0 ) {
+          
+        //   // console.log( y, tt.offsetHeight, window.innerHeight )
+        //   if( y + tt.offsetHeight > maxHeight && tt.offsetHeight > 0 ) {
+        //     // y -= window.innerHeight - tt.offsetHeight;
+        //     // tt.style.bottom = 0;
+        //   }
+        //   else {
+        //     //tt.style.top = y + 'px';
+        //   }
+        // } else
+        // {
+        //   //console.log('tt.offsetHeight', tt.offsetHeight);
+        //   //tt.style.top = y + 'px';
+        // }
+        tt.style.left = x +'px';
+        // console.log(x, maxWidth, y, maxHeight);
+        tt.style.top = y + 'px';
+        tt.hidden = false;
     },
     has (stat) {
       // console.log(stat, this.hoveredItem && this.hoveredItem[stat]);
@@ -151,7 +190,7 @@ export default {
       return Math.round(1.45 * (base + inc * (this.hoveredItem.maxLevel-1)) * 10)/10;
     },
     filterItems (item) {
-      return (!this.classFilter || item.class === this.classFilter) &&
+      return (this.classFilter===-1 || item.class === this.classFilter) &&
       (!this.maidenFilter || item.maiden === this.maidenFilter) &&
       (this.rarityFilter === -1 || item.rarity === this.rarityFilter);
     },
@@ -217,7 +256,6 @@ table {
   }
 
   th {
-    // position: sticky; top: 0;
     background-color: $p-light;
     padding: .3em .1em .2em .4em;
     text-align: left;
@@ -250,17 +288,17 @@ table {
   vertical-align: text-bottom;
 }
 
-/* Tooltip text */
 .ttt {
   // visibility: hidden;
-  // width: 120px;
+  width: 270px;
+  // min-height: 120px;
   background-color: #eee;
   color: #555;
   padding: 5px;
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  // transition: hidden .3 ease;
+  // transition: opacity .3 ease;
 }
 
 li {
@@ -293,9 +331,11 @@ li {
 }
 .tt-name {
   grid-area: name;
+  white-space: nowrap;
 }
 .tt-type {
   grid-area: type;
+  white-space: nowrap;
 }
 
 .tt-statname {
