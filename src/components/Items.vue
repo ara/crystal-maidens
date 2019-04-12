@@ -28,9 +28,9 @@
 
       </table>
     </div>
-    <div id="tp" class="ttt" ref="tt"
+    <div class="ttt" ref="tt"
       v-show="hoveredItem"
-      @mouseenter="$event.target.hidden=true">
+      @mouseover="hideTT($event)">
       <div class="tt-grid">
         <img :src="getBackground(hoveredItem)" class="tt-bg">
         <img :src="hoveredItem.imageUrl" class="tt-icon">
@@ -90,8 +90,6 @@ export default {
       maidenFilter: 0,
       rarityFilter: -1,
       hoveredItem: {},
-      x: 0,
-      y: 0,
       prevNode: null,
     }
   },
@@ -128,6 +126,7 @@ export default {
     setTooltipPos () {
         const item = this.hoveredItem;
         const tt = this.$refs.tt;
+        tt.hidden = false;
         const el = this.$refs[item.key][0];
         const table = el.offsetParent;// el.parentNode.parentNode;
         const maxWidth = window.innerWidth;// document.body.clientWidth; // window.innerWidth
@@ -139,8 +138,11 @@ export default {
         // show right ?
         x += el.clientWidth + 1;
         if( x + tt.clientWidth > maxWidth ) {
-          console.log('width was superior, switching...');
+          const prevX = x;
           x -= el.clientWidth + 1 + tt.clientWidth + 1;
+          console.log('width was superior', prevX, '=>', x );
+        } else {
+          console.log('normal', x)
         }
 
 
@@ -178,7 +180,6 @@ export default {
         tt.style.left = x +'px';
         // console.log(x, maxWidth, y, maxHeight);
         tt.style.top = y + 'px';
-        tt.hidden = false;
     },
     has (stat) {
       // console.log(stat, this.hoveredItem && this.hoveredItem[stat]);
