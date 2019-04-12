@@ -136,14 +136,14 @@ export default {
       if( !tt ) return;
       tt.hidden = true;
     },
-    show (stat) {
-      // console.log(stat, this.tparg && this.tparg[stat]);
-      return this.tparg && this.tparg[stat];
+    has (stat) {
+      // console.log(stat, this.hoveredItem && this.hoveredItem[stat]);
+      return this.hoveredItem && this.hoveredItem[stat];
     },
     getStat (stat) {
-      const base= this.tparg[stat];
-      const inc = this.tparg[stat+'Inc'] || 0;
-      return Math.round(1.45 * (base + inc * (this.tparg.maxLevel-1)) * 10)/10;
+      const base= this.hoveredItem[stat];
+      const inc = this.hoveredItem[stat+'Inc'] || 0;
+      return Math.round(1.45 * (base + inc * (this.hoveredItem.maxLevel-1)) * 10)/10;
     },
     filterItems (item) {
       return (!this.classFilter || item.class === this.classFilter) &&
