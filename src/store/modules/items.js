@@ -20,7 +20,7 @@ const getters = {
         id: item.id,
         key: item.id + 'r' + rarity,
         name: item.name,
-        imageUrl: itemImages.get(item.id),
+        imageUrl: itemImages.get(item.tex || item.id),
         set: rarity === RARITY.SET_ITEM
           ? sets.find( s => s.items.includes(item.id) )
           : null,
