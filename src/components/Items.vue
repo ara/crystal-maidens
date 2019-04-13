@@ -136,44 +136,18 @@ export default {
       //y += tableRow.clientHeight + 1;
         // show right ?
       x += tableRow.clientWidth + 1;
+      // tooltip overflow right but not left if repositioned ?
+      if( x + tt.clientWidth > maxWidth && x ) {
           const prevX = x;
+        x -= tableRow.clientWidth + 1 + tt.clientWidth + 1;
         tt.setAttribute('tt-pos', 'left');
         } else {
         tt.setAttribute('tt-pos', 'right');
         }
 
+      // center vertically
+      y -= tt.clientHeight/2 - tableRow.clientHeight/2;
 
-        // if( true || tt.offsetHeight !== 0 ) {
-
-        //   if(
-        //     x + el.offsetWidth + table.offsetWidth > maxWidth ||
-        //     tt.offsetHeight === 0 ||
-            
-        //   ) {
-        //     // it overflows right, display on left side instead
-        //     //x -= tt.offsetWidth;
-        //     x -= tt.offsetWidth;
-        //   } else {
-        //     x += table.offsetWidth;
-        //   }
-
-        // }
-
-        // if( true || tt.offsetHeight !== 0 ) {
-          
-        //   // console.log( y, tt.offsetHeight, window.innerHeight )
-        //   if( y + tt.offsetHeight > maxHeight && tt.offsetHeight > 0 ) {
-        //     // y -= window.innerHeight - tt.offsetHeight;
-        //     // tt.style.bottom = 0;
-        //   }
-        //   else {
-        //     //tt.style.top = y + 'px';
-        //   }
-        // } else
-        // {
-        //   //console.log('tt.offsetHeight', tt.offsetHeight);
-        //   //tt.style.top = y + 'px';
-        // }
         tt.style.left = x +'px';
         // console.log(x, maxWidth, y, maxHeight);
         tt.style.top = y + 'px';
