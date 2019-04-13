@@ -270,6 +270,13 @@ table {
   border-radius: 6px;
   position: absolute;
   z-index: 1;
+  transition: all .3 ease;
+  border: 1px solid #777;
+  max-width: 200px;
+  box-shadow: 1px 1px 3px #0008;
+  padding: 5px;
+  animation: fade .3s ease;
+}
 .ttt::before {
   content: "";
   position:absolute;
