@@ -28,7 +28,7 @@
 
       </table>
     </div>
-    <div class="ttt" ref="tt"
+    <div class="ttt" ref="tt" tt-pos="right"
       v-show="hoveredItem"
       @mouseover="hideTT($event)">
       <div class="tt-grid">
@@ -139,10 +139,9 @@ export default {
         x += el.clientWidth + 1;
         if( x + tt.clientWidth > maxWidth ) {
           const prevX = x;
-          x -= el.clientWidth + 1 + tt.clientWidth + 1;
-          console.log('width was superior', prevX, '=>', x );
+        tt.setAttribute('tt-pos', 'left');
         } else {
-          console.log('normal', x)
+        tt.setAttribute('tt-pos', 'right');
         }
 
 
@@ -299,8 +298,42 @@ table {
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  // transition: opacity .3 ease;
+.ttt::before {
+  content: "";
+  position:absolute;
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  border-style: solid;
+  animation: fade .3s ease;
 }
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+[tt-pos='right'].ttt {
+  margin-left: 10px;
+}
+[tt-pos='right']::before {
+  // right: 100%;
+  left: 0;
+  top: 50%;
+  margin-left: -14px;
+  transform: translatey(-50%) rotate(90deg);
+}
+
+
+[tt-pos='left'].ttt {
+  transform: translatex(-10px);
+}
+[tt-pos='left']::before {
+  right: 0;
+  margin-right: -14px;
+  top: 50%;
+  transform: translatey(-50%) rotate(-90deg);
+}
+
 
 li {
   display: table-row;
