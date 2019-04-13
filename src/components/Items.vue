@@ -126,18 +126,16 @@ export default {
     setTooltipPos () {
         const item = this.hoveredItem;
         const tt = this.$refs.tt;
-        tt.hidden = false;
-        const el = this.$refs[item.key][0];
-        const table = el.offsetParent;// el.parentNode.parentNode;
-        const maxWidth = window.innerWidth;// document.body.clientWidth; // window.innerWidth
-        const maxHeight = window.innerHeight;// document.body.clientHeight;
-        let x = table.offsetLeft + el.offsetLeft;
-        let y = table.offsetTop + el.offsetTop;
+      const tableRow = this.$refs[item.key][0];
+      const table = tableRow.offsetParent;
+      const maxWidth = window.innerWidth;
+      const maxHeight = window.innerHeight;
+      let x = table.offsetLeft + tableRow.offsetLeft;
+      let y = table.offsetTop + tableRow.offsetTop;
         // show below ?
-        //y += el.clientHeight + 1;
+      //y += tableRow.clientHeight + 1;
         // show right ?
-        x += el.clientWidth + 1;
-        if( x + tt.clientWidth > maxWidth ) {
+      x += tableRow.clientWidth + 1;
           const prevX = x;
         tt.setAttribute('tt-pos', 'left');
         } else {
