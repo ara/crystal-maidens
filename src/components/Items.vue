@@ -1,12 +1,14 @@
 <template>
-  <div class="flex-row">
-    <div>
-      <select v-model="classFilter">
+  <div>
+    <div class="options">
+      <select v-model="classFilter" class="item">
         <option v-for="(sclass, index) in classes" :key="sclass" :value="index-1">{{ sclass }}</option>
       </select>
+      <br>
     </div>
-    <div v-for="slot in slots" :key="slot.caption">
-      <table>
+  <div class="container">
+    <div v-for="slot in slots" :key="slot.caption" class="container">
+      <table class="item">
         <thead>
           <th>{{ slot.caption }}</th>
         </thead>
@@ -69,6 +71,7 @@
       </ul>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -123,31 +126,31 @@ export default {
     setTooltipPos () {
       const tt = this.$refs.tt;
       this.$refs.tt.hidden = false;
-        const item = this.hoveredItem;
+      const item = this.hoveredItem;
       const tableRow = this.$refs[item.key][0];
       const table = tableRow.offsetParent;
       const maxWidth = window.innerWidth;
       const maxHeight = window.innerHeight;
       let x = table.offsetLeft + tableRow.offsetLeft;
       let y = table.offsetTop + tableRow.offsetTop;
-        // show below ?
+      // show below ?
       //y += tableRow.clientHeight + 1;
-        // show right ?
+      // show right ?
       x += tableRow.clientWidth + 1;
       // tooltip overflow right but not left if repositioned ?
       if( x + tt.clientWidth > maxWidth && x ) {
-          const prevX = x;
+        const prevX = x;
         x -= tableRow.clientWidth + 1 + tt.clientWidth + 1;
         tt.setAttribute('tt-pos', 'left');
-        } else {
+      } else {
         tt.setAttribute('tt-pos', 'right');
-        }
+      }
 
       // center vertically
       y -= tt.clientHeight/2 - tableRow.clientHeight/2;
 
-        tt.style.left = x +'px';
-        tt.style.top = y + 'px';
+      tt.style.left = x +'px';
+      tt.style.top = y + 'px';
     },
     has (stat) {
       return this.hoveredItem && this.hoveredItem[stat];
@@ -189,6 +192,22 @@ $set: #73ce73;
 .bg3 { background-color: $leg; }
 .bg4 { background-color: $set; }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.item {
+  align-self: start;
+  margin: 5px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .item-name {
   display:inline-flex;
   justify-self:flex-start;
@@ -199,7 +218,7 @@ $set: #73ce73;
 }
 
 table {
-  box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
+  box-shadow: 0px 0px 4px 0px rgba(51, 51, 51, 0.5);
   cursor: default;
   margin-left: .5em;
   white-space: nowrap;
