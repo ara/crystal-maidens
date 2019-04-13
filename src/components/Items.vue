@@ -120,12 +120,10 @@ export default {
     hideTT (e) {
       this.$refs.tt.hidden = true;
     },
-    constains(ele, x, y) {
-      // if( ele. )
-    },
     setTooltipPos () {
+      const tt = this.$refs.tt;
+      this.$refs.tt.hidden = false;
         const item = this.hoveredItem;
-        const tt = this.$refs.tt;
       const tableRow = this.$refs[item.key][0];
       const table = tableRow.offsetParent;
       const maxWidth = window.innerWidth;
@@ -149,11 +147,9 @@ export default {
       y -= tt.clientHeight/2 - tableRow.clientHeight/2;
 
         tt.style.left = x +'px';
-        // console.log(x, maxWidth, y, maxHeight);
         tt.style.top = y + 'px';
     },
     has (stat) {
-      // console.log(stat, this.hoveredItem && this.hoveredItem[stat]);
       return this.hoveredItem && this.hoveredItem[stat];
     },
     getStat (stat) {
@@ -183,13 +179,8 @@ $p-light: #eee;
 
 $common: #eee;
 $rare: #a4c2f4;
-$rare2: rgb(112, 157, 247);
-$epic3: #bd9ff0;
-$epic2: #aa97da;
 $epic: #b9a0e4;
 $leg: #ffe599;
-$set3: #8e8;
-$set2: rgb(126, 214, 126);
 $set: #73ce73;
 
 .bg0 { background-color: $common; }
@@ -261,12 +252,9 @@ table {
 }
 
 .ttt {
-  // visibility: hidden;
-  width: 270px;
-  // min-height: 120px;
+  // width: 270px;
   background-color: #eee;
   color: #555;
-  padding: 5px;
   border-radius: 6px;
   position: absolute;
   z-index: 1;
@@ -325,8 +313,6 @@ li {
 .tt-grid{
   display: grid;
   grid-column-gap: .5em;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
   grid-template-areas:"icon name"
                       "icon type";
 }
@@ -344,7 +330,7 @@ li {
 }
 .tt-name {
   grid-area: name;
-  white-space: nowrap;
+  // white-space: nowrap;
 }
 .tt-type {
   grid-area: type;
