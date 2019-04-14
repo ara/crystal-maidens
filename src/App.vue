@@ -14,11 +14,12 @@ export default {
   components: {
     appHeader: Header
   }
-}
-import sassStyles from './assets/css/main.scss';
+};
+// import sassStyles from './assets/css/main.scss';
 </script>
 
 <style lang="scss">
+@import './assets/css/main';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
