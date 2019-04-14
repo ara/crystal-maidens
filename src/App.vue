@@ -15,6 +15,7 @@ export default {
     appHeader: Header
   }
 }
+import sassStyles from './assets/css/main.scss';
 </script>
 
 <style lang="scss">
