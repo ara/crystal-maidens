@@ -2,24 +2,30 @@
   <div id="app">
     <app-header></app-header>
     <keep-alive>
-    <router-view>
-    </router-view>
+      <app-item-tooltip></app-item-tooltip>
+    </keep-alive>
+    <keep-alive>
+      <router-view>
+      </router-view>
     </keep-alive>
   </div>
 </template>
 
 <script>
 import Header from './components/Header';
+import ItemTooltip from './components/ItemTooltip';
+
 export default {
   components: {
-    appHeader: Header
-  }
-};
+    appHeader: Header,
+    appItemTooltip: ItemTooltip,
+  },
+}
 // import sassStyles from './assets/css/main.scss';
 </script>
 
 <style lang="scss">
-@import './assets/css/main';
+@import './assets/css/main.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -36,7 +42,6 @@ export default {
   a:visited {
     color: #777;
   }
-
 }
 
 $p-dark: #333;

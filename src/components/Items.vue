@@ -30,46 +30,6 @@
 
       </table>
     </div>
-    <div class="ttt" ref="tt" tt-pos="right"
-      v-show="hoveredItem"
-      @mouseover="hideTT($event)">
-      <div class="tt-grid">
-        <img :src="getBackground(hoveredItem)" class="tt-bg">
-        <img :src="hoveredItem.imageUrl" class="tt-icon">
-        <span class="tt-name">{{ hoveredItem.name }}</span>
-        <span class="tt-type">{{ hoveredItem.sSlot }}  Level 5</span>
-      </div>
-      <ul class="tt-ul">
-        <li v-if="has('hp')">
-          <span class="tt-statname">Health</span>
-          <span class="tt-stat">{{ getStat('hp') }}%</span>
-        </li>
-        <li v-if="has('dmg')">
-          <span class="tt-statname">Damage</span>
-          <span class="tt-stat">{{ getStat('dmg') }}%</span>
-        </li>
-        <li v-if="has('as')">
-          <span class="tt-statname">Atk Speed</span>
-          <span class="tt-stat">{{ getStat('as') }}</span>
-        </li>
-        <li v-if="has('crit')">
-          <span class="tt-statname">Crit</span>
-          <span class="tt-stat">{{ getStat('crit') }}%</span>
-        </li>
-        <li v-if="has('dodge')">
-          <span class="tt-statname">Dodge</span>
-          <span class="tt-stat">{{ getStat('dodge') }}%</span>
-        </li>
-        <li v-if="has('def')">
-          <span class="tt-statname">Defense</span>
-          <span class="tt-stat">{{ getStat('def') }}%</span>
-        </li>
-        <li v-if="has('cdr')">
-          <span class="tt-statname">CDR</span>
-          <span class="tt-stat">{{ getStat('cdr') }}%</span>
-        </li>
-      </ul>
-    </div>
   </div>
   </div>
 </template>
@@ -92,15 +52,15 @@ export default {
       classFilter: CLASS.MARKSMAN,
       maidenFilter: 0,
       rarityFilter: -1,
-      hoveredItem: {},
       prevNode: null,
     }
   },
 
   computed: {
-    ...mapState({
-      // items: state => state.items.items,
-    }),
+    hoveredItem: {
+      get () { return this.$store.state.hoveredItem; },
+      set (value) { this.$store.commit('hoverItem', value); }
+    },
     ...mapGetters(['items','headItems','chestItems','mainHandItems','offHandItems','feetItems','neckItems']),
     filteredHeadItems () { return this.headItems.filter( this.filterItems ); },
     filteredChestItems () { return this.chestItems.filter( this.filterItems ); },
@@ -112,20 +72,17 @@ export default {
   },
 
   methods: {
-    getBackground (item) {
-      return bgItems.get(item.rarity);
-    },
     showTT (item, e) {
-      if( item === this.hoveredItem && !this.$refs.tt.hidden ) return;
+      if( item === this.hoveredItem && !this.$store.state.itemTooltip.hidden ) return;
       this.hoveredItem = item;
       this.$nextTick( this.setTooltipPos );
     },
     hideTT (e) {
-      this.$refs.tt.hidden = true;
+      this.$store.state.itemTooltip.hidden = true;
     },
     setTooltipPos () {
-      const tt = this.$refs.tt;
-      this.$refs.tt.hidden = false;
+      const tt = this.$store.state.itemTooltip;
+      tt.hidden = false;
       const item = this.hoveredItem;
       const tableRow = this.$refs[item.key][0];
       const table = tableRow.offsetParent;
@@ -151,14 +108,6 @@ export default {
 
       tt.style.left = x +'px';
       tt.style.top = y + 'px';
-    },
-    has (stat) {
-      return this.hoveredItem && this.hoveredItem[stat];
-    },
-    getStat (stat) {
-      const base= this.hoveredItem[stat];
-      const inc = this.hoveredItem[stat+'Inc'] || 0;
-      return Math.round(1.45 * (base + inc * (this.hoveredItem.maxLevel-1)) * 10)/10;
     },
     filterItems (item) {
       return (this.classFilter===-1 || item.class === this.classFilter) &&
@@ -270,103 +219,4 @@ table {
   vertical-align: text-bottom;
 }
 
-.ttt {
-  // width: 270px;
-  background-color: #eee;
-  color: #555;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  transition: all .3 ease;
-  border: 1px solid #777;
-  max-width: 200px;
-  box-shadow: 1px 1px 3px #0008;
-  padding: 5px;
-  animation: fade .3s ease;
-}
-.ttt::before {
-  content: "";
-  position:absolute;
-  border-width: 10px 8px 0 8px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-  border-style: solid;
-  animation: fade .3s ease;
-}
-@keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-[tt-pos='right'].ttt {
-  margin-left: 10px;
-}
-[tt-pos='right']::before {
-  // right: 100%;
-  left: 0;
-  top: 50%;
-  margin-left: -14px;
-  transform: translatey(-50%) rotate(90deg);
-}
-
-
-[tt-pos='left'].ttt {
-  transform: translatex(-10px);
-}
-[tt-pos='left']::before {
-  right: 0;
-  margin-right: -14px;
-  top: 50%;
-  transform: translatey(-50%) rotate(-90deg);
-}
-
-
-li {
-  display: table-row;
-}
-.tt-ul {
-  display:table-row;
-}
-
-
-.tt-grid{
-  display: grid;
-  grid-column-gap: .5em;
-  grid-template-areas:"icon name"
-                      "icon type";
-}
-.tt-bg {
-  grid-area: icon;
-  width: 64px;
-  height: 64px;
-}
-.tt-icon {
-  grid-area: icon;
-  justify-self: center;
-  align-self: center;
-  width: 48px;
-  height: 48px;
-}
-.tt-name {
-  grid-area: name;
-  // white-space: nowrap;
-}
-.tt-type {
-  grid-area: type;
-  white-space: nowrap;
-}
-
-.tt-statname {
-  display: table-cell;
-  // width: 6em;
-  text-align: right;
-  font-size: 1em;
-  margin-left: .4em;
-}
-.tt-stat {
-  display: table-cell;
-  width: 4em;
-  font-size: .95em;
-  text-align: right;
-}
 </style>
