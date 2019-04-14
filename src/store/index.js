@@ -14,7 +14,19 @@ export default new Vuex.Store({
     items,
   },
 
+  state: {
+    hoveredItem: {},
+    itemTooltip: null,
+  },
+
   mutations: {
+    setItemTooltipRef (state, payload) {
+      state.itemTooltip = payload;
+    },
+    hoverItem (state, payload) {
+      state.hoveredItem = payload;
+    },
+
     loadStore(state) {
       if(localStorage.getItem('heroFilters')) {
         Object.assign( state.heroes.filters, JSON.parse(localStorage.getItem('heroFilters')) );
