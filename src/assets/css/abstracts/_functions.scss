@@ -1,0 +1,14 @@
+// Get color map
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// .test{
+//   color: color(primary, base);
+// }
+
+// https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps

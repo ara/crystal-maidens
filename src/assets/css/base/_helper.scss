@@ -1,0 +1,163 @@
+// display
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// flex
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+.items-center {
+  -webkit-box-align: center;
+  -webkit-align-item: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+// position
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+// margin, padding
+$size: (
+  0: 0,
+  0_25: 0.25, // 4px
+  0_5: 0.5,   // 8px
+  0_75: 0.75, // 12px
+  1: 1,       // 16px
+  1_5: 1.5,   // 24px
+  2: 2,       // 32px
+  2_5: 2.5,   // 40px
+  3: 3,       // 48px
+  3_5: 3.5,   // 56px
+  4: 4,       // 64px
+  4_5: 4.5,   // 72px
+  5: 5,       // 80px
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10
+);
+$vertical-key: 'y';
+$horizontal-key: 'x';
+$d: (
+  t: 'top',
+  r: 'right',
+  b: 'bottom',
+  l: 'left'
+);
+@each $size-key, $size-value in $size {
+  .m#{$size-key} {
+    margin: #{$size-value}rem !important;
+  }
+  // all direction
+  .m#{$size-key} {
+    margin: #{$size-value}rem !important;
+  }
+
+  .p#{$size-key} {
+    padding: #{$size-value}rem !important;
+  }
+  // vertical
+  .m#{$vertical-key}#{$size-key} {
+    margin-top: #{$size-value}rem !important;
+    margin-bottom: #{$size-value}rem !important;
+  }
+
+  .p#{$vertical-key}#{$size-key} {
+    padding-top: #{$size-value}rem !important;
+    padding-bottom: #{$size-value}rem !important;
+  }
+  // horizontal
+  .m#{$horizontal-key}#{$size-key} {
+    margin-right: #{$size-value}rem !important;
+    margin-left: #{$size-value}rem !important;
+  }
+
+  .p#{$horizontal-key}#{$size-key} {
+    padding-right: #{$size-value}rem !important;
+    padding-left: #{$size-value}rem !important;
+  }
+  // each of top,right,bottom,left:
+  @each $dir, $dir-value in $d {
+    .m#{$dir}#{$size-key} {
+      margin-#{$dir-value}: #{$size-value}rem !important;
+    }
+  }
+  @each $dir, $dir-value in $d {
+    .p#{$dir}#{$size-key} {
+      padding-#{$dir-value}: #{$size-value}rem !important;
+    }
+  }
+}
+
+// float
+.float-left {
+  float: left;
+  @include clearfix;
+}
+
+.float-right {
+  float: right;
+  @include clearfix;
+}
+
+// text-align
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
