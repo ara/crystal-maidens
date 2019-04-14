@@ -2,6 +2,7 @@ const itemImages = new Map([]);
 const heroImages = new Map([]);
 const skillIcons = new Map([]);
 const bgItems = new Map([]);
+const uiImages = new Map([]);
 
 function importImages (mapObj, keyIsNumber, req) {
   req.keys().forEach( key =>
@@ -22,6 +23,7 @@ try {
   importImages( skillIcons, true, require.context('../assets/skills/') );
   importImages( itemImages, true, require.context('../assets/items/') );
   importImages( bgItems, true, require.context('../assets/bg-items/') );
+  importImages( uiImages, false, require.context('../assets/ui/') );
 } catch(err) { ; }
 
 const elements = ['Neutral', 'Fire', 'Water', null, 'Nature', null, null, null, 'Dark'];
