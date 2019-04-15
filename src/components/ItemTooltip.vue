@@ -40,13 +40,14 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import { bgItems } from "../api/const.js";
-import { setTimeout } from "timers";
+import { mapState } from 'vuex';
+import { bgItems } from '../api/const.js';
+import { setTimeout } from 'timers';
+import { tooltipBus } from '../main.js';
 
 export default {
   computed: {
-    ...mapState(["hoveredItem"])
+    ...mapState(['hoveredItem'])
   },
 
   methods: {
@@ -61,7 +62,7 @@ export default {
     },
     getStat(stat) {
       const base = this.hoveredItem[stat];
-      const inc = this.hoveredItem[stat + "Inc"] || 0;
+      const inc = this.hoveredItem[stat + 'Inc'] || 0;
       return (
         Math.round(1.45 * (base + inc * (this.hoveredItem.maxLevel - 1)) * 10) /
         10
