@@ -6,29 +6,29 @@
       </select>
       <br>
     </div>
-  <div class="container">
-    <div v-for="slot in slots" :key="slot.caption" class="container">
-      <table class="item">
-        <thead>
-          <th>{{ slot.caption }}</th>
-        </thead>
+    <div class="container">
+      <div v-for="slot in slots" :key="slot.caption" class="container">
+        <table class="item">
+          <thead>
+            <th>{{ slot.caption }}</th>
+          </thead>
 
-        <tbody>
-          <tr
-            v-for="item in itemsBySlot(slot)" :key="item.key"
-            :id="item.key"
+          <tbody>
+            <tr
+              v-for="item in itemsBySlot(slot)" :key="item.key"
+              :id="item.key"
               :class="['bg'+item.rarity, item.selected?'selected':'']"
               v-item-tooltip="{ item, direction:'right' }"
-          >
-            <td>
-            <img :src="item.imageUrl" class="item-icon"
-            ><span class="item-name">{{ item.name }}</span></td>
-          </tr>
-        </tbody>
+            >
+              <td>
+              <img :src="item.imageUrl" class="item-icon"
+              ><span class="item-name">{{ item.name }}</span></td>
+            </tr>
+          </tbody>
 
-      </table>
+        </table>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
