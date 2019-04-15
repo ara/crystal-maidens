@@ -17,10 +17,8 @@
           <tr
             v-for="item in itemsBySlot(slot)" :key="item.key"
             :id="item.key"
-            :class="['bg'+item.rarity, item.selected?'selected':'', 'tt']"
-            @mouseover="showTT(item,$event)"
-            @mouseleave="hideTT($event)"
-            :ref="item.key"
+              :class="['bg'+item.rarity, item.selected?'selected':'']"
+              v-item-tooltip="{ item, direction:'right' }"
           >
             <td>
             <img :src="item.imageUrl" class="item-icon"
@@ -72,43 +70,6 @@ export default {
   },
 
   methods: {
-    showTT (item, e) {
-      if( item === this.hoveredItem && !this.$store.state.itemTooltip.hidden ) return;
-      this.hoveredItem = item;
-      this.$nextTick( this.setTooltipPos );
-    },
-    hideTT (e) {
-      this.$store.state.itemTooltip.hidden = true;
-    },
-    setTooltipPos () {
-      const tt = this.$store.state.itemTooltip;
-      tt.hidden = false;
-      const item = this.hoveredItem;
-      const tableRow = this.$refs[item.key][0];
-      const table = tableRow.offsetParent;
-      const maxWidth = window.innerWidth;
-      const maxHeight = window.innerHeight;
-      let x = table.offsetLeft + tableRow.offsetLeft;
-      let y = table.offsetTop + tableRow.offsetTop;
-      // show below ?
-      //y += tableRow.clientHeight + 1;
-      // show right ?
-      x += tableRow.clientWidth + 1;
-      // tooltip overflow right but not left if repositioned ?
-      if( x + tt.clientWidth > maxWidth && x ) {
-        const prevX = x;
-        x -= tableRow.clientWidth + 1 + tt.clientWidth + 1;
-        tt.setAttribute('tt-pos', 'left');
-      } else {
-        tt.setAttribute('tt-pos', 'right');
-      }
-
-      // center vertically
-      y -= tt.clientHeight/2 - tableRow.clientHeight/2;
-
-      tt.style.left = x +'px';
-      tt.style.top = y + 'px';
-    },
     filterItems (item) {
       return (this.classFilter===-1 || item.class === this.classFilter) &&
       (!this.maidenFilter || item.maiden === this.maidenFilter) &&
@@ -117,7 +78,7 @@ export default {
     itemsBySlot (slot) {
       return this[slot.var];
     },
-  }
+  },
 
 }
 </script>
