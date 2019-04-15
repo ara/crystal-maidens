@@ -70,9 +70,6 @@ export default {
     }
   },
 
-  mounted() {
-    this.$store.commit("setItemTooltipRef", this.$refs.tt);
-  }
 };
 </script>
 
