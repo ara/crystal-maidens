@@ -55,10 +55,6 @@ export default {
   },
 
   computed: {
-    hoveredItem: {
-      get () { return this.$store.state.hoveredItem; },
-      set (value) { this.$store.commit('hoverItem', value); }
-    },
     ...mapGetters(['items','headItems','chestItems','mainHandItems','offHandItems','feetItems','neckItems']),
     filteredHeadItems () { return this.headItems.filter( this.filterItems ); },
     filteredChestItems () { return this.chestItems.filter( this.filterItems ); },
