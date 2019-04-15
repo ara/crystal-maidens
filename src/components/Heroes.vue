@@ -139,12 +139,14 @@ import HeroCard from './HeroCard';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { VueContext } from 'vue-context';
 import { heroImages } from '../api/const.js';
+import ItemTooltip from './ItemTooltip';
 
 export default {
   components: {
     VueContext,
     HeroCard,
     'app-switch': UISwitch,
+    'app-item-tooltip': ItemTooltip,
   },
 
 
@@ -205,7 +207,7 @@ export default {
       );
     },
 
-    ...mapGetters(['maidens','filteredHeroCols']),
+    ...mapGetters(['maidens','filteredHeroCols','items']),
   },
 
   methods: {
