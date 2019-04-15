@@ -4,11 +4,11 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import { routes } from './routes';
 import './registerServiceWorker'
+import { showTT, hideTT } from './api/itemTooltip.js';
 
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
-
 const router = new VueRouter({
   routes,
   mode: 'history',
@@ -17,7 +17,7 @@ const router = new VueRouter({
 
 
 var vm = new Vue({
-  el: '#app',
+  // el: '#app',
   render: h => h(App),
   store,
   router,
@@ -31,4 +31,20 @@ var vm = new Vue({
   }
 })
 
-//vm.$mount('#app');
+
+Vue.directive('item-tooltip', {
+  bind: function (el, binding, vnode, context) {
+    if( !context.store ) {
+      context.store = store;
+      context.vm = store._vm;
+      context.tt = context.tt || document.getElementById('item-tooltip');
+    }
+    el.addEventListener('mouseenter', (e) => {
+      showTT(e, el, binding, context, vnode);
+    });
+    el.addEventListener('mouseleave', (e) => hideTT(e, el, binding, context) );
+  }
+});
+
+
+vm.$mount('#app');
