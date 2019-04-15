@@ -1,10 +1,10 @@
 <template>
-  <div class="tt" ref="tt" tt-pos="right" v-show="hoveredItem" @mouseover="hideTT($event)">
+  <div class="tt" ref="tt" tt-pos="right" id="item-tooltip" v-show="hoveredItem" @mouseover="hideTT($event)" hidden>
     <div class="tt-grid">
       <img :src="getBackground(hoveredItem)" class="tt-bg">
-      <img :src="hoveredItem.imageUrl" class="tt-icon">
-      <span class="tt-name">{{ hoveredItem.name }}</span>
-      <span class="tt-type">{{ hoveredItem.sSlot }} Level 5</span>
+      <img :src="hoveredItem ? hoveredItem.imageUrl:''" class="tt-icon">
+      <span class="tt-name">{{ hoveredItem ? hoveredItem.name : '' }}</span>
+      <span class="tt-type">{{ hoveredItem ? hoveredItem.sSlot : '' }} Level 5</span>
     </div>
     <ul class="tt-ul">
       <li v-if="has('hp')">
@@ -52,7 +52,7 @@ export default {
 
   methods: {
     getBackground(item) {
-      return bgItems.get(item.rarity);
+      return item ? bgItems.get(item.rarity) : null;
     },
     has(stat) {
       return this.hoveredItem && this.hoveredItem[stat];
