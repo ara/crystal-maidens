@@ -74,35 +74,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tt, .tt::before {
+  position: absolute;
+  animation: fade-in 0.3s ease;
+}
 .tt {
   cursor: default;
   background-color: #eee;
   color: #555;
   border-radius: 6px;
-  position: absolute;
-  z-index: 1;
   border: 1px solid #777;
   max-width: 200px;
   box-shadow: 1px 1px 3px #0008;
   padding: 5px;
-  animation: fade 0.3s ease;
 }
 .tt::before {
   content: "";
-  position: absolute;
   border-width: 10px 8px 0 8px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
   border-style: solid;
-  animation: fade 0.3s ease;
 }
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tt-fade-out,
+.tt-fade-out::before {
+  animation: fade-out 0.3s ease forwards;
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 [tt-pos="right"].tt {
