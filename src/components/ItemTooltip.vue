@@ -58,7 +58,8 @@ export default {
       return this.hoveredItem && this.hoveredItem[stat];
     },
     hideTT(event) {
-      this.$refs.tt.hidden = true;
+      event._tt = this.$refs.tt;
+      hideTooltip(event);
     },
     getStat(stat) {
       const base = this.hoveredItem[stat];
