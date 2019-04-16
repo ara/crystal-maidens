@@ -75,6 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .tt {
+  cursor: default;
   background-color: #eee;
   color: #555;
   border-radius: 6px;
