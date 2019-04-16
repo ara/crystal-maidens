@@ -42,8 +42,7 @@
 <script>
 import { mapState } from 'vuex';
 import { bgItems } from '../api/const.js';
-import { setTimeout } from 'timers';
-import { tooltipBus } from '../main.js';
+import { hideTT as hideTooltip } from '../api/itemTooltip.js';
 
 export default {
   computed: {
