@@ -6,7 +6,7 @@
       <span class="tt-name">{{ hoveredItem ? hoveredItem.name : '' }}</span>
       <span class="tt-type">{{ hoveredItem ? hoveredItem.sSlot : '' }} Level 5</span>
     </div>
-    <ul class="tt-ul">
+    <ul>
       <li v-if="has('hp')">
         <span class="tt-statname">Health</span>
         <span class="tt-stat">{{ getStat('hp') }}%</span>
@@ -124,7 +124,7 @@ export default {
   top: 50%;
   transform: translatey(-50%) rotate(-90deg);
 }
-.tt-ul {
+ul, li {
   display: table-row;
 }
 
@@ -168,8 +168,5 @@ export default {
   width: 4em;
   font-size: 0.95em;
   text-align: right;
-}
-li {
-  display: table-row;
 }
 </style>
