@@ -43,7 +43,7 @@ const showTT = (event, el, binding, context, vnode) => {
     _timerID = null;
   }
   tt.style.zIndex = CSS_TOOLTIP_ON_ZINDEX;
-  if( binding.value.item === context.store.state.hoveredItem ) return;
+  if( !tt.hidden && binding.value.item === context.store.state.hoveredItem ) return;
   tt.hidden = false;
   context.store.commit(V_FN_HOVER_ITEM, binding.value.item);
   context.vm.$nextTick( () => setTooltipPos(event, el, binding, context) );
