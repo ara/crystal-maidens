@@ -88,7 +88,9 @@ export default {
 
   data () {
     return {
-      showDetails: this.showInfo,
+      showDetails: this.showInfo !== null
+        ? this.showInfo
+        : this.$store.state.heroes.showSkillDetails,
       skill: this.hero.skill,
       mousedown: false,
     };
@@ -230,7 +232,6 @@ export default {
   },
 
   created() {
-    this.showDetails = this.$store.state.heroes.showSkillDetails;
   },
 
 }

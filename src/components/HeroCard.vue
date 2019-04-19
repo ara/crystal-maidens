@@ -63,7 +63,7 @@
       </div>
       </transition>
       <hero-skill v-if="hero.skill && showDetails"
-        :hero="hero" :level="heroLevel" :show-info="showSkillDetails"
+        :hero="hero" :level="heroLevel"
       ></hero-skill>
     </div>
     <aside class="gear" v-if="!isMinion">
@@ -85,7 +85,7 @@ export default {
 
   data () {
     return {
-      showDetails: false,
+      showDetails: null,
       moveSpeeds: ['Immob.', 'Ultra F.', 'V.Fast', 'V.Fast', 'Fast', 'Med', 'Slow', 'V.Slow'],
     };
   },
@@ -97,7 +97,6 @@ export default {
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
       selectedHeroes: state => state.heroes.selectedHeroes,
-      showSkillDetails: state => state.heroes.showSkillDetails,
     }),
     isMinion () {
       return this.hero.id > 100;
