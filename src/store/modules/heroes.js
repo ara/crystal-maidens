@@ -176,7 +176,6 @@ const state = {
     class: 'All',
     element: 'All',
   },
-  heroes,
   heroCols,
   skillLevel: 29,
   cdr: 40,
@@ -193,8 +192,9 @@ const validElement = (hero) => state.filters.element === 'All' || hero.sElement 
 const validClass = (hero) => state.filters.class === 'All' || hero.sClass === state.filters.class;
 
 const getters = {
-  maidens: (state) => {
-    return state.heroes.filter( h =>
+  heroes: () => heroes,
+  maidens: (state, getters) => {
+    return getters.heroes.filter( h =>
       h.id >= 1 &&
       h.id <= 100 &&
       h.skill &&

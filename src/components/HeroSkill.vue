@@ -98,7 +98,7 @@ export default {
     ...mapState({
       globalSkillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
-      heroes: state => state.heroes.heroes,
+      heroes: (state, getters) => getters.heroes,
     }),
     skillIcon () {
       return skillIcons.get(this.skill.id);
