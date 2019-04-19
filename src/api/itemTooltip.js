@@ -4,8 +4,8 @@ const DOM_ATTR_TOOLTIP_POSITION = 'tt-pos';
 const TOOLTIP_POSITION_RIGHT = 'right';
 const TOOLTIP_POSITION_LEFT = 'left';
 const V_FN_HOVER_ITEM = 'hoverItem';
-const CSS_TOOLTIP_ON_ZINDEX = 0;
-const CSS_TOOLTIP_OFF_ZINDEX = -1;
+const CSS_TOOLTIP_ON_ZINDEX = 2;
+const CSS_TOOLTIP_OFF_ZINDEX = 2;
 const TIME_BEFORE_TOOLTIP_OFF_ZINDEX_CHANGE = 300; // milliseconds
 
 const setTooltipPos = (event, el, binding, context) => {
