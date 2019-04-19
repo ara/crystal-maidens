@@ -84,7 +84,6 @@ $set: #0c0;
 }
 
 button {
-  // background: linear-gradient(#eee,#ddd);
   background: linear-gradient(#f2f2f2,#dcdcdc);
   border: 1px solid #999;
   padding: .15em .5em;
