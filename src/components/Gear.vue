@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <app-gear-slot v-for="slot in SLOT" :key="slot" maiden="maiden" class="item"></app-gear-slot>
+  <div class="wrapper">
   </div>
 </template>
 
@@ -21,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.wrapper {
   display: flex;
   flex-direction: column;
 }
