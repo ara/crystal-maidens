@@ -24,7 +24,6 @@ const setTooltipPos = (event, el, binding, context) => {
   x += el.clientWidth + 1;
   // tooltip overflow right but not left if repositioned ?
   if( x + tt.clientWidth > maxWidth && x ) {
-    const prevX = x;
     x -= el.clientWidth + 1 + tt.clientWidth + 1;
     tt.setAttribute(DOM_ATTR_TOOLTIP_POSITION, TOOLTIP_POSITION_LEFT);
   } else {
@@ -40,7 +39,7 @@ const setTooltipPos = (event, el, binding, context) => {
 let _timerID = null;
 
 const showTT = (event, el, binding, context, vnode) => {
-  const tt = context.tt || document.getElementById(DOM_ID_ITEM_TOOLTIP);
+  const tt = document.getElementById(DOM_ID_ITEM_TOOLTIP);
   tt.classList.remove(CSS_CLASS_TOOLTIP_FADE_OUT);
   if( _timerID ) {
     window.clearTimeout(_timerID);
@@ -57,7 +56,7 @@ const hideTT = (event, el, binding, context) => {
   var tt = event._tt || context.tt || document.getElementById(DOM_ID_ITEM_TOOLTIP);
   tt.classList.add(CSS_CLASS_TOOLTIP_FADE_OUT);
   _timerID = window.setTimeout( () =>
-    tt.style.zIndex = CSS_TOOLTIP_OFF_ZINDEX, TIME_BEFORE_TOOLTIP_OFF_ZINDEX_CHANGE);
+    (tt.style.zIndex = CSS_TOOLTIP_OFF_ZINDEX), TIME_BEFORE_TOOLTIP_OFF_ZINDEX_CHANGE);
 }
 
 module.exports = {
