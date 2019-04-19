@@ -7,8 +7,8 @@
       <br>
     </div>
     <div class="container">
-      <div v-for="slot in slots" :key="slot.caption" class="container">
-        <table class="item">
+      <div v-for="slot in slots" :key="slot.caption" class="item-list">
+        <table>
           <thead>
             <th>{{ slot.caption }}</th>
           </thead>
@@ -102,9 +102,9 @@ $set: #73ce73;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5px;
+  padding: 0;
 }
-.item {
+.item, .item-list {
   align-self: start;
   margin: 5px;
 }
