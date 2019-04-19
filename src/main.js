@@ -32,19 +32,18 @@ var vm = new Vue({
 })
 
 
-Vue.directive('item-tooltip', {
-  bind: function (el, binding, vnode, context) {
+Vue.directive('item-tooltip', // bind + update func
+  function (el, binding, vnode, context) {
     if( !context.store ) {
       context.store = store;
       context.vm = store._vm;
-      context.tt = context.tt || document.getElementById('item-tooltip');
     }
     el.addEventListener('mouseenter', (e) => {
       showTT(e, el, binding, context, vnode);
     });
     el.addEventListener('mouseleave', (e) => hideTT(e, el, binding, context) );
   }
-});
+);
 
 
 vm.$mount('#app');
