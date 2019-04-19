@@ -74,8 +74,8 @@
       </div>
     </div>
     <br>
-    <div class="flex-row vcenter reverse-wrap">
-      <div>
+    <div class="flex-row">
+      <aside class="maiden-overview-list">
 
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
@@ -101,17 +101,17 @@
               >
               <img v-if="col.dataField==='name'" :title="m.sClass"
                 :src="getImage(m.sClass)" class="class-icon"
-              ><span style="display:inline-flex;justify-self:flex-end">{{ m[col.displayField] }}</span></td>
+              ><span>{{ m[col.displayField] }}</span></td>
             </tr>
           </tbody>
 
         </table>
 
-      </div>
-      <div style="margin-left:1.2em;">
+      </aside>
+      <div class="maiden-details-list">
         <hero-card :hero="hero"
           v-for="hero in selectedHeroes" :key="hero.id"
-          style="box-shadow: .2em .2em .2em 0 #777"
+          class="maiden-details"
         ></hero-card>
       </div>
     </div>
@@ -314,6 +314,22 @@ $dark: #d9d2e9;
 
 $darkenBy: 5%;
 
+.maiden-overview-list {
+  float: left;
+  margin: 0 1.2em;
+}
+.maiden-details-list {
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
+}
+.maiden-details {
+  height: fit-content;
+  box-shadow: rgb(119, 119, 119) 0.2em 0.2em 0.2em 0px;
+  margin: 0 1em 1em 0;
+}
+
 .filters {
   justify-content: center;
   * {
@@ -396,29 +412,16 @@ label {
 table {
   box-shadow: 0px 0px 8px 1px rgba(51, 51, 51, 0.5);
   cursor: default;
-  margin-left: .5em;
   white-space: nowrap;
-
   font-size: smaller;
-  background-color: $p-dark;
-  display: inline-block;
-  vertical-align: top;
-
   border-collapse: collapse;
-  border-spacing: 0px;
-
-  table-layout: auto;
-
   tfoot, thead {
     background-color: $p-light;
   }
-
   th {
     // position: sticky; top: 0;
-    background-color: $p-light;
     padding: .3em .1em .2em .4em;
     text-align: left;
-    width: auto;
     cursor: pointer;
     border: 1px solid $p-medium;
   }
@@ -439,12 +442,6 @@ table {
       border-bottom-color: $p-medium;
     }
   }
-}
-.vcenter {
-  justify-content: center;
-}
-.reverse-wrap {
-  flex-wrap: wrap-reverse;
 }
 .class-icon {
   width: 18px;
