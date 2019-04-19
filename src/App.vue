@@ -19,11 +19,10 @@ export default {
     appItemTooltip: ItemTooltip,
   },
 }
-// import sassStyles from './assets/css/main.scss';
 </script>
 
 <style lang="scss">
-@import './assets/css/main.scss';
+// @import './assets/css/main.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
