@@ -9,11 +9,15 @@ const CSS_TOOLTIP_OFF_ZINDEX = 2;
 const TIME_BEFORE_TOOLTIP_OFF_ZINDEX_CHANGE = 300; // milliseconds
 
 const setTooltipPos = (event, el, binding, context) => {
-  const tt = context.tt || document.getElementById('item-tooltip');
-  const parent = el.offsetParent;
+  const tt = document.getElementById(DOM_ID_ITEM_TOOLTIP);
+  let x = el.offsetLeft;
+  let y = el.offsetTop;
+  let parent = el;
+  while( (parent = parent.offsetParent) ) {
+    x += parent.offsetLeft;
+    y += parent.offsetTop;
+  }
   const maxWidth = window.innerWidth;
-  let x = (parent ? parent.offsetLeft: 0) + el.offsetLeft;
-  let y = (parent ? parent.offsetTop : 0) + el.offsetTop;
   // show below ?
   //y += tableRow.clientHeight + 1;
   // show right ?
