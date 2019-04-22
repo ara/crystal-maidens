@@ -1,10 +1,10 @@
 <template>
-  <div class="tt" ref="tt" tt-pos="right" id="item-tooltip" v-show="hoveredItem" @mouseover="hideTT($event)" hidden>
+  <div class="tt" ref="tt" tt-pos="right" id="item-tooltip" v-show="hoveredItemID" @mouseover="hideTT($event)" hidden>
     <div class="tt-grid">
-      <img :src="getBackground(hoveredItem)" class="tt-bg">
-      <img :src="hoveredItem ? hoveredItem.imageUrl:''" class="tt-icon">
-      <span class="tt-name">{{ hoveredItem ? hoveredItem.name : '' }}</span>
-      <span class="tt-type">{{ hoveredItem ? hoveredItem.sSlot : '' }} Level 5</span>
+      <img :src="itemBackground" class="tt-bg">
+      <img :src="itemIconUrl" class="tt-icon">
+      <span class="tt-name">{{ itemName }}</span>
+      <span class="tt-type">{{ itemClass }} Level 5</span>
     </div>
     <ul>
       <li v-if="has('hp')">
@@ -46,11 +46,30 @@ import { hideTT as hideTooltip } from '../api/itemTooltip.js';
 
 export default {
   computed: {
+    ...mapState(['hoveredItemID']),
+    itemBackground () {
+      return this.gearItem
+      ? bgItems.get(this.gearItem.rarity)
+      : null;
+    },
+    itemName () { return this.baseItem ? this.baseItem.name : ''; },
+    itemIconUrl () { return this.baseItem ? this.baseItem.imageUrl : ''; },
+    itemClass () { return this.baseItem ? this.baseItem.sClass : ''; },
     itemStats () {
       return this.baseItem && this.gearItem
       ? this.baseItem.stats[this.gearItem.rarity]
       : null;
     },
+    gearItem () {
+      return this.hoveredItemID
+      ? this.$store.state.items.gearItems[this.hoveredItemID]
+      : null;
+    },
+    baseItem () {
+      return this.gearItem
+      ? this.$store.getters.baseItems[this.gearItem.itemID]
+      : null;
+    }
   },
 
   methods: {
