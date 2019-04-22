@@ -46,27 +46,27 @@ import { hideTT as hideTooltip } from '../api/itemTooltip.js';
 
 export default {
   computed: {
-    ...mapState(['hoveredItem'])
+    itemStats () {
+      return this.baseItem && this.gearItem
+      ? this.baseItem.stats[this.gearItem.rarity]
+      : null;
+    },
   },
 
   methods: {
-    getBackground(item) {
-      return item ? bgItems.get(item.rarity) : null;
-    },
     has(stat) {
-      return this.hoveredItem && this.hoveredItem[stat];
+      return this.itemStats && this.itemStats[stat];
     },
     hideTT(event) {
       this.$refs.tt.hidden = true;
     },
     getStat(stat) {
-      const base = this.hoveredItem[stat];
-      const inc = this.hoveredItem[stat + 'Inc'] || 0;
-      return (
-        Math.round(1.45 * (base + inc * (this.hoveredItem.maxLevel - 1)) * 10) /
-        10
-      );
-    }
+      if( !this.itemStats ) return 0;
+      const base = this.itemStats[stat];
+      const inc = this.itemStats[stat + 'Inc'] || 0;
+      return Math.round( 1.45 *
+        (base + inc * (this.baseItem.maxLevel - 1)) * 10) / 10;
+    },
   },
 
 };
