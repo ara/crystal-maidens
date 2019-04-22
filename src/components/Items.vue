@@ -15,14 +15,14 @@
 
           <tbody>
             <tr
-              v-for="item in itemsBySlot(slot)" :key="item.key"
-              :id="item.key"
-              :class="['bg'+item.rarity, item.selected?'selected':'']"
-              v-item-tooltip="{ item, direction:'right' }"
+              v-for="item in classItemsBySlot(slot)" :key="item.id"
+              :id="item.id"
+              :class="'bg'+item.rarity"
+              v-item-tooltip="{ itemID:item.id, direction:'right' }"
             >
               <td>
-              <img :src="item.imageUrl" class="item-icon"
-              ><span class="item-name">{{ item.name }}</span></td>
+              <img :src="fieldFromItem(item,'imageUrl')" class="item-icon"
+              ><span class="item-name">{{ fieldFromItem(item,'name') }}</span></td>
             </tr>
           </tbody>
 
@@ -40,12 +40,12 @@ export default {
   data () {
     return {
       slots: [
-        { caption:'Head', var:'filteredHeadItems' },
-        { caption:'Chest', var:'filteredChestItems' },
-        { caption:'Main Hand', var:'filteredMainHandItems' },
-        { caption:'Off Hand', var:'filteredOffHandItems' },
-        { caption:'Feet', var:'filteredFeetItems' },
-        { caption:'Neck', var:'filteredNeckItems' },
+        { caption:'Head', var:'headItems' },
+        { caption:'Chest', var:'chestItems' },
+        { caption:'Main Hand', var:'mainHandItems' },
+        { caption:'Off Hand', var:'offHandItems' },
+        { caption:'Feet', var:'feetItems' },
+        { caption:'Neck', var:'neckItems' },
       ],
       classFilter: CLASS.MARKSMAN,
       maidenFilter: 0,
@@ -55,24 +55,27 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['items','headItems','chestItems','mainHandItems','offHandItems','feetItems','neckItems']),
-    filteredHeadItems () { return this.headItems.filter( this.filterItems ); },
-    filteredChestItems () { return this.chestItems.filter( this.filterItems ); },
-    filteredMainHandItems () { return this.mainHandItems.filter( this.filterItems ); },
-    filteredOffHandItems () { return this.offHandItems.filter( this.filterItems ); },
-    filteredFeetItems () { return this.feetItems.filter( this.filterItems ); },
-    filteredNeckItems () { return this.neckItems.filter( this.filterItems ); },
+    ...mapGetters(['baseItems','headItems','chestItems','mainHandItems','offHandItems','feetItems','neckItems']),
     classes () { return ['All','Unrestricted', ...classes.slice(1)]; },
   },
 
   methods: {
-    filterItems (item) {
-      return (this.classFilter===-1 || item.class === this.classFilter) &&
-      (!this.maidenFilter || item.maiden === this.maidenFilter) &&
-      (this.rarityFilter === -1 || item.rarity === this.rarityFilter);
+    filterByClass (items) {
+      const classItems = [];
+      for( const key in items ) {
+        const gearItem = items[key];
+        const baseItem = this.baseItems[gearItem.itemID];
+        if( this.classFilter === -1 || baseItem.class === this.classFilter ) {
+          classItems.push(gearItem);
+        }
+      };
+      return classItems;
     },
-    itemsBySlot (slot) {
-      return this[slot.var];
+    classItemsBySlot (slot) {
+      return this.filterByClass( this[slot.var] );
+    },
+    fieldFromItem (gearItem, field) {
+      return this.baseItems[gearItem.itemID][field];
     },
   },
 
