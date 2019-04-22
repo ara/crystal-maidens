@@ -82,23 +82,16 @@ export default {
     },
     ...mapMutations(['setActiveItemList']),
     away: function(e) {
-      // console.log('clicked away');
       this.displayList = false;
     },
     onSlotClicked(e) {
-      console.log('slot clicked');
       e.preventDefault();
       e.stopPropagation();
-      // const popup = document.getElementById(this.itemListID);
       this.listLoaded = true;
       this.displayList = !this.displayList;
       if( this.displayList ) {
-        // console.log(this.$vnode);
-        // this.setActiveItemList( this );
+        document.getElementById('item-tooltip').hidden = true;
       }
-      // this.displayList = true;
-      // popup.classList.remove('hide-item-list');
-      // this.$nextTick().then( () => {
       // document.addEventListener('click', this.documentOnClick );
       // });
     },
