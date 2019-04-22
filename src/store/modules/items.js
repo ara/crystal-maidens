@@ -5,54 +5,37 @@ const sets = require('../../assets/sets.json');
 
 
 
+function filterBySlot(slot) {
+  const filteredItems = {};
+  for( const key in baseItems ) {
+    const item = baseItems[key];
+    if( item.slot === slot ) filteredItems[key] = item;
+  }
+  return filteredItems;
+}
+
 const state = {
   baseItems: items,
 };
 
 const getters = {
-  items: (state) => state.baseItems
-  // split a base item into its different rarities
-    .map( item => item.stats
-      .map( (stats, rarityIndex) => [rarityIndex, stats] )
-      .filter( rarityStats => rarityStats[1] )
-      // ok now we have [rarity, stats] for existing rarities
-      .map( ([rarity, stats]) => (Object.assign( stats, {
-        id: item.id,
-        key: item.id + 'r' + rarity,
-        name: item.name,
-        imageUrl: itemImages.get(item.tex || item.id),
-        set: rarity === RARITY.SET_ITEM
-          ? sets.find( s => s.items.includes(item.id) )
-          : null,
-        class: item.class,
-        maiden: item.maiden,
-        sClass: classes[item.class],
-        slot: item.slot,
-        sSlot: itemSlots[item.slot],
-        maxLevel: item.maxLevel,
-        dropRate: item.dropRate,
-        eventDropRate: item.eventDropRate,
-        rarity,
-        sRarity: rarities[rarity]
-      })))
-    ).flat(),
-  headItems (_, getters) {
-    return getters.items.filter( i => i.slot === SLOT.HEAD );
+  headItems (state, getters) {
+    return filterBySlot( SLOT.HEAD );
   },
   chestItems (_, getters) {
-    return getters.items.filter( i => i.slot === SLOT.CHEST );
+    return filterBySlot( SLOT.CHEST );
   },
   mainHandItems (_, getters) {
-    return getters.items.filter( i => i.slot === SLOT.WEAPON );
+    return filterBySlot( SLOT.WEAPON );
   },
   offHandItems (_, getters) {
-    return getters.items.filter( i => i.slot === SLOT.OFFHAND );
+    return filterBySlot( SLOT.OFFHAND );
   },
   feetItems (_, getters) {
-    return getters.items.filter( i => i.slot === SLOT.BOOTS );
+    return filterBySlot( SLOT.BOOTS );
   },
   neckItems (_, getters) {
-    return getters.items.filter( i => i.slot === SLOT.NECKLACE );
+    return filterBySlot( SLOT.NECKLACE );
   },
 };
 
