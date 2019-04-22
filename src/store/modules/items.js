@@ -15,7 +15,6 @@ Object.keys(baseItems).map( key => {
   item.stats.forEach( (val, rarityIndex) => {
     if( !val ) return;
     const uid = item.id + rarityIndex * 10000;
-    // defaultGearItems.push({
     defaultGearItems[uid] = {
       id: uid,
       itemID: item.id,
@@ -23,15 +22,15 @@ Object.keys(baseItems).map( key => {
       level: 5,
       tiers: [10,10,10],
     };
-    // });
   } );
 });
 
 function filterBySlot(slot) {
   const filteredItems = {};
-  for( const key in baseItems ) {
-    const item = baseItems[key];
-    if( item.slot === slot ) filteredItems[key] = item;
+  for( const key in defaultGearItems ) {
+    const gearItem = defaultGearItems[key];
+    const baseItem = baseItems[gearItem.itemID];
+    if( baseItem.slot === slot ) filteredItems[key] = gearItem;
   }
   return filteredItems;
 }
