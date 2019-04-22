@@ -60,11 +60,6 @@ export default {
       }
       console.log(`itemList computed in ${Date.now()-t} ms.`);
       return items;
-      // return this.items.filter( i =>
-        // (i.slot === this.itemSlot) &&
-        // (i.class === this.maiden.class) &&
-        // (!i.maiden || i.maiden === this.maiden.id)
-      // );
     },
   },
 
@@ -75,17 +70,11 @@ export default {
       return baseItem ? baseItem[field] : '';
     },
     equip (gearItem) {
-      console.log(
-        '[GSIL equip()] maidenID:', this.maiden.id,
-        '\nitemSlot:', this.itemSlot,
-        '\nitem.id:', gearItem.id
-      );
       this.equipItem({
         maidenID: this.maiden.id,
         slot: this.itemSlot,
         itemID: gearItem.id
       });
-      console.log('[GSIL equip()] maide\'s gear:', this.$store.state.items.maidensGear[this.maiden.id],);
     },
   },
 
