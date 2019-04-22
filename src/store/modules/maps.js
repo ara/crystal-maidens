@@ -94,7 +94,6 @@ const defaultState = {
     col1Asc: false,
     col2Asc: false,
   },
-  maps,
   mapCols,
   filterCrystal: '',
   filterBossesOnly: false,
@@ -115,7 +114,7 @@ const getters = {
   },
 
   maps (state) {
-    let ret = state.maps;
+    let ret = maps;
     if( state.filterBossesOnly ) {
       ret = ret.filter( filterMapsFunc('mapType', '=', 1) );
     }
