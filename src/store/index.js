@@ -15,25 +15,16 @@ export default new Vuex.Store({
   },
 
   state: {
-    hoveredItem: {},
+    hoveredItemID: 0,
     itemTooltip: null,
-    maidensGear: {},
   },
 
   mutations: {
-    initMaidenGear (state, payload) {
-      Vue.set( state.maidensGear, payload, { 0: null, 1: null, 2: null, 3: null, 4: null, 5: null } );
-    },
-    /** id, slot, item */
-    equipItem( state, payload ) {
-      Vue.set( state.maidensGear[payload.id], payload.slot, payload.item );
-    },
-
     setItemTooltipRef (state, payload) {
       state.itemTooltip = payload;
     },
     hoverItem (state, payload) {
-      state.hoveredItem = payload;
+      state.hoveredItemID = payload;
     },
 
     loadStore(state) {
