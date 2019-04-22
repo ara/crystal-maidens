@@ -4,8 +4,8 @@
     <app-gear-slot
       v-for="slot in 6" :key="slot"
       :maiden="maiden" :itemSlot="slot-1"
-      :item="getItem(slot-1)"
-      v-item-tooltip="{ item: getItem(slot-1) }"
+      :item="gearItemFromSlot(slot-1)"
+      v-item-tooltip="{ itemID: gearIDFromSlot(slot-1) }"
     ></app-gear-slot>
   </div>
 </template>
@@ -20,19 +20,35 @@ export default {
   },
 
   data: () => ({
-    // maidenGear: null,
+    // maidenItems: null,
   }),
 
   computed: {
+    maidenItems () {
+      return this.maidenGear
+      .map( gearItemID => this.gearItems[gearItemID] );
+    },
     maidenGear () {
-      return this.$store.state.maidensGear[this.maiden.id];
+      return this.$store.state.items.maidensGear[this.maiden.id];
+    },
+    gearItems () {
+      return this.$store.state.items.gearItems;
+    },
+    baseItems () {
+      return this.$store.getters.baseItems;
     }
   },
 
+
   methods: {
-    ...mapMutations(['initMaidenGear']),
-    getItem (slot) {
-      return this.maidenGear ? this.maidenGear[slot] : null;
+    // ...mapMutations(['initMaidenGear']),
+    gearItemFromSlot (slot) {
+      return this.maidenItems[slot];
+    },
+    gearIDFromSlot (slot) {
+      console.log('[Gear.vue gearIDFromSlot] this.maidenItems[slot]', this.maidenItems[slot]);
+      const gearItem = this.maidenItems[slot];
+      return gearItem ? gearItem.id : 0;
     },
   },
 
@@ -41,8 +57,8 @@ export default {
   },
 
   created () {
-    if( !this.$store.state.maidensGear[this.maiden.id] ) {
-      this.initMaidenGear(this.maiden.id);
+    if( !this.$store.state.items.maidensGear[this.maiden.id] ) {
+      this.$store.commit('initMaidenGear', this.maiden.id);
     }
   },
 };

@@ -1,5 +1,5 @@
-[
-  {
+{
+  "1": {
     "id": 1,
     "name": "Warring Legion's Helmet",
     "class": 1,
@@ -29,7 +29,7 @@
       null
     ]
   },
-  {
+  "2": {
     "id": 2,
     "name": "Mighty Knight's Helmet",
     "class": 1,
@@ -59,7 +59,7 @@
       null
     ]
   },
-  {
+  "3": {
     "id": 3,
     "name": "Warring Legion's Armor",
     "class": 1,
@@ -89,7 +89,7 @@
       null
     ]
   },
-  {
+  "4": {
     "id": 4,
     "name": "Mighty Knight's Chest",
     "class": 1,
@@ -119,7 +119,7 @@
       null
     ]
   },
-  {
+  "5": {
     "id": 5,
     "name": "Warring Legion's Saber",
     "class": 1,
@@ -149,7 +149,7 @@
       null
     ]
   },
-  {
+  "6": {
     "id": 6,
     "name": "Mighty Knight's Sword",
     "class": 1,
@@ -179,7 +179,7 @@
       null
     ]
   },
-  {
+  "7": {
     "id": 7,
     "name": "Warring Legion's Targe",
     "class": 1,
@@ -209,7 +209,7 @@
       null
     ]
   },
-  {
+  "8": {
     "id": 8,
     "name": "Mighty Knight's Shield",
     "class": 1,
@@ -239,7 +239,7 @@
       null
     ]
   },
-  {
+  "9": {
     "id": 9,
     "name": "Warring Legion's Boots",
     "class": 1,
@@ -269,7 +269,7 @@
       null
     ]
   },
-  {
+  "10": {
     "id": 10,
     "name": "Mighty Knight's Boots",
     "class": 1,
@@ -299,7 +299,7 @@
       null
     ]
   },
-  {
+  "11": {
     "id": 11,
     "name": "Warring Legion's Locket",
     "class": 1,
@@ -329,7 +329,7 @@
       null
     ]
   },
-  {
+  "12": {
     "id": 12,
     "name": "The Protector",
     "class": 1,
@@ -359,7 +359,7 @@
       null
     ]
   },
-  {
+  "13": {
     "id": 13,
     "name": "Sorcerer's Hat",
     "class": 2,
@@ -389,7 +389,7 @@
       null
     ]
   },
-  {
+  "14": {
     "id": 14,
     "name": "Archmage's Hat",
     "class": 2,
@@ -419,7 +419,7 @@
       null
     ]
   },
-  {
+  "15": {
     "id": 15,
     "name": "Sorcerer's Dress",
     "class": 2,
@@ -449,7 +449,7 @@
       null
     ]
   },
-  {
+  "16": {
     "id": 16,
     "name": "Archmage's Robe",
     "class": 2,
@@ -479,7 +479,7 @@
       null
     ]
   },
-  {
+  "17": {
     "id": 17,
     "name": "Sorcerer's Wand",
     "class": 2,
@@ -509,7 +509,7 @@
       null
     ]
   },
-  {
+  "18": {
     "id": 18,
     "name": "Archmage's Staff",
     "class": 2,
@@ -539,7 +539,7 @@
       null
     ]
   },
-  {
+  "19": {
     "id": 19,
     "name": "Sorcerer's Ring",
     "class": 2,
@@ -569,7 +569,7 @@
       null
     ]
   },
-  {
+  "20": {
     "id": 20,
     "name": "Archmage's Artifact",
     "class": 2,
@@ -599,7 +599,7 @@
       null
     ]
   },
-  {
+  "21": {
     "id": 21,
     "name": "Sorcerer's Boots",
     "class": 2,
@@ -629,7 +629,7 @@
       null
     ]
   },
-  {
+  "22": {
     "id": 22,
     "name": "Archmage's Red Boots",
     "class": 2,
@@ -659,7 +659,7 @@
       null
     ]
   },
-  {
+  "23": {
     "id": 23,
     "name": "Sorcerer's Locket",
     "class": 2,
@@ -689,7 +689,7 @@
       null
     ]
   },
-  {
+  "24": {
     "id": 24,
     "name": "Archmage's Neckclace",
     "class": 2,
@@ -719,7 +719,7 @@
       null
     ]
   },
-  {
+  "25": {
     "id": 25,
     "name": "Robin's Hat",
     "class": 3,
@@ -749,7 +749,7 @@
       null
     ]
   },
-  {
+  "26": {
     "id": 26,
     "name": "Expert Archer Helmet",
     "class": 3,
@@ -779,7 +779,7 @@
       null
     ]
   },
-  {
+  "27": {
     "id": 27,
     "name": "Robin's Tunique",
     "class": 3,
@@ -809,7 +809,7 @@
       null
     ]
   },
-  {
+  "28": {
     "id": 28,
     "name": "Glorious Armor",
     "class": 3,
@@ -839,7 +839,7 @@
       null
     ]
   },
-  {
+  "29": {
     "id": 29,
     "name": "Old Bow",
     "class": 3,
@@ -869,7 +869,7 @@
       null
     ]
   },
-  {
+  "30": {
     "id": 30,
     "name": "Bowing 3000",
     "class": 3,
@@ -899,7 +899,7 @@
       null
     ]
   },
-  {
+  "31": {
     "id": 31,
     "name": "Speeder's Ring",
     "class": 3,
@@ -929,7 +929,7 @@
       null
     ]
   },
-  {
+  "32": {
     "id": 32,
     "name": "Accuracy Ring",
     "class": 3,
@@ -959,7 +959,7 @@
       null
     ]
   },
-  {
+  "33": {
     "id": 33,
     "name": "Dirty Shoes",
     "class": 3,
@@ -989,7 +989,7 @@
       null
     ]
   },
-  {
+  "34": {
     "id": 34,
     "name": "Ranger's Boots",
     "class": 3,
@@ -1019,7 +1019,7 @@
       null
     ]
   },
-  {
+  "35": {
     "id": 35,
     "name": "Charming Locket",
     "class": 3,
@@ -1049,7 +1049,7 @@
       null
     ]
   },
-  {
+  "36": {
     "id": 36,
     "name": "Amethyst Memories",
     "class": 3,
@@ -1079,7 +1079,7 @@
       null
     ]
   },
-  {
+  "37": {
     "id": 37,
     "name": "Worker's Hat",
     "class": 4,
@@ -1109,7 +1109,7 @@
       null
     ]
   },
-  {
+  "38": {
     "id": 38,
     "name": "Student's Helmet",
     "class": 4,
@@ -1139,7 +1139,7 @@
       null
     ]
   },
-  {
+  "39": {
     "id": 39,
     "name": "Peasant Cloak",
     "class": 4,
@@ -1169,7 +1169,7 @@
       null
     ]
   },
-  {
+  "40": {
     "id": 40,
     "name": "Crafter's Outfit",
     "class": 4,
@@ -1199,7 +1199,7 @@
       null
     ]
   },
-  {
+  "41": {
     "id": 41,
     "name": "Work Hammer",
     "class": 4,
@@ -1229,7 +1229,7 @@
       null
     ]
   },
-  {
+  "42": {
     "id": 42,
     "name": "Holy Hammer",
     "class": 4,
@@ -1259,7 +1259,7 @@
       null
     ]
   },
-  {
+  "43": {
     "id": 43,
     "name": "Small Ring",
     "class": 4,
@@ -1289,7 +1289,7 @@
       null
     ]
   },
-  {
+  "44": {
     "id": 44,
     "name": "Master Crafter's Ring",
     "class": 4,
@@ -1319,7 +1319,7 @@
       null
     ]
   },
-  {
+  "45": {
     "id": 45,
     "name": "Leather Boots",
     "class": 4,
@@ -1349,7 +1349,7 @@
       null
     ]
   },
-  {
+  "46": {
     "id": 46,
     "name": "Ceremony Shoes",
     "class": 4,
@@ -1379,7 +1379,7 @@
       null
     ]
   },
-  {
+  "47": {
     "id": 47,
     "name": "Weird Amethyst",
     "class": 4,
@@ -1409,7 +1409,7 @@
       null
     ]
   },
-  {
+  "48": {
     "id": 48,
     "name": "Craftmaster Signet",
     "class": 4,
@@ -1439,7 +1439,7 @@
       null
     ]
   },
-  {
+  "49": {
     "id": 49,
     "name": "Priest's Helmet",
     "class": 5,
@@ -1469,7 +1469,7 @@
       null
     ]
   },
-  {
+  "50": {
     "id": 50,
     "name": "Archonte's Head",
     "class": 5,
@@ -1499,7 +1499,7 @@
       null
     ]
   },
-  {
+  "51": {
     "id": 51,
     "name": "Priest's Robe",
     "class": 5,
@@ -1529,7 +1529,7 @@
       null
     ]
   },
-  {
+  "52": {
     "id": 52,
     "name": "Archonte's Dress",
     "class": 5,
@@ -1559,7 +1559,7 @@
       null
     ]
   },
-  {
+  "53": {
     "id": 53,
     "name": "Crescent Staff",
     "class": 5,
@@ -1589,7 +1589,7 @@
       null
     ]
   },
-  {
+  "54": {
     "id": 54,
     "name": "Archonte's Mighty Wand",
     "class": 5,
@@ -1619,7 +1619,7 @@
       null
     ]
   },
-  {
+  "55": {
     "id": 55,
     "name": "Priest's Ring",
     "class": 5,
@@ -1649,7 +1649,7 @@
       null
     ]
   },
-  {
+  "56": {
     "id": 56,
     "name": "Archonte's Ring",
     "class": 5,
@@ -1679,7 +1679,7 @@
       null
     ]
   },
-  {
+  "57": {
     "id": 57,
     "name": "Party Boots",
     "class": 5,
@@ -1709,7 +1709,7 @@
       null
     ]
   },
-  {
+  "58": {
     "id": 58,
     "name": "Archonte's Feet",
     "class": 5,
@@ -1739,7 +1739,7 @@
       null
     ]
   },
-  {
+  "59": {
     "id": 59,
     "name": "Lucky Charm",
     "class": 5,
@@ -1769,7 +1769,7 @@
       null
     ]
   },
-  {
+  "60": {
     "id": 60,
     "name": "Archonte's Heart",
     "class": 5,
@@ -1799,7 +1799,7 @@
       null
     ]
   },
-  {
+  "997": {
     "id": 997,
     "tex": 998,
     "name": "Ring of Longevity",
@@ -1830,7 +1830,7 @@
       null
     ]
   },
-  {
+  "998": {
     "id": 998,
     "name": "Ring of Patience",
     "class": 0,
@@ -1853,7 +1853,7 @@
       null
     ]
   },
-  {
+  "999": {
     "id": 999,
     "name": "Sword of Legends",
     "class": 1,
@@ -1876,7 +1876,7 @@
       null
     ]
   },
-  {
+  "2001": {
     "id": 2001,
     "name": "Ultimate Lightning Bow",
     "class": 3,
@@ -1899,7 +1899,7 @@
       null
     ]
   },
-  {
+  "2002": {
     "id": 2002,
     "name": "Ultimate Evil Axe",
     "class": 1,
@@ -1922,7 +1922,7 @@
       null
     ]
   },
-  {
+  "2006": {
     "id": 2006,
     "name": "Xmas Staff",
     "class": 2,
@@ -1952,7 +1952,7 @@
       null
     ]
   },
-  {
+  "2007": {
     "id": 2007,
     "name": "Micah's Golden Bow",
     "class": 3,
@@ -1982,7 +1982,7 @@
       null
     ]
   },
-  {
+  "2008": {
     "id": 2008,
     "name": "Moonlight Cannon",
     "class": 4,
@@ -2012,7 +2012,7 @@
       null
     ]
   },
-  {
+  "2009": {
     "id": 2009,
     "name": "Blazing Helmet",
     "class": 3,
@@ -2035,7 +2035,7 @@
       null
     ]
   },
-  {
+  "2010": {
     "id": 2010,
     "name": "Deadly Dynamite",
     "class": 4,
@@ -2058,7 +2058,7 @@
       null
     ]
   },
-  {
+  "2011": {
     "id": 2011,
     "name": "Fairy Bottle",
     "class": 0,
@@ -2081,7 +2081,7 @@
       null
     ]
   },
-  {
+  "2012": {
     "id": 2012,
     "name": "Tearful Earrings",
     "class": 0,
@@ -2104,7 +2104,7 @@
       null
     ]
   },
-  {
+  "2013": {
     "id": 2013,
     "name": "1st Anniversary Hat",
     "class": 0,
@@ -2134,7 +2134,7 @@
       null
     ]
   },
-  {
+  "2014": {
     "id": 2014,
     "name": "Joy's Ring of Fire (Joy Only)",
     "maiden": 57,
@@ -2158,7 +2158,7 @@
       null
     ]
   },
-  {
+  "2015": {
     "id": 2015,
     "name": "Gabriela's lucky socks",
     "maiden": 73,
@@ -2189,7 +2189,7 @@
       null
     ]
   },
-  {
+  "2016": {
     "id": 2016,
     "name": "Thumbs Up Headset",
     "class": 0,
@@ -2212,7 +2212,7 @@
       null
     ]
   },
-  {
+  "2017": {
     "id": 2017,
     "name": "Meat Scepter",
     "class": 0,
@@ -2235,7 +2235,7 @@
       null
     ]
   },
-  {
+  "2018": {
     "id": 2018,
     "name": "B Lasagna Shield",
     "class": 0,
@@ -2265,7 +2265,7 @@
       null
     ]
   },
-  {
+  "2019": {
     "id": 2019,
     "name": "Brisingamen",
     "maiden": 76,
@@ -2289,7 +2289,7 @@
       null
     ]
   },
-  {
+  "3001": {
     "id": 3001,
     "name": "Festive Hat",
     "class": 0,
@@ -2319,7 +2319,7 @@
       null
     ]
   },
-  {
+  "3002": {
     "id": 3002,
     "name": "Santa's Tunic",
     "class": 0,
@@ -2349,7 +2349,7 @@
       null
     ]
   },
-  {
+  "3003": {
     "id": 3003,
     "name": "The Lollipoper",
     "class": 0,
@@ -2379,7 +2379,7 @@
       null
     ]
   },
-  {
+  "3004": {
     "id": 3004,
     "name": "North Pole's Protector",
     "class": 0,
@@ -2409,7 +2409,7 @@
       null
     ]
   },
-  {
+  "3005": {
     "id": 3005,
     "name": "Christmas Stockings",
     "class": 0,
@@ -2439,7 +2439,7 @@
       null
     ]
   },
-  {
+  "3006": {
     "id": 3006,
     "name": "Frosty's Gloves",
     "class": 0,
@@ -2469,7 +2469,7 @@
       null
     ]
   },
-  {
+  "3007": {
     "id": 3007,
     "name": "Valentine's Headband",
     "class": 2,
@@ -2499,7 +2499,7 @@
       null
     ]
   },
-  {
+  "3008": {
     "id": 3008,
     "name": "Seductive Dress",
     "class": 3,
@@ -2529,7 +2529,7 @@
       null
     ]
   },
-  {
+  "3009": {
     "id": 3009,
     "name": "Lover's Bow",
     "class": 3,
@@ -2559,7 +2559,7 @@
       null
     ]
   },
-  {
+  "3010": {
     "id": 3010,
     "name": "Heart Shield",
     "class": 3,
@@ -2589,7 +2589,7 @@
       null
     ]
   },
-  {
+  "3011": {
     "id": 3011,
     "name": "Romantic Boots",
     "class": 3,
@@ -2619,7 +2619,7 @@
       null
     ]
   },
-  {
+  "3012": {
     "id": 3012,
     "name": "Nutaku-tan's Headset",
     "class": 0,
@@ -2649,7 +2649,7 @@
       null
     ]
   },
-  {
+  "3013": {
     "id": 3013,
     "name": "Nutaku-tan's Suit",
     "class": 0,
@@ -2679,7 +2679,7 @@
       null
     ]
   },
-  {
+  "3014": {
     "id": 3014,
     "name": "Nutaku-tan's Gloves",
     "class": 0,
@@ -2709,7 +2709,7 @@
       null
     ]
   },
-  {
+  "3015": {
     "id": 3015,
     "name": "Nutaku-tan's Boots",
     "class": 0,
@@ -2739,7 +2739,7 @@
       null
     ]
   },
-  {
+  "3016": {
     "id": 3016,
     "name": "Leprechaun's Hat",
     "class": 2,
@@ -2769,7 +2769,7 @@
       null
     ]
   },
-  {
+  "3017": {
     "id": 3017,
     "name": "Barmaid Dress",
     "class": 2,
@@ -2799,7 +2799,7 @@
       null
     ]
   },
-  {
+  "3018": {
     "id": 3018,
     "name": "Dancing Shoes",
     "class": 2,
@@ -2829,7 +2829,7 @@
       null
     ]
   },
-  {
+  "3019": {
     "id": 3019,
     "name": "Magical Pipe",
     "class": 2,
@@ -2859,7 +2859,7 @@
       null
     ]
   },
-  {
+  "3020": {
     "id": 3020,
     "name": "St-Pats Staff",
     "class": 2,
@@ -2889,7 +2889,7 @@
       null
     ]
   },
-  {
+  "3021": {
     "id": 3021,
     "name": "Bunny Ears",
     "class": 0,
@@ -2919,7 +2919,7 @@
       null
     ]
   },
-  {
+  "3022": {
     "id": 3022,
     "name": "Bunny Suit",
     "class": 0,
@@ -2949,7 +2949,7 @@
       null
     ]
   },
-  {
+  "3023": {
     "id": 3023,
     "name": "Earth Staff",
     "class": 2,
@@ -2979,7 +2979,7 @@
       null
     ]
   },
-  {
+  "3024": {
     "id": 3024,
     "name": "Blooming Kimono",
     "class": 2,
@@ -3009,7 +3009,7 @@
       null
     ]
   },
-  {
+  "3025": {
     "id": 3025,
     "name": "Tachi Sword",
     "class": 1,
@@ -3039,7 +3039,7 @@
       null
     ]
   },
-  {
+  "3026": {
     "id": 3026,
     "name": "Kakute Ring",
     "class": 1,
@@ -3069,7 +3069,7 @@
       null
     ]
   },
-  {
+  "3027": {
     "id": 3027,
     "name": "Justice Hat",
     "class": 0,
@@ -3099,7 +3099,7 @@
       null
     ]
   },
-  {
+  "3028": {
     "id": 3028,
     "name": "Eagle Stick",
     "class": 5,
@@ -3129,7 +3129,7 @@
       null
     ]
   },
-  {
+  "3029": {
     "id": 3029,
     "name": "Water Sword",
     "class": 1,
@@ -3159,7 +3159,7 @@
       null
     ]
   },
-  {
+  "3030": {
     "id": 3030,
     "name": "Surfboard Shield",
     "class": 1,
@@ -3189,7 +3189,7 @@
       null
     ]
   },
-  {
+  "3031": {
     "id": 3031,
     "name": "Winner's Jersey",
     "class": 3,
@@ -3219,7 +3219,7 @@
       null
     ]
   },
-  {
+  "3032": {
     "id": 3032,
     "name": "French Glories",
     "class": 0,
@@ -3249,7 +3249,7 @@
       null
     ]
   },
-  {
+  "3033": {
     "id": 3033,
     "name": "Belgian's Runner",
     "class": 0,
@@ -3279,7 +3279,7 @@
       null
     ]
   },
-  {
+  "3034": {
     "id": 3034,
     "name": "England's Footwear",
     "class": 0,
@@ -3309,7 +3309,7 @@
       null
     ]
   },
-  {
+  "3035": {
     "id": 3035,
     "name": "Croatian Crushers",
     "class": 0,
@@ -3339,7 +3339,7 @@
       null
     ]
   },
-  {
+  "3036": {
     "id": 3036,
     "name": "Soccer Ball",
     "class": 0,
@@ -3369,7 +3369,7 @@
       null
     ]
   },
-  {
+  "3037": {
     "id": 3037,
     "name": "Measure Ruler",
     "class": 4,
@@ -3399,7 +3399,7 @@
       null
     ]
   },
-  {
+  "3038": {
     "id": 3038,
     "name": "Teacher's Glasses",
     "class": 4,
@@ -3429,7 +3429,7 @@
       null
     ]
   },
-  {
+  "3039": {
     "id": 3039,
     "name": "Baseball Bat",
     "class": 1,
@@ -3459,7 +3459,7 @@
       null
     ]
   },
-  {
+  "3040": {
     "id": 3040,
     "name": "Little Skeleton",
     "class": 1,
@@ -3489,7 +3489,7 @@
       null
     ]
   },
-  {
+  "3041": {
     "id": 3041,
     "name": "Melody's Harp",
     "class": 5,
@@ -3519,7 +3519,7 @@
       null
     ]
   },
-  {
+  "3042": {
     "id": 3042,
     "name": "Frozen Sword",
     "class": 1,
@@ -3549,7 +3549,7 @@
       null
     ]
   },
-  {
+  "3046": {
     "id": 3046,
     "name": "Quiver of Love",
     "class": 3,
@@ -3579,7 +3579,7 @@
       null
     ]
   },
-  {
+  "3047": {
     "id": 3047,
     "name": "Marksman Stiletto",
     "class": 3,
@@ -3609,7 +3609,7 @@
       null
     ]
   },
-  {
+  "3048": {
     "id": 3048,
     "name": "Shield of Love",
     "class": 0,
@@ -3639,7 +3639,7 @@
       null
     ]
   },
-  {
+  "3050": {
     "id": 3050,
     "name": "Ophelia's Bow",
     "maiden": 19,
@@ -3670,7 +3670,7 @@
       null
     ]
   },
-  {
+  "3051": {
     "id": 3051,
     "name": "Lucky Clover Shield",
     "class": 2,
@@ -3700,7 +3700,7 @@
       null
     ]
   },
-  {
+  "3052": {
     "id": 3052,
     "name": "Patty's Shield",
     "class": 1,
@@ -3730,7 +3730,7 @@
       null
     ]
   },
-  {
+  "3053": {
     "id": 3053,
     "name": "Patty's Necklace",
     "class": 2,
@@ -3760,7 +3760,7 @@
       null
     ]
   },
-  {
+  "3054": {
     "id": 3054,
     "name": "Patrick's lucky Staff",
     "class": 0,
@@ -3790,7 +3790,7 @@
       null
     ]
   },
-  {
+  "3055": {
     "id": 3055,
     "name": "Bunny Boots",
     "class": 4,
@@ -3820,7 +3820,7 @@
       null
     ]
   },
-  {
+  "3056": {
     "id": 3056,
     "name": "Carrot Armor",
     "class": 4,
@@ -3850,7 +3850,7 @@
       null
     ]
   },
-  {
+  "3057": {
     "id": 3057,
     "name": "Easter Glasses",
     "class": 4,
@@ -3880,7 +3880,7 @@
       null
     ]
   },
-  {
+  "4001": {
     "id": 4001,
     "name": "Arena Helmet",
     "class": 1,
@@ -3910,7 +3910,7 @@
       null
     ]
   },
-  {
+  "4002": {
     "id": 4002,
     "name": "Hell Breaker",
     "class": 1,
@@ -3940,7 +3940,7 @@
       null
     ]
   },
-  {
+  "4003": {
     "id": 4003,
     "name": "Fire Boots",
     "class": 1,
@@ -3970,7 +3970,7 @@
       null
     ]
   },
-  {
+  "4004": {
     "id": 4004,
     "name": "Flowers Crown",
     "class": 5,
@@ -4000,7 +4000,7 @@
       null
     ]
   },
-  {
+  "4005": {
     "id": 4005,
     "name": "Fairy Dress",
     "class": 5,
@@ -4030,7 +4030,7 @@
       null
     ]
   },
-  {
+  "4006": {
     "id": 4006,
     "name": "Magical wooden staff",
     "class": 5,
@@ -4060,7 +4060,7 @@
       null
     ]
   },
-  {
+  "4007": {
     "id": 4007,
     "name": "Ring of illusions",
     "class": 5,
@@ -4090,7 +4090,7 @@
       null
     ]
   },
-  {
+  "4008": {
     "id": 4008,
     "name": "Grass Runners",
     "class": 5,
@@ -4120,7 +4120,7 @@
       null
     ]
   },
-  {
+  "4009": {
     "id": 4009,
     "name": "Lily's Wooden Mask",
     "maiden": 15,
@@ -4151,7 +4151,7 @@
       null
     ]
   },
-  {
+  "4010": {
     "id": 4010,
     "name": "Cute Ribbon",
     "class": 5,
@@ -4181,7 +4181,7 @@
       null
     ]
   },
-  {
+  "4011": {
     "id": 4011,
     "name": "Mei-Li's Dress",
     "maiden": 28,
@@ -4212,7 +4212,7 @@
       null
     ]
   },
-  {
+  "4012": {
     "id": 4012,
     "name": "Monk Staff",
     "class": 5,
@@ -4242,7 +4242,7 @@
       null
     ]
   },
-  {
+  "4013": {
     "id": 4013,
     "name": "Light Bracers",
     "class": 5,
@@ -4272,7 +4272,7 @@
       null
     ]
   },
-  {
+  "4014": {
     "id": 4014,
     "name": "Little Sandals",
     "class": 5,
@@ -4302,7 +4302,7 @@
       null
     ]
   },
-  {
+  "4015": {
     "id": 4015,
     "name": "Golden Medal",
     "class": 5,
@@ -4332,7 +4332,7 @@
       null
     ]
   },
-  {
+  "4016": {
     "id": 4016,
     "name": "Golden Tiara",
     "class": 1,
@@ -4362,7 +4362,7 @@
       null
     ]
   },
-  {
+  "4017": {
     "id": 4017,
     "name": "Assassin's Dress",
     "class": 1,
@@ -4392,7 +4392,7 @@
       null
     ]
   },
-  {
+  "4018": {
     "id": 4018,
     "name": "Isana's Claws",
     "maiden": 13,
@@ -4423,7 +4423,7 @@
       null
     ]
   },
-  {
+  "4019": {
     "id": 4019,
     "name": "Necromancer's Cape",
     "class": 2,
@@ -4453,7 +4453,7 @@
       null
     ]
   },
-  {
+  "4020": {
     "id": 4020,
     "name": "Cursed Staff",
     "class": 2,
@@ -4483,7 +4483,7 @@
       null
     ]
   },
-  {
+  "4021": {
     "id": 4021,
     "name": "High-heeled Footwear",
     "class": 2,
@@ -4513,7 +4513,7 @@
       null
     ]
   },
-  {
+  "4022": {
     "id": 4022,
     "name": "Flash Dress",
     "class": 4,
@@ -4543,7 +4543,7 @@
       null
     ]
   },
-  {
+  "4023": {
     "id": 4023,
     "name": "Litza's Gauntlet",
     "maiden": 32,
@@ -4574,7 +4574,7 @@
       null
     ]
   },
-  {
+  "4024": {
     "id": 4024,
     "name": "Gold Necklace",
     "class": 4,
@@ -4604,7 +4604,7 @@
       null
     ]
   },
-  {
+  "4025": {
     "id": 4025,
     "name": "Ichi's Headband",
     "maiden": 41,
@@ -4635,7 +4635,7 @@
       null
     ]
   },
-  {
+  "4026": {
     "id": 4026,
     "name": "Samourai's Dress",
     "class": 1,
@@ -4665,7 +4665,7 @@
       null
     ]
   },
-  {
+  "4027": {
     "id": 4027,
     "name": "Miru",
     "class": 1,
@@ -4695,7 +4695,7 @@
       null
     ]
   },
-  {
+  "4028": {
     "id": 4028,
     "name": "Invisible Rod",
     "class": 1,
@@ -4725,7 +4725,7 @@
       null
     ]
   },
-  {
+  "4029": {
     "id": 4029,
     "name": "Electric Dagger",
     "class": 1,
@@ -4755,7 +4755,7 @@
       null
     ]
   },
-  {
+  "4030": {
     "id": 4030,
     "name": "Faye's Fighting boots",
     "maiden": 18,
@@ -4786,7 +4786,7 @@
       null
     ]
   },
-  {
+  "4031": {
     "id": 4031,
     "name": "Exotic Bracelet",
     "class": 1,
@@ -4816,7 +4816,7 @@
       null
     ]
   },
-  {
+  "4032": {
     "id": 4032,
     "name": "Amazonian Dress",
     "class": 2,
@@ -4846,7 +4846,7 @@
       null
     ]
   },
-  {
+  "4033": {
     "id": 4033,
     "name": "Eloe's Cursed Spear",
     "maiden": 42,
@@ -4877,7 +4877,7 @@
       null
     ]
   },
-  {
+  "4034": {
     "id": 4034,
     "name": "Steel Bracelets",
     "class": 2,
@@ -4907,7 +4907,7 @@
       null
     ]
   },
-  {
+  "4035": {
     "id": 4035,
     "name": "Sea Staff",
     "class": 2,
@@ -4937,7 +4937,7 @@
       null
     ]
   },
-  {
+  "4036": {
     "id": 4036,
     "name": "Oceanic Helmet",
     "class": 4,
@@ -4967,7 +4967,7 @@
       null
     ]
   },
-  {
+  "4037": {
     "id": 4037,
     "name": "Wet Belt",
     "class": 4,
@@ -4997,7 +4997,7 @@
       null
     ]
   },
-  {
+  "4038": {
     "id": 4038,
     "name": "Aqua Boots",
     "class": 5,
@@ -5027,7 +5027,7 @@
       null
     ]
   },
-  {
+  "4039": {
     "id": 4039,
     "name": "Mermaid Dress",
     "class": 5,
@@ -5057,7 +5057,7 @@
       null
     ]
   },
-  {
+  "4040": {
     "id": 4040,
     "name": "Energized Electro Gun",
     "class": 4,
@@ -5087,7 +5087,7 @@
       null
     ]
   },
-  {
+  "4041": {
     "id": 4041,
     "name": "Steampunk Hat",
     "class": 4,
@@ -5117,7 +5117,7 @@
       null
     ]
   },
-  {
+  "4042": {
     "id": 4042,
     "name": "Golden Pistols",
     "class": 3,
@@ -5147,7 +5147,7 @@
       null
     ]
   },
-  {
+  "4043": {
     "id": 4043,
     "name": "Cowgirl Hat",
     "maiden": 36,
@@ -5178,7 +5178,7 @@
       null
     ]
   },
-  {
+  "4044": {
     "id": 4044,
     "name": "Sheriff's Boots",
     "class": 3,
@@ -5208,7 +5208,7 @@
       null
     ]
   },
-  {
+  "4045": {
     "id": 4045,
     "name": "Cursed Bow",
     "maiden": 55,
@@ -5239,7 +5239,7 @@
       null
     ]
   },
-  {
+  "4046": {
     "id": 4046,
     "name": "Dark Spirit Boots",
     "class": 3,
@@ -5269,7 +5269,7 @@
       null
     ]
   },
-  {
+  "4047": {
     "id": 4047,
     "name": "Dark Spirit Gauntlet",
     "class": 3,
@@ -5299,7 +5299,7 @@
       null
     ]
   },
-  {
+  "4048": {
     "id": 4048,
     "name": "Masakari Axes",
     "maiden": 40,
@@ -5330,7 +5330,7 @@
       null
     ]
   },
-  {
+  "4049": {
     "id": 4049,
     "name": "Mask of deception",
     "class": 3,
@@ -5360,7 +5360,7 @@
       null
     ]
   },
-  {
+  "4050": {
     "id": 4050,
     "name": "Warbonnets",
     "class": 3,
@@ -5390,7 +5390,7 @@
       null
     ]
   },
-  {
+  "4051": {
     "id": 4051,
     "name": "Charming Ring",
     "class": 2,
@@ -5420,7 +5420,7 @@
       null
     ]
   },
-  {
+  "4052": {
     "id": 4052,
     "name": "Arang's Fire Dress",
     "maiden": 30,
@@ -5451,7 +5451,7 @@
       null
     ]
   },
-  {
+  "4053": {
     "id": 4053,
     "name": "Shoes of Elusiveness",
     "class": 2,
@@ -5481,7 +5481,7 @@
       null
     ]
   },
-  {
+  "4054": {
     "id": 4054,
     "name": "Crow Helmet",
     "class": 5,
@@ -5511,7 +5511,7 @@
       null
     ]
   },
-  {
+  "4055": {
     "id": 4055,
     "name": "Metal Gauntlet",
     "class": 5,
@@ -5541,7 +5541,7 @@
       null
     ]
   },
-  {
+  "4056": {
     "id": 4056,
     "name": "Raven's Crow",
     "maiden": 37,
@@ -5572,7 +5572,7 @@
       null
     ]
   },
-  {
+  "4057": {
     "id": 4057,
     "name": "Wave Pulsar",
     "class": 3,
@@ -5602,7 +5602,7 @@
       null
     ]
   },
-  {
+  "4058": {
     "id": 4058,
     "name": "Julia's Water Suit",
     "maiden": 38,
@@ -5633,7 +5633,7 @@
       null
     ]
   },
-  {
+  "4059": {
     "id": 4059,
     "name": "Rescue Can",
     "class": 3,
@@ -5663,7 +5663,7 @@
       null
     ]
   },
-  {
+  "4060": {
     "id": 4060,
     "name": "Floating Vest",
     "class": 0,
@@ -5693,7 +5693,7 @@
       null
     ]
   },
-  {
+  "4061": {
     "id": 4061,
     "name": "Sunhat",
     "class": 2,
@@ -5723,7 +5723,7 @@
       null
     ]
   },
-  {
+  "4062": {
     "id": 4062,
     "name": "Magical Parasol",
     "class": 2,
@@ -5753,7 +5753,7 @@
       null
     ]
   },
-  {
+  "4063": {
     "id": 4063,
     "name": "Pool Party Wand",
     "class": 2,
@@ -5783,7 +5783,7 @@
       null
     ]
   },
-  {
+  "4064": {
     "id": 4064,
     "name": "Alchemist Belt",
     "maiden": 62,
@@ -5814,7 +5814,7 @@
       null
     ]
   },
-  {
+  "4065": {
     "id": 4065,
     "name": "Flowers Necklace",
     "maiden": 61,
@@ -5845,7 +5845,7 @@
       null
     ]
   },
-  {
+  "4066": {
     "id": 4066,
     "name": "Nurse's Hat",
     "maiden": 69,
@@ -5876,7 +5876,7 @@
       null
     ]
   },
-  {
+  "4067": {
     "id": 4067,
     "name": "Student Sandals",
     "class": 0,
@@ -5906,7 +5906,7 @@
       null
     ]
   },
-  {
+  "4068": {
     "id": 4068,
     "name": "Hard schoolbag",
     "class": 4,
@@ -5936,7 +5936,7 @@
       null
     ]
   },
-  {
+  "4069": {
     "id": 4069,
     "name": "Nurse's Scalpel",
     "class": 5,
@@ -5966,7 +5966,7 @@
       null
     ]
   },
-  {
+  "4070": {
     "id": 4070,
     "name": "Clementine's Boomerang",
     "maiden": 52,
@@ -5997,7 +5997,7 @@
       null
     ]
   },
-  {
+  "4071": {
     "id": 4071,
     "name": "Syringe of immunity",
     "class": 5,
@@ -6027,7 +6027,7 @@
       null
     ]
   },
-  {
+  "4072": {
     "id": 4072,
     "name": "Tombstone Shield",
     "class": 1,
@@ -6057,7 +6057,7 @@
       null
     ]
   },
-  {
+  "4073": {
     "id": 4073,
     "name": "Spooky Hockey Mask",
     "class": 1,
@@ -6087,7 +6087,7 @@
       null
     ]
   },
-  {
+  "4074": {
     "id": 4074,
     "name": "Skeleton Armor",
     "class": 1,
@@ -6117,7 +6117,7 @@
       null
     ]
   },
-  {
+  "4075": {
     "id": 4075,
     "name": "Grim Reaper",
     "class": 1,
@@ -6147,7 +6147,7 @@
       null
     ]
   },
-  {
+  "4076": {
     "id": 4076,
     "name": "Sorceress Hat",
     "class": 2,
@@ -6177,7 +6177,7 @@
       null
     ]
   },
-  {
+  "4077": {
     "id": 4077,
     "name": "Cigarette Holder",
     "class": 2,
@@ -6207,7 +6207,7 @@
       null
     ]
   },
-  {
+  "4078": {
     "id": 4078,
     "name": "Reindeer Hat",
     "class": 1,
@@ -6237,7 +6237,7 @@
       null
     ]
   },
-  {
+  "4079": {
     "id": 4079,
     "name": "Star Wand",
     "class": 2,
@@ -6267,7 +6267,7 @@
       null
     ]
   },
-  {
+  "4080": {
     "id": 4080,
     "name": "Santa's Belt",
     "class": 3,
@@ -6297,7 +6297,7 @@
       null
     ]
   },
-  {
+  "4081": {
     "id": 4081,
     "name": "Christmas ring",
     "class": 4,
@@ -6327,7 +6327,7 @@
       null
     ]
   },
-  {
+  "4082": {
     "id": 4082,
     "name": "Elf Boots",
     "class": 0,
@@ -6357,7 +6357,7 @@
       null
     ]
   },
-  {
+  "4083": {
     "id": 4083,
     "name": "Christmas Bracelet",
     "class": 0,
@@ -6387,7 +6387,7 @@
       null
     ]
   },
-  {
+  "4084": {
     "id": 4084,
     "name": "Love Bracelet",
     "class": 5,
@@ -6417,7 +6417,7 @@
       null
     ]
   },
-  {
+  "4085": {
     "id": 4085,
     "name": "Valentine Hat",
     "class": 4,
@@ -6447,7 +6447,7 @@
       null
     ]
   },
-  {
+  "4086": {
     "id": 4086,
     "name": "Naughty Whip",
     "class": 1,
@@ -6477,7 +6477,7 @@
       null
     ]
   },
-  {
+  "4087": {
     "id": 4087,
     "name": "Love Bow Tie ",
     "class": 5,
@@ -6507,7 +6507,7 @@
       null
     ]
   },
-  {
+  "4088": {
     "id": 4088,
     "name": "Marksman Glasses",
     "class": 3,
@@ -6537,7 +6537,7 @@
       null
     ]
   },
-  {
+  "4089": {
     "id": 4089,
     "name": "Gold Digger's Shades",
     "class": 0,
@@ -6560,7 +6560,7 @@
       null
     ]
   },
-  {
+  "4090": {
     "id": 4090,
     "name": "Mo Gems Mo Problems Cane",
     "class": 0,
@@ -6583,7 +6583,7 @@
       null
     ]
   },
-  {
+  "4091": {
     "id": 4091,
     "name": "Until the End of Time Ring",
     "class": 0,
@@ -6606,7 +6606,7 @@
       null
     ]
   },
-  {
+  "4092": {
     "id": 4092,
     "name": "I'm on a Boat Hat",
     "class": 0,
@@ -6629,7 +6629,7 @@
       null
     ]
   },
-  {
+  "4093": {
     "id": 4093,
     "name": "Easter Armor",
     "class": 1,
@@ -6659,7 +6659,7 @@
       null
     ]
   },
-  {
+  "4094": {
     "id": 4094,
     "name": "Easter Helmet",
     "class": 1,
@@ -6689,7 +6689,7 @@
       null
     ]
   },
-  {
+  "5004": {
     "id": 5004,
     "tex": 10000,
     "name": "Upgrade Material",
@@ -6713,7 +6713,7 @@
       null
     ]
   },
-  {
+  "6001": {
     "id": 6001,
     "name": "Burning Knight's Helmet",
     "class": 1,
@@ -6736,7 +6736,7 @@
       }
     ]
   },
-  {
+  "6002": {
     "id": 6002,
     "name": "Burning Knight's Breastplate",
     "class": 1,
@@ -6759,7 +6759,7 @@
       }
     ]
   },
-  {
+  "6003": {
     "id": 6003,
     "name": "Burning Knight's Sword",
     "class": 1,
@@ -6782,7 +6782,7 @@
       }
     ]
   },
-  {
+  "6004": {
     "id": 6004,
     "name": "Burning Knight's Shield",
     "class": 1,
@@ -6805,7 +6805,7 @@
       }
     ]
   },
-  {
+  "6005": {
     "id": 6005,
     "name": "Burning Knight's Boots",
     "class": 1,
@@ -6828,7 +6828,7 @@
       }
     ]
   },
-  {
+  "6006": {
     "id": 6006,
     "name": "Burning Knight's Necklace",
     "class": 1,
@@ -6851,7 +6851,7 @@
       }
     ]
   },
-  {
+  "6007": {
     "id": 6007,
     "name": "Burning Wizard's Hat",
     "class": 2,
@@ -6874,7 +6874,7 @@
       }
     ]
   },
-  {
+  "6008": {
     "id": 6008,
     "name": "Burning Wizard's Robe",
     "class": 2,
@@ -6897,7 +6897,7 @@
       }
     ]
   },
-  {
+  "6009": {
     "id": 6009,
     "name": "Burning Wizard's Staff",
     "class": 2,
@@ -6920,7 +6920,7 @@
       }
     ]
   },
-  {
+  "6010": {
     "id": 6010,
     "name": "Burning Wizard's Ring",
     "class": 2,
@@ -6943,7 +6943,7 @@
       }
     ]
   },
-  {
+  "6011": {
     "id": 6011,
     "name": "Burning Wizard's Boots",
     "class": 2,
@@ -6966,7 +6966,7 @@
       }
     ]
   },
-  {
+  "6012": {
     "id": 6012,
     "name": "Burning Wizard's Necklace",
     "class": 2,
@@ -6989,7 +6989,7 @@
       }
     ]
   },
-  {
+  "6013": {
     "id": 6013,
     "name": "Burning Sniper's Helmet",
     "class": 3,
@@ -7012,7 +7012,7 @@
       }
     ]
   },
-  {
+  "6014": {
     "id": 6014,
     "name": "Burning Sniper's Breastplate",
     "class": 3,
@@ -7035,7 +7035,7 @@
       }
     ]
   },
-  {
+  "6015": {
     "id": 6015,
     "name": "Burning Sniper's Bow",
     "class": 3,
@@ -7058,7 +7058,7 @@
       }
     ]
   },
-  {
+  "6016": {
     "id": 6016,
     "name": "Burning Sniper's Ring",
     "class": 3,
@@ -7081,7 +7081,7 @@
       }
     ]
   },
-  {
+  "6017": {
     "id": 6017,
     "name": "Burning Sniper's Boots",
     "class": 3,
@@ -7104,7 +7104,7 @@
       }
     ]
   },
-  {
+  "6018": {
     "id": 6018,
     "name": "Burning Sniper's Necklace",
     "class": 3,
@@ -7127,7 +7127,7 @@
       }
     ]
   },
-  {
+  "6019": {
     "id": 6019,
     "name": "Burning Architect's Helmet",
     "class": 4,
@@ -7150,7 +7150,7 @@
       }
     ]
   },
-  {
+  "6020": {
     "id": 6020,
     "name": "Burning Architect's Breastplate",
     "class": 4,
@@ -7173,7 +7173,7 @@
       }
     ]
   },
-  {
+  "6021": {
     "id": 6021,
     "name": "Burning Architect's Hammer",
     "class": 4,
@@ -7196,7 +7196,7 @@
       }
     ]
   },
-  {
+  "6022": {
     "id": 6022,
     "name": "Burning Architect's Ring",
     "class": 4,
@@ -7219,7 +7219,7 @@
       }
     ]
   },
-  {
+  "6023": {
     "id": 6023,
     "name": "Burning Architect's Boots",
     "class": 4,
@@ -7242,7 +7242,7 @@
       }
     ]
   },
-  {
+  "6024": {
     "id": 6024,
     "name": "Burning Architect's Necklace",
     "class": 4,
@@ -7265,7 +7265,7 @@
       }
     ]
   },
-  {
+  "6025": {
     "id": 6025,
     "name": "Burning Protector's Helmet",
     "class": 5,
@@ -7288,7 +7288,7 @@
       }
     ]
   },
-  {
+  "6026": {
     "id": 6026,
     "name": "Burning Protector's Breastplate",
     "class": 5,
@@ -7311,7 +7311,7 @@
       }
     ]
   },
-  {
+  "6027": {
     "id": 6027,
     "name": "Burning Protector's Staff",
     "class": 5,
@@ -7334,7 +7334,7 @@
       }
     ]
   },
-  {
+  "6028": {
     "id": 6028,
     "name": "Burning Protector's Ring",
     "class": 5,
@@ -7357,7 +7357,7 @@
       }
     ]
   },
-  {
+  "6029": {
     "id": 6029,
     "name": "Burning Protector's Boots",
     "class": 5,
@@ -7380,7 +7380,7 @@
       }
     ]
   },
-  {
+  "6030": {
     "id": 6030,
     "name": "Burning Protector's Necklace",
     "class": 5,
@@ -7403,7 +7403,7 @@
       }
     ]
   },
-  {
+  "6031": {
     "id": 6031,
     "name": "Tempest Knight's Helmet",
     "class": 1,
@@ -7426,7 +7426,7 @@
       }
     ]
   },
-  {
+  "6032": {
     "id": 6032,
     "name": "Tempest Knight's Breastplate",
     "class": 1,
@@ -7449,7 +7449,7 @@
       }
     ]
   },
-  {
+  "6033": {
     "id": 6033,
     "name": "Tempest Knight's Sword",
     "class": 1,
@@ -7472,7 +7472,7 @@
       }
     ]
   },
-  {
+  "6034": {
     "id": 6034,
     "name": "Tempest Knight's Shield",
     "class": 1,
@@ -7495,7 +7495,7 @@
       }
     ]
   },
-  {
+  "6035": {
     "id": 6035,
     "name": "Tempest Knight's Boots",
     "class": 1,
@@ -7518,7 +7518,7 @@
       }
     ]
   },
-  {
+  "6036": {
     "id": 6036,
     "name": "Tempest Knight's Necklace",
     "class": 1,
@@ -7541,7 +7541,7 @@
       }
     ]
   },
-  {
+  "6037": {
     "id": 6037,
     "name": "Tempest Wizard's Hat",
     "class": 2,
@@ -7564,7 +7564,7 @@
       }
     ]
   },
-  {
+  "6038": {
     "id": 6038,
     "name": "Tempest Wizard's Robe",
     "class": 2,
@@ -7587,7 +7587,7 @@
       }
     ]
   },
-  {
+  "6039": {
     "id": 6039,
     "name": "Tempest Wizard's Staff",
     "class": 2,
@@ -7610,7 +7610,7 @@
       }
     ]
   },
-  {
+  "6040": {
     "id": 6040,
     "name": "Tempest Wizard's Ring",
     "class": 2,
@@ -7633,7 +7633,7 @@
       }
     ]
   },
-  {
+  "6041": {
     "id": 6041,
     "name": "Tempest Wizard's Boots",
     "class": 2,
@@ -7656,7 +7656,7 @@
       }
     ]
   },
-  {
+  "6042": {
     "id": 6042,
     "name": "Tempest Wizard's Necklace",
     "class": 2,
@@ -7679,7 +7679,7 @@
       }
     ]
   },
-  {
+  "6043": {
     "id": 6043,
     "name": "Tempest Sniper's Helmet",
     "class": 3,
@@ -7702,7 +7702,7 @@
       }
     ]
   },
-  {
+  "6044": {
     "id": 6044,
     "name": "Tempest Sniper's Breastplate",
     "class": 3,
@@ -7725,7 +7725,7 @@
       }
     ]
   },
-  {
+  "6045": {
     "id": 6045,
     "name": "Tempest Sniper's Bow",
     "class": 3,
@@ -7748,7 +7748,7 @@
       }
     ]
   },
-  {
+  "6046": {
     "id": 6046,
     "name": "Tempest Sniper's Ring",
     "class": 3,
@@ -7771,7 +7771,7 @@
       }
     ]
   },
-  {
+  "6047": {
     "id": 6047,
     "name": "Tempest Sniper's Boots",
     "class": 3,
@@ -7794,7 +7794,7 @@
       }
     ]
   },
-  {
+  "6048": {
     "id": 6048,
     "name": "Tempest Sniper's Necklace",
     "class": 3,
@@ -7817,7 +7817,7 @@
       }
     ]
   },
-  {
+  "6049": {
     "id": 6049,
     "name": "Tempest Architect's Helmet",
     "class": 4,
@@ -7840,7 +7840,7 @@
       }
     ]
   },
-  {
+  "6050": {
     "id": 6050,
     "name": "Tempest Architect's Breastplate",
     "class": 4,
@@ -7863,7 +7863,7 @@
       }
     ]
   },
-  {
+  "6051": {
     "id": 6051,
     "name": "Tempest Architect's Hammer",
     "class": 4,
@@ -7886,7 +7886,7 @@
       }
     ]
   },
-  {
+  "6052": {
     "id": 6052,
     "name": "Tempest Architect's Ring",
     "class": 4,
@@ -7909,7 +7909,7 @@
       }
     ]
   },
-  {
+  "6053": {
     "id": 6053,
     "name": "Tempest Architect's Boots",
     "class": 4,
@@ -7932,7 +7932,7 @@
       }
     ]
   },
-  {
+  "6054": {
     "id": 6054,
     "name": "Tempest Architect's Necklace",
     "class": 4,
@@ -7955,7 +7955,7 @@
       }
     ]
   },
-  {
+  "6055": {
     "id": 6055,
     "name": "Tempest Protector's Helmet",
     "class": 5,
@@ -7978,7 +7978,7 @@
       }
     ]
   },
-  {
+  "6056": {
     "id": 6056,
     "name": "Tempest Protector's Breastplate",
     "class": 4,
@@ -8001,7 +8001,7 @@
       }
     ]
   },
-  {
+  "6057": {
     "id": 6057,
     "name": "Tempest Protector's Staff",
     "class": 4,
@@ -8024,7 +8024,7 @@
       }
     ]
   },
-  {
+  "6058": {
     "id": 6058,
     "name": "Tempest Protector's Ring",
     "class": 4,
@@ -8047,7 +8047,7 @@
       }
     ]
   },
-  {
+  "6059": {
     "id": 6059,
     "name": "Tempest Protector's Boots",
     "class": 4,
@@ -8070,7 +8070,7 @@
       }
     ]
   },
-  {
+  "6060": {
     "id": 6060,
     "name": "Tempest Protector's Necklace",
     "class": 4,
@@ -8093,7 +8093,7 @@
       }
     ]
   },
-  {
+  "6061": {
     "id": 6061,
     "name": "Forest Knight's Helmet",
     "class": 1,
@@ -8116,7 +8116,7 @@
       }
     ]
   },
-  {
+  "6062": {
     "id": 6062,
     "name": "Forest Knight's Breastplate",
     "class": 1,
@@ -8139,7 +8139,7 @@
       }
     ]
   },
-  {
+  "6063": {
     "id": 6063,
     "name": "Forest Knight's Sword",
     "class": 1,
@@ -8162,7 +8162,7 @@
       }
     ]
   },
-  {
+  "6064": {
     "id": 6064,
     "name": "Forest Knight's Shield",
     "class": 1,
@@ -8185,7 +8185,7 @@
       }
     ]
   },
-  {
+  "6065": {
     "id": 6065,
     "name": "Forest Knight's Boots",
     "class": 1,
@@ -8208,7 +8208,7 @@
       }
     ]
   },
-  {
+  "6066": {
     "id": 6066,
     "name": "Forest Knight's Necklace",
     "class": 1,
@@ -8231,7 +8231,7 @@
       }
     ]
   },
-  {
+  "6067": {
     "id": 6067,
     "name": "Forest Wizard's Hat",
     "class": 2,
@@ -8254,7 +8254,7 @@
       }
     ]
   },
-  {
+  "6068": {
     "id": 6068,
     "name": "Forest Wizard's Robe",
     "class": 2,
@@ -8277,7 +8277,7 @@
       }
     ]
   },
-  {
+  "6069": {
     "id": 6069,
     "name": "Forest Wizard's Staff",
     "class": 2,
@@ -8300,7 +8300,7 @@
       }
     ]
   },
-  {
+  "6070": {
     "id": 6070,
     "name": "Forest Wizard's Ring",
     "class": 2,
@@ -8323,7 +8323,7 @@
       }
     ]
   },
-  {
+  "6071": {
     "id": 6071,
     "name": "Forest Wizard's Boots",
     "class": 2,
@@ -8346,7 +8346,7 @@
       }
     ]
   },
-  {
+  "6072": {
     "id": 6072,
     "name": "Forest Wizard's Necklace",
     "class": 2,
@@ -8369,7 +8369,7 @@
       }
     ]
   },
-  {
+  "6073": {
     "id": 6073,
     "name": "Forest Sniper's Helmet",
     "class": 3,
@@ -8392,7 +8392,7 @@
       }
     ]
   },
-  {
+  "6074": {
     "id": 6074,
     "name": "Forest Sniper's Breastplate",
     "class": 3,
@@ -8415,7 +8415,7 @@
       }
     ]
   },
-  {
+  "6075": {
     "id": 6075,
     "name": "Forest Sniper's Bow",
     "class": 3,
@@ -8438,7 +8438,7 @@
       }
     ]
   },
-  {
+  "6076": {
     "id": 6076,
     "name": "Forest Sniper's Ring",
     "class": 3,
@@ -8461,7 +8461,7 @@
       }
     ]
   },
-  {
+  "6077": {
     "id": 6077,
     "name": "Forest Sniper's Boots",
     "class": 3,
@@ -8484,7 +8484,7 @@
       }
     ]
   },
-  {
+  "6078": {
     "id": 6078,
     "name": "Forest Sniper's Necklace",
     "class": 3,
@@ -8507,7 +8507,7 @@
       }
     ]
   },
-  {
+  "6079": {
     "id": 6079,
     "name": "Forest Architect's Helmet",
     "class": 4,
@@ -8530,7 +8530,7 @@
       }
     ]
   },
-  {
+  "6080": {
     "id": 6080,
     "name": "Forest Architect's Breastplate",
     "class": 4,
@@ -8553,7 +8553,7 @@
       }
     ]
   },
-  {
+  "6081": {
     "id": 6081,
     "name": "Forest Architect's Hammer",
     "class": 4,
@@ -8576,7 +8576,7 @@
       }
     ]
   },
-  {
+  "6082": {
     "id": 6082,
     "name": "Forest Architect's Ring",
     "class": 4,
@@ -8599,7 +8599,7 @@
       }
     ]
   },
-  {
+  "6083": {
     "id": 6083,
     "name": "Forest Architect's Boots",
     "class": 4,
@@ -8622,7 +8622,7 @@
       }
     ]
   },
-  {
+  "6084": {
     "id": 6084,
     "name": "Forest Architect's Necklace",
     "class": 4,
@@ -8645,7 +8645,7 @@
       }
     ]
   },
-  {
+  "6085": {
     "id": 6085,
     "name": "Forest Protector's Helmet",
     "class": 5,
@@ -8668,7 +8668,7 @@
       }
     ]
   },
-  {
+  "6086": {
     "id": 6086,
     "name": "Forest Protector's Breastplate",
     "class": 4,
@@ -8691,7 +8691,7 @@
       }
     ]
   },
-  {
+  "6087": {
     "id": 6087,
     "name": "Forest Protector's Staff",
     "class": 4,
@@ -8714,7 +8714,7 @@
       }
     ]
   },
-  {
+  "6088": {
     "id": 6088,
     "name": "Forest Protector's Ring",
     "class": 4,
@@ -8737,7 +8737,7 @@
       }
     ]
   },
-  {
+  "6089": {
     "id": 6089,
     "name": "Forest Protector's Boots",
     "class": 4,
@@ -8760,7 +8760,7 @@
       }
     ]
   },
-  {
+  "6090": {
     "id": 6090,
     "name": "Forest Protector's Necklace",
     "class": 4,
@@ -8783,7 +8783,7 @@
       }
     ]
   },
-  {
+  "6091": {
     "id": 6091,
     "name": "Royal Crushing Helmet",
     "class": 0,
@@ -8806,7 +8806,7 @@
       }
     ]
   },
-  {
+  "6092": {
     "id": 6092,
     "name": "Royal Crushing Armor",
     "class": 0,
@@ -8829,7 +8829,7 @@
       }
     ]
   },
-  {
+  "6093": {
     "id": 6093,
     "name": "Royal Crushing Boots",
     "class": 0,
@@ -8852,7 +8852,7 @@
       }
     ]
   },
-  {
+  "6094": {
     "id": 6094,
     "name": "Royal Crushing Necklace",
     "class": 0,
@@ -8875,7 +8875,7 @@
       }
     ]
   },
-  {
+  "6095": {
     "id": 6095,
     "name": "Diamond Helmet",
     "class": 0,
@@ -8898,7 +8898,7 @@
       }
     ]
   },
-  {
+  "6096": {
     "id": 6096,
     "name": "Diamond Armor",
     "class": 0,
@@ -8921,7 +8921,7 @@
       }
     ]
   },
-  {
+  "6097": {
     "id": 6097,
     "name": "Diamond Boots",
     "class": 0,
@@ -8944,7 +8944,7 @@
       }
     ]
   },
-  {
+  "6098": {
     "id": 6098,
     "name": "Dark Helmet",
     "class": 0,
@@ -8967,7 +8967,7 @@
       }
     ]
   },
-  {
+  "6099": {
     "id": 6099,
     "name": "Dark Shield",
     "class": 0,
@@ -8990,4 +8990,4 @@
       }
     ]
   }
-]
+}

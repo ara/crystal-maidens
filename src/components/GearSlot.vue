@@ -15,6 +15,7 @@
         :fn-hide="onILHide"
         :itemSlot="itemSlot"
         :maiden="maiden"
+        :currentItem="item"
       ></gear-slot-item-list>
       </div>
     </div>
@@ -59,6 +60,7 @@ export default {
   },
 
   computed: {
+    baseItem () { return this.item ? this.$store.getters.baseItems[this.item.itemID] : null; },
     itemListID () { return `m${this.maiden.id}s${this.itemSlot}` },
     itemBackgroundUrl () {
       console.log(this.item && this.item.rarity);
@@ -68,7 +70,7 @@ export default {
     },
     itemIcon() {
       return this.item
-        ? this.item.imageUrl
+        ? this.baseItem.imageUrl
         : uiImages.get('empty_slot_' + this.itemSlot)
     }
   },

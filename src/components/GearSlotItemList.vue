@@ -2,22 +2,22 @@
   <table ref="table">
     <tbody>
       <tr
-        v-for="item in itemList" :key="item.key"
-        :id="item.key"
-        :class="['bg'+item.rarity, item.selected?'selected':'']"
-        v-item-tooltip="{ item, direction:'right' }"
+        v-for="item in itemList" :key="item.id"
+        :id="'item'+item.id"
+        :class="['bg' + item.rarity, currentItem && item.id === currentItem.id ? 'selected' : '']"
+        v-item-tooltip="{ itemID:item.id, direction:'right' }"
         @click="equip(item)"
       >
         <td>
-        <img :src="item.imageUrl" class="item-icon"
-        ><span class="item-name">{{ item.name }}</span></td>
+        <img :src="fieldFromGearItem(item,'imageUrl')" class="item-icon"
+        ><span class="item-name">{{ fieldFromGearItem(item,'name') }}</span></td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 import { SLOT, bgItems } from '../api/const.js';
 
 export default {
@@ -34,31 +34,58 @@ export default {
       type: Function,
       required: true,
     },
-    item: {
+    currentItem: {
       type: Object,
       required: false,
     }
   },
 
   computed: {
-    ...mapGetters(['items']),
+    ...mapState({
+      gearItems: state => state.items.gearItems,
+    }),
+    ...mapGetters(['baseItems']),
     itemList () {
-      return this.items.filter( i =>
-        (i.slot === this.itemSlot) &&
-        (i.class === this.maiden.class) &&
-        (!i.maiden || i.maiden === this.maiden.id)
-      );
+      const t = Date.now();
+      const items = [];
+      for( const key in this.gearItems ) {
+        const item = this.gearItems[key];
+        const baseItem = this.baseItems[item.itemID];
+        if( (baseItem.slot === this.itemSlot) &&
+          (baseItem.class === this.maiden.class) &&
+          (!baseItem.maiden || baseItem.maiden === this.maiden.id)
+        ) {
+          items.push(item);
+        }
+      }
+      console.log(`itemList computed in ${Date.now()-t} ms.`);
+      return items;
+      // return this.items.filter( i =>
+        // (i.slot === this.itemSlot) &&
+        // (i.class === this.maiden.class) &&
+        // (!i.maiden || i.maiden === this.maiden.id)
+      // );
     },
   },
 
   methods: {
     ...mapMutations(['equipItem']),
-    equip (item) {
+    fieldFromGearItem (gearItem, field) {
+      const baseItem = this.baseItems[gearItem.itemID];
+      return baseItem ? baseItem[field] : '';
+    },
+    equip (gearItem) {
+      console.log(
+        '[GSIL equip()] maidenID:', this.maiden.id,
+        '\nitemSlot:', this.itemSlot,
+        '\nitem.id:', gearItem.id
+      );
       this.equipItem({
-        id: this.maiden.id,
+        maidenID: this.maiden.id,
         slot: this.itemSlot,
-        item
+        itemID: gearItem.id
       });
+      console.log('[GSIL equip()] maide\'s gear:', this.$store.state.items.maidensGear[this.maiden.id],);
     },
   },
 
@@ -92,7 +119,7 @@ $set: #73ce73;
   justify-self:flex-start;
 }
 .selected {
-  outline: 2px solid #3c78d8;
+  outline: 3px solid #3c78d8;
   outline-offset: -1px;
 }
 
