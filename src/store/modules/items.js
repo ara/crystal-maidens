@@ -1,9 +1,30 @@
 import { rarities, classes, itemSlots, itemImages, SLOT, RARITY } from '../../api/const';
 
-const items = require('../../assets/items.json');
+const baseItems = require('../../assets/items.json');
 const sets = require('../../assets/sets.json');
 
+const defaultGearItems = {};
 
+Object.keys(baseItems).map( key => {
+  const item = baseItems[key];
+  item.imageUrl = itemImages.get(item.tex || item.id);
+  if( item.stats[RARITY.SET_ITEM] ) {
+    item.set = sets.find( s => s.items.includes(item.id) );
+  }
+  item.stats.forEach( (val, rarityIndex) => {
+    if( !val ) return;
+    const uid = item.id + rarityIndex * 10000;
+    // defaultGearItems.push({
+    defaultGearItems[uid] = {
+      id: uid,
+      itemID: item.id,
+      rarity: rarityIndex,
+      level: 5,
+      tiers: [10,10,10],
+    };
+    // });
+  } );
+});
 
 function filterBySlot(slot) {
   const filteredItems = {};
@@ -15,10 +36,13 @@ function filterBySlot(slot) {
 }
 
 const state = {
-  baseItems: items,
+  maidensGear: {},
+  gearItems: defaultGearItems,
 };
 
 const getters = {
+  baseItems: () => baseItems,
+
   headItems (state, getters) {
     return filterBySlot( SLOT.HEAD );
   },
