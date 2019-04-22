@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { rarities, classes, itemSlots, itemImages, SLOT, RARITY } from '../../api/const';
 
 const baseItems = require('../../assets/items.json');
@@ -64,7 +65,16 @@ const getters = {
 };
 
 const mutations = {
-
+  /** @param {Number} payload maiden's ID */
+  initMaidenGear (state, payload) {
+    Vue.set( state.maidensGear, payload, new Array(6) );
+  },
+  /** @param {Number} payload maidenID, slot, itemID */
+  equipItem( state, payload ) {
+    const gear = [...state.maidensGear[payload.maidenID]];
+    gear[payload.slot] = payload.itemID;
+    Vue.set( state.maidensGear, payload.maidenID, gear );
+  },
 };
 
 const actions = {
