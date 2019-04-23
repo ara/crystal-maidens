@@ -6,6 +6,7 @@ import { sortMapsFunc as sortFunc, filterMapsFunc }
 
 const maps = require('../../assets/maps.json');
 const campaigns = require('../../assets/campaigns.json');
+campaigns.sort( sortFunc('groupID', true, 'id', true) )
 
 const cap = (str) => str.replace( /(\b[a-z](?!\s))/g, x => x.toUpperCase() );
 
@@ -43,14 +44,14 @@ const noz = v => v || '';
  * @property {string} [defaults.name] - defaults to capitalized 'col' field
  */
 const mapCols = [
-  { visible:true, val: 'name', caption: 'Map\t   ', align:'center' },
+  { val: 'name', caption: 'Map\t   ', align:'center' },
   // { visible:true, val: 'mapType', name: 'Type' }, // 1: boss; 0: artifact
-  { visible:true, val: 'energy' },
-  { visible:true, val: 'fodder', fmt:fix2 },
-  { visible:true, val: 'coinsPerEnergy', caption: 'Coins/E', fmt:fix0 },
-  { visible:true, val: 'maidenXPPerEnergy', caption: 'M.XP/E', fmt:fix0 },
-  { visible:true, val: 'fodderCoins', caption:'Fod/Coins', fmt:fix0 },
-  { visible:true, val: 'crystal', align: 'center' },
+  { val: 'energy' },
+  { val: 'fodder', fmt:fix2 },
+  { val: 'coinsPerEnergy', caption: 'Coins/E', fmt:fix0 },
+  { val: 'maidenXPPerEnergy', caption: 'M.XP/E', fmt:fix0 },
+  { val: 'fodderCoins', caption:'Fod/Coins', fmt:fix0 },
+  { val: 'crystal', align: 'center' },
   { val: 'dustDamage', fmt:fix2noz, caption: 'DMG dust' },
   { val: 'dustHealth', fmt:fix2noz, caption: 'HP dust' },
   { val: 'dustCrit', fmt:fix2noz, caption: 'Crit dust' },
@@ -73,8 +74,6 @@ const mapCols = [
 mapCols.forEach( (c, i) => {
   const isField = typeof c.val === 'string';
   c.caption = c.caption || (isField ? cap(c.val) : 'Col#'+i);
-  /** add visible state for reactive Vue changes */
-  c.visible = c.visible || false;
   c.index = i;
   c.dataField = isField ? c.val : 'col'+i;
   c.displayField = c.fmt ? 'colfmt'+i : c.dataField;
@@ -94,11 +93,9 @@ const defaultState = {
     col1Asc: false,
     col2Asc: false,
   },
-  mapCols,
   filterCrystal: '',
   filterBossesOnly: false,
   filterCampaign: -1,
-  campaigns: campaigns.sort( sortFunc('groupID', true, 'id', true) ), //
   currPage: 1,
   filteredMapsCount: 0,
   maxEntries: 20,
@@ -108,7 +105,8 @@ const defaultState = {
 
 
 const getters = {
-
+  campaigns () { return campaigns; },
+  mapCols () { return mapCols; },
   lastPage (state, getters) {
     return Math.ceil( getters.maps.length / state.maxEntries );
   },
@@ -133,8 +131,9 @@ const getters = {
     return ret;
   },
 
-  filteredCols (state) {
-    return state.mapCols.filter( c => c.visible );
+  filteredCols (state, getters) {
+    const visibleCols = state.colProfiles.find( col => col.name === state.selectedProfileName ).cols;
+    return getters.mapCols.filter( col => visibleCols.includes(col.val) );
   },
 
 }; // getters

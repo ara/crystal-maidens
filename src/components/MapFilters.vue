@@ -67,11 +67,10 @@ export default {
 
   computed: {
     ...mapState({
-      campaigns: state => state.maps.campaigns,
       colProfiles: state => state.maps.colProfiles,
       selectedProfileName: state => state.maps.selectedProfileName,
     }),
-    ...mapGetters(['maps']),
+    ...mapGetters(['maps','campaigns']),
   },
 
   methods: {

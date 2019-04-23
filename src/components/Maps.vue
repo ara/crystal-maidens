@@ -102,7 +102,8 @@ export default {
       sorting: state => state.maps.sorting,
     }),
 
-    ...mapGetters(['lastPage','maps','filteredCols']),
+    ...mapGetters(['lastPage','maps','filteredCols','mapCols']),
+
 
     computedMaps () {
       const time = Date.now();
