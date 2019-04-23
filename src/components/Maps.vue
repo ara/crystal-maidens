@@ -111,10 +111,15 @@ export default {
     },
 
     profileColsObjects () {
-      console.log('pcols:', this.profileCols );
-      return this.profileCols.map( profileColName => {
-        return this.mapCols.find( colObject => profileColName === colObject.val )
-      });
+      /* using mapCols static order */
+      return this.mapCols.filter( colObject =>
+        this.profileCols.includes(colObject.val)
+      );
+
+      /* using profileCols dynamic order */
+      // return this.profileCols.map( profileColName =>
+      //   this.mapCols.find( colObject => profileColName === colObject.val )
+      // );
     },
 
     computedMaps () {
