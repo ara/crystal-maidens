@@ -63,7 +63,6 @@ export default {
     baseItem () { return this.item ? this.$store.getters.baseItems[this.item.itemID] : null; },
     itemListID () { return `m${this.maiden.id}s${this.itemSlot}` },
     itemBackgroundUrl () {
-      console.log(this.item && this.item.rarity);
       return this.item
         ? bgItems.get(this.item.rarity)
         : uiImages.get('bg_item_slot')

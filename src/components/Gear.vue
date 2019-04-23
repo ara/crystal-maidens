@@ -46,7 +46,6 @@ export default {
       return this.maidenItems[slot];
     },
     gearIDFromSlot (slot) {
-      console.log('[Gear.vue gearIDFromSlot] this.maidenItems[slot]', this.maidenItems[slot]);
       const gearItem = this.maidenItems[slot];
       return gearItem ? gearItem.id : 0;
     },
