@@ -19,6 +19,7 @@
 <script>
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { SLOT, bgItems } from '../api/const.js';
+import gearHandler from '../mixins/gearHandler.js';
 
 export default {
   props: {
@@ -40,11 +41,9 @@ export default {
     }
   },
 
+  mixins: [gearHandler],
+
   computed: {
-    ...mapState({
-      gearItems: state => state.items.gearItems,
-    }),
-    ...mapGetters(['baseItems']),
     itemList () {
       const t = Date.now();
       const items = [];
@@ -65,10 +64,6 @@ export default {
 
   methods: {
     ...mapMutations(['equipItem']),
-    fieldFromGearItem (gearItem, field) {
-      const baseItem = this.baseItems[gearItem.itemID];
-      return baseItem ? baseItem[field] : '';
-    },
     equip (gearItem) {
       this.equipItem({
         maidenID: this.maiden.id,
