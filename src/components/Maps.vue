@@ -24,7 +24,7 @@
           :class="campaignClass(m)"
         >
           <td
-            v-for="col in mapCols.filter( c => c.visible )"
+            v-for="col in profileColsObjects"
             :key="col.index"
             :style="'text-align:'+(col.align||'right')"
           >
@@ -79,7 +79,7 @@
           class="cm"
           :class="col.val==='name'?'disabled':''"
         >
-          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'.6em'}"
+          <span :style="{float:'left', opacity:profileCols.includes(col.val)?1:0, marginRight:'.6em'}"
           >{{ '✓' }}</span>
           {{ col.caption }}
         </li>
@@ -98,12 +98,24 @@ export default {
 
   computed: {
     ...mapState({
-      mapCols: state => state.maps.mapCols,
       sorting: state => state.maps.sorting,
+      profileName: state => state.maps.selectedProfileName,
     }),
 
     ...mapGetters(['lastPage','maps','filteredCols','mapCols']),
 
+    profileCols () {
+      const profileCols = this.$store.state.maps.colProfiles.find(
+        profile => profile.name === this.profileName );
+      return profileCols ? profileCols.cols : null;
+    },
+
+    profileColsObjects () {
+      console.log('pcols:', this.profileCols );
+      return this.profileCols.map( profileColName => {
+        return this.mapCols.find( colObject => profileColName === colObject.val )
+      });
+    },
 
     computedMaps () {
       const time = Date.now();
@@ -160,10 +172,18 @@ export default {
     },
 
     onColMiddleClick(event, col) {
-      this.updateColVisibility( { col, visible:false } );
+      this.updateColVisibility( {
+        col: col.val,
+        visible: false,
+        profileCols: this.profileCols,
+      } );
     },
     onCMClick(col) {
-      this.updateColVisibility( { col, visible:!col.visible } );
+      this.updateColVisibility( {
+        col: col.val,
+        visible: !this.profileCols.includes(col.val),
+        profileCols: this.profileCols
+      } );
     },
 
     ...mapMutations(['updateMapsSort','updateColVisibility']),

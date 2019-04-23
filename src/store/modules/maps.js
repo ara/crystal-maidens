@@ -175,22 +175,17 @@ const mutations = {
       [s.col1Asc, s.col2Asc] = [false, s.col1Asc];
     }
   },
+  /** payload fields: col (string), visible (boolean), profileCols */
   updateColVisibility (state, payload) {
-    payload.col.visible = payload.visible;
+    const colIsVisible = payload.profileCols.includes(payload.col)
+    if( payload.visible ) {
+      if( !colIsVisible ) payload.profileCols.push(payload.col);
+    } else if( colIsVisible ) {
+      payload.profileCols.splice( payload.profileCols.indexOf(payload.col), 1);
+    }
   },
   SET_COL_PROFILE (state, profile) {
     state.selectedProfileName = profile.name;
-    // change all columns at once
-    // by working on a mirrored array
-    let mirrorMapCols = state.mapCols.map( c => ({ ...c }) );
-    for( const col of mirrorMapCols ) {
-      if( profile.cols.includes(col.val) ) {
-        col.visible = true;
-      } else {
-        col.visible = false;
-      }
-    }
-    state.mapCols = mirrorMapCols;
   }
 }; // mutations
 
