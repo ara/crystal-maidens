@@ -95,7 +95,7 @@
               @click.exact="select(m)"
               @click.ctrl.exact="select(m,true)"
             >
-              <td v-for="col in heroCols.filter(c => c.visible)" :key="col.index"
+              <td v-for="col in profileColsObjects" :key="col.index"
                 :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
                 :style="'text-align:'+(col.align || 'right')"
               >
@@ -123,7 +123,7 @@
           class="cm"
           :class="col.val==='name'?'disabled':''"
         >
-          <span :style="{float:'left', opacity:col.visible?1:0, marginRight:'.6em'}"
+          <span :style="{float:'left', opacity:profileCols.includes(col.caption)?1:0, marginRight:'.6em'}"
           >{{ '✓' }}</span>
           {{ col.caption }}
         </li>
@@ -163,7 +163,23 @@ export default {
       sorting: state => state.heroes.sorting,
       classImages: state => state.heroes.classImages,
       selectedHeroes: state => state.heroes.selectedHeroes,
+      heroColsProfiles: state => state.heroes.heroColsProfiles,
+      profileName: state => state.heroes.selectedHeroColsProfile,
     }),
+    ...mapGetters(['maidens','filteredHeroCols','items','heroCols']),
+
+    profileCols () {
+      const profileCols = this.heroColsProfiles.find(
+        profile => profile.name === this.profileName );
+      return profileCols ? profileCols.cols : null;
+    },
+
+    profileColsObjects () {
+      /* using heroCols static order */
+      return this.heroCols.filter( colObject =>
+        this.profileCols.includes(colObject.caption)
+      );
+    },
 
     heroExtraAS: {
       get () {
@@ -205,10 +221,10 @@ export default {
       );
     },
 
-    ...mapGetters(['maidens','filteredHeroCols','items']),
   },
 
   methods: {
+    ...mapMutations(['updateHeroColVisibility']),
     getImage (key) {
       return heroImages.get(key);
     },
@@ -248,10 +264,18 @@ export default {
       event.stopPropagation();
       event.stopImmediatePropagation();
       event.preventDefault();
-      this.updateHeroColVisibility( { col, visible:false } );
+      this.updateHeroColVisibility({
+        col: col.caption,
+        visible: false,
+        profileCols: this.profileCols,
+      });
     },
     onCMClick (col) {
-      this.updateHeroColVisibility( { col, visible:!col.visible } );
+      this.updateHeroColVisibility({
+        col: col.caption,
+        visible: !this.profileCols.includes(col.caption),
+        profileCols: this.profileCols,
+      });
     },
     classIcon (hero) {
       return this.classImages[hero.class];

@@ -123,11 +123,15 @@ const heroCols = [
 heroCols.forEach( (c,i) => {
   const isField = typeof c.val === 'string';
   c.caption = c.caption || (isField ? cap(c.val) : 'Col#'+i);
-  c.visible = c.visible || false;
   c.index = i;
   c.dataField = isField ? c.val : 'col'+i;
   c.displayField = c.fmt ? 'colfmt'+i : c.dataField;
 });
+
+const heroColsProfiles = [
+  { name: 'Default', cols: ['Maiden', 'EHP', 'DPS', 'Skill DPS', 'Skill HPS'] },
+];
+
 
 
 const setSkillDMGandHEAL = (hero) => {
@@ -176,7 +180,8 @@ const state = {
     class: 'All',
     element: 'All',
   },
-  heroCols,
+  heroColsProfiles: heroColsProfiles,
+  selectedHeroColsProfile: 'Default',
   skillLevel: 29,
   cdr: 40,
   heroLevel: 85,
@@ -192,6 +197,7 @@ const validElement = (hero) => state.filters.element === 'All' || hero.sElement 
 const validClass = (hero) => state.filters.class === 'All' || hero.sClass === state.filters.class;
 
 const getters = {
+  heroCols: () => heroCols,
   heroes: () => heroes,
   maidens: (state, getters) => {
     return getters.heroes.filter( h =>
@@ -203,8 +209,9 @@ const getters = {
     );
   },
 
-  filteredHeroCols: () => {
-    return heroCols.filter( c => c.visible );
+  filteredHeroCols: (state, getters) => {
+    const visibleCols = state.heroColsProfiles.find( col => col.name === state.selectedHeroColsProfile ).cols;
+    return getters.heroCols.filter( col => visibleCols.includes(col.caption) );
   },
 }
 
@@ -266,8 +273,14 @@ const mutations = {
   updateFilterHeroElement (state, payload) {
     state.filters.element = payload;
   },
+  /** payload fields: col (string), visible (boolean), profileCols */
   updateHeroColVisibility (state, payload) {
-    payload.col.visible = payload.visible;
+    const colIsVisible = payload.profileCols.includes(payload.col)
+    if( payload.visible ) {
+      if( !colIsVisible ) payload.profileCols.push(payload.col);
+    } else if( colIsVisible ) {
+      payload.profileCols.splice( payload.profileCols.indexOf(payload.col), 1);
+    }
   },
   updateHeroesSort (state, payload) {
     const s = state.sorting;
