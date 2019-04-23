@@ -45,5 +45,21 @@ Vue.directive('item-tooltip', // bind + update func
   }
 );
 
+Vue.directive('click-outside', {
+  bind: function (el, binding, vnode) {
+    el.clickOutsideEvent = function (event) {
+      // check if click was outside el and his childrens
+      if (!(el == event.target || el.contains(event.target))) {
+        // outside => call provided method
+        vnode.context[binding.expression](event);
+      }
+    };
+    document.body.addEventListener('click', el.clickOutsideEvent)
+  },
+  unbind: function (el) {
+    document.body.removeEventListener('click', el.clickOutsideEvent)
+  },
+});
+
 
 vm.$mount('#app');
