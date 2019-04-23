@@ -49,26 +49,26 @@ export default {
     ...mapState(['hoveredItemID']),
     itemBackground () {
       return this.gearItem
-      ? bgItems.get(this.gearItem.rarity)
-      : null;
+        ? bgItems.get(this.gearItem.rarity)
+        : null;
     },
     itemName () { return this.baseItem ? this.baseItem.name : ''; },
     itemIconUrl () { return this.baseItem ? this.baseItem.imageUrl : ''; },
     itemClass () { return this.baseItem ? this.baseItem.sClass : ''; },
     itemStats () {
       return this.baseItem && this.gearItem
-      ? this.baseItem.stats[this.gearItem.rarity]
-      : null;
+        ? this.baseItem.stats[this.gearItem.rarity]
+        : null;
     },
     gearItem () {
       return this.hoveredItemID
-      ? this.$store.state.items.gearItems[this.hoveredItemID]
-      : null;
+        ? this.$store.state.items.gearItems[this.hoveredItemID]
+        : null;
     },
     baseItem () {
       return this.gearItem
-      ? this.$store.getters.baseItems[this.gearItem.itemID]
-      : null;
+        ? this.$store.getters.baseItems[this.gearItem.itemID]
+        : null;
     }
   },
 

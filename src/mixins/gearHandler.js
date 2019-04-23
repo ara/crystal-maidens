@@ -7,7 +7,7 @@ export default {
       gearItems: state => state.items.gearItems,
     }),
     ...mapGetters(['baseItems']),
-    
+
   },
 
   methods: {
@@ -15,6 +15,6 @@ export default {
       const baseItem = this.baseItems[gearItem.itemID];
       return baseItem ? baseItem[field] : '';
     },
-    
+
   }
 }

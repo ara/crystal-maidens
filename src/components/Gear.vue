@@ -26,7 +26,7 @@ export default {
   computed: {
     maidenItems () {
       return this.maidenGear
-      .map( gearItemID => this.gearItems[gearItemID] );
+        .map( gearItemID => this.gearItems[gearItemID] );
     },
     maidenGear () {
       return this.$store.state.items.maidensGear[this.maiden.id];
