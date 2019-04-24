@@ -1,0 +1,58 @@
+// make gradient
+// theme background linear gradient
+@mixin linear-dark-darken {
+  @include linear-gradient (135deg, map-get($theme-colors, dark), map-get($theme-colors, darken));
+}
+@mixin linear-normal-dark {
+  @include linear-gradient (135deg, map-get($theme-colors, normal), map-get($theme-colors, dark));
+}
+@mixin linear-light-normal {
+  @include linear-gradient (135deg, map-get($theme-colors, light), map-get($theme-colors, normal));
+}
+@mixin linear-lighten-light {
+  @include linear-gradient (135deg, map-get($theme-colors, lighten), map-get($theme-colors, light));
+}
+// theme background radial gradient
+@mixin radial-dark-darken {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colors, dark), map-get($theme-colors, darken));
+}
+@mixin radial-normal-dark {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colors, normal), map-get($theme-colors, dark));
+}
+@mixin radial-light-normal {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colors, light), map-get($theme-colors, normal));
+}
+@mixin radial-lighten-light {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colors, lighten), map-get($theme-colors, light));
+}
+// color background linear-gradient
+@mixin linear-blue-sky {
+  @include linear-gradient (135deg, $blue, $sky);
+}
+@mixin linear-sky-cyan {
+  @include linear-gradient (135deg, $sky, $cyan);
+}
+@mixin linear-cyan-mint {
+  @include linear-gradient (135deg, $cyan, $mint);
+}
+@mixin linear-mint-lime {
+  @include linear-gradient (135deg, $mint, $lime);
+}
+@mixin linear-green-lime {
+  @include linear-gradient (135deg, $green, $lime);
+}
+@mixin linear-lime-yellow {
+  @include linear-gradient (135deg, $lime, $yellow);
+}
+@mixin linear-yellow-orange {
+  @include linear-gradient (135deg, $yellow, $orange);
+}
+@mixin linear-orange-red {
+  @include linear-gradient (135deg, $orange, $red);
+}
+@mixin linear-red-purple {
+  @include linear-gradient (135deg, $red, $purple);
+}
+@mixin linear-purple-violet {
+  @include linear-gradient (135deg, $purple, $violet);
+}

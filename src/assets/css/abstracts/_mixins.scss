@@ -17,6 +17,7 @@
     clear: both;
   }
 }
+
 @mixin linear-gradient ($range, $baseColor, $sideColor) {
   background: $baseColor;
   background: -webkit-linear-gradient($range, $baseColor, $sideColor);
@@ -39,6 +40,7 @@
 // - Box shadow
 // - Box sizing
 // - Content columns
+// - Flex
 // - Hyphens
 // - Placeholder text
 // - Transformations
@@ -109,6 +111,30 @@
   -moz-column-gap: $column-gap;
   column-gap: $column-gap;
 }
+
+// Flex
+@mixin flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin align-items($align) {
+  -webkit-box-align: $align;
+  -webkit-align-item: $align;
+  -ms-flex-align: $align;
+  -ms-grid-row-align: $align;
+  align-items: $align;
+}
+
+@mixin justify-content ($align) {
+  -webkit-box-pack: $align;
+  -webkit-justify-content: $align;
+  -ms-flex-pack: $align;
+  justify-content: $align;
+}
+
 // Optional hyphenation
 @mixin hyphens($mode: auto) {
   word-wrap: break-word;
@@ -130,6 +156,7 @@
     color: $color;
   }
   // Internet Explorer 10+
+
   &::-webkit-input-placeholder {
     color: $color;
   }

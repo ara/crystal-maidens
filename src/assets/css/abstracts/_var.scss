@@ -25,7 +25,7 @@ $red:     hsla(339, 78, 71, 1);
 $purple:  hsla(307, 70, 53, 1);
 $violet:  hsla(277, 100, 74, 1);
 
-// --rari
+// --rarity
 $common: $white;
 $rare: $blue;
 $epic: $violet;
@@ -44,18 +44,18 @@ $sub-colors: (
   white-54:   transparentize($white, .46),
   white-30:   transparentize($white, .7),
   white-10:   transparentize($white, .9),
-  primary-80: transparentize($blue, .2),
-  primary-54: transparentize($blue, .46),
-  primary-30: transparentize($blue, .7),
-  primary-10: transparentize($blue, .9),
-  second-80:  transparentize($sky, .2),
-  second-54:  transparentize($sky, .46),
-  second-30:  transparentize($sky, .7),
-  second-10:  transparentize($sky, .9),
-  accent-80:  transparentize($cyan, .2),
-  accent-54:  transparentize($cyan, .46),
-  accent-30:  transparentize($cyan, .7),
-  accent-10:  transparentize($cyan, .9),
+  blue-80: transparentize($blue, .2),
+  blue-54: transparentize($blue, .46),
+  blue-30: transparentize($blue, .7),
+  blue-10: transparentize($blue, .9),
+  sky-80:  transparentize($sky, .2),
+  sky-54:  transparentize($sky, .46),
+  sky-30:  transparentize($sky, .7),
+  sky-10:  transparentize($sky, .9),
+  cyan-80:  transparentize($cyan, .2),
+  cyan-54:  transparentize($cyan, .46),
+  cyan-30:  transparentize($cyan, .7),
+  cyan-10:  transparentize($cyan, .9),
   mint-80:    transparentize($mint, .2),
   mint-54:    transparentize($mint, .46),
   mint-30:    transparentize($mint, .7),
@@ -88,11 +88,11 @@ $sub-colors: (
 
 // Font Weight
 $font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 700;
+$font-weight-medium: 600;
+$font-weight-bold: 800;
 
 // Basic System
-$basic-radius: 10px;
+$basic-radius: 16px;
 
 // Grid System
 $grid-columns: 12; // ~ 24 column grid

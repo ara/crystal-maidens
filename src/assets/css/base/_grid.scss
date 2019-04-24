@@ -27,6 +27,7 @@ html {
   margin-right: auto;
   margin-left: auto;
   // min-height: calc(100vh - 72px);
+  min-width: 1920px;
 }
 @media (min-width: 576px) {
   .container {
@@ -51,8 +52,8 @@ html {
 
 .container-fluid {
   width: 100%;
-  padding-right: $Gutter;
-  padding-left: $Gutter;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
   margin-right: auto;
   margin-left: auto;
 }
@@ -63,17 +64,17 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -$Gutter;
-  margin-left: -$Gutter;
+  margin-right: -$grid-gutter;
+  margin-left: -$grid-gutter;
 }
 
-.no-gutters {
+.no-grid-gutters {
   margin-right: 0;
   margin-left: 0;
 }
 
-.no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-grid-gutters > .col,
+.no-grid-gutters > [class*="col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -151,8 +152,8 @@ html {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: $Gutter;
-  padding-left: $Gutter;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
 }
 
 .col {

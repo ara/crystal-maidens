@@ -1,0 +1,58 @@
+@mixin input {
+  box-sizing: border-box;
+  border: 1px solid map-get($theme-colors, normal);
+  border-radius: 10px;
+  background: map-get($theme-colors, darken);
+  width: auto;
+  height: 1.6rem;
+  padding: 0 .75em;
+  color: $white;
+  line-height: 1;
+  outline: none;
+  @include box-shadow (inset 0 4px 4px rgba(0,0,0,.25));
+  @include transition (200ms);
+  @extend %overline;
+
+  &:hover {
+    border-color: map-get($sub-colors, blue-54);
+  }
+
+  &:focus {
+    border-color: $blue;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: map-get($sub-colors, blue-10);
+    border: 1px solid map-get($sub-colors, blue-10);
+    @include box-shadow (none);
+  }
+}
+
+.form-group {
+  float: left;
+  margin-right: 2rem;
+  @include flex;
+  @include align-items(center);
+}
+
+.label,
+label {
+  display: inline-block;
+  float: left;
+  text-align: right;
+  margin-right: .5rem;
+  @extend %overline;
+  @include clearfix;
+}
+
+.input,
+input {
+  float: left;
+  @include input;
+  @include clearfix;
+
+  &[type="number"] {
+    width: 4rem;
+  }
+}

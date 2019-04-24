@@ -1,0 +1,125 @@
+// 01: Switch Start
+.switch {
+  display: inline-block;
+  height: 24px;
+  // basic checkbox hidden
+  // if switch unchecked
+  input {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    margin-left: -999px;
+    opacity: 0;
+
+    & ~ span {
+      cursor: pointer;
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      float: left;
+      width: 48px;
+      height: 24px;
+      background: map-get($theme-colors, darken);
+      border: 1px solid map-get($theme-colors, lighten);
+      border-radius: 12px;
+      margin: 0;
+      //switch background-color
+      &:before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        display: block;
+        width: 48px;
+        height: 24px;
+        border-radius: 12px;
+        opacity: 0;
+        @include linear-blue-sky;
+        @include transition(200ms $CubicBezier);
+      }
+      // switch indicator
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 2px;
+        left: 2px;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: map-get($sub-colors, white-80);
+        // @include box-shadow(0 4px 4px $BlackBorder);
+        @include transition(200ms $CubicBezier);
+        @include shadow-dp-2;
+      }
+    }
+  }
+  // if switch checked
+  input:checked {
+    & ~ span {
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        left: 26px;
+        background: $white;
+      }
+    }
+  }
+  // if switch disabled
+  input:disabled ~ span {
+    cursor: not-allowed;
+
+    &:after {
+      background: map-get($theme-colors, lighten);
+    }
+  }
+  // if switch checked, disabled
+  input:checked:disabled ~ span {
+    opacity: .54;
+
+    &:after {
+      background: map-get($sub-colors, white-80);
+    }
+  }
+  // switch color changer
+  &.switch-blue input ~ span:before {
+    @include linear-blue-sky;
+  }
+
+  &.switch-sky input ~ span:before {
+    @include linear-sky-cyan;
+  }
+
+  &.switch-cyan input ~ span:before {
+    @include linear-cyan-mint;
+  }
+
+  &.switch-mint input ~ span:before {
+    @include linear-mint-lime;
+  }
+
+  &.switch-lime input ~ span:before {
+    @include linear-lime-yellow;
+  }
+
+  &.switch-yellow input ~ span:before {
+    @include linear-yellow-orange;
+  }
+
+  &.switch-orange input ~ span:before {
+    @include linear-orange-red;
+  }
+
+  &.switch-red input ~ span:before {
+    @include linear-red-purple;
+  }
+
+  &.switch-purple input ~ span:before {
+    @include linear-purple-violet;
+  }
+}
+// 01: Switch End
