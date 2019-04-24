@@ -31,10 +31,6 @@ export default {
       type: Object,
       required: true,
     },
-    fnHide: {
-      type: Function,
-      required: true,
-    },
     currentItem: {
       type: Object,
       required: false,

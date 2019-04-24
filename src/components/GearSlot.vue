@@ -1,6 +1,5 @@
 <template>
   <div
-    v-on-clickaway="away"
     class="container _gslot"
     @click="onSlotClicked($event)"
     v-on-clickaway="onClickOutside"
@@ -13,7 +12,6 @@
     <div v-if="listLoaded" class="item-list" :id="itemListID">
       <div v-show="displayList">
       <gear-slot-item-list
-        :fn-hide="onILHide"
         :itemSlot="itemSlot"
         :maiden="maiden"
         :currentItem="item"
@@ -80,19 +78,12 @@ export default {
       this.displayList = false;
     },
     ...mapMutations(['setActiveItemList']),
-    away: function(e) {
-      this.displayList = false;
-    },
     onSlotClicked(e) {
-      e.preventDefault();
-      e.stopPropagation();
       this.listLoaded = true;
       this.displayList = !this.displayList;
       if( this.displayList ) {
         document.getElementById('item-tooltip').hidden = true;
       }
-      // document.addEventListener('click', this.documentOnClick );
-      // });
     },
   },
 
