@@ -3,6 +3,7 @@
     v-on-clickaway="away"
     class="container _gslot"
     @click="onSlotClicked($event)"
+    v-on-clickaway="onClickOutside"
   >
     <img class="item-background" :src="itemBackgroundUrl">
     <img
@@ -26,11 +27,11 @@
 import { mapMutations } from 'vuex';
 import { SLOT, RARITY, CLASS, uiImages, bgItems } from '../api/const.js';
 import { maxHeaderSize } from 'http';
-import { directive as onClickaway } from '../directives/vue-clickaway.js';
+import { onClickaway } from '../directives/v-on-clickaway.js';
 
 export default {
   directives: {
-    onClickaway: onClickaway,
+    onClickaway,
   },
 
   components: {
@@ -75,8 +76,7 @@ export default {
   },
 
   methods: {
-    onILHide () {
-      console.log('on item list hide');
+    onClickOutside (event) {
       this.displayList = false;
     },
     ...mapMutations(['setActiveItemList']),
