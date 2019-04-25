@@ -63,7 +63,7 @@
       </div>
       </transition>
       <hero-skill v-if="hero.skill && showDetails"
-        :hero="hero" :level="heroLevel"
+        :heroID="heroID" :level="heroLevel"
       ></hero-skill>
     </div>
     <aside class="gear" v-if="!isMinion">
@@ -102,17 +102,11 @@ export default {
       selectedHeroIDs: state => state.heroes.selectedHeroIDs,
     }),
     hero () {
-      return this.$store.getters.heroes[this.heroID];
+      return this.$store.getters.heroes.find( h => h.id === this.heroID );
     },
-    isMinion () {
-      return this.hero.id > 100;
-    },
-    heroLevel () {
-      return this.isMinion ? this.level : this.globalLevel;
-    },
-    campBonus () {
-      return campBonuses[this.campLevel];
-    },
+    isMinion () { return this.heroID > 100; },
+    heroLevel () { return this.isMinion ? this.level : this.globalLevel; },
+    campBonus () { return campBonuses[this.campLevel]; },
     heroHealth () {
       const m = this.hero;
       let val = m.hp.base + m.hp.inc * (this.heroLevel-1) ** this.hero.hpCoef;
@@ -203,7 +197,7 @@ export default {
     },
     setColor(color) {
       if( this.selectedHeroIDs.length === 1 ) return;
-      document.getElementById('close'+this.hero.id).style.color = color;
+      document.getElementById('close'+this.heroID).style.color = color;
     },
     getImage(key) {
       return heroImages.get(key);
