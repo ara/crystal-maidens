@@ -46,8 +46,8 @@
       </div>
 
       <div v-if="skill.effects[0].heroids">
-        <hero-card :hero="heroFromID(minionID)" :level="skillLevel"
-          v-for="minionID in skill.effects[0].heroids" :key="minionID"
+        <hero-card v-for="minionID in skill.effects[0].heroids" :key="minionID"
+          :heroID="minionID" :level="skillLevel" :showInfo="false"
         ></hero-card>
       </div>
 
@@ -81,7 +81,7 @@ const setOverTimeEffect = (str, ticks, duration) => {
 
 export default {
   props: {
-    hero: Object,
+    heroID: Number,
     showInfo: Boolean,
     level: Number,
   },
@@ -102,8 +102,8 @@ export default {
       cdr: state => state.heroes.cdr,
       heroes: (state, getters) => getters.heroes,
     }),
-    skillIcon () {
-      return skillIcons.get(this.skill.id);
+    hero () {
+      return this.heroes.find( h => h.id === this.heroID );
     },
     skillName () {
       return this.skill.name || '#' + this.skill.id;
@@ -114,9 +114,7 @@ export default {
     currentCD () {
       return Math.ceil(this.skill.CD * (100-this.heroCDR) / 10) / 10;
     },
-    isMinion () {
-      return this.hero.id > 100;
-    },
+    isMinion () { return this.heroID > 100; },
     skillLevel () {
       return this.isMinion
         ? Math.floor( (this.level-1) / 3 ) + 1
