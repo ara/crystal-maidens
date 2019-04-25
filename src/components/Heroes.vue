@@ -30,10 +30,12 @@
         </div>
 
         <div class="flexitem-right">
-          <app-switch v-model="showSkillDetails" checked>Show skill details</app-switch>
+          <label for="checkSkillDetails">Show skill details</label>
+          <input id="checkSkillDetails" type="checkbox" v-model="showSkillDetails">
         </div>
         <div class="flexitem-right">
-          <app-switch style="padding:0" v-model="showMinionDetails" checked>Show minion details</app-switch>
+          <label for="checkMinionDetails">Show minion details</label>
+          <input id="checkMinionDetails" type="checkbox" v-model="showMinionDetails">
         </div>
 
       </div>
