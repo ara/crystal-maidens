@@ -214,34 +214,22 @@ const getters = {
 
 
 const mutations = {
-  selectMaiden(state, payload) {
-    state.selectedHeroes.push(payload);
-    const el = document.getElementById('m'+payload.id);
-    if( el ) {
-      el.classList.add('selected');
-    }
-    payload.selected = true;
+  selectMaidenID(state, payload) {
+    state.selectedHeroIDs.push(payload);
+    document.getElementById('m'+payload).classList.add('selected');
   },
-  deselectMaiden(state, payload) {
-    const maidenIndex = state.selectedHeroes.indexOf(payload);
+  deselectMaidenID(state, payload) {
+    const maidenIndex = state.selectedHeroIDs.indexOf(payload);
     if( maidenIndex >= 0 ) {
-      const el = document.getElementById('m'+payload.id);
-      if( el ) {
-        el.classList.remove('selected');
-      }
-      state.selectedHeroes.splice(maidenIndex, 1);
-      payload.selected = false;
+      document.getElementById('m'+payload).classList.remove('selected');
+      state.selectedHeroIDs.splice(maidenIndex, 1);
     }
   },
-  deselectAllMaidens(state, payload) {
-    state.selectedHeroes.forEach( m => {
-      m.selected = false;
-      const el = document.getElementById('m'+m.id);
-      if( el ) {
-        el.classList.remove('selected');
-      }
+  deselectAllMaidenIDs(state, payload) {
+    state.selectedHeroIDs.forEach( id => {
+      document.getElementById('m'+id).classList.remove('selected');
     });
-    state.selectedHeroes.splice(0, state.selectedHeroes.length);
+    state.selectedHeroIDs.splice(0, state.selectedHeroIDs.length);
   },
   updateHeroExtraAS (state, payload) {
     state.heroExtraAS = payload;

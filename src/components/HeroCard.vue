@@ -5,7 +5,7 @@
         @click="toggleDetails"
         style="cursor:pointer;margin: .2em 0 -.2em 0;"
       >
-        <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
         <img v-if="getImage(hero.id)"
           :src="getImage(hero.id)" :alt="hero.name"
           class="hero-icon border-rarity" :class="'r'+hero.rarity">
@@ -21,7 +21,7 @@
       <div v-else class="flex-row text-shadow no-pad headline hero-pad"
         :style="showDetails?'':'margin-bottom:-0.5em;'"
       >
-        <button v-if="selectedHeroes.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
         <img v-if="getImage(hero.id)"
           :src="getImage(hero.id)" :alt="hero.name"
           class="hero-icon border-rarity" :class="'r'+hero.rarity">
@@ -79,7 +79,10 @@ import Gear from './Gear';
 
 export default {
   props: {
-    hero: Object,
+    heroID: {
+      type: Number,
+      required: true,
+    },
     level: Number,
   },
 
@@ -96,8 +99,11 @@ export default {
       skillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
-      selectedHeroes: state => state.heroes.selectedHeroes,
+      selectedHeroIDs: state => state.heroes.selectedHeroIDs,
     }),
+    hero () {
+      return this.$store.getters.heroes[this.heroID];
+    },
     isMinion () {
       return this.hero.id > 100;
     },
@@ -196,7 +202,7 @@ export default {
       }
     },
     setColor(color) {
-      if( this.selectedHeroes.length === 1 ) return;
+      if( this.selectedHeroIDs.length === 1 ) return;
       document.getElementById('close'+this.hero.id).style.color = color;
     },
     getImage(key) {
@@ -211,7 +217,7 @@ export default {
       this.setColor('#eee');
     },
     deselectHero() {
-      this.$store.commit('deselectMaiden', this.hero);
+      this.$store.commit('deselectMaidenID', this.hero.id);
     }
   },
 

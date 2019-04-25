@@ -91,7 +91,7 @@
               v-for="m in sortedMaidens"
               :key="m.id"
               :id="'m'+m.id"
-              :class="['h'+m.sElement, m.selected?'selected':'']"
+              :class="['h'+m.sElement, selectedHeroIDs.includes(m.id)?'selected':'']"
               @click.exact="select(m)"
               @click.ctrl.exact="select(m,true)"
             >
@@ -109,8 +109,8 @@
 
       </aside>
       <div class="maiden-details-list">
-        <hero-card :hero="hero"
-          v-for="hero in selectedHeroes" :key="hero.id"
+        <hero-card :heroID="heroID"
+          v-for="heroID in selectedHeroIDs" :key="heroID"
           class="maiden-details"
         ></hero-card>
       </div>
@@ -162,7 +162,7 @@ export default {
       heroCols: state => state.heroes.heroCols,
       sorting: state => state.heroes.sorting,
       classImages: state => state.heroes.classImages,
-      selectedHeroes: state => state.heroes.selectedHeroes,
+      selectedHeroIDs: state => state.heroes.selectedHeroIDs,
       heroColsProfiles: state => state.heroes.heroColsProfiles,
       profileName: state => state.heroes.selectedHeroColsProfile,
     }),
@@ -285,15 +285,15 @@ export default {
         But if you click on a selected hero that is
         part of a multi select, it will deselect it. */
       if( !multiSelect ) {
-        if( this.selectedHeroes.length > 1 &&
-            this.selectedHeroes.includes(hero)
+        if( this.selectedHeroIDs.length > 1 &&
+            this.selectedHeroIDs.includes(hero.id)
         ) {
-          return this.$store.commit('deselectMaiden', hero);
+          return this.$store.commit('deselectMaidenID', hero.id);
         }
-        this.$store.commit('deselectAllMaidens');
+        this.$store.commit('deselectAllMaidenIDs');
       }
-      if( !this.selectedHeroes.includes(hero) ) {
-        this.$store.commit('selectMaiden', hero);
+      if( !this.selectedHeroIDs.includes(hero.id) ) {
+        this.$store.commit('selectMaidenID', hero.id);
       }
     },
 
