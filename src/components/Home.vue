@@ -82,7 +82,6 @@
           <span></span>
         </label>
       </span>
-      </span>
       <span class="switch switch-orange">
         <label>
           <input type="checkbox" checked="">
