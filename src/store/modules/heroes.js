@@ -188,7 +188,7 @@ const state = {
   campLevel: 15,
   /** for testing while items are being added */
   heroExtraAS: 0,
-  selectedHeroes: [],
+  selectedHeroIDs: [1], // initial selection: Helen
   showSkillDetails: true,
   showMinionDetails: false,
 };

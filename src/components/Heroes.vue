@@ -315,12 +315,6 @@ export default {
 
   },
 
-  created () {
-    if( this.selectedHeroes.length === 0 ) {
-      this.select(this.maidens[0]);
-    }
-  },
-
 }
 </script>
 
