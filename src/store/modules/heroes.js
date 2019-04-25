@@ -193,9 +193,6 @@ const state = {
   showMinionDetails: false,
 };
 
-const validElement = (hero) => state.filters.element === 'All' || hero.sElement === state.filters.element;
-const validClass = (hero) => state.filters.class === 'All' || hero.sClass === state.filters.class;
-
 const getters = {
   heroCols: () => heroCols,
   heroes: () => heroes,
@@ -204,8 +201,8 @@ const getters = {
       h.id >= 1 &&
       h.id <= 100 &&
       h.skill &&
-      validElement(h) &&
-      validClass(h)
+      (state.filters.element === 'All' || h.sElement === state.filters.element) &&
+      (state.filters.class === 'All' || h.sClass === state.filters.class)
     );
   },
 
