@@ -212,22 +212,26 @@ const getters = {
   },
 }
 
+function selectNode( id, select ) {
+  const el = document.getElementById(id);
+  if (el) el.classList[select?'add':'remove']('selected');
+}
 
 const mutations = {
   selectMaidenID(state, payload) {
     state.selectedHeroIDs.push(payload);
-    document.getElementById('m'+payload).classList.add('selected');
+    selectNode('m'+payload, true);
   },
   deselectMaidenID(state, payload) {
     const maidenIndex = state.selectedHeroIDs.indexOf(payload);
     if( maidenIndex >= 0 ) {
-      document.getElementById('m'+payload).classList.remove('selected');
+      selectNode('m'+payload, false);
       state.selectedHeroIDs.splice(maidenIndex, 1);
     }
   },
   deselectAllMaidenIDs(state, payload) {
     state.selectedHeroIDs.forEach( id => {
-      document.getElementById('m'+id).classList.remove('selected');
+      selectNode('m'+id, false)
     });
     state.selectedHeroIDs.splice(0, state.selectedHeroIDs.length);
   },
