@@ -105,9 +105,9 @@ export default {
     hero () {
       return this.heroes.find( h => h.id === this.heroID );
     },
-    skillName () {
-      return this.skill.name || '#' + this.skill.id;
-    },
+    skill () { return this.hero.skill; },
+    skillIcon () { return skillIcons.get(this.skill.id); },
+    skillName () { return this.skill.name || '#' + this.skill.id; },
     heroCDR () {
       return this.isMinion ? 0 : this.cdr;
     },
@@ -119,7 +119,7 @@ export default {
       return this.isMinion
         ? Math.floor( (this.level-1) / 3 ) + 1
         : this.globalSkillLevel;
-    }
+    },
   },
 
   methods: {
