@@ -136,7 +136,6 @@
 </template>
 
 <script>
-import UISwitch from './UISwitch';
 import HeroCard from './HeroCard';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import { VueContext } from 'vue-context';
@@ -146,7 +145,6 @@ export default {
   components: {
     VueContext,
     HeroCard,
-    'app-switch': UISwitch,
   },
 
 
