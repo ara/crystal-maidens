@@ -315,8 +315,10 @@ export default {
 
   },
 
-  mounted () {
-    this.select(this.maidens[0]);
+  created () {
+    if( this.selectedHeroes.length === 0 ) {
+      this.select(this.maidens[0]);
+    }
   },
 
 }
