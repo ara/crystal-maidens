@@ -16,7 +16,10 @@ import { mapMutations } from 'vuex';
 
 export default {
   props: {
-    maiden: Object
+    maiden: {
+      type: Object,
+      required: true,
+    },
   },
 
   data: () => ({
