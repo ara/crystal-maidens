@@ -25,8 +25,8 @@ export default {
 // @import './assets/css/main.scss';
 
 #app {
-  text-align: center;
-  color: #2c3e50;
+  // text-align: center;
+  // color: #2c3e50;
   :focus {
     outline-color: #2c3e50 !important;
   }

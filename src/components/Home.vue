@@ -1,4 +1,5 @@
 <template>
+  <!-- REVIEW: Subsequent unused components are removed with SCSS -->
 <div class="container">
   <!-- input -->
   <div class="row">
@@ -13,8 +14,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="label">Enemy<br />Element</label>
-          <input class="input" />
+          <label class="label"  for="GoToInput">Enemy<br />Element</label>
+          <input id="GoToInput" class="input" />
         </div>
         <div class="form-group">
           <label class="label">Camp Lvl</label>
@@ -46,7 +47,7 @@
   <!-- switch -->
   <div class="row">
     <div class="col-12">
-      <span class="switch switch-blue">
+      <span class="switch">
         <label>
           <input type="checkbox" checked="">
           <span></span>
@@ -114,7 +115,61 @@
       </span>
     </div>
   </div>
-  <!-- checkbox -->
+  <!-- checkbox, Radio -->
+  <div class="row">
+    <div class="col-12">
+      <span class="checkbox">
+        <label>
+          <input type="checkbox" checked="">
+          <p>Checkbox</p>
+          <span></span>
+        </label>
+      </span>
+      <span class="checkbox">
+        <label>
+          <input type="checkbox" disabled>
+          <p>Disabled</p>
+          <span></span>
+        </label>
+      </span>
+      <span class="checkbox">
+        <label>
+          <input type="checkbox" checked="" disabled>
+          <p>Check:Dis</p>
+          <span></span>
+        </label>
+      </span>
+      <span class="radio">
+        <label>
+          <input name="radio-test" type="radio" checked="">
+          <p>Select1</p>
+          <span></span>
+        </label>
+      </span>
+      <span class="radio">
+        <label>
+          <input name="radio-test" type="radio" checked="">
+          <p>Select2</p>
+          <span></span>
+        </label>
+      </span>
+      <span class="radio">
+        <label>
+          <input type="radio" disabled>
+          <p>Disabled</p>
+          <span></span>
+        </label>
+      </span>
+      <span class="radio">
+        <label>
+          <input type="radio" checked="" disabled>
+          <p>Check:Dis</p>
+          <span></span>
+        </label>
+      </span>
+    </div>
+  </div>
+  <!-- button -->
 </div>
 </template>
 
@@ -123,7 +178,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss">
-// @import '../assets/css/main.scss';
-</style>
