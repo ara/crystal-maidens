@@ -22,7 +22,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/css/main.scss';
+// @import './assets/css/main.scss';
+@import './assets/css/abstracts/var.scss';
+@import './assets/css/abstracts/mixins.scss';
+@import './assets/css/base/typography.scss';
+@import './assets/css/base/gradient.scss';
+@import './assets/css/base/common.scss';
+@import './assets/css/layout/top.scss';
 
 #app {
   // text-align: center;

@@ -1,3 +1,19 @@
+// surface
+@mixin shadow-dp-2 {
+  @include box-shadow (0 4px 8px map-get($theme-colors, darken));
+}
+@mixin shadow-dp-6 {
+  @include box-shadow (0 8px 12px map-get($theme-colors, darken));
+}
+@mixin shadow-dp-12 {
+  @include box-shadow (0 8px 20px map-get($theme-colors, darken));
+}
+@mixin shadow-dp-24 {
+  @include box-shadow (0 12px 32px map-get($theme-colors, darken));
+}
+
+
+
 // Text overflow
 // Requires inline-block or block for proper styling
 @mixin text-overflow() {

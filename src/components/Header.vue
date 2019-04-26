@@ -16,28 +16,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" scoped>
-// .navContainer {
-//   margin: .3em auto 1em;
-//   display: inline-flex;
-//   list-style: none;
-//   > * {
-//     margin: 0 10px;
-//   }
-// }
-// li {
-//   cursor: pointer;
-//   text-decoration: none;
-//   border: 1px solid #777;
-//   border-radius: .3em;
-//   padding: .3em;
-//   background: #eee;
-//   width: 6em;
-//   &.active {
-//     // background: #fd0;
-//     background: #888;
-//     color: white;
-//   }
-// }
-</style>
