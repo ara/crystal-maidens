@@ -11,22 +11,28 @@
         </label>
       </span>
 
-      <label for="crystals">Crystals</label>
-      <select id="crystals" @input="fCrystal=$event.target.value" @mousewheel.passive="selectWheel($event,'fCrystal')">
-        <option value="">All</option>
-        <option value="Fire">Fire</option>
-        <option value="Nature">Nature</option>
-        <option value="Water">Water</option>
-        <option value="Light">Light</option>
-        <option value="Dark">Dark</option>
-      </select>
-      <button :enabled="fCrystal" @click="fCrystal=''">Clear</button><br>
-      <label for="cid">Maps</label>
-      <select id="cid" @input="fCampaign=$event.target.value" @mousewheel.passive="selectWheel($event,'fCampaign')">
-        <option value="-2">All</option>
-        <option value="-1" selected>All Campaigns</option>
-        <option v-for="c in campaigns" :key="c.id" :value="c.id">{{ c.name }}</option>
-      </select>
+      <div class="form-group">
+        <label for="crystals">Crystals</label>
+        <select id="crystals" class="input" @input="fCrystal=$event.target.value" @mousewheel.passive="selectWheel($event,'fCrystal')">
+          <option value="">All</option>
+          <option value="Fire">Fire</option>
+          <option value="Nature">Nature</option>
+          <option value="Water">Water</option>
+          <option value="Light">Light</option>
+          <option value="Dark">Dark</option>
+        </select>
+      </div>
+
+      <button :enabled="fCrystal" @click="fCrystal=''">Clear</button>
+
+      <div class="form-group">
+        <label for="cid">Maps</label>
+        <select id="cid" class="input" @input="fCampaign=$event.target.value" @mousewheel.passive="selectWheel($event,'fCampaign')">
+          <option value="-2">All</option>
+          <option value="-1" selected>All Campaigns</option>
+          <option v-for="c in campaigns" :key="c.id" :value="c.id">{{ c.name }}</option>
+        </select>
+      </div>
 
       <div>
         <button v-for="col in colProfiles" :key="col.name" @click="applyColProfile(col)" :class="col.name===selectedProfileName?'selected':''">{{ col.name }}</button>

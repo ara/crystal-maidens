@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="options">
-      <select v-model="classFilter" class="item">
+      <!-- REVIEW: need item class here? -->
+      <select v-model="classFilter" class="input">
         <option v-for="(sclass, index) in classes" :key="sclass" :value="index-1">{{ sclass }}</option>
       </select>
-      <br>
     </div>
     <div class="container">
       <div v-for="slot in slots" :key="slot.caption" class="item-list">
