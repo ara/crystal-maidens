@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container _gslot"
+    class="container2"
     @click="onSlotClicked($event)"
     v-on-clickaway="onClickOutside"
   >
@@ -94,7 +94,7 @@ export default {
 .hide-item-list {
   display: none;
 }
-.container {
+.container2 {
   position: relative;
   cursor: pointer;
   background-size: contain;

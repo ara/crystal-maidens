@@ -1,5 +1,5 @@
 <template>
-  <div class="container" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
+  <div class="container3" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
     <div class="flex-col wide">
       <div v-if="isMinion" class="flex-row text-shadow headline"
         @click="toggleDetails"
@@ -309,7 +309,7 @@ h4, span {
   align-items: flex-start;
 }
 
-.container {
+.container3 {
   display: flex;
   position: relative;
   margin: 0 0 .35em;
