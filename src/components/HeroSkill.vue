@@ -4,7 +4,7 @@
     @mouseup.left="clearTimer()"
     @mouseout="clearTimer()"
   >
-    <div class="headline" @click="toggleSkillDetails">
+    <div class="headline" @click="toggleDetails">
       <img v-if="skillIcon" :src="skillIcon" class="skill-icon">
       <span class="skill-name">{{ skillName }}</span>
       <span class="skill-level">(Level {{ skillLevel }})</span>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <transition name="slide-fade">
-    <div v-show="showSkillDetails" class="card">
+    <div v-show="showDetails" class="card">
       <div v-if="isMinion" class="border-top" style="width:100%"></div>
       <div v-else class="desc border-top border-bottom">
         <span>{{ skill.desc }}</span>
@@ -88,7 +88,10 @@ export default {
 
   data () {
     return {
-      showSkillDetails: this.showInfo || this.$store.state.heroes.showSkillDetails,
+      showDetails: this.showInfo !== null
+        ? this.showInfo
+        : this.$store.state.heroes.showSkillDetails,
+      skill: this.hero.skill,
       mousedown: false,
     };
   },
@@ -137,8 +140,8 @@ export default {
       const caption = `<span style="display: table-cell; text-align: ${swap?'start':'end'}; padding-${swap?'left':'right'}:.8em; font-weight: 600; font-size: .75em;">${title}</span>`;
       return swap ? data+caption : caption+data;
     },
-    toggleSkillDetails () {
-      this.showSkillDetails = !this.showSkillDetails;
+    toggleDetails () {
+      this.showDetails = !this.showDetails;
     },
     formatEffect (hero, effect) {
       const mul = (this.skillLevel-1) ** this.hero.skillCoef;
