@@ -1,6 +1,6 @@
 <template>
   <!-- REVIEW: Subsequent unused components are removed with SCSS -->
-<div class="container">
+<div class="contain">
   <!-- input -->
   <div class="row">
     <div class="col-4">

@@ -21,7 +21,7 @@ html {
   box-sizing: inherit;
 }
 
-.container {
+.contain {
   width: 100%;
   padding: 0 32px;
   margin-right: auto;
@@ -30,27 +30,27 @@ html {
   min-width: 1920px;
 }
 @media (min-width: 576px) {
-  .container {
+  .contain {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .contain {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .contain {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .contain {
     max-width: 1140px;
   }
 }
 
-.container-fluid {
+.contain-fluid {
   width: 100%;
   padding-right: $grid-gutter;
   padding-left: $grid-gutter;
