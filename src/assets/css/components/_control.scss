@@ -5,8 +5,14 @@
 .switch {
   display: inline-block;
   height: 24px;
+  padding-right: 48px;
+  position: relative;
+
+  p {
+    padding: 0.5em 0;
+    margin-right: 8px;
+  }
   // basic checkbox hidden
-  // if switch unchecked
   input {
     position: absolute;
     overflow: hidden;
@@ -14,11 +20,12 @@
     height: 0;
     margin-left: -999px;
     opacity: 0;
-
+    // if switch unchecked
     & ~ span {
       cursor: pointer;
       box-sizing: border-box;
-      position: relative;
+      position: absolute;
+      top: 0;
       display: inline-block;
       float: left;
       width: 48px;

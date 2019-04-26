@@ -46,10 +46,10 @@ body {
   }
 }
 
-.btn,
+.btn, %btn,
 .button {
   font-size: .875rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   text-transform: uppercase;
   letter-spacing: .15em;
 }

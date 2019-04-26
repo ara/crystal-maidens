@@ -50,6 +50,9 @@
       <span class="switch">
         <label>
           <input type="checkbox" checked="">
+          <p>
+            Switch
+          </p>
           <span></span>
         </label>
       </span>

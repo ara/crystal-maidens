@@ -133,6 +133,7 @@ table {
   white-space: nowrap;
 
   font-size: smaller;
+  color: black; //temp
   background-color: $p-dark;
   display: inline-block;
   vertical-align: top;
