@@ -91,7 +91,6 @@ export default {
       showDetails: this.showInfo !== null
         ? this.showInfo
         : this.$store.state.heroes.showSkillDetails,
-      skill: this.hero.skill,
       mousedown: false,
     };
   },
