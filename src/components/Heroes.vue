@@ -24,7 +24,6 @@
         <div class="flexitem-right">
           <label for="txHeroAS" @click="$store.commit('updateHeroExtraAS',0)">Atk Spd test</label>
           <input type="number" min="0" max="1000" step="20" id="txHeroAS"
-            style="width:3em"
             v-model="heroExtraAS"
           >
         </div>
@@ -44,7 +43,6 @@
         <div class="flexitem-right">
           <label for="txHeroLevel">Maiden Lvl</label>
           <input type="number" min="1" max="85" id="txHeroLevel"
-            style="width:3em"
             @input="setHeroLevel($event)"
             :value="heroLevel"
           >
@@ -52,7 +50,6 @@
         <div class="flexitem-right">
           <label for="txSkillLevel">Skill Lvl</label>
           <input type="number" min="1" max="29" id="txSkillLevel"
-            style="width:3em"
             @input="setSkillLevel($event)"
             :value="skillLevel"
           >
@@ -60,7 +57,6 @@
         <div class="flexitem-right">
           <label for="txCDR">CDR</label>
           <input type="number" min="0" max="50" step="5" id="txCDR"
-            style="width:3em"
             @input="setCDR($event)"
             :value="cdr"
           >
@@ -68,7 +64,6 @@
         <div class="flexitem-right">
           <label for="txCamp">Camp Lvl</label>
           <input type="number" min="0" max="15" step="1" id="txCamp"
-            style="width:3em"
             @input="setCampLevel($event)"
             :value="campLevel"
           >
