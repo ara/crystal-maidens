@@ -201,11 +201,11 @@ export default {
       }
     },
     sortArrowClasses(col) {
-      return col === this.sorting.col1 ?
-        'sort1' :
-        col === this.sorting.col2 ?
-        'sort2' :
-        'nosort'
+      return col === this.sorting.col1
+        ? 'sort1'
+        : col === this.sorting.col2
+          ? 'sort2'
+          : 'nosort'
     },
     campaignClass(map) {
       return map.campaignID < 2000 && map.campaignID % 1000 < 10 ? map.name.substr(0, 2) + map.name[3] : 'CXX';
@@ -219,16 +219,16 @@ export default {
         if (asc) {
           [a, b] = [b, a];
         }
-        return typeof a[field] === 'string' ?
-          a[field].localeCompare(b[field]) :
-          b[field] - a[field];
+        return typeof a[field] === 'string'
+          ? a[field].localeCompare(b[field])
+          : b[field] - a[field];
       } else {
         if (asc2) {
           [a, b] = [b, a];
         }
-        return typeof a[field2] === 'string' ?
-          a[field2].localeCompare(b[field2]) :
-          b[field2] - a[field2];
+        return typeof a[field2] === 'string'
+          ? a[field2].localeCompare(b[field2])
+          : b[field2] - a[field2];
       }
     },
 
