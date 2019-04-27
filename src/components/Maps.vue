@@ -1,69 +1,80 @@
 <template>
-<div class="container">
-  <MapFilters />
-  <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
-  <table class="maps" @mousewheel.passive="wheelOnTable($event)">
-    <thead @contextmenu.prevent="$refs.colMenu.open">
-      <th v-for="(c,i) in filteredCols" :key="i" @click.middle.exact.prevent="onColMiddleClick($event,c)" @click.left.ctrl="updateMapsSort([c.val,$event]);currPage=1" @click.left.shift="updateMapsSort([c.val,$event]);currPage=1" @click.left.exact="updateMapsSort([c.val,$event]);currPage=1"
-        :class="i==filteredCols.length-1?'longth':''">{{ c.caption }}<span :class="sortArrowClasses(c.val)" class="sort-arrow">{{ sortArrow(c.val) }}</span>
-      </th>
-    </thead>
-    <tbody style="">
-      <tr v-for="m in computeMaps( sortedMaps.slice((currPage-1)*maxEntries, currPage*maxEntries) )" :key="m.id" :class="campaignClass(m)">
-        <td v-for="col in profileColsObjects" :key="col.index" :style="'text-align:'+(col.align||'right')">
-          <span>{{ m[col.displayField] }}</span>
-        </td>
-      </tr>
-    </tbody>
+  <div class="container">
+    <MapFilters />
+    <table class="maps" @mousewheel.passive="wheelOnTable($event)">
+      <thead @contextmenu.prevent="$refs.colMenu.open">
+        <th v-for="(c,i) in filteredCols" :key="i"
+          @click.middle.exact.prevent="onColMiddleClick($event,c)"
+          @click.left.ctrl="updateMapsSort([c.val,$event]);currPage=1"
+          @click.left.shift="updateMapsSort([c.val,$event]);currPage=1"
+          @click.left.exact="updateMapsSort([c.val,$event]);currPage=1"
+          :class="{ longth: i==filteredCols.length-1 }"
+        >{{ c.caption }}<span :class="sortArrowClasses(c.val)" class="sort-arrow">{{ sortArrow(c.val) }}</span>
+        </th>
+      </thead>
+      <tbody style="">
+        <tr v-for="m in computeMaps( sortedMaps.slice((currPage-1)*maxEntries, currPage*maxEntries) )" :key="m.id"
+          :class="campaignClass(m)"
+        >
+          <td v-for="col in profileColsObjects" :key="col.index"
+            :style="'text-align:'+(col.align||'right')"
+          >
+            <span>{{ m[col.displayField] }}</span>
+          </td>
+        </tr>
+      </tbody>
 
-    <tfoot>
-      <tr>
-        <td :colspan="filteredCols.length">
-          <div class="pagingContainer">
+      <tfoot>
+        <tr>
+          <td :colspan="filteredCols.length">
+            <div class="pagingContainer">
 
-            <div />
-            <div />
+              <div />
+              <div />
 
-            <div>
-              <button @click="currPage--" :disabled="currPage<=1">
-                <b>◄</b>
-              </button>
-              <input type="text" size="1" v-model="currPage">
-              <span>/ {{ lastPage }}</span>
-              <button @click="currPage++" :disabled="currPage>=lastPage">
-                <b>►</b>
-              </button>
-            </div>
+              <div>
+                <button @click="currPage--" :disabled="currPage<=1">
+                  <b>◄</b>
+                </button>
+                <input type="text" size="1" v-model="currPage">
+                <span>/ {{ lastPage }}</span>
+                <button @click="currPage++" :disabled="currPage>=lastPage">
+                  <b>►</b>
+                </button>
+              </div>
 
-            <div>
-              <div style="transform: scaleY(.7);float:left">
-                <input style="width:6em;vertical-align:top;margin-top:auto" type=range min=1 :max=lastPage value=1 v-model=currPage>
+              <div>
+                <div style="transform: scaleY(.7);float:left">
+                  <input style="width:6em;vertical-align:top;margin-top:auto" type=range min=1 :max=lastPage value=1 v-model=currPage>
+                </div>
+
+              </div>
+              <div>
+                <div class="align-items:flex-end">
+                  <span style="font-size:smaller">Items per page</span>
+                  <select v-model="maxEntries">
+                    <option v-for="v in [10,20,30,40,50]" :key="v.id">{{ v }}</option>
+                  </select>
+                </div>
               </div>
 
             </div>
-            <div>
-              <div class="align-items:flex-end">
-                <span style="font-size:smaller">Items per page</span>
-                <select v-model="maxEntries">
-                  <option v-for="v in [10,20,30,40,50]" :key="v.id">{{ v }}</option>
-                </select>
-              </div>
-            </div>
-
-          </div>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
-  <vue-context :closeOnClick="false" ref="colMenu" class="cm">
-    <ul class="cm">
-      <li v-for="col in mapCols" :key="col.index" @click="onCMClick(col)" class="cm" :class="col.val==='name'?'disabled':''">
-        <span :style="{float:'left', opacity:profileCols.includes(col.val)?1:0, marginRight:'.6em'}">{{ '✓' }}</span>
-        {{ col.caption }}
-      </li>
-    </ul>
-  </vue-context>
-</div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <vue-context :closeOnClick="false" ref="colMenu" class="cm">
+      <ul class="cm">
+        <li v-for="col in mapCols" :key="col.index" @click="onCMClick(col)" class="cm"
+          :class="{ disabled: col.val==='name' }"
+        >
+          <span :style="{float:'left', opacity:profileCols.includes(col.val)?1:0, marginRight:'.6em'}"
+          >{{ '✓' }}</span>
+          {{ col.caption }}
+        </li>
+      </ul>
+    </vue-context>
+  </div>
 </template>
 
 <script>

@@ -77,7 +77,7 @@
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
             <th v-for="c in filteredHeroCols" :key="c.id"
-              :class="c.dataField===sorting.col1?'hlCol':''"
+              :class="{'hlCol': c.dataField===sorting.col1}"
               @click.middle.prevent="onColMiddleClick($event,c)"
               @click.left.exact="updateHeroesSort(c)"
             >{{ c.caption }}</th>
@@ -88,12 +88,12 @@
               v-for="m in sortedMaidens"
               :key="m.id"
               :id="'m'+m.id"
-              :class="['h'+m.sElement, selectedHeroIDs.includes(m.id)?'selected':'']"
+              :class="[ 'h'+m.sElement, { 'selected': selectedHeroIDs.includes(m.id) }]"
               @click.exact="select(m)"
               @click.ctrl.exact="select(m,true)"
             >
               <td v-for="col in profileColsObjects" :key="col.index"
-                :class="sorting.col1===col.dataField?'hl'+m.sElement:''"
+                :class="{ ['hl'+m.sElement]: sorting.col1===col.dataField }"
                 :style="'text-align:'+(col.align || 'right')"
               >
               <img v-if="col.dataField==='name'" :title="m.sClass"
@@ -118,7 +118,7 @@
         <li v-for="col in heroCols" :key="col.id"
           @click="onCMClick(col)"
           class="cm"
-          :class="col.val==='name'?'disabled':''"
+          :class="{ disabled: col.val==='name' }"
         >
           <span :style="{float:'left', opacity:profileCols.includes(col.caption)?1:0, marginRight:'.6em'}"
           >{{ '✓' }}</span>
