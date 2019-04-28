@@ -17,8 +17,8 @@
         </div>
       </div>
 
-      <div class="portlet -btn">
-        <i class="material-icons">settings</i>
+      <div class="portlet -opt">
+        <i class="table-opt material-icons">settings</i>
       </div>
     </div>
     <div class="col-8">
@@ -35,9 +35,7 @@
           <label for="txSkillLevel">Skill Lvl</label>
           <input type="number" min="1" max="29" id="txSkillLevel" @input="setSkillLevel($event)" :value="skillLevel">
         </div>
-
         <div class="seperator -y mr1"></div>
-
         <div class="form-group">
           <label for="txHeroAS" @click="$store.commit('updateHeroExtraAS',0)">Atk Spd test</label>
           <input type="number" min="0" max="1000" step="20" id="txHeroAS" v-model="heroExtraAS">
@@ -50,9 +48,7 @@
           <label>Item Lvl</label>
           <input type="number" min="1" max="5" step="1">
         </div>
-
         <div class="seperator -y mr1"></div>
-
         <div class="form-group">
           <span class="switch">
             <label for="checkSkillDetails">
@@ -76,21 +72,20 @@
   </div>
 
   <div class="row">
-    <aside class="col-4 maiden-overview-list">
-      <table>
-        <thead @contextmenu.prevent="$refs.colMenu.open">
-          <th v-for="c in filteredHeroCols" :key="c.id" :class="c.dataField===sorting.col1?'hlCol':''" @click.middle.prevent="onColMiddleClick($event,c)" @click.left.exact="updateHeroesSort(c)">{{ c.caption }}</th>
-        </thead>
-
-        <tbody>
-          <tr v-for="m in sortedMaidens" :key="m.id" :id="'m'+m.id" :class="['h'+m.sElement, selectedHeroIDs.includes(m.id)?'selected':'']" @click.exact="select(m)" @click.ctrl.exact="select(m,true)">
-            <td v-for="col in profileColsObjects" :key="col.index" :class="sorting.col1===col.dataField?'hl'+m.sElement:''" :style="'text-align:'+(col.align || 'right')">
-              <img v-if="col.dataField==='name'" :title="m.sClass" :src="getImage(m.sClass)" class="class-icon"><span>{{ m[col.displayField] }}</span></td>
-          </tr>
-        </tbody>
-
-      </table>
-
+    <aside class="col-4">
+      <div class="portlet -table">
+        <table>
+          <thead @contextmenu.prevent="$refs.colMenu.open">
+            <th v-for="c in filteredHeroCols" :key="c.id" :class="c.dataField===sorting.col1?'hlCol':''" @click.middle.prevent="onColMiddleClick($event,c)" @click.left.exact="updateHeroesSort(c)">{{ c.caption }}</th>
+          </thead>
+          <tbody>
+            <tr v-for="m in sortedMaidens" :key="m.id" :id="'m'+m.id" :class="['h'+m.sElement, selectedHeroIDs.includes(m.id)?'selected':'']" @click.exact="select(m)" @click.ctrl.exact="select(m,true)">
+              <td v-for="col in profileColsObjects" :key="col.index" :class="sorting.col1===col.dataField?'hl'+m.sElement:''" :style="'text-align:'+(col.align || 'right')">
+                <img v-if="col.dataField==='name'" :title="m.sClass" :src="getImage(m.sClass)" class="class-icon"><span>{{ m[col.displayField] }}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </aside>
     <div class="maiden-details-list">
       <hero-card :heroID="heroID" v-for="heroID in selectedHeroIDs" :key="heroID" class="maiden-details"></hero-card>
@@ -309,13 +304,7 @@ $p-medium: #777;
 $p-ml: #bbb;
 $p-light: #eee;
 
-$fire: #f4cccc;
-$nature: #d9ead3;
-$water: #c9daf8;
-$light: #fff2cc;
-$dark: #d9d2e9;
-
-$darkenBy: 5%;
+// $darkenBy: 5%;
 
 .maiden-overview-list {
     float: left;
@@ -346,21 +335,6 @@ $darkenBy: 5%;
     }
 }
 
-label {
-    cursor: pointer;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
 .flexitem-right {
     display: flex;
     justify-content: flex-end;
@@ -374,88 +348,17 @@ label {
     justify-content: flex-start;
 }
 
-.hlCol {
-    background: $p-ml;
-}
-.hFire {
-    background: $fire;
-}
-.hlFire {
-    background: darken($fire, $darkenBy) !important;
-}
-.hNature {
-    background: $nature;
-}
-.hlNature {
-    background: darken($nature, $darkenBy) !important;
-}
-.hWater {
-    background: $water;
-}
-.hlWater {
-    background: darken($water, $darkenBy) !important;
-}
-.hLight {
-    background: $light;
-}
-.hlLight {
-    background: darken($light, $darkenBy) !important;
-}
-.hDark {
-    background: $dark;
-}
-.hlDark {
-    background: darken($dark, $darkenBy) !important;
-}
 
-.selected {
-    outline: 4px solid #3c78d8;
-    outline-offset: -2px;
-}
 
-table {
-    box-shadow: 0 0 8px 1px rgba(51, 51, 51, 0.5);
-    cursor: default;
-    white-space: nowrap;
-    font-size: smaller;
-    border-collapse: collapse;
-    tfoot,
-    thead {
-        background-color: $p-light;
-    }
-    th {
-        // position: sticky; top: 0;
-        padding: 0.3em 0.1em 0.2em 0.4em;
-        text-align: left;
-        cursor: pointer;
-        border: 1px solid $p-medium;
-    }
-    td {
-        border: 1px solid $p-ml;
-        padding: 0.1em 0.3em;
-        &:first-child {
-            border-left-color: $p-medium;
-        }
-        &:last-child {
-            border-right-color: $p-medium;
-        }
-        text-align: right;
-    }
+// .selected {
+//     outline: 4px solid #3c78d8;
+//     outline-offset: -2px;
+// }
 
-    tr {
-        &:last-child td {
-            border-bottom-color: $p-medium;
-        }
-    }
-}
 .class-icon {
     width: 18px;
     height: 18px;
     vertical-align: middle;
     margin-right: 0.2em;
-}
-body {
-    margin: 0 !important;
-    padding: 0 !important;
 }
 </style>

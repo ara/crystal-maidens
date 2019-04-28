@@ -40,6 +40,14 @@ $nature: $lime;
 $light: $yellow;
 $dark: $violet;
 
+$ele-colors: (
+  Fire: $red,
+  Water: $sky,
+  Nature: $lime,
+  Light: $yellow,
+  Dark: $violet
+);
+
 $sub-colors: (
   white-80:   transparentize($white, .2),
   white-54:   transparentize($white, .46),

@@ -13,14 +13,31 @@ body {
   padding: 1em;
   @include radial-lighten-light;
   @include shadow-dp-2;
-  overflow: hidden;
+  overflow: auto;
   z-index: 100;
   min-width: 3em;
   flex: 1;
 
-  &.-btn {
+  &.-opt {
+    cursor: pointer;
     flex: 0;
     min-width: 56px;
     margin-left: 8px;
+
+    .table-opt {
+      @include transition (3000ms);
+
+      &:hover {
+        @include rotate (360deg);
+        @include shadow-dp-12;     }
+    }
   }
+
+  &.-table {
+    padding: 0;
+  }
+}
+
+.headline {
+  width: 100px;
 }
