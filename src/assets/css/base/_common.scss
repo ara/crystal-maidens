@@ -15,4 +15,12 @@ body {
   @include shadow-dp-2;
   overflow: hidden;
   z-index: 100;
+  min-width: 3em;
+  flex: 1;
+
+  &.-btn {
+    flex: 0;
+    min-width: 56px;
+    margin-left: 8px;
+  }
 }

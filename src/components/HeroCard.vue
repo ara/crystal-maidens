@@ -1,5 +1,5 @@
 <template>
-  <div class="container3" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
+  <div class="col-2" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
     <div class="flex-col wide">
       <div v-if="isMinion" class="flex-row text-shadow headline"
         @click="toggleDetails"

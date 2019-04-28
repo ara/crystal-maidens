@@ -1,4 +1,5 @@
 // display
+
 .none {
   display: none;
 }
@@ -14,8 +15,8 @@
 .inline-block {
   display: inline-block;
 }
-
 // flex
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -46,8 +47,8 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 // position
+
 .fixed {
   position: fixed;
 }
@@ -59,23 +60,33 @@
 .relative {
   position: relative;
 }
-
 // margin, padding (16px * $size-value)
 $size: (
   0: 0,
-  0_25: 0.25, // 4px
-  0_5: 0.5,   // 8px
-  0_75: 0.75, // 12px
-  1: 1,       // 16px
-  1_5: 1.5,   // 24px
-  2: 2,       // 32px
-  2_5: 2.5,   // 40px
-  3: 3,       // 48px
-  3_5: 3.5,   // 56px
-  4: 4,       // 64px
-  4_5: 4.5,   // 72px
-  5: 5,       // 80px
-  6: 6,       // 96px
+  0_25: .25, // 4px
+  0_5: .5,
+  // 8px
+  0_75: .75, // 12px
+  1: 1,
+  // 16px
+  1_5: 1.5,
+  // 24px
+  2: 2,
+  // 32px
+  2_5: 2.5,
+  // 40px
+  3: 3,
+  // 48px
+  3_5: 3.5,
+  // 56px
+  4: 4,
+  // 64px
+  4_5: 4.5,
+  // 72px
+  5: 5,
+  // 80px
+  6: 6,
+  // 96px
   7: 7,
   8: 8,
   9: 9,
@@ -159,8 +170,8 @@ $d: (
 .mba {
   margin-bottom: auto !important;
 }
-
 // float
+
 .float-left {
   float: left;
   @include clearfix;
@@ -170,8 +181,8 @@ $d: (
   float: right;
   @include clearfix;
 }
-
 // text-align
+
 .text-left {
   text-align: left;
 }
@@ -186,4 +197,19 @@ $d: (
 
 .text-justify {
   text-align: justify;
+}
+
+.seperator {
+  background: map-get($sub-colors, white-30);
+  float: left;
+
+  &.-x {
+    width: 100%;
+    height: 1px;
+  }
+
+  &.-y {
+    width: 1px;
+    height: 24px;
+  }
 }

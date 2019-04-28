@@ -30,8 +30,9 @@
 }
 
 .form-group {
+  max-width: 9em;
   float: left;
-  margin-right: 2rem;
+  margin-right: 1rem;
   @include flex;
   @include align-items(center);
 }
