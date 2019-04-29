@@ -15,7 +15,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: map-get($sub-colors, white-30);
 }
-
 // ::-moz-selection {
 //   background: map-get($theme-colors, darken);
 //   color: $white;
@@ -69,4 +68,98 @@ body {
 
 .headline {
   width: 100px;
+}
+
+.portlet-content {
+  width: 100%;
+  float: left;
+  // @include flex;
+  @include align-items(center);
+  @include clearfix;
+}
+// hero thumbnail
+
+.hero-icon {
+  float: left;
+
+  img {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+  // hero rarity color
+  &.border-rarity {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 24px;
+  }
+}
+
+.hero-name {
+  float: left;
+  padding: 8px 0;
+  // hero name
+  .subtitle {
+    display: block;
+  }
+  // hero title
+  .overline {
+    display: block;
+    color: map-get($sub-colors, white-54);
+  }
+}
+
+.class-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+}
+// hero level
+
+.hero-lvl {
+  span {
+    margin-left: 0.25em;
+    color: $blue;
+  }
+}
+// hero stat line
+
+.cell-block {
+  float: left;
+  padding: 4px 0;
+  border-bottom: 1px solid map-get($sub-colors, white-10);
+  width: calc(100% - 72px);
+
+  li {
+    width: 100%;
+    float: left;
+    padding: 2px 0;
+
+    &:hover {
+      background: map-get($sub-colors, white-10);
+    }
+  }
+}
+
+.cell-cap,
+.cell-data {
+  @extend %overline;
+}
+
+.cell-cap {
+  color: map-get($sub-colors, white-80);
+  float: left;
+}
+
+.cell-data {
+  color: $blue;
+  float: right;
+}
+// item slots
+
+.gear {
+  position: absolute;
+  top: 112px;
+  right: 16px;
 }

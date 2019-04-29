@@ -24,10 +24,12 @@
             </select>
           </div>
         </div>
+
         <div class="portlet -opt">
           <i class="table-opt material-icons">settings</i>
         </div>
       </div>
+
       <div class="portlet p0">
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
@@ -42,6 +44,7 @@
         </table>
       </div>
     </div>
+
     <!-- REVIEW: Structure change: HeroConfig + HeroCard in col-8 -->
     <div class="col-8">
       <div class="portlet">
@@ -90,7 +93,7 @@
           </span>
         </div>
       </div>
-      <hero-card :heroID="heroID" v-for="heroID in selectedHeroIDs" :key="heroID" class="maiden-details"></hero-card>
+      <hero-card :heroID="heroID" v-for="heroID in selectedHeroIDs" :key="heroID"></hero-card>
     </div>
   </div>
 
@@ -349,11 +352,6 @@ $p-light: #eee;
     display: flex;
     justify-content: flex-start;
 }
-
-// .selected {
-//     outline: 4px solid #3c78d8;
-//     outline-offset: -2px;
-// }
 
 .class-icon {
     width: 18px;

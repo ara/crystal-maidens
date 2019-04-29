@@ -1,19 +1,19 @@
 // display
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .block {
-  display: block;
+  display: block !important;
 }
 
 .inline {
-  display: inline;
+  display: inline !important;
 }
 
 .inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 // flex
 
@@ -63,10 +63,10 @@
 // margin, padding (16px * $size-value)
 $size: (
   0: 0,
-  0_25: .25, // 4px
-  0_5: .5,
+  0_25: 0.25, // 4px
+  0_5: 0.5,
   // 8px
-  0_75: .75, // 12px
+  0_75: 0.75, // 12px
   1: 1,
   // 16px
   1_5: 1.5,
@@ -211,5 +211,10 @@ $d: (
   &.-y {
     width: 1px;
     height: 24px;
+  }
+
+  &.-b {
+    background: transparent;
+    border-bottom: 1px solid map-get($sub-colors, white-30);
   }
 }
