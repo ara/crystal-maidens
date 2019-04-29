@@ -30,9 +30,9 @@
 }
 
 .form-group {
-  max-width: 9em;
+  max-width: 9.3em;
   float: left;
-  margin-right: 1rem;
+  margin-right: 0.75rem;
   @include flex;
   @include align-items(center);
 }
@@ -54,6 +54,6 @@ input {
   @include clearfix;
 
   &[type="number"] {
-    width: 4rem;
+    width: 3.5rem;
   }
 }

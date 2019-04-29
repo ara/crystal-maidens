@@ -30,7 +30,6 @@ table {
 
       td {
         padding: 0 1em;
-        @include transition(300ms);
 
         &:first-child {
           padding-left: 2em;
@@ -39,20 +38,41 @@ table {
     }
   }
 }
-// if table row selected
-
-.selected {
-  outline: 2px solid $violet;
-  background: map-get($sub-colors, blue-10) !important;
-
-  td {
-    @include scale(1.1);
-  }
-}
 // maiden element colorline = .hNature {color:$nature}
 @each $get-color, $value in $ele-colors {
   .h#{$get-color} {
     color: $value;
+  }
+}
+
+// if table row selected
+.selected {
+  color: map-get($theme-colors, darken);
+  // outline: 2px solid $violet;
+  // outline-offset: -2px;
+  // background: map-get($sub-colors, blue-10) !important;
+  &.hLight {
+    @include linear-yellow-orange;
+  }
+
+  &.hDark {
+    @include linear-purple-violet;
+  }
+
+  &.hNature {
+    @include linear-mint-lime;
+  }
+
+  &.hFire {
+    @include linear-red-purple;
+  }
+
+  &.hWater {
+    @include linear-sky-cyan;
+  }
+
+  td {
+    @include scale(1.05);
   }
 }
 
