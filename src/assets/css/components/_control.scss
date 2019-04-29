@@ -31,6 +31,10 @@
       height: 24px;
       margin: 0;
     }
+
+    &:checked ~ p {
+      color: $white;
+    }
   }
 }
 
@@ -168,10 +172,6 @@
         &:after {
           display: block;
         }
-      }
-
-      & ~ p {
-        color: $white;
       }
     }
 

@@ -5,6 +5,7 @@ table {
 
   thead {
     th {
+      cursor: url('assets/ui/compare_arrows_24px.svg') 1 24, pointer;
       height: 24px;
       padding: 1em;
       color: map-get($sub-colors, white-80);

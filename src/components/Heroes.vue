@@ -1,26 +1,48 @@
 <template>
 <div class="contain">
   <div class="row">
-    <div class="col-4 flex">
-      <div class="portlet">
-        <div class="form-group">
-          <label for="selClass" @click="setFilterClass('All')">Class</label>
-          <select id="selClass" class="input" @input="setFilterClass($event.target.value)" :value="$store.state.heroes.filters.class">
-            <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']" :key="heroClass">{{ heroClass }}</option>
-          </select>
+    <!-- REVIEW: Structure change: TableFilter + Table in col-4 -->
+    <div class="col-4">
+      <div class="flex">
+        <div class="portlet">
+          <div class="form-group">
+            <label for="selClass" @click="setFilterClass('All')">Class</label>
+            <select id="selClass" class="input" @input="setFilterClass($event.target.value)" :value="$store.state.heroes.filters.class">
+              <option v-for="heroClass in ['All','Warrior','Mage','Marksman','Engineer','Support']" :key="heroClass">{{ heroClass }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="selEle" @click="setFilterElem('All')">Element</label>
+            <select id="selEle" class="input" @input="setFilterElem($event.target.value)" :value="$store.state.heroes.filters.element">
+              <option v-for="ele in ['All','Fire','Nature','Water','Light','Dark']" :key="ele.id">{{ ele }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Enemy Element</label>
+            <select class="input">
+              <option v-for="ele in ['Normal','Fire','Nature','Water','Light','Dark']" :key="ele.id">{{ ele }}</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="selEle" @click="setFilterElem('All')">Element</label>
-          <select id="selEle" class="input" @input="setFilterElem($event.target.value)" :value="$store.state.heroes.filters.element">
-            <option v-for="ele in ['All','Fire','Nature','Water','Light','Dark']" :key="ele.id">{{ ele }}</option>
-          </select>
+        <div class="portlet -opt">
+          <i class="table-opt material-icons">settings</i>
         </div>
       </div>
-
-      <div class="portlet -opt">
-        <i class="table-opt material-icons">settings</i>
+      <div class="portlet p0">
+        <table>
+          <thead @contextmenu.prevent="$refs.colMenu.open">
+            <th v-for="c in filteredHeroCols" :key="c.id" :class="c.dataField===sorting.col1?'hlCol':''" @click.middle.prevent="onColMiddleClick($event,c)" @click.left.exact="updateHeroesSort(c)">{{ c.caption }}</th>
+          </thead>
+          <tbody>
+            <tr v-for="m in sortedMaidens" :key="m.id" :id="'m'+m.id" :class="['h'+m.sElement, selectedHeroIDs.includes(m.id)?'selected':'']" @click.exact="select(m)" @click.ctrl.exact="select(m,true)">
+              <td v-for="col in profileColsObjects" :key="col.index" :class="sorting.col1===col.dataField?'hl'+m.sElement:''" :style="'text-align:'+(col.align || 'right')">
+                <img v-if="col.dataField==='name'" :title="m.sClass" :src="getImage(m.sClass)" class="class-icon"><span>{{ m[col.displayField] }}</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+    <!-- REVIEW: Structure change: HeroConfig + HeroCard in col-8 -->
     <div class="col-8">
       <div class="portlet">
         <div class="form-group">
@@ -68,26 +90,6 @@
           </span>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <aside class="col-4">
-      <div class="portlet -table">
-        <table>
-          <thead @contextmenu.prevent="$refs.colMenu.open">
-            <th v-for="c in filteredHeroCols" :key="c.id" :class="c.dataField===sorting.col1?'hlCol':''" @click.middle.prevent="onColMiddleClick($event,c)" @click.left.exact="updateHeroesSort(c)">{{ c.caption }}</th>
-          </thead>
-          <tbody>
-            <tr v-for="m in sortedMaidens" :key="m.id" :id="'m'+m.id" :class="['h'+m.sElement, selectedHeroIDs.includes(m.id)?'selected':'']" @click.exact="select(m)" @click.ctrl.exact="select(m,true)">
-              <td v-for="col in profileColsObjects" :key="col.index" :class="sorting.col1===col.dataField?'hl'+m.sElement:''" :style="'text-align:'+(col.align || 'right')">
-                <img v-if="col.dataField==='name'" :title="m.sClass" :src="getImage(m.sClass)" class="class-icon"><span>{{ m[col.displayField] }}</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </aside>
-    <div class="maiden-details-list">
       <hero-card :heroID="heroID" v-for="heroID in selectedHeroIDs" :key="heroID" class="maiden-details"></hero-card>
     </div>
   </div>
@@ -347,8 +349,6 @@ $p-light: #eee;
     display: flex;
     justify-content: flex-start;
 }
-
-
 
 // .selected {
 //     outline: 4px solid #3c78d8;

@@ -1,3 +1,31 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: map-get($sub-colors, white-10);
+  border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: map-get($sub-colors, white-30);
+}
+
+// ::-moz-selection {
+//   background: map-get($theme-colors, darken);
+//   color: $white;
+// }
+//
+// ::selection {
+//   background: map-get($theme-colors, darken);
+//   color: $white;
+// }
+
 html {
   height: 100%;
 }
@@ -9,10 +37,14 @@ body {
 
 .portlet {
   border-radius: $basic-radius;
-  margin: .5em 0;
+  float: left;
+  width: 100%;
+  margin: 0.5em 0;
   padding: 1em;
   @include radial-lighten-light;
   @include shadow-dp-2;
+  @include flex;
+  @include justify-content(space-between);
   overflow: auto;
   z-index: 100;
   min-width: 3em;
@@ -29,12 +61,9 @@ body {
 
       &:hover {
         @include rotate (360deg);
-        @include shadow-dp-12;     }
+        @include shadow-dp-12;
+      }
     }
-  }
-
-  &.-table {
-    padding: 0;
   }
 }
 
