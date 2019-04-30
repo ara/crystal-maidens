@@ -1799,6 +1799,1091 @@
       null
     ]
   },
+  "61": {
+    "id": 61,
+    "tex": null,
+    "name": "The Boob Plate",
+    "class": 1,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 7,
+        "defInc": 2.25,
+        "cdr": 3,
+        "cdrInc": 1.5,
+        "hp": 35,
+        "hpInc": 6
+      },
+      {
+        "def": 13,
+        "defInc": 4,
+        "cdr": 4,
+        "cdrInc": 2,
+        "hp": 70,
+        "hpInc": 15
+      },
+      null
+    ]
+  },
+  "62": {
+    "id": 62,
+    "tex": null,
+    "name": "Dwarven Forged Helmet",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 65,
+        "hpInc": 17.5,
+        "def": 4.5,
+        "defInc": 2,
+        "dmg": 20,
+        "dmgInc": 4
+      },
+      {
+        "hp": 90,
+        "hpInc": 25,
+        "def": 9,
+        "defInc": 3,
+        "dmg": 40,
+        "dmgInc": 8.5
+      },
+      null
+    ]
+  },
+  "63": {
+    "id": 63,
+    "tex": null,
+    "name": "Ring of lust",
+    "class": 1,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 7,
+        "asInc": 3,
+        "hp": 40,
+        "hpInc": 10,
+        "crit": 2.5,
+        "critInc": 1.5
+      },
+      {
+        "as": 11,
+        "asInc": 4,
+        "hp": 60,
+        "hpInc": 14,
+        "crit": 5,
+        "critInc": 2.5
+      },
+      null
+    ]
+  },
+  "64": {
+    "id": 64,
+    "tex": null,
+    "name": "Blue Crystal Saber",
+    "class": 1,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 11,
+        "asInc": 5,
+        "dmg": 66,
+        "dmgInc": 15,
+        "dodge": 2.5,
+        "dodgeInc": 1.2
+      },
+      {
+        "as": 17,
+        "asInc": 8.5,
+        "dmg": 120,
+        "dmgInc": 20,
+        "dodge": 5.5,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "65": {
+    "id": 65,
+    "tex": null,
+    "name": "Red Crystal Saber",
+    "class": 1,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 10,
+        "asInc": 5,
+        "dmg": 70,
+        "dmgInc": 15,
+        "crit": 3,
+        "critInc": 1.2
+      },
+      {
+        "as": 15,
+        "asInc": 8.5,
+        "dmg": 130,
+        "dmgInc": 20,
+        "crit": 7,
+        "critInc": 3
+      },
+      null
+    ]
+  },
+  "66": {
+    "id": 66,
+    "tex": null,
+    "name": "The Templar's best friend",
+    "class": 1,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 8,
+        "dodgeInc": 3,
+        "def": 3,
+        "defInc": 2,
+        "cdr": 2.2,
+        "cdrInc": 1.3
+      },
+      {
+        "dodge": 11,
+        "dodgeInc": 4,
+        "def": 6,
+        "defInc": 3,
+        "cdr": 3,
+        "cdrInc": 2.2
+      },
+      null
+    ]
+  },
+  "67": {
+    "id": 67,
+    "tex": null,
+    "name": "The Heels of Glory",
+    "class": 1,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 7,
+        "cdrInc": 2.5,
+        "dodge": 4.5,
+        "dodgeInc": 1.5,
+        "crit": 3.5,
+        "critInc": 1.5
+      },
+      {
+        "cdr": 9,
+        "cdrInc": 3.5,
+        "dodge": 7,
+        "dodgeInc": 2.5,
+        "crit": 5,
+        "critInc": 2
+      },
+      null
+    ]
+  },
+  "68": {
+    "id": 68,
+    "tex": null,
+    "name": "The Mildly Evil Dress",
+    "class": 2,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 4.5,
+        "dodgeInc": 1,
+        "cdr": 6,
+        "cdrInc": 1.5,
+        "as": 2.5,
+        "asInc": 1
+      },
+      {
+        "dodge": 7,
+        "dodgeInc": 1.2,
+        "cdr": 9,
+        "cdrInc": 2,
+        "as": 5,
+        "asInc": 1.5
+      },
+      null
+    ]
+  },
+  "69": {
+    "id": 69,
+    "tex": null,
+    "name": "Ring 69",
+    "class": 2,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 60,
+        "hpInc": 15,
+        "cdr": 6,
+        "cdrInc": 1.5,
+        "dmg": 20,
+        "dmgInc": 10
+      },
+      {
+        "hp": 100,
+        "hpInc": 25,
+        "cdr": 9,
+        "cdrInc": 2,
+        "dmg": 30,
+        "dmgInc": 15
+      },
+      null
+    ]
+  },
+  "70": {
+    "id": 70,
+    "tex": null,
+    "name": "The Mildly Evil Cowl",
+    "class": 2,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 5.5,
+        "critInc": 1.75,
+        "def": 3,
+        "defInc": 1,
+        "dodge": 1.5,
+        "dodgeInc": 1
+      },
+      {
+        "crit": 10,
+        "critInc": 2,
+        "def": 6,
+        "defInc": 2,
+        "dodge": 3,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "71": {
+    "id": 71,
+    "tex": null,
+    "name": "The Mildly Evil Boots",
+    "class": 2,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 60,
+        "dmgInc": 8,
+        "crit": 2.5,
+        "critInc": 1.5,
+        "cdr": 2.5,
+        "cdrInc": 1.5
+      },
+      {
+        "dmg": 90,
+        "dmgInc": 20,
+        "crit": 5,
+        "critInc": 2,
+        "cdr": 4,
+        "cdrInc": 1.75
+      },
+      null
+    ]
+  },
+  "72": {
+    "id": 72,
+    "tex": null,
+    "name": "Everlasting Ring",
+    "class": 2,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 5,
+        "dodgeInc": 2,
+        "cdr": 4,
+        "cdrInc": 1.75,
+        "as": 2,
+        "asInc": 1
+      },
+      {
+        "dodge": 10,
+        "dodgeInc": 3,
+        "cdr": 8,
+        "cdrInc": 2.5,
+        "as": 5,
+        "asInc": 2
+      },
+      null
+    ]
+  },
+  "73": {
+    "id": 73,
+    "tex": null,
+    "name": "The Godly Gift",
+    "class": 2,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 6,
+        "dodgeInc": 3,
+        "hp": 20,
+        "hpInc": 15,
+        "def": 1,
+        "defInc": 1
+      },
+      {
+        "dodge": 15,
+        "dodgeInc": 4,
+        "hp": 60,
+        "hpInc": 30,
+        "def": 3,
+        "defInc": 2.5
+      },
+      null
+    ]
+  },
+  "74": {
+    "id": 74,
+    "tex": null,
+    "name": "Moon Sorceress Staff",
+    "class": 2,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 5,
+        "critInc": 4,
+        "dmg": 60,
+        "dmgInc": 20,
+        "cdr": 2,
+        "cdrInc": 2
+      },
+      {
+        "crit": 8,
+        "critInc": 6,
+        "dmg": 100,
+        "dmgInc": 25,
+        "cdr": 3,
+        "cdrInc": 3
+      },
+      null
+    ]
+  },
+  "75": {
+    "id": 75,
+    "tex": null,
+    "name": "Green Vigilante's Vest",
+    "class": 3,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 6,
+        "defInc": 2,
+        "cdr": 6,
+        "cdrInc": 2.5,
+        "dodge": 1.75,
+        "dodgeInc": 1.5
+      },
+      {
+        "def": 10,
+        "defInc": 3,
+        "cdr": 7,
+        "cdrInc": 3,
+        "dodge": 3.5,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "76": {
+    "id": 76,
+    "tex": null,
+    "name": "Speedster's Boots",
+    "class": 3,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 9.5,
+        "asInc": 2.25,
+        "cdr": 5.5,
+        "cdrInc": 2.5,
+        "dodge": 2,
+        "dodgeInc": 1.5
+      },
+      {
+        "as": 11,
+        "asInc": 3.5,
+        "cdr": 6.5,
+        "cdrInc": 3,
+        "dodge": 4,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "77": {
+    "id": 77,
+    "tex": null,
+    "name": "Eagle Assassin Hood",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 8,
+        "critInc": 3,
+        "as": 4.5,
+        "asInc": 2.25,
+        "dodge": 1.75,
+        "dodgeInc": 1.5
+      },
+      {
+        "crit": 11,
+        "critInc": 5,
+        "as": 6.5,
+        "asInc": 2.75,
+        "dodge": 3.5,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "78": {
+    "id": 78,
+    "tex": null,
+    "name": "Quicky Buckler",
+    "class": 0,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 3,
+        "dodgeInc": 1.5,
+        "as": 4,
+        "asInc": 2.25,
+        "hp": 40,
+        "hpInc": 10
+      },
+      {
+        "dodge": 6.5,
+        "dodgeInc": 3.5,
+        "as": 6,
+        "asInc": 2.75,
+        "hp": 65,
+        "hpInc": 12
+      },
+      null
+    ]
+  },
+  "79": {
+    "id": 79,
+    "tex": null,
+    "name": "Ring of Marble Flesh",
+    "class": 3,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 54,
+        "hpInc": 11,
+        "def": 2.5,
+        "defInc": 2,
+        "dmg": 35,
+        "dmgInc": 7.5
+      },
+      {
+        "hp": 108,
+        "hpInc": 18,
+        "def": 2.5,
+        "defInc": 2,
+        "dmg": 35,
+        "dmgInc": 7.5
+      },
+      null
+    ]
+  },
+  "80": {
+    "id": 80,
+    "tex": null,
+    "name": "The Flexing Bow",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 48,
+        "dmgInc": 12.5,
+        "crit": 3,
+        "critInc": 1,
+        "hp": 35,
+        "hpInc": 9
+      },
+      {
+        "dmg": 94,
+        "dmgInc": 17,
+        "crit": 3,
+        "critInc": 1,
+        "hp": 60,
+        "hpInc": 10
+      },
+      null
+    ]
+  },
+  "81": {
+    "id": 81,
+    "tex": null,
+    "name": "Dagger of Edginess",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 11,
+        "asInc": 3,
+        "crit": 3,
+        "critInc": 1,
+        "cdr": 4,
+        "cdrInc": 1
+      },
+      {
+        "as": 15,
+        "asInc": 4,
+        "crit": 7.5,
+        "critInc": 2.5,
+        "cdr": 6,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  "82": {
+    "id": 82,
+    "tex": null,
+    "name": "Elven Tailored Gem Suit",
+    "class": 4,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 6,
+        "cdrInc": 2.5,
+        "dmg": 40,
+        "dmgInc": 12,
+        "hp": 32,
+        "hpInc": 8
+      },
+      {
+        "cdr": 12,
+        "cdrInc": 5,
+        "dmg": 70,
+        "dmgInc": 16,
+        "hp": 65,
+        "hpInc": 12
+      },
+      null
+    ]
+  },
+  "83": {
+    "id": 83,
+    "tex": null,
+    "name": "Titanium Boots",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 5,
+        "dodgeInc": 2.5,
+        "def": 4,
+        "defInc": 2,
+        "cdr": 2.5,
+        "cdrInc": 1
+      },
+      {
+        "dodge": 8,
+        "dodgeInc": 3,
+        "def": 7,
+        "defInc": 2.5,
+        "cdr": 4.5,
+        "cdrInc": 2.5
+      },
+      null
+    ]
+  },
+  "84": {
+    "id": 84,
+    "tex": null,
+    "name": "Helm of Resurection",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 60,
+        "hpInc": 15,
+        "cdr": 4,
+        "cdrInc": 2,
+        "dodge": 2.2,
+        "dodgeInc": 1
+      },
+      {
+        "hp": 90,
+        "hpInc": 20,
+        "cdr": 7,
+        "cdrInc": 3,
+        "dodge": 4.4,
+        "dodgeInc": 1.5
+      },
+      null
+    ]
+  },
+  "85": {
+    "id": 85,
+    "tex": null,
+    "name": "The Fabulous Aegis",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 4.2,
+        "defInc": 1.5,
+        "hp": 32,
+        "hpInc": 10,
+        "dodge": 2,
+        "dodgeInc": 1.5
+      },
+      {
+        "def": 8,
+        "defInc": 2.5,
+        "hp": 60,
+        "hpInc": 15,
+        "dodge": 4,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "86": {
+    "id": 86,
+    "tex": null,
+    "name": "The Ice Dragon Jewel",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 80,
+        "hpInc": 10,
+        "cdr": 5.5,
+        "cdrInc": 2,
+        "dodge": 2,
+        "dodgeInc": 1
+      },
+      {
+        "hp": 110,
+        "hpInc": 14,
+        "cdr": 7.5,
+        "cdrInc": 3,
+        "dodge": 3.5,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "87": {
+    "id": 87,
+    "tex": null,
+    "name": "The Fire Dragon Jewel",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 80,
+        "dmgInc": 10,
+        "as": 5.5,
+        "asInc": 2,
+        "crit": 2,
+        "critInc": 1
+      },
+      {
+        "dmg": 110,
+        "dmgInc": 14,
+        "as": 7.5,
+        "asInc": 3,
+        "crit": 3.5,
+        "critInc": 2
+      },
+      null
+    ]
+  },
+  "88": {
+    "id": 88,
+    "tex": null,
+    "name": "The Judge's Hammer",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 90,
+        "dmgInc": 13,
+        "cdr": 5,
+        "cdrInc": 2,
+        "crit": 5,
+        "critInc": 2.5
+      },
+      {
+        "dmg": 130,
+        "dmgInc": 16,
+        "cdr": 8,
+        "cdrInc": 3.5,
+        "crit": 8,
+        "critInc": 4
+      },
+      null
+    ]
+  },
+  "89": {
+    "id": 89,
+    "tex": null,
+    "name": "The Holy Master's Plate",
+    "class": 5,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 78,
+        "hpInc": 22,
+        "cdr": 6,
+        "cdrInc": 2,
+        "def": 1.5,
+        "defInc": 1.5
+      },
+      {
+        "hp": 100,
+        "hpInc": 29,
+        "cdr": 9,
+        "cdrInc": 4,
+        "def": 3,
+        "defInc": 2
+      },
+      null
+    ]
+  },
+  "90": {
+    "id": 90,
+    "tex": null,
+    "name": "The Holy Master's Boots",
+    "class": 5,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 63,
+        "hpInc": 18,
+        "dodge": 6.5,
+        "dodgeInc": 2.5,
+        "cdr": 3.5,
+        "cdrInc": 2.25
+      },
+      {
+        "hp": 90,
+        "hpInc": 23,
+        "dodge": 8.5,
+        "dodgeInc": 3.5,
+        "cdr": 7,
+        "cdrInc": 3.5
+      },
+      null
+    ]
+  },
+  "91": {
+    "id": 91,
+    "tex": null,
+    "name": "The Holy Master's Cowl",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 68,
+        "hpInc": 20,
+        "dmg": 52,
+        "dmgInc": 9,
+        "cdr": 3.5,
+        "cdrInc": 2.25
+      },
+      {
+        "hp": 95,
+        "hpInc": 25,
+        "dmg": 95,
+        "dmgInc": 15,
+        "cdr": 7,
+        "cdrInc": 3.5
+      },
+      null
+    ]
+  },
+  "92": {
+    "id": 92,
+    "tex": null,
+    "name": "The Sacred Shield",
+    "class": 5,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 6,
+        "defInc": 1.5,
+        "crit": 4.5,
+        "critInc": 2.5,
+        "hp": 65,
+        "hpInc": 10
+      },
+      {
+        "def": 9,
+        "defInc": 2.5,
+        "crit": 8,
+        "critInc": 4,
+        "hp": 90,
+        "hpInc": 15
+      },
+      null
+    ]
+  },
+  "93": {
+    "id": 93,
+    "tex": null,
+    "name": "The All Seeing Stone",
+    "class": 5,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 7,
+        "critInc": 2.5,
+        "as": 5,
+        "asInc": 2.5,
+        "cdr": 3,
+        "cdrInc": 2
+      },
+      {
+        "crit": 13,
+        "critInc": 5,
+        "as": 9,
+        "asInc": 2.5,
+        "cdr": 6,
+        "cdrInc": 3
+      },
+      null
+    ]
+  },
+  "94": {
+    "id": 94,
+    "tex": null,
+    "name": "The Everlasting Flame",
+    "class": 5,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 6.5,
+        "cdrInc": 2,
+        "hp": 40,
+        "hpInc": 9,
+        "dmg": 45,
+        "dmgInc": 9
+      },
+      {
+        "cdr": 11,
+        "cdrInc": 4,
+        "hp": 80,
+        "hpInc": 12,
+        "dmg": 75,
+        "dmgInc": 13
+      },
+      null
+    ]
+  },
+  "95": {
+    "id": 95,
+    "tex": null,
+    "name": "The Neon Mace",
+    "class": 5,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 80,
+        "dmgInc": 21,
+        "crit": 5.5,
+        "critInc": 2,
+        "as": 2,
+        "asInc": 1
+      },
+      {
+        "dmg": 110,
+        "dmgInc": 28,
+        "crit": 9.5,
+        "critInc": 3,
+        "as": 4,
+        "asInc": 2
+      },
+      null
+    ]
+  },
   "997": {
     "id": 997,
     "tex": 998,
@@ -2285,6 +3370,30 @@
         "critInc": 2.25,
         "cdr": 4.5,
         "cdrInc": 2.25
+      },
+      null
+    ]
+  },
+  "2021": {
+    "id": 2021,
+    "name": "Kebi's Sunrod ",
+    "maiden": 45,
+    "class": 5,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      {
+        "cdr": 18,
+        "cdrInc": 5.5,
+        "dodge": 6,
+        "dodgeInc": 3,
+        "hp": 100,
+        "hpInc": 22
       },
       null
     ]
@@ -6701,7 +7810,14 @@
     "stats": [
       null,
       null,
-      null,
+      {
+        "hp": 0.01,
+        "hpInc": 0.01,
+        "def": 0.01,
+        "defInc": 0.01,
+        "crit": 0.01,
+        "critInc": 0.01
+      },
       {
         "hp": 0.01,
         "hpInc": 0.01,
@@ -8987,6 +10103,126 @@
         "critInc": 3.5,
         "def": 3,
         "defInc": 3
+      }
+    ]
+  },
+  "6100": {
+    "id": 6100,
+    "tex": null,
+    "name": "Steampunk Corset",
+    "class": 0,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "cdr": 12,
+        "cdrInc": 4,
+        "as": 8,
+        "asInc": 3.5,
+        "dodge": 4,
+        "dodgeInc": 1.75
+      }
+    ]
+  },
+  "6101": {
+    "id": 6101,
+    "tex": null,
+    "name": "Steampunk Longboots",
+    "class": 0,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 9,
+        "crit": 5,
+        "critInc": 2,
+        "cdr": 7,
+        "cdrInc": 2.5
+      }
+    ]
+  },
+  "6102": {
+    "id": 6102,
+    "tex": null,
+    "name": "Steampunk Clock-Shield",
+    "class": 0,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "as": 20,
+        "asInc": 5,
+        "cdr": 8,
+        "cdrInc": 2,
+        "dodge": 5,
+        "dodgeInc": 1.75
+      }
+    ]
+  },
+  "6103": {
+    "id": 6103,
+    "tex": null,
+    "name": "Steampunk Mask",
+    "class": 0,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "cdr": 10,
+        "cdrInc": 3.5,
+        "dodge": 6,
+        "dodgeInc": 2.5,
+        "as": 4,
+        "asInc": 2.5
+      }
+    ]
+  },
+  "6104": {
+    "id": 6104,
+    "tex": null,
+    "name": "Steampunk Pistol",
+    "class": 0,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 100,
+        "dmgInc": 9,
+        "crit": 6,
+        "critInc": 2,
+        "as": 6.5,
+        "asInc": 2.5
       }
     ]
   }

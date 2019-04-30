@@ -2781,11 +2781,11 @@
     "crit": 2,
     "dodge": 5,
     "def": 0,
-    "hpCoef": 2.19,
+    "hpCoef": 2.15,
     "dmgCoef": 2.07,
-    "skillCoef": 2.35,
+    "skillCoef": 2.3,
     "hp": {
-      "base": 700,
+      "base": 600,
       "inc": 40
     },
     "respawnCD": 10,
@@ -2806,11 +2806,13 @@
     },
     "skill": {
       "id": 90,
+      "name": "Blessing of the Sun",
+      "desc": "Use the power of the sun gods to stun your enemies while revivifying your allies",
       "castTime": 0.8,
-      "CD": 1,
+      "CD": 12,
       "range": 7,
       "missChance": 0,
-      "radius": 3,
+      "radius": 4,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
@@ -2819,30 +2821,23 @@
       "healTicks": 0,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "your allies and yourself",
-          "damagealter": -150,
-          "damagealterInc": -25,
-          "duration": 60
-        },
-        {
           "type": "HealEffect",
           "target": "your allies and yourself",
-          "hp": 350,
-          "hpInc": 330
+          "hp": 250,
+          "hpInc": 250
         },
         {
           "type": "AlterAttackSpeed",
           "target": "your allies and yourself",
-          "percent": 1500,
-          "percentInc": 80,
-          "duration": 60
+          "percent": 1000,
+          "percentInc": 90,
+          "duration": 50
         },
         {
           "type": "StunEffect",
           "target": "enemies",
           "duration": 5,
-          "durationInc": 1
+          "durationInc": 2
         }
       ],
       "healDuration": 0
@@ -6708,7 +6703,7 @@
     "id": 1999,
     "name": "#1999",
     "rarity": 0,
-    "element": 8,
+    "element": 4,
     "class": 3,
     "moveSpeed": 4,
     "as": 120,
