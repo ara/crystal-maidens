@@ -1,6 +1,6 @@
 <template>
 <div class="col-3 p0 float-left" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
-  <div class="portlet block">
+  <div class="portlet flexible-height block">
 
     <div v-if="isMinion" class="flex-row text-shadow headline" @click="toggleDetails" style="cursor:pointer;margin: .2em 0 -.2em 0;">
       <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>

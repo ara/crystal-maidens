@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="portlet p0">
+      <div class="portlet p0 flexible-height">
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
             <th v-for="c in filteredHeroCols" :key="c.id"
