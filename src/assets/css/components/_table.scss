@@ -1,0 +1,91 @@
+table {
+  white-space: nowrap;
+  width: 100%;
+  @extend %overline;
+
+  thead {
+    th {
+      cursor: url('assets/ui/compare_arrows_24px.svg') 1 24, pointer;
+      height: 24px;
+      padding: 1em;
+      color: map-get($sub-colors, white-80);
+    }
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+      height: 24px;
+      @include transition(100ms);
+      @include box-shadow (0 0 0 map-get($theme-colors, darken));
+
+      &:nth-child(odd) {
+        background: map-get($theme-colors, light);
+      }
+
+      &:hover {
+        background: map-get($theme-colors, lighten);
+        @include shadow-dp-2;
+        @include scale(1.01);
+      }
+
+      td {
+        padding: 0 1em;
+
+        &:first-child {
+          padding-left: 2em;
+        }
+      }
+    }
+  }
+}
+// maiden element colorline = .hNature {color:$nature}
+@each $get-color, $value in $ele-colors {
+  .h#{$get-color} {
+    color: $value;
+  }
+}
+
+// if table row selected
+.selected {
+  color: map-get($theme-colors, darken);
+  // outline: 2px solid $violet;
+  // outline-offset: -2px;
+  // background: map-get($sub-colors, blue-10) !important;
+  &.hLight {
+    @include linear-yellow-orange;
+  }
+
+  &.hDark {
+    @include linear-purple-violet;
+  }
+
+  &.hNature {
+    @include linear-mint-lime;
+  }
+
+  &.hFire {
+    @include linear-red-purple;
+  }
+
+  &.hWater {
+    @include linear-sky-cyan;
+  }
+
+  td {
+    @include scale(1.05);
+  }
+}
+
+.hlCol {
+  color: $blue;
+  background: map-get($sub-colors, blue-10);
+}
+
+.hlDark,
+.hlFire,
+.hlLight,
+.hlNature,
+.hlWater {
+  background: map-get($sub-colors, blue-10);
+}

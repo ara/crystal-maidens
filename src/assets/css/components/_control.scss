@@ -1,39 +1,55 @@
 // 01: Switch Start
 // 02: Checkbox, Radio Start
 // 01: Switch Start
-
-.switch {
+@mixin control {
+  position: relative;
   display: inline-block;
   height: 24px;
-  padding-right: 48px;
-  position: relative;
-
+  padding-top: 0;
+  margin-bottom: 0;
+  @include flex;
+  @include align-items(center);
   p {
-    padding: 0.5em 0;
-    margin-right: 8px;
+    cursor: pointer;
+    text-align: left;
+    color: map-get($sub-colors, white-54);
+    @include transition ($CubicBezier 200ms);
   }
-  // basic checkbox hidden
+
   input {
     position: absolute;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    margin-left: -999px;
+    z-index: -1;
     opacity: 0;
-    // if switch unchecked
+
     & ~ span {
       cursor: pointer;
+      display: inline-block;
       box-sizing: border-box;
       position: absolute;
       top: 0;
-      display: inline-block;
+      left: 0;
+      height: 24px;
+      margin: 0;
+    }
+
+    &:checked ~ p {
+      color: $white;
+    }
+  }
+}
+
+.switch {
+  @include control;
+  padding-left: 56px;
+  // basic checkbox hidden
+  input {
+    // if switch unchecked
+    & ~ span {
       float: left;
       width: 48px;
-      height: 24px;
       background: map-get($theme-colors, darken);
       border: 1px solid map-get($theme-colors, lighten);
       border-radius: 12px;
-      margin: 0;
       //switch background-color
       &:before {
         content: '';
@@ -89,7 +105,7 @@
   }
   // if switch checked, disabled
   input:checked:disabled ~ span {
-    opacity: 0.54;
+    opacity: .54;
 
     &:after {
       background: map-get($sub-colors, white-80);
@@ -137,36 +153,17 @@
 
 .checkbox,
 .radio {
-  position: relative;
-  display: inline-block;
+  @include control;
   width: auto;
-  height: 24px;
-  padding-top: 0;
   padding-left: 32px;
-  margin-bottom: 0;
 
   span {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 24px;
     width: 24px;
     border: 2px solid map-get($sub-colors, white-30);
     @include transition ($CubicBezier 200ms);
   }
-
-  p {
-    cursor: pointer;
-    color: map-get($sub-colors, white-54);
-    padding: 0.5em 0;
-    @include transition ($CubicBezier 200ms);
-  }
   // hide basic box
   input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
     // actual view box
     &:checked {
       & ~ span {
@@ -175,10 +172,6 @@
         &:after {
           display: block;
         }
-      }
-
-      & ~ p {
-        color: $white;
       }
     }
 

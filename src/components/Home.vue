@@ -1,5 +1,5 @@
 <template>
-  <!-- REVIEW: Subsequent unused components are removed with SCSS -->
+<!-- REVIEW: Subsequent unused components are removed with SCSS -->
 <div class="contain">
   <!-- input -->
   <div class="row">
@@ -14,7 +14,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="label"  for="GoToInput">Enemy<br />Element</label>
+          <label class="label" for="GoToInput">Enemy<br />Element</label>
           <input id="GoToInput" class="input" />
         </div>
         <div class="form-group">
@@ -50,9 +50,7 @@
       <span class="switch">
         <label>
           <input type="checkbox" checked="">
-          <p>
-            Switch
-          </p>
+          <p>Switch</p>
           <span></span>
         </label>
       </span>
@@ -173,6 +171,11 @@
     </div>
   </div>
   <!-- button -->
+  <div class="row">
+    <div class="col-12">
+      <button class="btn">btn</button>
+    </div>
+  </div>
 </div>
 </template>
 

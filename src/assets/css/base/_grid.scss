@@ -26,8 +26,6 @@ html {
   padding: 0 32px;
   margin-right: auto;
   margin-left: auto;
-  // min-height: calc(100vh - 72px);
-  min-width: 1920px;
 }
 @media (min-width: 576px) {
   .contain {
@@ -46,7 +44,9 @@ html {
 }
 @media (min-width: 1200px) {
   .contain {
-    max-width: 1140px;
+    max-width: 1920px;
+    // max-height: calc(100vh - 72px);
+    // overflow: hidden;
   }
 }
 

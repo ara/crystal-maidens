@@ -12,6 +12,7 @@ $theme-colors:(
   lighten: hsla(234, 31, 33, 1)
 );
 
+
 $white:   hsla(201, 69, 90, 1);
 $blue:    hsla(218, 90, 72, 1);
 $sky:     hsla(198, 74, 71, 1);
@@ -38,6 +39,14 @@ $water: $sky;
 $nature: $lime;
 $light: $yellow;
 $dark: $violet;
+
+$ele-colors: (
+  Fire: $red,
+  Water: $sky,
+  Nature: $lime,
+  Light: $yellow,
+  Dark: $violet
+);
 
 $sub-colors: (
   white-80:   transparentize($white, .2),

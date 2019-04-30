@@ -1,3 +1,103 @@
-button {
-  color: black;
+// Basic Button style
+// 01: Contained Button start
+
+.btn {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  width: auto;
+  height: 24px;
+  padding: 0 12px;
+  box-shadow: 0 4px 8px map-get($sub-colors, blue-30);
+  color: map-get($theme-colors, darken);
+  white-space: nowrap;
+  outline: none;
+  overflow: hidden;
+  @include linear-blue-sky;
+  @include transition (200ms);
+  @include user-select(none);
+
+  i {
+    float: left;
+    font-size: 16px;
+    width: 28px;
+  }
+  // @each $get-color, $value in $colors {
+  //   &.btn-#{$get-color} {
+  //     box-shadow: 0 4px 8px map-get($sub-colors, #{$get-color}-30);
+  //
+  //     &:hover {
+  //       box-shadow: 0 8px 16px map-get($sub-colors, #{$get-color}-30);
+  //       @include translate(0, -2px);
+  //     }
+  //
+  //     &:active {
+  //       @include translate(0, 0);
+  //     }
+  //   }
+  // }
+  &.btn-blue {
+    @include linear-blue-sky;
+  }
+
+  &.btn-sky {
+    @include linear-sky-cyan;
+  }
+
+  &.btn-cyan {
+    @include linear-cyan-mint;
+  }
+
+  &.btn-mint {
+    @include linear-mint-lime;
+  }
+
+  &.btn-green {
+    @include linear-green-lime;
+  }
+
+  &.btn-lime {
+    @include linear-lime-yellow;
+  }
+
+  &.btn-yellow {
+    @include linear-yellow-orange;
+  }
+
+  &.btn-orange {
+    @include linear-orange-red;
+  }
+
+  &.btn-red {
+    @include linear-red-purple;
+  }
+
+  &.btn-purple {
+    @include linear-purple-violet;
+  }
+
+  &:hover {
+    @include scale(1.03);
+  }
+
+  &:active {
+    opacity: .9;
+    @include scale(.98);
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    background: map-get($sub-colors, white-10);
+    box-shadow: none;
+    color: map-get($sub-colors, white-30);
+
+    &:hover {
+      box-shadow: none;
+      @include translate(0,0);
+    }
+  }
 }
+// 01: Contained Button end

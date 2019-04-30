@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="isMinion?'ww-minion':'ww'"
+  <div class="portlet-content" :class="isMinion?'ww-minion':'ww'"
     @mousedown.left="mousedown=true"
     @mouseup.left="clearTimer()"
     @mouseout="clearTimer()"
