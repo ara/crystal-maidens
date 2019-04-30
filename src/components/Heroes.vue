@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="portlet p0">
+      <div class="portlet p0 flexible-height">
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
             <th v-for="c in filteredHeroCols" :key="c.id" :class="c.dataField===sorting.col1?'hlCol':''" @click.middle.prevent="onColMiddleClick($event,c)" @click.left.exact="updateHeroesSort(c)">{{ c.caption }}</th>

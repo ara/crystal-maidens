@@ -24,7 +24,7 @@ body {
 //
 %subtitle,
 .subtitle {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: $font-weight-regular;
   margin: 0;
 
@@ -36,7 +36,7 @@ body {
 }
 
 .body {
-  font-size: .875rem;
+  font-size: .875em;
   font-weight: $font-weight-regular;
   line-height: 1.5;
 
@@ -49,21 +49,21 @@ body {
 
 .btn, %btn,
 .button {
-  font-size: .875rem;
+  font-size: .875em;
   font-weight: $font-weight-medium;
   text-transform: uppercase;
   letter-spacing: .15em;
 }
 %caption,
 .caption {
-  font-size: .75rem;
+  font-size: .75em;
   font-weight: $font-weight-regular;
   line-height: 1.5;
 }
 
 %overline,
 .overline {
-  font-size: .6875rem;
+  font-size: .75em;
   font-weight: $font-weight-regular;
   text-transform: uppercase;
   letter-spacing: .05em;

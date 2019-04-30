@@ -45,6 +45,7 @@ html {
 @media (min-width: 1200px) {
   .contain {
     max-width: 1920px;
+    min-width: 1920px;
     // max-height: calc(100vh - 72px);
     // overflow: hidden;
   }
