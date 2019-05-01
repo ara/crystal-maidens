@@ -29,17 +29,31 @@ export default new Vuex.Store({
     },
 
     loadStore(state) {
-      const savedState = localStorage.getItem('state');
+      // let t = Date.now();
+      let savedState = localStorage.getItem('state');
+
       if( savedState ) {
-        Object.assign( state, JSON.parse( savedState ) );
-        this.replaceState(state);
+        savedState = JSON.parse( savedState );
+        const mergedState = Object.assign( {}, state, savedState );
+        // console.log(`load + parse + global merge: ${Date.now()-t} ms`); t = Date.now();
+
+        /* crazy CPU load! */
+        // Object.assign( state.items.gearItems, savedState.items.gearItems );
+
+        /* add newly generated items */
+        for( const gearItemID in state.items.gearItems ) {
+          if( savedState.items.gearItems[gearItemID] ) continue;
+          savedState.items.gearItems[gearItemID] = state.items.gearItems[gearItemID];
+        }
+
+        // console.log(`gearItems merge: ${Date.now()-t} ms`); t = Date.now();
+        Object.assign( state.items.maidensGear, savedState.items.maidensGear );
+        // console.log(`maidensGear merge: ${Date.now()-t} ms`); t = Date.now();
+
+        // console.log(`fine grained merge: ${Date.now()-t} ms`); t = Date.now();
+        this.replaceState(mergedState);
+        // console.log(`replace state: ${Date.now()-t} ms`);
       }
-      // if(localStorage.getItem('heroFilters')) {
-      //   Object.assign( state.heroes.filters, JSON.parse(localStorage.getItem('heroFilters')) );
-      //   this.replaceState( state )
-      //   Object.assign( state, JSON.parse(localStorage.getItem('state')) );
-      //   this.replaceState(state);
-      // }
     },
     watchStore(state) {
       // Subscribe to store updates
