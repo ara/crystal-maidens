@@ -8,7 +8,7 @@ const defaultGearItems = {};
 
 Object.keys(baseItems).map( key => {
   const item = baseItems[key];
-  item.imageUrl = itemImages.get(item.tex || item.id);
+  item.imageUrl = itemImages.get(item.tex || item.id) || itemImages.get(0);
   if( item.stats[RARITY.SET_ITEM] ) {
     item.set = sets.find( s => s.items.includes(item.id) );
   }

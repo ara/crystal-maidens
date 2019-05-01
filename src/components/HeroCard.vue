@@ -214,7 +214,7 @@ export default {
       document.getElementById('close' + this.heroID).style.color = color;
     },
     getImage(key) {
-      return heroImages.get(key);
+      return heroImages.get(key) || heroImages.get(0);
     },
     digit1: val => Math.round(val * 10) / 10,
     digit2: val => Math.round(val * 100) / 100,

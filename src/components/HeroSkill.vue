@@ -105,7 +105,7 @@ export default {
       return this.heroes.find( h => h.id === this.heroID );
     },
     skill () { return this.hero.skill; },
-    skillIcon () { return skillIcons.get(this.skill.id); },
+    skillIcon () { return skillIcons.get(this.skill.id) || skillIcons.get(0); },
     skillName () { return this.skill.name || '#' + this.skill.id; },
     heroCDR () {
       return this.isMinion ? 0 : this.cdr;

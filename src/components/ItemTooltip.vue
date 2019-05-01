@@ -41,7 +41,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { bgItems } from '../api/const.js';
+import { bgItems, itemImages } from '../api/const.js';
 import { hideTT as hideTooltip } from '../api/itemTooltip.js';
 
 export default {
