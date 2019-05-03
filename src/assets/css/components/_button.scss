@@ -83,8 +83,8 @@
   }
 
   &:active {
-    opacity: .9;
-    @include scale(.98);
+    opacity: 0.9;
+    @include scale(0.98);
   }
 
   &.disabled,
@@ -101,3 +101,17 @@
   }
 }
 // 01: Contained Button end
+
+.close {
+  position: absolute;
+  right: 24px;
+  background: transparent;
+  color: map-get($sub-colors, white-54);
+  border: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}

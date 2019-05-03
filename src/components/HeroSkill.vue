@@ -6,8 +6,10 @@
   >
     <div class="headline" @click="toggleDetails">
       <img v-if="skillIcon" :src="skillIcon" class="skill-icon">
-      <span class="skill-name">{{ skillName }}</span>
-      <span class="skill-level">(Level {{ skillLevel }})</span>
+      <div class="hero-name">
+        <span class="body bold">{{ skillName }}</span>
+        <span class="level overline">Level <span>{{ skillLevel }}</span></span>
+      </div>
       <div v-if="!isMinion" class="skill-buttons" @click="$event.stopPropagation()">
         <button class="skill-bt"
           @mousedown.left="updateSkillLevel(-1)"
@@ -339,6 +341,7 @@ li {
   }
 }
 .headline {
+  position: relative;
   display: flex;
   align-items: center;
   padding-bottom: .2em;

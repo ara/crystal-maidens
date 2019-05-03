@@ -3,7 +3,7 @@
     <div class="portlet flexible-height block">
 
       <div v-if="isMinion" class="flex-row text-shadow headline" @click="toggleDetails" style="cursor:pointer;margin: .2em 0 -.2em 0;">
-        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero"><i class="material-icons">close</i></button>
 
         <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
 
@@ -21,7 +21,7 @@
       </div>
 
       <div v-else :style="showDetails?'':'margin-bottom:-0.5em;'">
-        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero"><i class="material-icons">close</i></button>
 
         <div class="portlet-content">
           <div class="hero-icon">
@@ -38,7 +38,7 @@
           <!-- <span class="attr">{{ hero.sClass }}</span> -->
           <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
           <!-- <span class="attr">{{ hero.sElement }}</span> -->
-          <span class="hero-lvl overline">Level<span>{{ heroLevel }}</span></span>
+          <span class="level overline">Level<span>{{ heroLevel }}</span></span>
         </div>
       </div>
 
