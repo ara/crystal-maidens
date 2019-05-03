@@ -24,13 +24,9 @@
             </select>
           </div>
         </div>
-
-        <div class="portlet -opt">
-          <i class="table-opt material-icons">settings</i>
-        </div>
       </div>
 
-      <div class="portlet p0 flexible-height">
+      <div class="portlet p0 overflow-a flexible-height">
         <table>
           <thead @contextmenu.prevent="$refs.colMenu.open">
             <th v-for="c in filteredHeroCols" :key="c.id"
@@ -57,56 +53,61 @@
               ><span>{{ m[col.displayField] }}</span></td>
             </tr>
           </tbody>
+
         </table>
       </div>
     </div>
 
     <!-- REVIEW: Structure change: HeroConfig + HeroCard in col-8 -->
-    <div class="col-8">
-      <div class="portlet">
-        <div class="form-group">
-          <label for="txCamp">Camp Lvl</label>
-          <input type="number" min="0" max="15" step="1" id="txCamp" @input="setCampLevel($event)" :value="campLevel">
+    <div class="col-8 p0">
+      <div class="portlet m0_5">
+        <div class="portlet-block">
+          <div class="form-group col-4">
+            <label for="txCamp">Camp Lvl</label>
+            <input type="number" min="0" max="15" step="1" id="txCamp" @input="setCampLevel($event)" :value="campLevel">
+          </div>
+          <div class="form-group col-4">
+            <label for="txHeroLevel">Maiden Lvl</label>
+            <input type="number" min="1" max="85" id="txHeroLevel" @input="setHeroLevel($event)" :value="heroLevel">
+          </div>
+          <div class="form-group col-4">
+            <label for="txSkillLevel">Skill Lvl</label>
+            <input type="number" min="1" max="29" id="txSkillLevel" @input="setSkillLevel($event)" :value="skillLevel">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="txHeroLevel">Maiden Lvl</label>
-          <input type="number" min="1" max="85" id="txHeroLevel" @input="setHeroLevel($event)" :value="heroLevel">
+        <div class="portlet-block">
+          <div class="form-group col-4">
+            <label for="txHeroAS" @click="$store.commit('updateHeroExtraAS',0)">Atk Spd test</label>
+            <input type="number" min="0" max="1000" step="20" id="txHeroAS" v-model="heroExtraAS">
+          </div>
+          <div class="form-group col-4">
+            <label for="txCDR">CDR(%)</label>
+            <input type="number" min="0" max="50" step="5" id="txCDR" @input="setCDR($event)" :value="cdr">
+          </div>
+          <div class="form-group col-4">
+            <label>Item Lvl</label>
+            <input type="number" min="1" max="5" step="1">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="txSkillLevel">Skill Lvl</label>
-          <input type="number" min="1" max="29" id="txSkillLevel" @input="setSkillLevel($event)" :value="skillLevel">
-        </div>
-        <div class="seperator -y mr1"></div>
-        <div class="form-group">
-          <label for="txHeroAS" @click="$store.commit('updateHeroExtraAS',0)">Atk Spd test</label>
-          <input type="number" min="0" max="1000" step="20" id="txHeroAS" v-model="heroExtraAS">
-        </div>
-        <div class="form-group">
-          <label for="txCDR">CDR(%)</label>
-          <input type="number" min="0" max="50" step="5" id="txCDR" @input="setCDR($event)" :value="cdr">
-        </div>
-        <div class="form-group">
-          <label>Item Lvl</label>
-          <input type="number" min="1" max="5" step="1">
-        </div>
-        <div class="seperator -y mr1"></div>
-        <div class="form-group">
-          <span class="switch">
-            <label for="checkSkillDetails">
-              <input id="checkSkillDetails" type="checkbox" v-model="showSkillDetails">
-              <p>Show skill details</p>
-              <span></span>
-            </label>
-          </span>
-        </div>
-        <div class="form-group">
-          <span class="switch">
-            <label for="checkMinionDetails">
-              <input id="checkMinionDetails" type="checkbox" v-model="showMinionDetails">
-              <p>Show minion details</p>
-              <span></span>
-            </label>
-          </span>
+        <div class="portlet-block">
+          <div class="form-group col-6">
+            <span class="switch">
+              <label for="checkSkillDetails">
+                <input id="checkSkillDetails" type="checkbox" v-model="showSkillDetails">
+                <p>Show skill details</p>
+                <span></span>
+              </label>
+            </span>
+          </div>
+          <div class="form-group col-6">
+            <span class="switch">
+              <label for="checkMinionDetails">
+                <input id="checkMinionDetails" type="checkbox" v-model="showMinionDetails">
+                <p>Show minion details</p>
+                <span></span>
+              </label>
+            </span>
+          </div>
         </div>
       </div>
       <hero-card :heroID="heroID" v-for="heroID in selectedHeroIDs" :key="heroID"></hero-card>
@@ -374,10 +375,4 @@ $p-light: #eee;
     justify-content: flex-start;
 }
 
-.class-icon {
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    margin-right: 0.2em;
-}
 </style>

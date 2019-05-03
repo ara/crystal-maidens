@@ -26,22 +26,23 @@ html {
   padding: 0 32px;
   margin-right: auto;
   margin-left: auto;
+  min-width: 1920px;
 }
-@media (min-width: 576px) {
-  .contain {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .contain {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .contain {
-    max-width: 960px;
-  }
-}
+// @media (min-width: 576px) {
+//   .contain {
+//     max-width: 540px;
+//   }
+// }
+// @media (min-width: 768px) {
+//   .contain {
+//     max-width: 720px;
+//   }
+// }
+// @media (min-width: 992px) {
+//   .contain {
+//     max-width: 960px;
+//   }
+// }
 @media (min-width: 1200px) {
   .contain {
     max-width: 1920px;

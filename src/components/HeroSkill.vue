@@ -305,9 +305,9 @@ li {
   background: #ddd;
   border: 1px solid #aaa;
 }
-.ww {
-  width: 20.5em;
-}
+// .ww {
+//   width: 20.5em;
+// }
 .ww-minion {
   width: 18.6em;
 }

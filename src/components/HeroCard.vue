@@ -1,78 +1,78 @@
 <template>
-<div class="col-3 p0 float-left" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
-  <div class="portlet flexible-height block">
+  <div class="col-3 float-left" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
+    <div class="portlet flexible-height block">
 
-    <div v-if="isMinion" class="flex-row text-shadow headline" @click="toggleDetails" style="cursor:pointer;margin: .2em 0 -.2em 0;">
-      <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+      <div v-if="isMinion" class="flex-row text-shadow headline" @click="toggleDetails" style="cursor:pointer;margin: .2em 0 -.2em 0;">
+        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
 
-      <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
+        <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
 
-      <div v-else style="padding-left:.5em;"></div>
-      <span class="hero-name">{{ hero.name }}</span>
-      <span class="hero-title" v-if="hero.title">{{ hero.title }}</span>
+        <div v-else style="padding-left:.5em;"></div>
+        <span class="hero-name">{{ hero.name }}</span>
+        <span class="hero-title" v-if="hero.title">{{ hero.title }}</span>
 
-      <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
-      <span class="attr">{{ hero.sClass }}</span>
-
-      <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
-
-      <span class="attr">{{ hero.sElement }}</span>
-      <span class="lvl">(Level {{ heroLevel }})</span>
-    </div>
-
-    <div v-else class="w-100" :style="showDetails?'':'margin-bottom:-0.5em;'">
-      <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
-
-      <div class="portlet-content">
-        <div class="hero-icon">
-          <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
-        </div>
-        <div class="hero-name">
-          <span class="subtitle bold">{{ hero.name }}</span>
-          <span class="overline" v-if="hero.title">{{ hero.title }}</span>
-        </div>
-      </div>
-
-      <div class="portlet-content mt0_25 pb0_5 seperator -b">
         <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
-        <!-- <span class="attr">{{ hero.sClass }}</span> -->
+        <span class="attr">{{ hero.sClass }}</span>
+
         <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
-        <!-- <span class="attr">{{ hero.sElement }}</span> -->
-        <span class="hero-lvl overline">Level<span>{{ heroLevel }}</span></span>
+
+        <span class="attr">{{ hero.sElement }}</span>
+        <span class="lvl">(Level {{ heroLevel }})</span>
       </div>
+
+      <div v-else class="w-100" :style="showDetails?'':'margin-bottom:-0.5em;'">
+        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
+
+        <div class="portlet-content">
+          <div class="hero-icon">
+            <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
+          </div>
+          <div class="hero-name">
+            <span class="subtitle bold">{{ hero.name }}</span>
+            <span class="overline" v-if="hero.title">{{ hero.title }}</span>
+          </div>
+        </div>
+
+        <div class="portlet-content mt0_25 pb0_5 seperator -b">
+          <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+          <!-- <span class="attr">{{ hero.sClass }}</span> -->
+          <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
+          <!-- <span class="attr">{{ hero.sElement }}</span> -->
+          <span class="hero-lvl overline">Level<span>{{ heroLevel }}</span></span>
+        </div>
+      </div>
+
+      <transition name="slide-fade">
+        <div v-show="showDetails" class="portlet-content">
+          <ul class="cell-block">
+            <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
+            <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
+            <li><span class="cell-cap">Atk Spd</span><span class="cell-data">{{ heroAS }}</span></li>
+            <li><span class="cell-cap">Atk /sec</span><span class="cell-data">{{ atkSec }}</span></li>
+            <li><span class="cell-cap">Crit</span><span class="cell-data">{{ heroCrit }}</span></li>
+            <li><span class="cell-cap">Dodge</span><span class="cell-data">{{ heroDodge }}</span></li>
+            <li><span class="cell-cap">Defense</span><span class="cell-data">{{ heroDefense }}</span></li>
+            <li v-if="!isMinion"><span class="cell-cap">CDR</span><span class="cell-data">{{ heroCDR }}</span></li>
+          </ul>
+          <ul class="cell-block">
+            <li><span class="cell-cap">EHP</span><span class="cell-data">{{ heroEHP }}</span></li>
+            <li><span class="cell-cap">DPS</span><span class="cell-data">{{ heroDPS }}</span></li>
+            <li><span class="cell-cap">Range</span><span class="cell-data">{{ heroRange }}</span></li>
+            <li><span class="cell-cap">Vision</span><span class="cell-data">{{ heroVision }}</span></li>
+            <li><span class="cell-cap">Movement</span><span class="cell-data">{{ heroMoveSpeed }}</span></li>
+            <li><span class="cell-cap">{{ isMinion ? 'Swing T.':'Swing Time' }}</span><span class="cell-data">{{ heroSwingTime }}</span></li>
+            <li v-if="!isMinion"><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
+          </ul>
+        </div>
+      </transition>
+
+      <hero-skill v-if="hero.skill && showDetails" :heroID="heroID" :level="heroLevel"></hero-skill>
+
     </div>
-
-    <transition name="slide-fade">
-      <div v-show="showDetails" class="portlet-content">
-        <ul class="cell-block">
-          <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
-          <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
-          <li><span class="cell-cap">Atk Spd</span><span class="cell-data">{{ heroAS }}</span></li>
-          <li><span class="cell-cap">Atk /sec</span><span class="cell-data">{{ atkSec }}</span></li>
-          <li><span class="cell-cap">Crit</span><span class="cell-data">{{ heroCrit }}</span></li>
-          <li><span class="cell-cap">Dodge</span><span class="cell-data">{{ heroDodge }}</span></li>
-          <li><span class="cell-cap">Defense</span><span class="cell-data">{{ heroDefense }}</span></li>
-          <li v-if="!isMinion"><span class="cell-cap">CDR</span><span class="cell-data">{{ heroCDR }}</span></li>
-        </ul>
-        <ul class="cell-block">
-          <li><span class="cell-cap">EHP</span><span class="cell-data">{{ heroEHP }}</span></li>
-          <li><span class="cell-cap">DPS</span><span class="cell-data">{{ heroDPS }}</span></li>
-          <li><span class="cell-cap">Range</span><span class="cell-data">{{ heroRange }}</span></li>
-          <li><span class="cell-cap">Vision</span><span class="cell-data">{{ heroVision }}</span></li>
-          <li><span class="cell-cap">Movement</span><span class="cell-data">{{ heroMoveSpeed }}</span></li>
-          <li><span class="cell-cap">{{ isMinion ? 'Swing T.':'Swing Time' }}</span><span class="cell-data">{{ heroSwingTime }}</span></li>
-          <li v-if="!isMinion"><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
-        </ul>
-      </div>
-    </transition>
-
-    <hero-skill v-if="hero.skill && showDetails" :heroID="heroID" :level="heroLevel"></hero-skill>
-
+    <aside class="gear" v-if="!isMinion">
+      <app-gear :maiden="hero"></app-gear>
+    </aside>
   </div>
-  <aside class="gear" v-if="!isMinion">
-    <app-gear :maiden="hero"></app-gear>
-  </aside>
-</div>
 </template>
 
 <script>
@@ -241,98 +241,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" scoped>
-// ul {
-//     display: inline-table;
-//     margin: 0.15em 0.35em;
-//     padding: 0;
-// }
-//
-// li {
-//     display: table-row;
-//     margin-bottom: 0.4em;
-// }
-//
-// .cell-cap {
-//     text-align: end;
-//     font-weight: 700;
-//     font-size: 0.8em;
-// }
-//
-// .cell-data {
-//     font-size: 0.9em;
-//     text-align: center;
-//     min-width: 6.2em;
-// }
-//
-// .wide {
-//     width: 100%;
-// }
-// .center {
-//     align-items: center;
-// }
-//
-// .hero-pad {
-//     padding: 0.3em 0 0.1em 0 !important; // my bad xD
-// }
-//
-//
-// .container3 {
-//     display: flex;
-//     position: relative;
-//     margin: 0 0 0.35em;
-//     background: #eee;
-//     border-radius: 0.4em;
-//     padding: 0 0.4em 0.4em;
-//     color: #555;
-//     border: 1px solid #aaa;
-// }
-//
-// .flex-top {
-//     align-items: flex-start;
-// }
-//
-// .border-right {
-//     border-right: 1px solid #bbb;
-//     padding-right: 0.5em;
-// }
-//
-// .no-pad {
-//     padding: 0;
-// }
-// .text-shadow {
-//     text-shadow: 0 0 1px #ddd;
-// }
-// .headline {
-//     align-items: center;
-//     justify-content: start;
-// }
-//
-// .close {
-//     cursor: pointer;
-//     position: absolute;
-//     border: none;
-//     width: 25px;
-//     height: 24px;
-//     top: 0;
-//     right: -.2em;
-//     font-weight: 600;
-//     font-size: 1.3em;
-//     background: transparent;
-//     margin: 0.3em 0.6em 0 0;
-//     padding: 0;
-//     color: #eee;
-//     transition: all 0.4s ease;
-//     &:hover {
-//         transition: all 0.4s ease;
-//         color: #555 !important;
-//         box-shadow: 0 0 1px 1px #777;
-//         background: #ccc;
-//     }
-// }
-// .gear {
-//     margin: 0.3em 0 0 0.3em;
-//     z-index: 1;
-// }
-</style>

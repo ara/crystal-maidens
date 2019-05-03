@@ -14,7 +14,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="label" for="GoToInput">Enemy<br />Element</label>
+          <label class="label" for="GoToInput">Enemy Element</label>
           <input id="GoToInput" class="input" />
         </div>
         <div class="form-group">
@@ -34,7 +34,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="label">Enemy<br />Element</label>
+          <label class="label">Enemy Element</label>
           <input class="input" disabled />
         </div>
         <div class="form-group">
