@@ -20,7 +20,7 @@
         <span class="lvl">(Level {{ heroLevel }})</span>
       </div>
 
-      <div v-else class="w-100" :style="showDetails?'':'margin-bottom:-0.5em;'">
+      <div v-else :style="showDetails?'':'margin-bottom:-0.5em;'">
         <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero">×</button>
 
         <div class="portlet-content">

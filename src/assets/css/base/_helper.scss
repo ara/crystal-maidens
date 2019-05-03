@@ -221,5 +221,25 @@ $d: (
 
 //overflow
 .overflow-a{
-  overflow: auto;
+  overflow: auto !important;
+}
+
+.overflow-h {
+  overflow: hidden !important;
+}
+
+.overflow-xa{
+  overflow-x: auto !important;
+}
+
+.overflow-xh {
+  overflow-x: hidden !important;
+}
+
+.overflow-ya{
+  overflow-y: auto !important;
+}
+
+.overflow-yh{
+  overflow-y: hidden;
 }
