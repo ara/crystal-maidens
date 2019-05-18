@@ -1801,30 +1801,29 @@
   },
   "61": {
     "id": 61,
-    "tex": null,
-    "name": "The Boob Plate",
+    "name": "The Shiny Plate",
     "class": 1,
     "slot": 1,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
       null,
       {
-        "def": 7,
-        "defInc": 2.25,
+        "def": 4,
+        "defInc": 2,
         "cdr": 3,
         "cdrInc": 1.5,
-        "hp": 35,
-        "hpInc": 6
+        "hp": 65,
+        "hpInc": 10
       },
       {
-        "def": 13,
-        "defInc": 4,
+        "def": 8,
+        "defInc": 3,
         "cdr": 4,
         "cdrInc": 2,
-        "hp": 70,
+        "hp": 100,
         "hpInc": 15
       },
       null
@@ -1832,12 +1831,11 @@
   },
   "62": {
     "id": 62,
-    "tex": null,
     "name": "Dwarven Forged Helmet",
     "class": 1,
     "slot": 0,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -1845,17 +1843,17 @@
       {
         "hp": 65,
         "hpInc": 17.5,
-        "def": 4.5,
-        "defInc": 2,
-        "dmg": 20,
+        "def": 3.5,
+        "defInc": 1.75,
+        "dmg": 40,
         "dmgInc": 4
       },
       {
         "hp": 90,
         "hpInc": 25,
-        "def": 9,
-        "defInc": 3,
-        "dmg": 40,
+        "def": 6,
+        "defInc": 2.5,
+        "dmg": 80,
         "dmgInc": 8.5
       },
       null
@@ -1863,12 +1861,11 @@
   },
   "63": {
     "id": 63,
-    "tex": null,
     "name": "Ring of lust",
     "class": 1,
     "slot": 5,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -1894,7 +1891,6 @@
   },
   "64": {
     "id": 64,
-    "tex": null,
     "name": "Blue Crystal Saber",
     "class": 1,
     "slot": 2,
@@ -1925,7 +1921,6 @@
   },
   "65": {
     "id": 65,
-    "tex": null,
     "name": "Red Crystal Saber",
     "class": 1,
     "slot": 2,
@@ -1956,12 +1951,11 @@
   },
   "66": {
     "id": 66,
-    "tex": null,
     "name": "The Templar's best friend",
     "class": 1,
     "slot": 3,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -1987,8 +1981,7 @@
   },
   "67": {
     "id": 67,
-    "tex": null,
-    "name": "The Heels of Glory",
+    "name": "The Golden Greaves",
     "class": 1,
     "slot": 4,
     "maxLevel": 5,
@@ -1998,18 +1991,18 @@
       null,
       null,
       {
-        "cdr": 7,
-        "cdrInc": 2.5,
+        "hp": 65,
+        "hpInc": 10,
         "dodge": 4.5,
-        "dodgeInc": 1.5,
-        "crit": 3.5,
-        "critInc": 1.5
+        "dodgeInc": 1,
+        "crit": 2.5,
+        "critInc": null
       },
       {
-        "cdr": 9,
-        "cdrInc": 3.5,
+        "hp": 100,
+        "hpInc": 12.5,
         "dodge": 7,
-        "dodgeInc": 2.5,
+        "dodgeInc": 1.5,
         "crit": 5,
         "critInc": 2
       },
@@ -2018,7 +2011,6 @@
   },
   "68": {
     "id": 68,
-    "tex": null,
     "name": "The Mildly Evil Dress",
     "class": 2,
     "slot": 1,
@@ -2029,32 +2021,31 @@
       null,
       null,
       {
-        "dodge": 4.5,
-        "dodgeInc": 1,
+        "dodge": 5.5,
+        "dodgeInc": 2,
         "cdr": 6,
         "cdrInc": 1.5,
-        "as": 2.5,
-        "asInc": 1
+        "as": 3.5,
+        "asInc": 1.5
       },
       {
-        "dodge": 7,
-        "dodgeInc": 1.2,
+        "dodge": 8.5,
+        "dodgeInc": 2.5,
         "cdr": 9,
         "cdrInc": 2,
-        "as": 5,
-        "asInc": 1.5
+        "as": 6,
+        "asInc": 2.5
       },
       null
     ]
   },
   "69": {
     "id": 69,
-    "tex": null,
     "name": "Ring 69",
     "class": 2,
     "slot": 5,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2062,25 +2053,24 @@
       {
         "hp": 60,
         "hpInc": 15,
-        "cdr": 6,
-        "cdrInc": 1.5,
-        "dmg": 20,
-        "dmgInc": 10
+        "dmg": 25,
+        "dmgInc": 10,
+        "cdr": 2.5,
+        "cdrInc": 1.25
       },
       {
         "hp": 100,
         "hpInc": 25,
-        "cdr": 9,
-        "cdrInc": 2,
-        "dmg": 30,
-        "dmgInc": 15
+        "dmg": 40,
+        "dmgInc": 15,
+        "cdr": 5,
+        "cdrInc": 1.75
       },
       null
     ]
   },
   "70": {
     "id": 70,
-    "tex": null,
     "name": "The Mildly Evil Cowl",
     "class": 2,
     "slot": 0,
@@ -2111,7 +2101,6 @@
   },
   "71": {
     "id": 71,
-    "tex": null,
     "name": "The Mildly Evil Boots",
     "class": 2,
     "slot": 4,
@@ -2142,12 +2131,11 @@
   },
   "72": {
     "id": 72,
-    "tex": null,
     "name": "Everlasting Ring",
     "class": 2,
     "slot": 5,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2173,27 +2161,26 @@
   },
   "73": {
     "id": 73,
-    "tex": null,
     "name": "The Godly Gift",
     "class": 2,
     "slot": 3,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
       null,
       {
         "dodge": 6,
-        "dodgeInc": 3,
+        "dodgeInc": 2.5,
         "hp": 20,
         "hpInc": 15,
         "def": 1,
         "defInc": 1
       },
       {
-        "dodge": 15,
-        "dodgeInc": 4,
+        "dodge": 11,
+        "dodgeInc": 3.5,
         "hp": 60,
         "hpInc": 30,
         "def": 3,
@@ -2204,27 +2191,26 @@
   },
   "74": {
     "id": 74,
-    "tex": null,
     "name": "Moon Sorceress Staff",
     "class": 2,
     "slot": 2,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
       null,
       {
         "crit": 5,
-        "critInc": 4,
+        "critInc": 3,
         "dmg": 60,
         "dmgInc": 20,
         "cdr": 2,
         "cdrInc": 2
       },
       {
-        "crit": 8,
-        "critInc": 6,
+        "crit": 7,
+        "critInc": 4.5,
         "dmg": 100,
         "dmgInc": 25,
         "cdr": 3,
@@ -2235,60 +2221,58 @@
   },
   "75": {
     "id": 75,
-    "tex": null,
     "name": "Green Vigilante's Vest",
     "class": 3,
     "slot": 1,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
       null,
       {
-        "def": 6,
-        "defInc": 2,
-        "cdr": 6,
-        "cdrInc": 2.5,
-        "dodge": 1.75,
-        "dodgeInc": 1.5
+        "def": 5,
+        "defInc": 1.75,
+        "crit": 6,
+        "critInc": 2.5,
+        "dodge": 2.5,
+        "dodgeInc": 1.75
       },
       {
-        "def": 10,
-        "defInc": 3,
-        "cdr": 7,
-        "cdrInc": 3,
-        "dodge": 3.5,
-        "dodgeInc": 2
+        "def": 8,
+        "defInc": 2.5,
+        "crit": 7,
+        "critInc": 3,
+        "dodge": 4.5,
+        "dodgeInc": 2.5
       },
       null
     ]
   },
   "76": {
     "id": 76,
-    "tex": null,
     "name": "Speedster's Boots",
     "class": 3,
     "slot": 4,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
       null,
       {
         "as": 9.5,
-        "asInc": 2.25,
-        "cdr": 5.5,
-        "cdrInc": 2.5,
+        "asInc": 3.25,
+        "cdr": 4.5,
+        "cdrInc": 1.75,
         "dodge": 2,
         "dodgeInc": 1.5
       },
       {
-        "as": 11,
-        "asInc": 3.5,
-        "cdr": 6.5,
-        "cdrInc": 3,
+        "as": 12,
+        "asInc": 4,
+        "cdr": 5.5,
+        "cdrInc": 2.5,
         "dodge": 4,
         "dodgeInc": 2
       },
@@ -2297,12 +2281,11 @@
   },
   "77": {
     "id": 77,
-    "tex": null,
     "name": "Eagle Assassin Hood",
     "class": 3,
     "slot": 0,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2312,25 +2295,24 @@
         "critInc": 3,
         "as": 4.5,
         "asInc": 2.25,
-        "dodge": 1.75,
-        "dodgeInc": 1.5
+        "dodge": 2.5,
+        "dodgeInc": 2
       },
       {
         "crit": 11,
         "critInc": 5,
         "as": 6.5,
         "asInc": 2.75,
-        "dodge": 3.5,
-        "dodgeInc": 2
+        "dodge": 4.5,
+        "dodgeInc": 3
       },
       null
     ]
   },
   "78": {
     "id": 78,
-    "tex": null,
     "name": "Quicky Buckler",
-    "class": 0,
+    "class": 3,
     "slot": 3,
     "maxLevel": 5,
     "dropRate": 0,
@@ -2359,7 +2341,6 @@
   },
   "79": {
     "id": 79,
-    "tex": null,
     "name": "Ring of Marble Flesh",
     "class": 3,
     "slot": 5,
@@ -2390,12 +2371,11 @@
   },
   "80": {
     "id": 80,
-    "tex": null,
-    "name": "The Flexing Bow",
+    "name": "Dagger of Edginess",
     "class": 3,
     "slot": 2,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2403,16 +2383,16 @@
       {
         "dmg": 48,
         "dmgInc": 12.5,
-        "crit": 3,
-        "critInc": 1,
+        "crit": 5.5,
+        "critInc": 2,
         "hp": 35,
         "hpInc": 9
       },
       {
         "dmg": 94,
         "dmgInc": 17,
-        "crit": 3,
-        "critInc": 1,
+        "crit": 9,
+        "critInc": 3.5,
         "hp": 60,
         "hpInc": 10
       },
@@ -2421,8 +2401,7 @@
   },
   "81": {
     "id": 81,
-    "tex": null,
-    "name": "Dagger of Edginess",
+    "name": "Balanced Kunai",
     "class": 3,
     "slot": 2,
     "maxLevel": 5,
@@ -2452,7 +2431,6 @@
   },
   "82": {
     "id": 82,
-    "tex": null,
     "name": "Elven Tailored Gem Suit",
     "class": 4,
     "slot": 1,
@@ -2463,19 +2441,19 @@
       null,
       null,
       {
-        "cdr": 6,
-        "cdrInc": 2.5,
-        "dmg": 40,
+        "as": 6,
+        "asInc": 2.5,
+        "dmg": 70,
         "dmgInc": 12,
-        "hp": 32,
+        "hp": 52,
         "hpInc": 8
       },
       {
-        "cdr": 12,
-        "cdrInc": 5,
-        "dmg": 70,
+        "as": 11,
+        "asInc": 5,
+        "dmg": 90,
         "dmgInc": 16,
-        "hp": 65,
+        "hp": 75,
         "hpInc": 12
       },
       null
@@ -2483,7 +2461,6 @@
   },
   "83": {
     "id": 83,
-    "tex": null,
     "name": "Titanium Boots",
     "class": 4,
     "slot": 4,
@@ -2498,26 +2475,25 @@
         "dodgeInc": 2.5,
         "def": 4,
         "defInc": 2,
-        "cdr": 2.5,
-        "cdrInc": 1
+        "hp": 32,
+        "hpInc": 7
       },
       {
         "dodge": 8,
         "dodgeInc": 3,
         "def": 7,
         "defInc": 2.5,
-        "cdr": 4.5,
-        "cdrInc": 2.5
+        "hp": 65,
+        "hpInc": 10
       },
       null
     ]
   },
   "84": {
     "id": 84,
-    "tex": null,
-    "name": "Helm of Resurection",
+    "name": "Helm of Resurrection",
     "class": 4,
-    "slot": 4,
+    "slot": 0,
     "maxLevel": 5,
     "dropRate": 0,
     "eventDropRate": null,
@@ -2527,16 +2503,16 @@
       {
         "hp": 60,
         "hpInc": 15,
-        "cdr": 4,
-        "cdrInc": 2,
+        "cdr": 3.5,
+        "cdrInc": 1.75,
         "dodge": 2.2,
         "dodgeInc": 1
       },
       {
         "hp": 90,
         "hpInc": 20,
-        "cdr": 7,
-        "cdrInc": 3,
+        "cdr": 6.5,
+        "cdrInc": 2.5,
         "dodge": 4.4,
         "dodgeInc": 1.5
       },
@@ -2545,12 +2521,11 @@
   },
   "85": {
     "id": 85,
-    "tex": null,
     "name": "The Fabulous Aegis",
     "class": 4,
-    "slot": 4,
+    "slot": 3,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2576,12 +2551,11 @@
   },
   "86": {
     "id": 86,
-    "tex": null,
     "name": "The Ice Dragon Jewel",
     "class": 4,
-    "slot": 4,
+    "slot": 5,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2589,17 +2563,17 @@
       {
         "hp": 80,
         "hpInc": 10,
-        "cdr": 5.5,
-        "cdrInc": 2,
-        "dodge": 2,
-        "dodgeInc": 1
+        "def": 5.5,
+        "defInc": 2,
+        "dodge": 3,
+        "dodgeInc": 1.25
       },
       {
         "hp": 110,
         "hpInc": 14,
-        "cdr": 7.5,
-        "cdrInc": 3,
-        "dodge": 3.5,
+        "def": 7.5,
+        "defInc": 3,
+        "dodge": 6.5,
         "dodgeInc": 2
       },
       null
@@ -2607,12 +2581,11 @@
   },
   "87": {
     "id": 87,
-    "tex": null,
     "name": "The Fire Dragon Jewel",
     "class": 4,
-    "slot": 4,
+    "slot": 5,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2622,28 +2595,27 @@
         "dmgInc": 10,
         "as": 5.5,
         "asInc": 2,
-        "crit": 2,
-        "critInc": 1
+        "crit": 3,
+        "critInc": 1.5
       },
       {
         "dmg": 110,
         "dmgInc": 14,
         "as": 7.5,
         "asInc": 3,
-        "crit": 3.5,
-        "critInc": 2
+        "crit": 6.5,
+        "critInc": 2.5
       },
       null
     ]
   },
   "88": {
     "id": 88,
-    "tex": null,
     "name": "The Judge's Hammer",
     "class": 4,
-    "slot": 4,
+    "slot": 2,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2651,16 +2623,16 @@
       {
         "dmg": 90,
         "dmgInc": 13,
-        "cdr": 5,
-        "cdrInc": 2,
+        "cdr": 3,
+        "cdrInc": 1.5,
         "crit": 5,
         "critInc": 2.5
       },
       {
         "dmg": 130,
         "dmgInc": 16,
-        "cdr": 8,
-        "cdrInc": 3.5,
+        "cdr": 5,
+        "cdrInc": 2,
         "crit": 8,
         "critInc": 4
       },
@@ -2669,8 +2641,7 @@
   },
   "89": {
     "id": 89,
-    "tex": null,
-    "name": "The Holy Master's Plate",
+    "name": "The Grand Priest's Tunic",
     "class": 5,
     "slot": 1,
     "maxLevel": 5,
@@ -2682,28 +2653,27 @@
       {
         "hp": 78,
         "hpInc": 22,
-        "cdr": 6,
-        "cdrInc": 2,
-        "def": 1.5,
-        "defInc": 1.5
+        "cdr": 3,
+        "cdrInc": 1.5,
+        "def": 3,
+        "defInc": 1.75
       },
       {
         "hp": 100,
         "hpInc": 29,
-        "cdr": 9,
-        "cdrInc": 4,
-        "def": 3,
-        "defInc": 2
+        "cdr": 5,
+        "cdrInc": 2,
+        "def": 6,
+        "defInc": 2.5
       },
       null
     ]
   },
   "90": {
     "id": 90,
-    "tex": null,
-    "name": "The Holy Master's Boots",
+    "name": "The Grand Priest's Boots",
     "class": 5,
-    "slot": 1,
+    "slot": 4,
     "maxLevel": 5,
     "dropRate": 0,
     "eventDropRate": null,
@@ -2716,23 +2686,22 @@
         "dodge": 6.5,
         "dodgeInc": 2.5,
         "cdr": 3.5,
-        "cdrInc": 2.25
+        "cdrInc": 1.25
       },
       {
         "hp": 90,
         "hpInc": 23,
         "dodge": 8.5,
         "dodgeInc": 3.5,
-        "cdr": 7,
-        "cdrInc": 3.5
+        "cdr": 6.5,
+        "cdrInc": 2
       },
       null
     ]
   },
   "91": {
     "id": 91,
-    "tex": null,
-    "name": "The Holy Master's Cowl",
+    "name": "The Grand Priest's Cowl",
     "class": 5,
     "slot": 0,
     "maxLevel": 5,
@@ -2746,28 +2715,27 @@
         "hpInc": 20,
         "dmg": 52,
         "dmgInc": 9,
-        "cdr": 3.5,
-        "cdrInc": 2.25
+        "as": 6,
+        "asInc": 2
       },
       {
         "hp": 95,
         "hpInc": 25,
         "dmg": 95,
         "dmgInc": 15,
-        "cdr": 7,
-        "cdrInc": 3.5
+        "as": 9.5,
+        "asInc": 3
       },
       null
     ]
   },
   "92": {
     "id": 92,
-    "tex": null,
     "name": "The Sacred Shield",
     "class": 5,
     "slot": 3,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2775,16 +2743,16 @@
       {
         "def": 6,
         "defInc": 1.5,
-        "crit": 4.5,
-        "critInc": 2.5,
+        "dodge": 4,
+        "dodgeInc": 2,
         "hp": 65,
         "hpInc": 10
       },
       {
         "def": 9,
         "defInc": 2.5,
-        "crit": 8,
-        "critInc": 4,
+        "dodge": 7,
+        "dodgeInc": 3,
         "hp": 90,
         "hpInc": 15
       },
@@ -2793,12 +2761,11 @@
   },
   "93": {
     "id": 93,
-    "tex": null,
     "name": "The All Seeing Stone",
     "class": 5,
     "slot": 5,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2808,59 +2775,57 @@
         "critInc": 2.5,
         "as": 5,
         "asInc": 2.5,
-        "cdr": 3,
-        "cdrInc": 2
+        "def": 3,
+        "defInc": 2
       },
       {
         "crit": 13,
         "critInc": 5,
         "as": 9,
         "asInc": 2.5,
-        "cdr": 6,
-        "cdrInc": 3
+        "def": 6,
+        "defInc": 3
       },
       null
     ]
   },
   "94": {
     "id": 94,
-    "tex": null,
     "name": "The Everlasting Flame",
     "class": 5,
     "slot": 2,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
       null,
       {
-        "cdr": 6.5,
-        "cdrInc": 2,
-        "hp": 40,
-        "hpInc": 9,
-        "dmg": 45,
-        "dmgInc": 9
+        "cdr": 4.5,
+        "cdrInc": 1.75,
+        "hp": 50,
+        "hpInc": 10,
+        "dmg": 55,
+        "dmgInc": 10
       },
       {
-        "cdr": 11,
-        "cdrInc": 4,
+        "cdr": 8,
+        "cdrInc": 2.5,
         "hp": 80,
-        "hpInc": 12,
-        "dmg": 75,
-        "dmgInc": 13
+        "hpInc": 15,
+        "dmg": 85,
+        "dmgInc": 15
       },
       null
     ]
   },
   "95": {
     "id": 95,
-    "tex": null,
     "name": "The Neon Mace",
     "class": 5,
     "slot": 2,
     "maxLevel": 5,
-    "dropRate": 0,
+    "dropRate": 50,
     "eventDropRate": null,
     "stats": [
       null,
@@ -2880,6 +2845,456 @@
         "critInc": 3,
         "as": 4,
         "asInc": 2
+      },
+      null
+    ]
+  },
+  "96": {
+    "id": 96,
+    "name": "The Bloody Gladiator's Plate",
+    "class": 1,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 65,
+        "dmgInc": 20,
+        "cdr": 2.5,
+        "cdrInc": 1.5,
+        "def": 4.5,
+        "defInc": 1.5
+      },
+      {
+        "dmg": 120,
+        "dmgInc": 25,
+        "cdr": 3.5,
+        "cdrInc": 2,
+        "def": 7.5,
+        "defInc": 3.5
+      },
+      null
+    ]
+  },
+  "97": {
+    "id": 97,
+    "name": "The Bloody Gladiator's Helm",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 4.25,
+        "defInc": 2.5,
+        "as": 4,
+        "asInc": 3,
+        "hp": 35,
+        "hpInc": 8.5
+      },
+      {
+        "def": 5.5,
+        "defInc": 3.5,
+        "as": 7.5,
+        "asInc": 5,
+        "hp": 65,
+        "hpInc": 17.5
+      },
+      null
+    ]
+  },
+  "98": {
+    "id": 98,
+    "name": "The Bloody Gladiator's Boots",
+    "class": 1,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 8.5,
+        "asInc": 4.25,
+        "def": 4,
+        "defInc": 2.5,
+        "crit": 3,
+        "critInc": 2
+      },
+      {
+        "as": 11,
+        "asInc": 6.25,
+        "def": 6.5,
+        "defInc": 3.5,
+        "crit": 6,
+        "critInc": 4.5
+      },
+      null
+    ]
+  },
+  "99": {
+    "id": 99,
+    "name": "Voodoo Prince's Hat",
+    "class": 2,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 5.5,
+        "asInc": 2,
+        "cdr": 4.5,
+        "cdrInc": 1.5,
+        "crit": 2.5,
+        "critInc": 1.25
+      },
+      {
+        "as": 9,
+        "asInc": 4,
+        "cdr": 6,
+        "cdrInc": 2,
+        "crit": 5,
+        "critInc": 2.5
+      },
+      null
+    ]
+  },
+  "100": {
+    "id": 100,
+    "name": "Voodoo Prince's Coat",
+    "class": 2,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 4,
+        "defInc": 1.5,
+        "dodge": 4,
+        "dodgeInc": 1.5,
+        "cdr": 2,
+        "cdrInc": 1.25
+      },
+      {
+        "def": 8,
+        "defInc": 2.5,
+        "dodge": 6,
+        "dodgeInc": 2.75,
+        "cdr": 4,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  "101": {
+    "id": 101,
+    "name": "Voodoo Prince's Boots",
+    "class": 2,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 5.5,
+        "asInc": 2,
+        "crit": 5.5,
+        "critInc": 2,
+        "dodge": 1.5,
+        "dodgeInc": 1.25
+      },
+      {
+        "as": 9,
+        "asInc": 4,
+        "crit": 8,
+        "critInc": 3.5,
+        "dodge": 3,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "102": {
+    "id": 102,
+    "name": "Night Owl's Armor",
+    "class": 3,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 5,
+        "defInc": 2,
+        "dodge": 3.5,
+        "dodgeInc": 1.5,
+        "crit": 3,
+        "critInc": 2
+      },
+      {
+        "def": 8,
+        "defInc": 2.5,
+        "dodge": 6,
+        "dodgeInc": 2,
+        "crit": 5,
+        "critInc": 3
+      },
+      null
+    ]
+  },
+  "103": {
+    "id": 103,
+    "name": "Night Owl's Helm",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 5.5,
+        "cdrInc": 2,
+        "dodge": 3.5,
+        "dodgeInc": 2,
+        "crit": 3,
+        "critInc": 2
+      },
+      {
+        "cdr": 8.5,
+        "cdrInc": 3,
+        "dodge": 6,
+        "dodgeInc": 2.5,
+        "crit": 5,
+        "critInc": 3
+      },
+      null
+    ]
+  },
+  "104": {
+    "id": 104,
+    "name": "Night Owl's Boots",
+    "class": 3,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 7.5,
+        "asInc": 3,
+        "dodge": 3.5,
+        "dodgeInc": 1.5,
+        "crit": 3,
+        "critInc": 2
+      },
+      {
+        "as": 10,
+        "asInc": 3.75,
+        "dodge": 6,
+        "dodgeInc": 2,
+        "crit": 5,
+        "critInc": 3
+      },
+      null
+    ]
+  },
+  "105": {
+    "id": 105,
+    "name": "Dragonscale Armor",
+    "class": 4,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 60,
+        "hpInc": 12.5,
+        "def": 2.5,
+        "defInc": 1.75,
+        "dmg": 27.5,
+        "dmgInc": 8.5
+      },
+      {
+        "hp": 100,
+        "hpInc": 16,
+        "def": 5,
+        "defInc": 2.5,
+        "dmg": 55,
+        "dmgInc": 10.5
+      },
+      null
+    ]
+  },
+  "106": {
+    "id": 106,
+    "name": "Dragonscale Helm",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 56,
+        "hpInc": 12.5,
+        "crit": 5,
+        "critInc": 2,
+        "dmg": 27.5,
+        "dmgInc": 8.5
+      },
+      {
+        "hp": 96,
+        "hpInc": 16,
+        "crit": 9,
+        "critInc": 3.5,
+        "dmg": 55,
+        "dmgInc": 10.5
+      },
+      null
+    ]
+  },
+  "107": {
+    "id": 107,
+    "name": "Dragonscale Greaves",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 52,
+        "hpInc": 12.5,
+        "dodge": 2.75,
+        "dodgeInc": 1.75,
+        "dmg": 27.5,
+        "dmgInc": 8.5
+      },
+      {
+        "hp": 92,
+        "hpInc": 16,
+        "dodge": 4.5,
+        "dodgeInc": 3,
+        "dmg": 55,
+        "dmgInc": 10.5
+      },
+      null
+    ]
+  },
+  "108": {
+    "id": 108,
+    "name": "The Evil Priest's Cowl",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 78,
+        "dmgInc": 19,
+        "cdr": 6.5,
+        "cdrInc": 12.5,
+        "as": 2,
+        "asInc": 2.25
+      },
+      {
+        "dmg": 95,
+        "dmgInc": 25,
+        "cdr": 9,
+        "cdrInc": 14,
+        "as": 4,
+        "asInc": 4
+      },
+      null
+    ]
+  },
+  "109": {
+    "id": 109,
+    "name": "The Evil Priest's Tunic",
+    "class": 5,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 88,
+        "dmgInc": 19,
+        "def": 3,
+        "defInc": 1.5,
+        "cdr": 2.5,
+        "cdrInc": 1.25
+      },
+      {
+        "dmg": 110,
+        "dmgInc": 25,
+        "def": 4.5,
+        "defInc": 2,
+        "cdr": 5,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  "110": {
+    "id": 110,
+    "name": "The Evil Priest's Boots",
+    "class": 5,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 73,
+        "dmgInc": 19,
+        "cdr": 4.5,
+        "cdrInc": 1.5,
+        "hp": 50,
+        "hpInc": 12.5
+      },
+      {
+        "dmg": 90,
+        "dmgInc": 25,
+        "cdr": 6,
+        "cdrInc": 2,
+        "hp": 85,
+        "hpInc": 20
       },
       null
     ]
@@ -3388,10 +3803,10 @@
       null,
       null,
       {
-        "cdr": 18,
-        "cdrInc": 5.5,
-        "dodge": 6,
-        "dodgeInc": 3,
+        "cdr": 7.5,
+        "cdrInc": 3,
+        "dodge": 7.5,
+        "dodgeInc": 4.5,
         "hp": 100,
         "hpInc": 22
       },
@@ -5746,7 +6161,7 @@
   },
   "4026": {
     "id": 4026,
-    "name": "Samourai's Dress",
+    "name": "Samurai's Dress",
     "class": 1,
     "slot": 1,
     "maxLevel": 5,
@@ -6198,7 +6613,7 @@
   },
   "4041": {
     "id": 4041,
-    "name": "Steampunk Hat",
+    "name": "Old Steampunk Hat",
     "class": 4,
     "slot": 0,
     "maxLevel": 5,
@@ -7798,6 +8213,37 @@
       null
     ]
   },
+  "4100": {
+    "id": 4100,
+    "name": "Jess' Mecha-Arm",
+    "maiden": 47,
+    "class": 4,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 16,
+        "asInc": 6,
+        "cdr": 6,
+        "cdrInc": 2,
+        "def": 7.5,
+        "defInc": 3
+      },
+      {
+        "as": 24,
+        "asInc": 8,
+        "cdr": 9,
+        "cdrInc": 2.5,
+        "def": 9,
+        "defInc": 4
+      },
+      null
+    ]
+  },
   "5004": {
     "id": 5004,
     "tex": 10000,
@@ -7843,12 +8289,12 @@
       null,
       null,
       {
-        "hp": 65,
-        "hpInc": 17.5,
-        "def": 2.5,
-        "defInc": 2,
-        "dodge": 1.5,
-        "dodgeInc": 1.75
+        "hp": 75,
+        "hpInc": 22.5,
+        "def": 3,
+        "defInc": 2.75,
+        "dodge": 2,
+        "dodgeInc": 1.65
       }
     ]
   },
@@ -7867,11 +8313,11 @@
       null,
       {
         "hp": 95,
-        "hpInc": 20,
-        "def": 3,
-        "defInc": 1.75,
+        "hpInc": 27,
+        "def": 5,
+        "defInc": 2.25,
         "cdr": 4,
-        "cdrInc": 2
+        "cdrInc": 2.5
       }
     ]
   },
@@ -7889,12 +8335,12 @@
       null,
       null,
       {
-        "dmg": 70,
-        "dmgInc": 30,
-        "as": 4.5,
-        "asInc": 3.75,
-        "dodge": 1,
-        "dodgeInc": 1.75
+        "dmg": 75,
+        "dmgInc": 32,
+        "as": 6,
+        "asInc": 4.5,
+        "hp": 95,
+        "hpInc": 26
       }
     ]
   },
@@ -7912,8 +8358,8 @@
       null,
       null,
       {
-        "def": 11,
-        "defInc": 2.25,
+        "def": 8,
+        "defInc": 1.2,
         "crit": 6,
         "critInc": 6,
         "hp": 95,
@@ -7936,11 +8382,11 @@
       null,
       {
         "dodge": 3.5,
-        "dodgeInc": 1,
+        "dodgeInc": 1.25,
         "def": 4,
-        "defInc": 1.5,
+        "defInc": 1.2,
         "cdr": 6,
-        "cdrInc": 1
+        "cdrInc": 2
       }
     ]
   },
@@ -10108,9 +10554,8 @@
   },
   "6100": {
     "id": 6100,
-    "tex": null,
     "name": "Steampunk Corset",
-    "class": 0,
+    "class": 4,
     "slot": 1,
     "maxLevel": 5,
     "dropRate": 0,
@@ -10121,20 +10566,19 @@
       null,
       null,
       {
-        "cdr": 12,
-        "cdrInc": 4,
+        "hp": 100,
+        "hpInc": 9,
         "as": 8,
         "asInc": 3.5,
-        "dodge": 4,
-        "dodgeInc": 1.75
+        "dodge": 8,
+        "dodgeInc": 2.5
       }
     ]
   },
   "6101": {
     "id": 6101,
-    "tex": null,
     "name": "Steampunk Longboots",
-    "class": 0,
+    "class": 4,
     "slot": 4,
     "maxLevel": 5,
     "dropRate": 0,
@@ -10145,20 +10589,19 @@
       null,
       null,
       {
-        "hp": 90,
-        "hpInc": 9,
+        "dmg": 100,
+        "dmgInc": 9.5,
         "crit": 5,
         "critInc": 2,
-        "cdr": 7,
-        "cdrInc": 2.5
+        "def": 6.25,
+        "defInc": 2
       }
     ]
   },
   "6102": {
     "id": 6102,
-    "tex": null,
     "name": "Steampunk Clock-Shield",
-    "class": 0,
+    "class": 4,
     "slot": 3,
     "maxLevel": 5,
     "dropRate": 0,
@@ -10171,18 +10614,17 @@
       {
         "as": 20,
         "asInc": 5,
-        "cdr": 8,
-        "cdrInc": 2,
-        "dodge": 5,
-        "dodgeInc": 1.75
+        "hp": 65,
+        "hpInc": 15,
+        "dodge": 8,
+        "dodgeInc": 2.5
       }
     ]
   },
   "6103": {
     "id": 6103,
-    "tex": null,
     "name": "Steampunk Mask",
-    "class": 0,
+    "class": 4,
     "slot": 5,
     "maxLevel": 5,
     "dropRate": 0,
@@ -10193,10 +10635,10 @@
       null,
       null,
       {
-        "cdr": 10,
-        "cdrInc": 3.5,
-        "dodge": 6,
-        "dodgeInc": 2.5,
+        "cdr": 6,
+        "cdrInc": 2.25,
+        "dmg": 120,
+        "dmgInc": 12,
         "as": 4,
         "asInc": 2.5
       }
@@ -10204,9 +10646,8 @@
   },
   "6104": {
     "id": 6104,
-    "tex": null,
     "name": "Steampunk Pistol",
-    "class": 0,
+    "class": 4,
     "slot": 2,
     "maxLevel": 5,
     "dropRate": 0,
@@ -10218,11 +10659,126 @@
       null,
       {
         "dmg": 100,
-        "dmgInc": 9,
+        "dmgInc": 10,
         "crit": 6,
         "critInc": 2,
-        "as": 6.5,
+        "as": 7.5,
         "asInc": 2.5
+      }
+    ]
+  },
+  "6105": {
+    "id": 6105,
+    "name": "Steampunk New Hat",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "crit": 6,
+        "critInc": 2.5,
+        "dodge": 8.5,
+        "dodgeInc": 3,
+        "cdr": 6.5,
+        "cdrInc": 1.75
+      }
+    ]
+  },
+  "6106": {
+    "id": 6106,
+    "name": "Old Hermit's Shoes",
+    "class": 2,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "cdr": 7,
+        "cdrInc": 1.55,
+        "hp": 100,
+        "hpInc": 13,
+        "dodge": 7,
+        "dodgeInc": 3
+      }
+    ]
+  },
+  "6107": {
+    "id": 6107,
+    "name": "Old Hermit's Hood",
+    "class": 2,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "cdr": 7,
+        "cdrInc": 1.55,
+        "def": 7,
+        "defInc": 2.5,
+        "hp": 100,
+        "hpInc": 15
+      }
+    ]
+  },
+  "6108": {
+    "id": 6108,
+    "name": "Old Hermit's Cane",
+    "class": 2,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "as": 9,
+        "asInc": 3,
+        "dmg": 40,
+        "dmgInc": 25,
+        "def": 8,
+        "defInc": 2.5
+      }
+    ]
+  },
+  "6109": {
+    "id": 6109,
+    "name": "Old Hermit's Rag",
+    "class": 2,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "cdr": 7,
+        "cdrInc": 1.55,
+        "hp": 90,
+        "hpInc": 12,
+        "dodge": 7.5,
+        "dodgeInc": 3.5
       }
     ]
   }

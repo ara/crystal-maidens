@@ -14,7 +14,7 @@
     "bonuses": [
       null,
       {
-        "dmgAgainstNature": 1000
+        "dmgAgainstNature": 1500
       },
       {
         "attackSpd": 250
@@ -184,16 +184,16 @@
     "bonuses": [
       null,
       {
-        "dmgAgainstFire": 1000
+        "dmgAgainstFire": 1500
       },
       {
         "critChance": 250
       },
       {
-        "lifesteal": 100
+        "lifesteal": 500
       },
       {
-        "lifesteal": 100
+        "lifesteal": 500
       },
       {
         "dmgAgainstFire": 500,
@@ -577,13 +577,15 @@
   },
   {
     "id": 19,
+    "name": "Steampunk set",
     "desc": "Steampunk",
     "items": [
       6100,
       6101,
       6102,
       6103,
-      6104
+      6104,
+      6105
     ],
     "bonuses": [
       null,
@@ -597,22 +599,25 @@
         "dropChanceOnMap ": 10000
       },
       {
+        "stepPerTiles": -1
+      },
+      {
         "respawn": -3500,
         "dropChanceOnMap ": 10000,
         "lifesteal": 350,
-        "xp": 2500
-      },
-      null
+        "xp": 1000
+      }
     ]
   },
   {
     "id": 20,
+    "name": "Old Hermit's set",
     "desc": "Old Hermit",
     "items": [
-      6105,
       6106,
       6107,
-      6108
+      6108,
+      6109
     ],
     "bonuses": [
       null,
@@ -625,8 +630,8 @@
       {
         "respawn": -3500,
         "deathGateShield ": 25,
-        "cooldownOverCap": 1000,
-        "xp": 2000
+        "cooldownOverCap": 500,
+        "xp": 1000
       },
       null,
       null

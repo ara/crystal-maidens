@@ -11094,6 +11094,7 @@
     "dustCDR": 0,
     "total": 4,
     "Dark": 3,
+    "Warrior": 3,
     "Fire": 1
   },
   {
@@ -22443,7 +22444,8 @@
     "dustCDR": 0,
     "total": 4,
     "Fire": 1,
-    "Dark": 3
+    "Dark": 3,
+    "Warrior": 3
   },
   {
     "id": 1500,
@@ -26769,13 +26771,13 @@
     "dustCDR": 0,
     "total": 10,
     "Dark": 6,
+    "Warrior": 5,
     "Support": 1,
     "Fire": 2,
     "Engineer": 2,
     "Mage": 1,
     "Light": 1,
     "Marksman": 1,
-    "Warrior": 2,
     "Water": 1
   },
   {
@@ -26823,6 +26825,7 @@
     "dustCDR": 0,
     "total": 10,
     "Dark": 4,
+    "Warrior": 3,
     "Light": 4,
     "Engineer": 5,
     "Nature": 1,
@@ -26875,9 +26878,9 @@
     "dustCDR": 0,
     "total": 11,
     "Dark": 7,
+    "Warrior": 5,
     "Light": 1,
     "Engineer": 4,
-    "Warrior": 2,
     "Fire": 2,
     "Marksman": 1,
     "Mage": 1,
@@ -26929,7 +26932,7 @@
     "dustCDR": 0,
     "total": 10,
     "Water": 2,
-    "Warrior": 2,
+    "Warrior": 4,
     "Dark": 5,
     "Engineer": 4,
     "Fire": 1,
@@ -26983,6 +26986,7 @@
     "dustCDR": 0,
     "total": 12,
     "Dark": 5,
+    "Warrior": 2,
     "Fire": 6,
     "Marksman": 6,
     "Light": 1,
@@ -34480,10 +34484,21 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Old Batteries",
+        "itemID": 1115,
+        "droprate": 100,
+        "q1": 4,
+        "q2": 6,
+        "quantity": 5,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.8333333333333334,
     "coinsPerEnergy": 83.33333333333333,
     "maidenXPPerEnergy": 583.3333333333334,
-    "fodderCoins": 0,
+    "fodderCoins": 69.44444444444444,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -34512,10 +34527,21 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Screw",
+        "itemID": 1114,
+        "droprate": 100,
+        "q1": 4,
+        "q2": 5,
+        "quantity": 4.5,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.75,
     "coinsPerEnergy": 83.33333333333333,
     "maidenXPPerEnergy": 750,
-    "fodderCoins": 0,
+    "fodderCoins": 62.5,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -34525,7 +34551,7 @@
     "dustCDR": 0,
     "total": 10,
     "Water": 1,
-    "Warrior": 2,
+    "Warrior": 5,
     "Dark": 6,
     "Fire": 2,
     "Marksman": 1,
@@ -34547,10 +34573,21 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Nut",
+        "itemID": 1113,
+        "droprate": 100,
+        "q1": 2,
+        "q2": 4,
+        "quantity": 3,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.5,
     "coinsPerEnergy": 83.33333333333333,
     "maidenXPPerEnergy": 916.6666666666666,
-    "fodderCoins": 0,
+    "fodderCoins": 41.666666666666664,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -34560,6 +34597,7 @@
     "dustCDR": 0,
     "total": 10,
     "Dark": 4,
+    "Warrior": 3,
     "Light": 4,
     "Engineer": 5,
     "Fire": 1,
@@ -34580,10 +34618,30 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Watch Gear",
+        "itemID": 1112,
+        "droprate": 100,
+        "q1": 1,
+        "q2": 2,
+        "quantity": 1.5,
+        "rarity": "Common"
+      },
+      {
+        "name": "Rusted Nut",
+        "itemID": 1113,
+        "droprate": 100,
+        "q1": 3,
+        "q2": 5,
+        "quantity": 4,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.9166666666666666,
     "coinsPerEnergy": 83.33333333333333,
     "maidenXPPerEnergy": 1083.3333333333333,
-    "fodderCoins": 0,
+    "fodderCoins": 76.38888888888889,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -34598,7 +34656,7 @@
     "Mage": 1,
     "Fire": 2,
     "Marksman": 1,
-    "Warrior": 2,
+    "Warrior": 5,
     "Light": 1
   },
   {
@@ -34614,10 +34672,30 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Watch Gear",
+        "itemID": 1112,
+        "droprate": 100,
+        "q1": 1,
+        "q2": 2,
+        "quantity": 1.5,
+        "rarity": "Common"
+      },
+      {
+        "name": "Rusted Screw",
+        "itemID": 1114,
+        "droprate": 100,
+        "q1": 2,
+        "q2": 4,
+        "quantity": 3,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.75,
     "coinsPerEnergy": 83.33333333333333,
     "maidenXPPerEnergy": 1250,
-    "fodderCoins": 0,
+    "fodderCoins": 62.5,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -34633,7 +34711,7 @@
     "Mage": 1,
     "Fire": 1,
     "Water": 2,
-    "Warrior": 2
+    "Warrior": 4
   },
   {
     "id": 5228,
@@ -34648,10 +34726,30 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Chip",
+        "itemID": 1111,
+        "droprate": 100,
+        "q1": 1,
+        "q2": 2,
+        "quantity": 1.5,
+        "rarity": "Common"
+      },
+      {
+        "name": "Old Batteries",
+        "itemID": 1115,
+        "droprate": 100,
+        "q1": 4,
+        "q2": 6,
+        "quantity": 5,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 1.0833333333333335,
     "coinsPerEnergy": 166.66666666666666,
     "maidenXPPerEnergy": 1666.6666666666667,
-    "fodderCoins": 0,
+    "fodderCoins": 180.55555555555557,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -34665,7 +34763,8 @@
     "Mage": 2,
     "Light": 1,
     "Fire": 6,
-    "Marksman": 6
+    "Marksman": 6,
+    "Warrior": 2
   },
   {
     "id": 6025,
@@ -36666,7 +36765,7 @@
     "dustCDR": 0,
     "total": 10,
     "Water": 1,
-    "Warrior": 2,
+    "Warrior": 5,
     "Dark": 6,
     "Fire": 2,
     "Marksman": 1,
@@ -36720,6 +36819,7 @@
     "dustCDR": 0,
     "total": 10,
     "Dark": 4,
+    "Warrior": 3,
     "Light": 4,
     "Engineer": 5,
     "Fire": 1,
@@ -36773,11 +36873,11 @@
     "total": 12,
     "Dark": 8,
     "Engineer": 4,
+    "Warrior": 6,
     "Nature": 1,
     "Mage": 1,
     "Fire": 2,
     "Marksman": 1,
-    "Warrior": 2,
     "Light": 1
   },
   {
@@ -36832,7 +36932,7 @@
     "Mage": 1,
     "Fire": 1,
     "Water": 2,
-    "Warrior": 2
+    "Warrior": 4
   },
   {
     "id": 6078,
@@ -36880,6 +36980,7 @@
     "dustCDR": 0,
     "total": 12,
     "Dark": 5,
+    "Warrior": 2,
     "Engineer": 2,
     "Mage": 2,
     "Light": 1,
@@ -44382,10 +44483,21 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Old Batteries",
+        "itemID": 1115,
+        "droprate": 100,
+        "q1": 6,
+        "q2": 8,
+        "quantity": 7,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 1.1666666666666667,
     "coinsPerEnergy": 83.33333333333333,
     "maidenXPPerEnergy": 666.6666666666666,
-    "fodderCoins": 0,
+    "fodderCoins": 97.22222222222223,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -44416,10 +44528,21 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Screw",
+        "itemID": 1114,
+        "droprate": 100,
+        "q1": 5,
+        "q2": 6,
+        "quantity": 5.5,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.9166666666666666,
     "coinsPerEnergy": 116.66666666666667,
     "maidenXPPerEnergy": 1000,
-    "fodderCoins": 0,
+    "fodderCoins": 106.94444444444444,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -44429,13 +44552,13 @@
     "dustCDR": 0,
     "total": 10,
     "Dark": 6,
+    "Warrior": 5,
     "Support": 1,
     "Fire": 2,
     "Engineer": 2,
     "Mage": 1,
     "Light": 1,
     "Marksman": 1,
-    "Warrior": 2,
     "Water": 1
   },
   {
@@ -44451,10 +44574,21 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Nut",
+        "itemID": 1113,
+        "droprate": 100,
+        "q1": 3,
+        "q2": 5,
+        "quantity": 4,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 0.6666666666666666,
     "coinsPerEnergy": 150,
     "maidenXPPerEnergy": 1333.3333333333333,
-    "fodderCoins": 0,
+    "fodderCoins": 100,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -44469,7 +44603,8 @@
     "Dark": 4,
     "Mage": 1,
     "Fire": 1,
-    "Marksman": 1
+    "Marksman": 1,
+    "Warrior": 3
   },
   {
     "id": 6226,
@@ -44484,10 +44619,30 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Watch Gear",
+        "itemID": 1112,
+        "droprate": 100,
+        "q1": 2,
+        "q2": 3,
+        "quantity": 2.5,
+        "rarity": "Common"
+      },
+      {
+        "name": "Rusted Nut",
+        "itemID": 1113,
+        "droprate": 100,
+        "q1": 4,
+        "q2": 6,
+        "quantity": 5,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 1.25,
     "coinsPerEnergy": 183.33333333333334,
     "maidenXPPerEnergy": 1666.6666666666667,
-    "fodderCoins": 0,
+    "fodderCoins": 229.16666666666669,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -44497,9 +44652,9 @@
     "dustCDR": 0,
     "total": 12,
     "Dark": 8,
+    "Warrior": 6,
     "Light": 1,
     "Engineer": 4,
-    "Warrior": 2,
     "Fire": 2,
     "Marksman": 1,
     "Mage": 1,
@@ -44518,10 +44673,30 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Watch Gear",
+        "itemID": 1112,
+        "droprate": 100,
+        "q1": 2,
+        "q2": 4,
+        "quantity": 3,
+        "rarity": "Common"
+      },
+      {
+        "name": "Rusted Screw",
+        "itemID": 1114,
+        "droprate": 100,
+        "q1": 5,
+        "q2": 6,
+        "quantity": 5.5,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 1.4166666666666665,
     "coinsPerEnergy": 216.66666666666666,
     "maidenXPPerEnergy": 1833.3333333333333,
-    "fodderCoins": 0,
+    "fodderCoins": 306.9444444444444,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -44531,7 +44706,7 @@
     "dustCDR": 0,
     "total": 10,
     "Water": 2,
-    "Warrior": 2,
+    "Warrior": 4,
     "Dark": 5,
     "Engineer": 4,
     "Fire": 1,
@@ -44552,10 +44727,30 @@
     "cd": 0,
     "challenge": "",
     "pvp": false,
-    "fodder": 0,
+    "rewards": [
+      {
+        "name": "Rusted Chip",
+        "itemID": 1111,
+        "droprate": 100,
+        "q1": 1,
+        "q2": 3,
+        "quantity": 2,
+        "rarity": "Common"
+      },
+      {
+        "name": "Old Batteries",
+        "itemID": 1115,
+        "droprate": 100,
+        "q1": 5,
+        "q2": 7,
+        "quantity": 6,
+        "rarity": "Common"
+      }
+    ],
+    "fodder": 1.3333333333333333,
     "coinsPerEnergy": 250,
     "maidenXPPerEnergy": 2000,
-    "fodderCoins": 0,
+    "fodderCoins": 333.3333333333333,
     "dustDamage": 0,
     "dustHealth": 0,
     "dustCrit": 0,
@@ -44569,7 +44764,8 @@
     "Light": 1,
     "Engineer": 2,
     "Dark": 5,
-    "Mage": 2
+    "Mage": 2,
+    "Warrior": 2
   },
   {
     "id": 7019,
