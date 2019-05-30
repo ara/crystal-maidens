@@ -2951,20 +2951,20 @@
       null,
       null,
       {
-        "as": 5.5,
-        "asInc": 2,
+        "def": 5.5,
+        "defInc": 2,
         "cdr": 4.5,
         "cdrInc": 1.5,
-        "crit": 2.5,
-        "critInc": 1.25
+        "hp": 2.5,
+        "hpInc": 1.25
       },
       {
-        "as": 9,
-        "asInc": 4,
+        "def": 8,
+        "defInc": 2.4,
         "cdr": 6,
         "cdrInc": 2,
-        "crit": 5,
-        "critInc": 2.5
+        "hp": 70,
+        "hpInc": 15
       },
       null
     ]
@@ -2983,18 +2983,18 @@
       {
         "def": 4,
         "defInc": 1.5,
-        "dodge": 4,
-        "dodgeInc": 1.5,
+        "as": 4,
+        "asInc": 1.5,
         "cdr": 2,
         "cdrInc": 1.25
       },
       {
         "def": 8,
-        "defInc": 2.5,
-        "dodge": 6,
-        "dodgeInc": 2.75,
+        "defInc": 2.4,
+        "as": 6,
+        "asInc": 2.8,
         "cdr": 4,
-        "cdrInc": 2
+        "cdrInc": 2.4
       },
       null
     ]
@@ -3011,20 +3011,20 @@
       null,
       null,
       {
-        "as": 5.5,
-        "asInc": 2,
-        "crit": 5.5,
-        "critInc": 2,
-        "dodge": 1.5,
-        "dodgeInc": 1.25
+        "dodge": 5.5,
+        "dodgeInc": 2,
+        "hp": 55,
+        "hpInc": 12,
+        "as": 1.5,
+        "asInc": 1.25
       },
       {
-        "as": 9,
-        "asInc": 4,
-        "crit": 8,
-        "critInc": 3.5,
-        "dodge": 3,
-        "dodgeInc": 2
+        "dodge": 9,
+        "dodgeInc": 4,
+        "hp": 80,
+        "hpInc": 14.2,
+        "as": 5,
+        "asInc": 3
       },
       null
     ]
@@ -3789,9 +3789,33 @@
       null
     ]
   },
+  "2020": {
+    "id": 2020,
+    "name": "Amira's Flint Pistol",
+    "maiden": 54,
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      {
+        "dmg": 90,
+        "dmgInc": 23.6,
+        "crit": 9,
+        "critInc": 4.6,
+        "dodge": 4.5,
+        "dodgeInc": 1.75
+      },
+      null
+    ]
+  },
   "2021": {
     "id": 2021,
-    "name": "Kebi's Sunrod ",
+    "name": "Kebi's Sunrod",
     "maiden": 45,
     "class": 5,
     "slot": 2,
@@ -3809,6 +3833,66 @@
         "dodgeInc": 4.5,
         "hp": 100,
         "hpInc": 22
+      },
+      null
+    ]
+  },
+  "2022": {
+    "id": 2022,
+    "name": "Destiny's Necro-Spear",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 70,
+        "dmgInc": 20,
+        "hp": 70,
+        "hpInc": 20,
+        "crit": 4,
+        "critInc": 2
+      },
+      {
+        "dmg": 100,
+        "dmgInc": 28,
+        "hp": 100,
+        "hpInc": 28,
+        "crit": 5,
+        "critInc": 3
+      },
+      null
+    ]
+  },
+  "2023": {
+    "id": 2023,
+    "name": "Alisha's Skull Tiara",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 15,
+        "cdr": 5.5,
+        "cdrInc": 2,
+        "def": 6,
+        "defInc": 3
+      },
+      {
+        "hp": 110,
+        "hpInc": 18,
+        "cdr": 7,
+        "cdrInc": 2.5,
+        "def": 8,
+        "defInc": 4
       },
       null
     ]

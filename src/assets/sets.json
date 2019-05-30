@@ -629,7 +629,7 @@
       },
       {
         "respawn": -3500,
-        "deathGateShield ": 25,
+        "deathGateShield": 25,
         "cooldownOverCap": 500,
         "xp": 1000
       },
