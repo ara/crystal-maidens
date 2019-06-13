@@ -44,7 +44,7 @@
     "respawnCD": 10,
     "vision": 7,
     "affection": "2 2 3 3 10 3 3 5 7 12 5 5 10 10 20",
-    "dropRate": 250,
+    "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Swordswoman",
     "attack": {
@@ -594,7 +594,7 @@
     "dodge": 2,
     "def": 0,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.105,
     "skillCoef": 2.3,
     "hp": {
       "base": 300,
@@ -1287,7 +1287,7 @@
     "vision": 7,
     "affection": "20 20 25 30 60 45 45 50 60 110 65 75 85 115 395",
     "dropRate": 100,
-    "eventDropRate": 0,
+    "eventDropRate": 100,
     "title": "The Lich Queen",
     "attack": {
       "hits": 1,
@@ -2183,7 +2183,7 @@
     "crit": 1,
     "dodge": 2,
     "def": 0,
-    "hpCoef": 2.11,
+    "hpCoef": 2.13,
     "dmgCoef": 2.11,
     "skillCoef": 2.4,
     "hp": {
@@ -2624,7 +2624,7 @@
     "dodge": 1,
     "def": 0,
     "hpCoef": 2.15,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.14,
     "skillCoef": 2.11,
     "hp": {
       "base": 700,
@@ -2687,7 +2687,7 @@
     "dodge": 2,
     "def": 0,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.11,
     "skillCoef": 2.55,
     "hp": {
       "base": 525,
@@ -3312,7 +3312,7 @@
     "def": 0,
     "hpCoef": 2.15,
     "dmgCoef": 2.15,
-    "skillCoef": 2.25,
+    "skillCoef": 2.3,
     "hp": {
       "base": 750,
       "inc": 35
@@ -3336,9 +3336,9 @@
     "skill": {
       "id": 108,
       "name": "Slashing Sandstorm",
-      "desc": "Swing her sword which summons a sandstorm that hurt and slow the enemies",
+      "desc": "Swing her sword which summons a sandstorm that hurt and slow the enemies.",
       "castTime": 0.6,
-      "CD": 12,
+      "CD": 10,
       "range": 6,
       "missChance": 0,
       "radius": 5,
@@ -3360,7 +3360,7 @@
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 40,
-          "damageInc": 370,
+          "damageInc": 130,
           "overtimeduration": 50,
           "overtimeinterval": 10
         }
@@ -3380,7 +3380,7 @@
     "dodge": 10,
     "def": 0,
     "hpCoef": 2.11,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.1,
     "skillCoef": 2.55,
     "hp": {
       "base": 550,
@@ -3875,7 +3875,7 @@
     },
     "respawnCD": 10,
     "vision": 7,
-    "affection": "20 20 25 30 60 45 45 50 60 110 65 75 85 115 395",
+    "affection": "30 35 40 45 60 55 60 65 70 100 80 90 120 150 500",
     "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Voodoo Priestess",
@@ -3892,31 +3892,24 @@
     "skill": {
       "id": 126,
       "name": "Horrific Hex",
-      "desc": "Impose a curse that hurts and frightened her foes and then reflect damage done to her allies.",
-      "castTime": 1,
+      "desc": "Impose a curse that hurts and frightens her foes.",
+      "castTime": 2,
       "CD": 15,
-      "range": 255,
+      "range": 12,
       "missChance": 0,
-      "radius": 255,
+      "radius": 7,
       "ticks": 1,
       "duration": 80,
-      "walkDelay": 2,
+      "walkDelay": 1,
       "actDelay": 0,
       "dmgTicks": 10,
       "healTicks": 1,
       "effects": [
         {
-          "type": "ReflectEffect",
-          "target": "your allies and yourself",
-          "percent": 1500,
-          "percentInc": 75,
-          "duration": 100
-        },
-        {
           "type": "DamageEffect",
           "target": "enemies",
           "damage": 10,
-          "damageInc": 6,
+          "damageInc": 20,
           "overtimeduration": 100,
           "overtimeinterval": 10
         },
@@ -3949,9 +3942,9 @@
     },
     "respawnCD": 10,
     "vision": 7,
-    "affection": "20 20 25 30 60 45 45 50 60 110 65 75 85 115 395",
+    "affection": "30 35 40 45 60 55 60 65 70 100 80 90 120 150 500",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 150,
     "title": "The Soul Seeker",
     "attack": {
       "hits": 1,
@@ -3972,8 +3965,8 @@
       "range": 7,
       "missChance": 0,
       "radius": 5,
-      "ticks": 2,
-      "duration": 80,
+      "ticks": 1,
+      "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
       "dmgTicks": 5,
@@ -4706,14 +4699,26 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 1,
+      "dmgTicks": 3,
       "healTicks": 1,
       "effects": [
         {
-          "type": "17",
-          "target": "enemies"
+          "type": "DamageEffect",
+          "target": "enemies",
+          "damage": 25,
+          "damageInc": 30,
+          "overtimeduration": 30,
+          "overtimeinterval": 10
+        },
+        {
+          "type": "DamageAlterEffect",
+          "target": "your allies",
+          "damagealter": 25,
+          "duration": 30,
+          "damagealterInc": 35
         }
-      ]
+      ],
+      "dmgDuration": 30
     }
   },
   {
@@ -11988,16 +11993,16 @@
     "element": 0,
     "class": 1,
     "moveSpeed": 0,
-    "as": 100,
+    "as": 90,
     "crit": 5,
     "dodge": 1,
-    "def": 0,
+    "def": 5,
     "hpCoef": 2.11,
     "dmgCoef": 2.09,
     "skillCoef": 2.11,
     "hp": {
       "base": 120000,
-      "inc": 2000
+      "inc": 33000
     },
     "respawnCD": 15,
     "vision": 15,

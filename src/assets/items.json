@@ -3041,18 +3041,18 @@
       null,
       null,
       {
-        "def": 5,
-        "defInc": 2,
-        "dodge": 3.5,
-        "dodgeInc": 1.5,
+        "hp": 65,
+        "hpInc": 13,
+        "def": 4,
+        "defInc": 1.5,
         "crit": 3,
         "critInc": 2
       },
       {
-        "def": 8,
-        "defInc": 2.5,
-        "dodge": 6,
-        "dodgeInc": 2,
+        "hp": 120,
+        "hpInc": 21,
+        "def": 6.5,
+        "defInc": 2.25,
         "crit": 5,
         "critInc": 3
       },
@@ -3071,20 +3071,20 @@
       null,
       null,
       {
-        "cdr": 5.5,
-        "cdrInc": 2,
+        "dmg": 35,
+        "dmgInc": 6,
         "dodge": 3.5,
-        "dodgeInc": 2,
-        "crit": 3,
-        "critInc": 2
+        "dodgeInc": 1.5,
+        "cdr": 2.5,
+        "cdrInc": 1.5
       },
       {
-        "cdr": 8.5,
-        "cdrInc": 3,
+        "dmg": 70,
+        "dmgInc": 10,
         "dodge": 6,
         "dodgeInc": 2.5,
-        "crit": 5,
-        "critInc": 3
+        "cdr": 4.5,
+        "cdrInc": 2.5
       },
       null
     ]
@@ -3102,17 +3102,17 @@
       null,
       {
         "as": 7.5,
-        "asInc": 3,
-        "dodge": 3.5,
-        "dodgeInc": 1.5,
+        "asInc": 2,
+        "hp": 50,
+        "hpInc": 11,
         "crit": 3,
         "critInc": 2
       },
       {
-        "as": 10,
-        "asInc": 3.75,
-        "dodge": 6,
-        "dodgeInc": 2,
+        "as": 12,
+        "asInc": 3.5,
+        "hp": 100,
+        "hpInc": 18,
         "crit": 5,
         "critInc": 3
       },
@@ -5233,8 +5233,8 @@
         "dodgeInc": 1.2,
         "def": 6.25,
         "defInc": 1.3,
-        "dmg": 1.75,
-        "dmgInc": 0.4
+        "dmg": 17.5,
+        "dmgInc": 6
       },
       {
         "dodge": 11,
@@ -5485,6 +5485,179 @@
         "cdr": 3.2,
         "cdrInc": 1.4
       },
+      null
+    ]
+  },
+  "3058": {
+    "id": 3058,
+    "name": "Deer Head Skull",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 76,
+        "dmgInc": 21.5,
+        "dodge": 2.75,
+        "dodgeInc": 1,
+        "cdr": 3.75,
+        "cdrInc": 1.5
+      },
+      {
+        "dmg": 90,
+        "dmgInc": 28.5,
+        "dodge": 4,
+        "dodgeInc": 1.7,
+        "cdr": 4.25,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  "3059": {
+    "id": 3059,
+    "name": "Dark Skull Staff",
+    "class": 5,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 90,
+        "dmgInc": 19.5,
+        "as": 5,
+        "asInc": 2,
+        "hp": 60,
+        "hpInc": 10
+      },
+      {
+        "dmg": 115,
+        "dmgInc": 27.5,
+        "as": 12,
+        "asInc": 3.25,
+        "hp": 86.5,
+        "hpInc": 21.7
+      },
+      null
+    ]
+  },
+  "3060": {
+    "id": 3060,
+    "name": "Voodoo Ring",
+    "class": 5,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 5,
+        "dodgeInc": 1.2,
+        "hp": 66.5,
+        "hpInc": 12,
+        "def": 5,
+        "defInc": 2.75
+      },
+      {
+        "dodge": 8,
+        "dodgeInc": 1.3,
+        "hp": 92,
+        "hpInc": 15.5,
+        "def": 7,
+        "defInc": 4.2
+      },
+      null
+    ]
+  },
+  "3061": {
+    "id": 3061,
+    "name": "Ghost Armor",
+    "class": 3,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 6.5,
+        "asInc": 2.5,
+        "hp": 40,
+        "hpInc": 5.5,
+        "dodge": 3,
+        "dodgeInc": 1.5
+      },
+      {
+        "as": 8,
+        "asInc": 1.25,
+        "hp": 60,
+        "hpInc": 8.5,
+        "dodge": 4.75,
+        "dodgeInc": 2.75
+      },
+      null
+    ]
+  },
+  "3062": {
+    "id": 3062,
+    "name": "Ghost Ring",
+    "class": 3,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 21,
+        "hpInc": 9,
+        "as": 3.75,
+        "asInc": 2.5,
+        "dodge": 1.3,
+        "dodgeInc": 0.9
+      },
+      {
+        "hp": 48,
+        "hpInc": 14,
+        "as": 5.8,
+        "asInc": 2.9,
+        "dodge": 3.25,
+        "dodgeInc": 1.7
+      },
+      null
+    ]
+  },
+  "3063": {
+    "id": 3063,
+    "name": "Purple Shadow Shield",
+    "class": 0,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 11,
+        "defInc": 1.8,
+        "hp": 20,
+        "hpInc": 9.75,
+        "as": 2.25,
+        "asInc": 0.7
+      },
+      null,
       null
     ]
   },
@@ -7253,7 +7426,7 @@
       null,
       null,
       {
-        "hp": 22,
+        "hp": 72,
         "hpInc": 8,
         "def": 3.75,
         "defInc": 1,
@@ -10651,7 +10824,7 @@
       null,
       {
         "hp": 100,
-        "hpInc": 9,
+        "hpInc": 9.5,
         "as": 8,
         "asInc": 3.5,
         "dodge": 8,
@@ -10674,11 +10847,11 @@
       null,
       {
         "dmg": 100,
-        "dmgInc": 9.5,
+        "dmgInc": 10,
         "crit": 5,
         "critInc": 2,
-        "def": 6.25,
-        "defInc": 2
+        "def": 7,
+        "defInc": 2.35
       }
     ]
   },
@@ -10701,7 +10874,7 @@
         "hp": 65,
         "hpInc": 15,
         "dodge": 8,
-        "dodgeInc": 2.5
+        "dodgeInc": 3
       }
     ]
   },
@@ -10770,7 +10943,7 @@
         "dodge": 8.5,
         "dodgeInc": 3,
         "cdr": 6.5,
-        "cdrInc": 1.75
+        "cdrInc": 2
       }
     ]
   },
@@ -10864,6 +11037,486 @@
         "dodge": 7.5,
         "dodgeInc": 3.5
       }
+    ]
+  },
+  "7001": {
+    "id": 7001,
+    "name": "Corrupted Legion's Helmet",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 25,
+        "def": 5.5,
+        "defInc": 1.25,
+        "dmg": -45,
+        "dmgInc": -7.5
+      },
+      {
+        "hp": 150,
+        "hpInc": 35,
+        "def": 9.5,
+        "defInc": 2,
+        "dmg": -70,
+        "dmgInc": -10
+      },
+      null
+    ]
+  },
+  "7007": {
+    "id": 7007,
+    "name": "Corrupted Legion's Targe",
+    "class": 1,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 20,
+        "def": 4.5,
+        "defInc": 1.25,
+        "cdr": -6,
+        "cdrInc": -1.5
+      },
+      {
+        "hp": 160,
+        "hpInc": 35,
+        "def": 7.5,
+        "defInc": 2.25,
+        "cdr": -10,
+        "cdrInc": -2
+      },
+      null
+    ]
+  },
+  "7014": {
+    "id": 7014,
+    "name": "Corrupted Archmage's Hat",
+    "class": 2,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 75,
+        "dmgInc": 20,
+        "as": 5,
+        "asInc": 1.75,
+        "def": -5,
+        "defInc": -1
+      },
+      {
+        "dmg": 120,
+        "dmgInc": 30,
+        "as": 12,
+        "asInc": 2.5,
+        "def": -10,
+        "defInc": -2
+      },
+      null
+    ]
+  },
+  "7018": {
+    "id": 7018,
+    "name": "Corrupted Archmage's  Staff",
+    "class": 2,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 90,
+        "dmgInc": 25,
+        "crit": 10,
+        "critInc": 2.25,
+        "cdr": -5,
+        "cdrInc": -1.5
+      },
+      {
+        "dmg": 150,
+        "dmgInc": 35,
+        "crit": 16,
+        "critInc": 3.5,
+        "cdr": -10,
+        "cdrInc": -2.5
+      },
+      null
+    ]
+  },
+  "7020": {
+    "id": 7020,
+    "name": "Corrupted Archmage's  Artifact",
+    "class": 2,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 25,
+        "def": 8,
+        "defInc": 1.5,
+        "dmg": -40,
+        "dmgInc": -6
+      },
+      {
+        "hp": 160,
+        "hpInc": 35,
+        "def": 12,
+        "defInc": 3,
+        "dmg": -70,
+        "dmgInc": -10
+      },
+      null
+    ]
+  },
+  "7027": {
+    "id": 7027,
+    "name": "Corrupted Robin's Tunic",
+    "class": 3,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 25,
+        "crit": 6,
+        "critInc": 1.5,
+        "dodge": -4,
+        "dodgeInc": -1.25
+      },
+      {
+        "hp": 150,
+        "hpInc": 35,
+        "crit": 10,
+        "critInc": 2.5,
+        "dodge": -8,
+        "dodgeInc": -2
+      },
+      null
+    ]
+  },
+  "7030": {
+    "id": 7030,
+    "name": "Corrupted Bowing 3000",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 10,
+        "critInc": 2.5,
+        "dmg": 90,
+        "dmgInc": 25,
+        "cdr": -3,
+        "cdrInc": -1.25
+      },
+      {
+        "crit": 15,
+        "critInc": 4,
+        "dmg": 150,
+        "dmgInc": 35,
+        "cdr": -6,
+        "cdrInc": -2.5
+      },
+      null
+    ]
+  },
+  "7031": {
+    "id": 7031,
+    "name": "Corrupted Speeder's Ring",
+    "class": 3,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 23,
+        "asInc": 3.5,
+        "hp": 90,
+        "hpInc": 20,
+        "def": -4,
+        "defInc": -1.5
+      },
+      {
+        "as": 35,
+        "asInc": 5,
+        "hp": 150,
+        "hpInc": 30,
+        "def": -8,
+        "defInc": -3
+      },
+      null
+    ]
+  },
+  "7035": {
+    "id": 7035,
+    "name": "Corrupted Charming Locket",
+    "class": 3,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 90,
+        "dmgInc": 20,
+        "crit": 6,
+        "critInc": 1.5,
+        "cdr": -4.5,
+        "cdrInc": -2
+      },
+      {
+        "dmg": 150,
+        "dmgInc": 30,
+        "crit": 10,
+        "critInc": 2.5,
+        "cdr": -7.5,
+        "cdrInc": -3
+      },
+      null
+    ]
+  },
+  "7037": {
+    "id": 7037,
+    "name": "Corrupted Worker's Hat",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 25,
+        "crit": 12,
+        "critInc": 2.5,
+        "cdr": -6,
+        "cdrInc": -1.5
+      },
+      {
+        "hp": 140,
+        "hpInc": 40,
+        "crit": 20,
+        "critInc": 3.5,
+        "cdr": -10,
+        "cdrInc": -2.5
+      },
+      null
+    ]
+  },
+  "7042": {
+    "id": 7042,
+    "name": "Corrupted Hammer",
+    "class": 4,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 17.5,
+        "asInc": 2.5,
+        "dmg": 100,
+        "dmgInc": 20,
+        "dodge": -5,
+        "dodgeInc": -1
+      },
+      {
+        "as": 25,
+        "asInc": 4,
+        "dmg": 160,
+        "dmgInc": 32.5,
+        "dodge": -7,
+        "dodgeInc": -2
+      },
+      null
+    ]
+  },
+  "7047": {
+    "id": 7047,
+    "name": "Corrupted Amethyst",
+    "class": 4,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 95,
+        "dmgInc": 17.5,
+        "crit": 9,
+        "critInc": 2,
+        "cdr": -3,
+        "cdrInc": -1.5
+      },
+      {
+        "dmg": 150,
+        "dmgInc": 30,
+        "crit": 15,
+        "critInc": 3,
+        "cdr": -5,
+        "cdrInc": -2.5
+      },
+      null
+    ]
+  },
+  "7049": {
+    "id": 7049,
+    "name": "Corrupted Priest's Helmet",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 80,
+        "hpInc": 20,
+        "def": 8,
+        "defInc": 2.25,
+        "dodge": -2.5,
+        "dodgeInc": -1
+      },
+      {
+        "hp": 140,
+        "hpInc": 35,
+        "def": 15,
+        "defInc": 3.5,
+        "dodge": -5,
+        "dodgeInc": -1.5
+      },
+      null
+    ]
+  },
+  "7053": {
+    "id": 7053,
+    "name": "Corrupted Crescent Staff",
+    "class": 5,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 8,
+        "cdrInc": 1.25,
+        "hp": 100,
+        "hpInc": 17.5,
+        "as": -10,
+        "asInc": -2
+      },
+      {
+        "cdr": 15,
+        "cdrInc": 2,
+        "hp": 160,
+        "hpInc": 30,
+        "as": -16,
+        "asInc": -3
+      },
+      null
+    ]
+  },
+  "7059": {
+    "id": 7059,
+    "name": "Corrupted Lucky Charm",
+    "class": 5,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 9,
+        "dodgeInc": 2,
+        "def": 10,
+        "defInc": 1.5,
+        "cdr": -3.5,
+        "cdrInc": -1.25
+      },
+      {
+        "dodge": 15,
+        "dodgeInc": 3.5,
+        "def": 15,
+        "defInc": 2.5,
+        "cdr": -7.5,
+        "cdrInc": -2
+      },
+      null
+    ]
+  },
+  "7999": {
+    "id": 7999,
+    "name": "Corrupted Sword of Legends",
+    "class": 1,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 80,
+        "dmgInc": 25,
+        "as": 7,
+        "asInc": 2.25,
+        "cdr": -7.5,
+        "cdrInc": -1.5
+      },
+      {
+        "dmg": 140,
+        "dmgInc": 40,
+        "as": 12,
+        "asInc": 3.5,
+        "cdr": -15,
+        "cdrInc": -3
+      },
+      null
     ]
   }
 }
