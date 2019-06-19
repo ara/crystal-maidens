@@ -35614,18 +35614,18 @@
         "name": "Wood Doll",
         "itemID": 1116,
         "droprate": 100,
-        "q1": 4,
-        "q2": 5,
-        "quantity": 4.5,
+        "q1": 1,
+        "q2": 3,
+        "quantity": 2,
         "rarity": "Unidentified"
       },
       {
         "name": "Voodoo Pins",
         "itemID": 1120,
         "droprate": 100,
-        "q1": 2,
-        "q2": 4,
-        "quantity": 3,
+        "q1": 4,
+        "q2": 5,
+        "quantity": 4.5,
         "rarity": "Unidentified"
       }
     ],
@@ -45828,9 +45828,9 @@
         "name": "Purple Frog Legs",
         "itemID": 1117,
         "droprate": 100,
-        "q1": 3,
-        "q2": 5,
-        "quantity": 4,
+        "q1": 6,
+        "q2": 7,
+        "quantity": 6.5,
         "rarity": "Unidentified"
       },
       {
@@ -45925,17 +45925,17 @@
         "itemID": 1118,
         "droprate": 100,
         "q1": 15,
-        "q2": 16,
-        "quantity": 15.5,
+        "q2": 17,
+        "quantity": 16,
         "rarity": "Unidentified"
       },
       {
         "name": "Witches Fingers",
         "itemID": 1119,
         "droprate": 100,
-        "q1": 11,
+        "q1": 12,
         "q2": 13,
-        "quantity": 12,
+        "quantity": 12.5,
         "rarity": "Unidentified"
       }
     ],
@@ -45981,9 +45981,9 @@
         "name": "Witches Fingers",
         "itemID": 1119,
         "droprate": 100,
-        "q1": 8,
-        "q2": 9,
-        "quantity": 8.5,
+        "q1": 10,
+        "q2": 12,
+        "quantity": 11,
         "rarity": "Unidentified"
       }
     ],
@@ -46023,17 +46023,17 @@
         "itemID": 1116,
         "droprate": 100,
         "q1": 4,
-        "q2": 5,
-        "quantity": 4.5,
+        "q2": 6,
+        "quantity": 5,
         "rarity": "Unidentified"
       },
       {
         "name": "Voodoo Pins",
         "itemID": 1120,
         "droprate": 100,
-        "q1": 9,
-        "q2": 11,
-        "quantity": 10,
+        "q1": 11,
+        "q2": 13,
+        "quantity": 12,
         "rarity": "Unidentified"
       }
     ],

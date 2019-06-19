@@ -4656,7 +4656,7 @@
   },
   {
     "id": 77,
-    "name": "Fire Djinn swap",
+    "name": "Amber",
     "rarity": 3,
     "element": 1,
     "class": 5,
@@ -4690,6 +4690,8 @@
     },
     "skill": {
       "id": 154,
+      "name": "Fire Wave",
+      "desc": "Brings forth a wave from the fire plane that burns enemies and ignites her allies' strenght",
       "castTime": 0.8,
       "CD": 1,
       "range": 10,
@@ -4723,7 +4725,7 @@
   },
   {
     "id": 78,
-    "name": "Sky Pirate taunt",
+    "name": "Jackie",
     "rarity": 2,
     "element": 16,
     "class": 4,
@@ -4747,6 +4749,8 @@
     "title": "The Sky Corsair",
     "skill": {
       "id": 156,
+      "name": "Raiding Onward",
+      "desc": "Calls a number of robot crew equal to the enemies in front of her and give a burst of adrenaline to some allies in her path",
       "castTime": 0.1,
       "CD": 1,
       "range": 12,
@@ -4763,7 +4767,7 @@
   },
   {
     "id": 79,
-    "name": "Cyborg",
+    "name": "Eve",
     "rarity": 2,
     "element": 8,
     "class": 4,
