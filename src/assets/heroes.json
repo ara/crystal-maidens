@@ -276,7 +276,7 @@
     "rarity": 0,
     "element": 8,
     "class": 2,
-    "moveSpeed": 5,
+    "moveSpeed": 3,
     "as": 55,
     "crit": 1,
     "dodge": 2,
@@ -289,7 +289,7 @@
       "inc": 40
     },
     "respawnCD": 10,
-    "vision": 9,
+    "vision": 10,
     "affection": "5 7 8 10 30 10 15 20 25 50 20 25 30 45 180",
     "dropRate": 400,
     "eventDropRate": 0,
@@ -4657,24 +4657,24 @@
   {
     "id": 77,
     "name": "Amber",
-    "rarity": 3,
+    "rarity": 2,
     "element": 1,
     "class": 5,
     "moveSpeed": 7,
-    "as": 105,
+    "as": 100,
     "crit": 2,
-    "dodge": 10,
+    "dodge": 0,
     "def": 0,
-    "hpCoef": 2.1,
-    "dmgCoef": 2.21,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.17,
     "skillCoef": 2.5,
     "hp": {
       "base": 900,
       "inc": 45
     },
     "respawnCD": 10,
-    "vision": 0,
-    "affection": "20 20 25 30 60 45 45 50 60 110 65 75 85 115 395",
+    "vision": 9,
+    "affection": "20 25 30 35 40 45 50 55 90 60 70 80 100 110 290\n",
     "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Spirit Of Fire",
@@ -4684,43 +4684,41 @@
       "actDelay": 0,
       "castTime": 0.2,
       "range": 7,
-      "damage": 120,
+      "damage": 100,
       "damageInc": 3,
       "aoe": 0
     },
     "skill": {
       "id": 154,
       "name": "Fire Wave",
-      "desc": "Brings forth a wave from the fire plane that burns enemies and ignites her allies' strenght",
+      "desc": "Brings forth a wave from the fire plane that burns enemies and ignites her allies' strenght.",
       "castTime": 0.8,
-      "CD": 1,
-      "range": 10,
+      "CD": 15,
+      "range": 255,
       "missChance": 0,
-      "radius": 1,
+      "radius": 255,
       "ticks": 1,
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 0,
       "healTicks": 1,
       "effects": [
         {
           "type": "DamageEffect",
           "target": "enemies",
-          "damage": 25,
-          "damageInc": 30,
-          "overtimeduration": 30,
-          "overtimeinterval": 10
+          "damage": 120,
+          "damageInc": 130
         },
         {
           "type": "DamageAlterEffect",
           "target": "your allies",
           "damagealter": 25,
-          "duration": 30,
-          "damagealterInc": 35
+          "duration": 50,
+          "damagealterInc": 25
         }
       ],
-      "dmgDuration": 30
+      "dmgDuration": 0
     }
   },
   {
@@ -4730,16 +4728,16 @@
     "element": 16,
     "class": 4,
     "moveSpeed": 4,
-    "as": 140,
-    "crit": 10,
-    "dodge": 10,
+    "as": 145,
+    "crit": 5,
+    "dodge": 5,
     "def": 0,
-    "hpCoef": 2.12,
-    "dmgCoef": 2.11,
+    "hpCoef": 2.1,
+    "dmgCoef": 2.14,
     "skillCoef": 2.25,
     "hp": {
-      "base": 750,
-      "inc": 43
+      "base": 650,
+      "inc": 40
     },
     "respawnCD": 10,
     "vision": 7,
@@ -4747,48 +4745,339 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "title": "The Sky Corsair",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.3,
+      "range": 1,
+      "damage": 150,
+      "damageInc": 3,
+      "aoe": 0
+    },
     "skill": {
       "id": 156,
       "name": "Raiding Onward",
       "desc": "Calls a number of robot crew equal to the enemies in front of her and give a burst of adrenaline to some allies in her path",
       "castTime": 0.1,
-      "CD": 1,
-      "range": 12,
+      "CD": 12,
+      "range": 20,
       "missChance": 0,
-      "radius": 12,
-      "ticks": 1,
-      "duration": 0,
-      "walkDelay": 0,
+      "radius": 2,
+      "ticks": 10,
+      "duration": 100,
+      "walkDelay": 1,
       "actDelay": 0,
       "dmgTicks": 1,
       "healTicks": 1,
-      "effects": []
+      "effects": [
+        {
+          "type": "SummonEffect",
+          "target": "enemies",
+          "heroids": [
+            5004
+          ],
+          "maxconcurrent": 12,
+          "level": -1,
+          "destroyfirst": 1
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "target": "yourself",
+          "percent": 9000,
+          "percentInc": 175,
+          "duration": 30
+        }
+      ]
     }
   },
   {
     "id": 79,
     "name": "Eve",
-    "rarity": 2,
+    "rarity": 3,
     "element": 8,
     "class": 4,
     "moveSpeed": 5,
-    "as": 120,
+    "as": 100,
     "crit": 2,
     "dodge": 2,
-    "def": 0,
-    "hpCoef": 2.2,
-    "dmgCoef": 2.13,
+    "def": 2,
+    "hpCoef": 2.21,
+    "dmgCoef": 2.12,
     "skillCoef": 2.25,
     "hp": {
       "base": 1100,
+      "inc": 43
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "20 25 30 60 45 45 50 60 110 65 75 85 115 120 400",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Cyber Woman",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 5,
+      "damage": 100,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 158,
+      "name": "Quantum Shift",
+      "desc": "Switch places with an enemy and give herself a defense bubble for a short time",
+      "castTime": 0.8,
+      "CD": 10,
+      "range": 7,
+      "missChance": 0,
+      "radius": 25,
+      "ticks": 1,
+      "duration": 100,
+      "walkDelay": 1,
+      "actDelay": 1,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "16",
+          "target": "0"
+        },
+        {
+          "type": "17",
+          "target": "0",
+          "duration": 38,
+          "durationInc": 4
+        },
+        {
+          "type": "DefenseModifierEffect",
+          "target": "your allies and yourself",
+          "defense": 140,
+          "defenseInc": 45,
+          "duration": 38,
+          "durationInc": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "name": "#80",
+    "rarity": 3,
+    "element": 8,
+    "class": 2,
+    "moveSpeed": 5,
+    "as": 85,
+    "crit": 0,
+    "dodge": 5,
+    "def": 3,
+    "hpCoef": 2.21,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.33,
+    "hp": {
+      "base": 1200,
+      "inc": 45
+    },
+    "respawnCD": 10,
+    "vision": 9,
+    "affection": "20 25 30 60 45 45 50 60 110 65 75 85 115 120 400",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 1,
+      "damage": 80,
+      "damageInc": 5,
+      "aoe": 0,
+      "effects": [
+        {
+          "type": "HealEffect",
+          "target": "yourself",
+          "hp": 40,
+          "hpInc": 3
+        }
+      ]
+    },
+    "skill": {
+      "id": 160,
+      "castTime": 0.8,
+      "CD": 12,
+      "range": 8,
+      "missChance": 0,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 100,
+      "walkDelay": 1,
+      "actDelay": 1,
+      "dmgTicks": 0,
+      "healTicks": 20,
+      "effects": [
+        {
+          "type": "16",
+          "target": "0"
+        },
+        {
+          "type": "DamageEffect",
+          "target": "enemies",
+          "damage": 150,
+          "damageInc": 200
+        },
+        {
+          "type": "HealEffect",
+          "target": "yourself",
+          "hp": 25,
+          "hpInc": 25,
+          "overtimeduration": 100,
+          "overtimeinterval": 5
+        }
+      ],
+      "dmgDuration": 0,
+      "healDuration": 100
+    }
+  },
+  {
+    "id": 81,
+    "name": "#81",
+    "rarity": 2,
+    "element": 1,
+    "class": 1,
+    "moveSpeed": 4,
+    "as": 55,
+    "crit": 5,
+    "dodge": 3,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.23,
+    "hp": {
+      "base": 300,
       "inc": 41
     },
     "respawnCD": 10,
     "vision": 7,
-    "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
+    "affection": "20 25 30 35 40 45 50 55 90 60 70 80 100 110 290",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Cyber Woman"
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 2,
+      "damage": 55,
+      "damageInc": 5,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 162,
+      "castTime": 0.6,
+      "CD": 10,
+      "range": 1,
+      "missChance": 0,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 50,
+      "walkDelay": 0.5,
+      "actDelay": 0.5,
+      "dmgTicks": 5,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "DamageEffect",
+          "target": "enemies",
+          "damage": 100,
+          "damageInc": 45,
+          "overtimeduration": 50,
+          "overtimeinterval": 10
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "target": "yourself",
+          "percent": 800,
+          "percentInc": 150,
+          "duration": 22,
+          "durationInc": 4
+        },
+        {
+          "type": "DamageAlterEffect",
+          "target": "yourself",
+          "damagealter": 25,
+          "duration": 22,
+          "damagealterInc": 45,
+          "durationInc": 2
+        }
+      ],
+      "dmgDuration": 50
+    }
+  },
+  {
+    "id": 82,
+    "name": "#82",
+    "rarity": 2,
+    "element": 1,
+    "class": 1,
+    "moveSpeed": 4,
+    "as": 100,
+    "crit": 7,
+    "dodge": 3,
+    "def": 0,
+    "hpCoef": 2.12,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.5,
+    "hp": {
+      "base": 800,
+      "inc": 49
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "20 25 30 35 40 45 50 55 90 60 70 80 100 110 290\n",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 2,
+      "damage": 85,
+      "damageInc": 6,
+      "aoe": 3
+    },
+    "skill": {
+      "id": 164,
+      "castTime": 0.2,
+      "CD": 13,
+      "range": 1,
+      "missChance": 0,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 0.2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "ReflectEffect",
+          "target": "yourself",
+          "percent": 2200,
+          "percentInc": 100,
+          "duration": 36,
+          "durationInc": 3
+        },
+        {
+          "type": "17",
+          "target": "0",
+          "duration": 36,
+          "durationInc": 3
+        }
+      ]
+    }
   },
   {
     "id": 100,
@@ -11348,6 +11637,30 @@
         }
       ]
     }
+  },
+  {
+    "id": 5021,
+    "name": "#5021",
+    "rarity": 0,
+    "element": 16,
+    "class": 4,
+    "moveSpeed": 4,
+    "as": 80,
+    "crit": 10,
+    "dodge": 10,
+    "def": 0,
+    "hpCoef": 2.1,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 300,
+      "inc": 150
+    },
+    "respawnCD": 12,
+    "vision": 6,
+    "affection": "15 15 20 25 45 25 25 30 40 80 30 40 60 100 300",
+    "dropRate": 0,
+    "eventDropRate": 0
   },
   {
     "id": 6000,

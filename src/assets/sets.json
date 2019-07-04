@@ -144,29 +144,24 @@
       6026,
       6027,
       6028,
-      6029,
-      6030
+      6029
     ],
     "bonuses": [
       null,
       {
-        "dmgAgainstNature": 1000
+        "coinOnMap": 1000
       },
       {
-        "attackSpd": 250
+        "cooldownOverCap": 1000
       },
       {
-        "attackSpd": 250
+        "hpAfterItems": 500
       },
       {
-        "reflect": 1000
+        "coinOnMap": 1000,
+        "deathGateShield": 30
       },
-      {
-        "dmgAgainstNature": 500,
-        "crystalOnMap": 2500,
-        "reflect": 1000,
-        "attackSpd": 500
-      }
+      null
     ]
   },
   {
