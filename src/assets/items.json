@@ -2450,7 +2450,7 @@
       },
       {
         "as": 11,
-        "asInc": 5,
+        "asInc": 3.5,
         "dmg": 90,
         "dmgInc": 16,
         "hp": 75,
@@ -3223,17 +3223,17 @@
       {
         "dmg": 78,
         "dmgInc": 19,
-        "cdr": 6.5,
-        "cdrInc": 12.5,
-        "as": 2,
+        "hp": 65,
+        "hpInc": 12.5,
+        "as": 4,
         "asInc": 2.25
       },
       {
         "dmg": 95,
         "dmgInc": 25,
-        "cdr": 9,
-        "cdrInc": 14,
-        "as": 4,
+        "hp": 90,
+        "hpInc": 14,
+        "as": 7,
         "asInc": 4
       },
       null
@@ -3924,6 +3924,130 @@
         "hpInc": 13.5,
         "dmg": 80,
         "dmgInc": 15
+      },
+      null
+    ]
+  },
+  "2025": {
+    "id": 2025,
+    "name": "Jackie's Winged Boots",
+    "maiden": 78,
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 10.5,
+        "asInc": 5.4,
+        "dodge": 3.6,
+        "dodgeInc": 1.6,
+        "dmg": 36.4,
+        "dmgInc": 12.1
+      },
+      {
+        "as": 17,
+        "asInc": 7.8,
+        "dodge": 7.5,
+        "dodgeInc": 2.5,
+        "dmg": 70,
+        "dmgInc": 18
+      },
+      null
+    ]
+  },
+  "2026": {
+    "id": 2026,
+    "name": "Florence's Hat",
+    "maiden": 81,
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 7.4,
+        "asInc": 2.8,
+        "dodge": 3.4,
+        "dodgeInc": 1.1,
+        "crit": 5.5,
+        "critInc": 1.2
+      },
+      {
+        "as": 12,
+        "asInc": 4,
+        "dodge": 7,
+        "dodgeInc": 1.8,
+        "crit": 10,
+        "critInc": 2
+      },
+      null
+    ]
+  },
+  "2027": {
+    "id": 2027,
+    "name": "Ygritte's Dire Wolf Pelt",
+    "maiden": 83,
+    "class": 1,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 54.9,
+        "hpInc": 21.1,
+        "def": 4.7,
+        "defInc": 1.8,
+        "dmg": 31.2,
+        "dmgInc": 13.4
+      },
+      {
+        "hp": 90,
+        "hpInc": 32,
+        "def": 9,
+        "defInc": 2.5,
+        "dmg": 60,
+        "dmgInc": 20
+      },
+      null
+    ]
+  },
+  "2028": {
+    "id": 2028,
+    "name": "Winter's Edge",
+    "maiden": 83,
+    "class": 1,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 75.6,
+        "dmgInc": 17.3,
+        "as": 5.4,
+        "asInc": 3.4,
+        "cdr": 2.5,
+        "cdrInc": 1.4
+      },
+      {
+        "dmg": 120,
+        "dmgInc": 25,
+        "as": 9.5,
+        "asInc": 5.25,
+        "cdr": 4.5,
+        "cdrInc": 2.25
       },
       null
     ]
@@ -5689,6 +5813,246 @@
         "asInc": 0.7
       },
       null,
+      null
+    ]
+  },
+  "3064": {
+    "id": 3064,
+    "name": "Crystal Powered Rifle",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 72.5,
+        "dmgInc": 17.3,
+        "as": 6.3,
+        "asInc": 1.7,
+        "crit": 5,
+        "critInc": 1.9
+      },
+      {
+        "dmg": 115,
+        "dmgInc": 25,
+        "as": 11,
+        "asInc": 2.6,
+        "crit": 9,
+        "critInc": 3
+      },
+      null
+    ]
+  },
+  "3065": {
+    "id": 3065,
+    "name": "Hovering Shield",
+    "class": 3,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 45.8,
+        "hpInc": 11.2,
+        "def": 3.6,
+        "defInc": 1.8,
+        "cdr": 4.4,
+        "cdrInc": 1.3
+      },
+      {
+        "hp": 75,
+        "hpInc": 17,
+        "def": 7,
+        "defInc": 2.6,
+        "cdr": 8,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  "3066": {
+    "id": 3066,
+    "name": "Mystical Scientist's Goggles",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 4.3,
+        "cdrInc": 1.1,
+        "as": 6.8,
+        "asInc": 1.6,
+        "dodge": 3.8,
+        "dodgeInc": 1.3
+      },
+      {
+        "cdr": 7.5,
+        "cdrInc": 1.7,
+        "as": 12,
+        "asInc": 2.4,
+        "dodge": 8,
+        "dodgeInc": 2
+      },
+      null
+    ]
+  },
+  "3067": {
+    "id": 3067,
+    "name": "Crystal Powered Blade",
+    "class": 1,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 54.8,
+        "dmgInc": 14.5,
+        "as": 6.3,
+        "asInc": 1.7,
+        "cdr": 4,
+        "cdrInc": 1.1
+      },
+      {
+        "dmg": 87,
+        "dmgInc": 21,
+        "as": 11,
+        "asInc": 2.6,
+        "cdr": 7.25,
+        "cdrInc": 1.75
+      },
+      null
+    ]
+  },
+  "3068": {
+    "id": 3068,
+    "name": "Thunder Twin Axes",
+    "class": 1,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 9.3,
+        "asInc": 1.8,
+        "crit": 8.3,
+        "critInc": 1.6,
+        "cdr": 5.5,
+        "cdrInc": 0.8
+      },
+      {
+        "as": 15,
+        "asInc": 2.6,
+        "crit": 15,
+        "critInc": 2.6,
+        "cdr": 10,
+        "cdrInc": 1.2
+      },
+      null
+    ]
+  },
+  "3069": {
+    "id": 3069,
+    "name": "Runic Tattoos",
+    "class": 1,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 48.8,
+        "hpInc": 9.9,
+        "dodge": 4.1,
+        "dodgeInc": 1.2,
+        "cdr": 4.7,
+        "cdrInc": 0.8
+      },
+      {
+        "hp": 80,
+        "hpInc": 15,
+        "dodge": 8.5,
+        "dodgeInc": 1.9,
+        "cdr": 8.5,
+        "cdrInc": 1.3
+      },
+      null
+    ]
+  },
+  "3070": {
+    "id": 3070,
+    "name": "Light of Valhalla",
+    "class": 1,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 36.6,
+        "hpInc": 9.6,
+        "dmg": 36.4,
+        "dmgInc": 10.1,
+        "cdr": 4.1,
+        "cdrInc": 0.8
+      },
+      {
+        "hp": 60,
+        "hpInc": 14.5,
+        "dmg": 70,
+        "dmgInc": 15,
+        "cdr": 7.4,
+        "cdrInc": 1.25
+      },
+      null
+    ]
+  },
+  "3071": {
+    "id": 3071,
+    "name": "Helm of the Gods",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 42.7,
+        "hpInc": 11.9,
+        "def": 2.9,
+        "defInc": 2.1,
+        "cdr": 4.1,
+        "cdrInc": 1
+      },
+      {
+        "hp": 70,
+        "hpInc": 18,
+        "def": 5.5,
+        "defInc": 3,
+        "cdr": 7.5,
+        "cdrInc": 1.5
+      },
       null
     ]
   },
@@ -8360,7 +8724,14 @@
     "stats": [
       null,
       null,
-      null,
+      {
+        "crit": 7.15,
+        "critInc": 1.7,
+        "dmg": 53.3,
+        "dmgInc": 10.75,
+        "as": 1.95,
+        "asInc": 1.95
+      },
       {
         "crit": 11,
         "critInc": 2.6,
@@ -8383,7 +8754,14 @@
     "stats": [
       null,
       null,
-      null,
+      {
+        "hp": 58.5,
+        "hpInc": 10.4,
+        "dmg": 61.75,
+        "dmgInc": 11.05,
+        "def": 2.3,
+        "defInc": 0.8
+      },
       {
         "hp": 90,
         "hpInc": 16,
@@ -8406,7 +8784,14 @@
     "stats": [
       null,
       null,
-      null,
+      {
+        "cdr": 6.5,
+        "cdrInc": 2.1,
+        "dodge": 3.9,
+        "dodgeInc": 1.95,
+        "as": 2.95,
+        "asInc": 1.45
+      },
       {
         "cdr": 10,
         "cdrInc": 3.25,
@@ -8429,7 +8814,14 @@
     "stats": [
       null,
       null,
-      null,
+      {
+        "hp": 40.3,
+        "hpInc": 13,
+        "dmg": 24.4,
+        "dmgInc": 9.45,
+        "def": 2.3,
+        "defInc": 1.15
+      },
       {
         "hp": 62,
         "hpInc": 20,
@@ -8528,6 +8920,336 @@
         "cdrInc": 2.5,
         "def": 9,
         "defInc": 4
+      },
+      null
+    ]
+  },
+  "4101": {
+    "id": 4101,
+    "name": "Summer Visor Hat",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "def": 5.2,
+        "defInc": 1,
+        "dodge": 4.9,
+        "dodgeInc": 1,
+        "cdr": 3.25,
+        "cdrInc": 1.15
+      },
+      {
+        "def": 8,
+        "defInc": 1.5,
+        "dodge": 7.5,
+        "dodgeInc": 1.5,
+        "cdr": 5,
+        "cdrInc": 1.75
+      },
+      null
+    ]
+  },
+  "4102": {
+    "id": 4102,
+    "name": "Water Machine Gun",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 71.5,
+        "dmgInc": 16.25,
+        "crit": 7.8,
+        "critInc": 1.7,
+        "cdr": 3.6,
+        "cdrInc": 1.3
+      },
+      {
+        "dmg": 110,
+        "dmgInc": 25,
+        "crit": 12,
+        "critInc": 2.5,
+        "cdr": 5.5,
+        "cdrInc": 2
+      },
+      null
+    ]
+  },
+  "4103": {
+    "id": 4103,
+    "name": "Funky Ukulele",
+    "class": 1,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 7.8,
+        "asInc": 1.15,
+        "dodge": 3.9,
+        "dodgeInc": 1.3,
+        "crit": 3.6,
+        "critInc": 1.3
+      },
+      {
+        "as": 12,
+        "asInc": 1.75,
+        "dodge": 6,
+        "dodgeInc": 2,
+        "crit": 5.5,
+        "critInc": 2
+      },
+      null
+    ]
+  },
+  "4107": {
+    "id": 4107,
+    "name": "Flamingo Tube",
+    "class": 0,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 61.75,
+        "hpInc": 14.75,
+        "dodge": 5.8,
+        "dodgeInc": 1.3,
+        "crit": 5,
+        "critInc": 1.7
+      },
+      {
+        "hp": 85,
+        "hpInc": 21,
+        "dodge": 8,
+        "dodgeInc": 1.75,
+        "crit": 7.5,
+        "critInc": 2.5
+      },
+      null
+    ]
+  },
+  "4108": {
+    "id": 4108,
+    "name": "Armored Unicorn Tube",
+    "class": 1,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "hp": 71.5,
+        "hpInc": 14.3,
+        "def": 5.85,
+        "defInc": 1.3,
+        "cdr": 4.55,
+        "cdrInc": 1.45
+      },
+      {
+        "hp": 110,
+        "hpInc": 22,
+        "def": 9,
+        "defInc": 2,
+        "cdr": 7,
+        "cdrInc": 2.25
+      },
+      null
+    ]
+  },
+  "4109": {
+    "id": 4109,
+    "name": "Skull 'n Bones Hat",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dodge": 5.2,
+        "dodgeInc": 1.5,
+        "crit": 7.8,
+        "critInc": 2.25,
+        "as": 4.55,
+        "asInc": 2.55
+      },
+      {
+        "dodge": 8,
+        "dodgeInc": 2,
+        "crit": 12,
+        "critInc": 3,
+        "as": 7,
+        "asInc": 3.4
+      },
+      null
+    ]
+  },
+  "4110": {
+    "id": 4110,
+    "name": "Hat of the Filibuster",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "cdr": 6.5,
+        "cdrInc": 1.5,
+        "hp": 71.5,
+        "hpInc": 19.5,
+        "dodge": 5.85,
+        "dodgeInc": 1.65
+      },
+      {
+        "cdr": 10,
+        "cdrInc": 2,
+        "hp": 110,
+        "hpInc": 26,
+        "dodge": 9,
+        "dodgeInc": 2.2
+      },
+      null
+    ]
+  },
+  "4111": {
+    "id": 4111,
+    "name": "Pirate Bandana",
+    "class": 2,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 6.5,
+        "critInc": 1.5,
+        "dodge": 7.8,
+        "dodgeInc": 1.8,
+        "hp": 52,
+        "hpInc": 9
+      },
+      {
+        "crit": 10,
+        "critInc": 2,
+        "dodge": 12,
+        "dodgeInc": 2.4,
+        "hp": 80,
+        "hpInc": 12
+      },
+      null
+    ]
+  },
+  "4112": {
+    "id": 4112,
+    "name": "Huge Cutlass",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "crit": 8.45,
+        "critInc": 1.65,
+        "dmg": 65,
+        "dmgInc": 15,
+        "dodge": 8.45,
+        "dodgeInc": 2.25
+      },
+      {
+        "crit": 13,
+        "critInc": 2.2,
+        "dmg": 100,
+        "dmgInc": 20,
+        "dodge": 13,
+        "dodgeInc": 3
+      },
+      null
+    ]
+  },
+  "4113": {
+    "id": 4113,
+    "name": "Aztec Cursed Gold",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "dmg": 53.95,
+        "dmgInc": 8.25,
+        "as": 9.75,
+        "asInc": 1.9,
+        "crit": 5.2,
+        "critInc": 0.9
+      },
+      {
+        "dmg": 83,
+        "dmgInc": 11,
+        "as": 15,
+        "asInc": 2.55,
+        "crit": 8,
+        "critInc": 1.2
+      },
+      null
+    ]
+  },
+  "4114": {
+    "id": 4114,
+    "name": "Long John's Boots",
+    "class": 3,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      {
+        "as": 7.8,
+        "asInc": 1.95,
+        "dodge": 5.2,
+        "dodgeInc": 1.35,
+        "def": 4.25,
+        "defInc": 0.95
+      },
+      {
+        "as": 12,
+        "asInc": 2.6,
+        "dodge": 8,
+        "dodgeInc": 1.8,
+        "def": 6.5,
+        "defInc": 1.25
       },
       null
     ]
@@ -11070,6 +11792,744 @@
       }
     ]
   },
+  "6110": {
+    "id": 6110,
+    "name": "Dragon Slayer's Plate",
+    "class": 1,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 15,
+        "dmg": 80,
+        "dmgInc": 13,
+        "def": 9,
+        "defInc": 2
+      }
+    ]
+  },
+  "6111": {
+    "id": 6111,
+    "name": "Dragon Slayer's Boots",
+    "class": 1,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 75,
+        "hpInc": 14,
+        "dodge": 9.5,
+        "dodgeInc": 2,
+        "dmg": 70,
+        "dmgInc": 11
+      }
+    ]
+  },
+  "6112": {
+    "id": 6112,
+    "name": "Dragon Slayer's Helm",
+    "class": 1,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 80,
+        "hpInc": 14,
+        "dmg": 75,
+        "dmgInc": 11,
+        "def": 7.5,
+        "defInc": 1.1
+      }
+    ]
+  },
+  "6113": {
+    "id": 6113,
+    "name": "Dragon Slayer's Shield",
+    "class": 1,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 100,
+        "hpInc": 20,
+        "dodge": 10,
+        "dodgeInc": 2.1,
+        "def": 8.5,
+        "defInc": 1.5
+      }
+    ]
+  },
+  "6114": {
+    "id": 6114,
+    "name": "Desert Wanderer's Robe",
+    "class": 2,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 65,
+        "dmgInc": 18,
+        "def": 10,
+        "defInc": 2,
+        "as": 10,
+        "asInc": 2.2
+      }
+    ]
+  },
+  "6115": {
+    "id": 6115,
+    "name": "Desert Wanderer's Boots",
+    "class": 2,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 50,
+        "dmgInc": 15,
+        "def": 7,
+        "defInc": 1.8,
+        "dodge": 7.5,
+        "dodgeInc": 2.2
+      }
+    ]
+  },
+  "6116": {
+    "id": 6116,
+    "name": "Desert Wanderer's Cowl",
+    "class": 2,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 55,
+        "dmgInc": 15,
+        "as": 8.5,
+        "asInc": 3,
+        "dodge": 7,
+        "dodgeInc": 2
+      }
+    ]
+  },
+  "6117": {
+    "id": 6117,
+    "name": "Desert Wanderer's Staff",
+    "class": 2,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 85,
+        "dmgInc": 25,
+        "as": 10,
+        "asInc": 3.5,
+        "dodge": 6.5,
+        "dodgeInc": 2
+      }
+    ]
+  },
+  "6118": {
+    "id": 6118,
+    "name": "Dark Assassin's Vest",
+    "class": 3,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dodge": 8.5,
+        "dodgeInc": 2.75,
+        "crit": 10,
+        "critInc": 2,
+        "as": 10,
+        "asInc": 2.4
+      }
+    ]
+  },
+  "6119": {
+    "id": 6119,
+    "name": "Dark Assassin's Boots",
+    "class": 3,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dodge": 7,
+        "dodgeInc": 2.25,
+        "crit": 8,
+        "critInc": 2,
+        "dmg": 70,
+        "dmgInc": 16
+      }
+    ]
+  },
+  "6120": {
+    "id": 6120,
+    "name": "Dark Assassin's Hood",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dodge": 7,
+        "dodgeInc": 2.5,
+        "dmg": 75,
+        "dmgInc": 16,
+        "as": 7,
+        "asInc": 2.5
+      }
+    ]
+  },
+  "6121": {
+    "id": 6121,
+    "name": "Dark Assassin's Daggers",
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 100,
+        "dmgInc": 25,
+        "crit": 12,
+        "critInc": 6,
+        "as": 9,
+        "asInc": 3.5
+      }
+    ]
+  },
+  "6122": {
+    "id": 6122,
+    "name": "Golden Architect's Armor",
+    "class": 4,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 20,
+        "cdr": 7,
+        "cdrInc": 1.7,
+        "def": 10,
+        "defInc": 2.8
+      }
+    ]
+  },
+  "6123": {
+    "id": 6123,
+    "name": "Golden Architect's Greaves",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 70,
+        "hpInc": 15.5,
+        "cdr": 6,
+        "cdrInc": 1.75,
+        "dodge": 6,
+        "dodgeInc": 2
+      }
+    ]
+  },
+  "6124": {
+    "id": 6124,
+    "name": "Golden Architect's Helmet",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 70,
+        "hpInc": 17.5,
+        "def": 10,
+        "defInc": 2.8,
+        "dodge": 6,
+        "dodgeInc": 1.8
+      }
+    ]
+  },
+  "6125": {
+    "id": 6125,
+    "name": "Golden Architect's Shield",
+    "class": 4,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 100,
+        "hpInc": 25,
+        "cdr": 5,
+        "cdrInc": 1.75,
+        "dodge": 7,
+        "dodgeInc": 2
+      }
+    ]
+  },
+  "6126": {
+    "id": 6126,
+    "name": "Exalted Warlord's Chainmail",
+    "class": 5,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 20,
+        "dmg": 70,
+        "dmgInc": 18,
+        "def": 6,
+        "defInc": 2
+      }
+    ]
+  },
+  "6127": {
+    "id": 6127,
+    "name": "Exalted Warlord's Greaves",
+    "class": 5,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 80,
+        "hpInc": 17.5,
+        "as": 7,
+        "asInc": 2.5,
+        "dmg": 60,
+        "dmgInc": 17
+      }
+    ]
+  },
+  "6128": {
+    "id": 6128,
+    "name": "Exalted Warlord's Headwear",
+    "class": 5,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 75,
+        "hpInc": 17.5,
+        "as": 7,
+        "asInc": 3,
+        "dmg": 60,
+        "dmgInc": 15
+      }
+    ]
+  },
+  "6129": {
+    "id": 6129,
+    "name": "Exalted Warlord's Amulet",
+    "class": 5,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 45,
+        "dmgInc": 15,
+        "as": 7.5,
+        "asInc": 3,
+        "def": 5.5,
+        "defInc": 2.1
+      }
+    ]
+  },
+  "6130": {
+    "id": 6130,
+    "tex": 6132,
+    "name": "Scuba Diver's Oxy Tank",
+    "class": 3,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 110,
+        "hpInc": 22.5,
+        "as": 15,
+        "asInc": 2.5,
+        "dodge": 8,
+        "dodgeInc": 1.75
+      }
+    ]
+  },
+  "6131": {
+    "id": 6131,
+    "name": "Scuba Diver's Flippers",
+    "class": 3,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dodge": 10,
+        "dodgeInc": 1.75,
+        "hp": 90,
+        "hpInc": 13,
+        "def": 7,
+        "defInc": 2
+      }
+    ]
+  },
+  "6132": {
+    "id": 6132,
+    "tex": 6130,
+    "name": "Scuba Diver's Mask",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "def": 10,
+        "defInc": 2,
+        "dodge": 6,
+        "dodgeInc": 2,
+        "as": 12,
+        "asInc": 2
+      }
+    ]
+  },
+  "6133": {
+    "id": 6133,
+    "name": "Pirate Captain's Hat",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dodge": 10,
+        "dodgeInc": 2.5,
+        "hp": 80,
+        "hpInc": 12.5,
+        "crit": 10,
+        "critInc": 2
+      }
+    ]
+  },
+  "6134": {
+    "id": 6134,
+    "name": "Pirate Captain's Eyepatch",
+    "class": 3,
+    "slot": 5,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "as": 12,
+        "asInc": 2.6,
+        "dmg": 75,
+        "dmgInc": 12.5,
+        "crit": 10,
+        "critInc": 1.8
+      }
+    ]
+  },
+  "6135": {
+    "id": 6135,
+    "name": "Pirate Captain's Coat",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 100,
+        "hpInc": 15.5,
+        "dmg": 100,
+        "dmgInc": 23,
+        "dodge": 10,
+        "dodgeInc": 2.3
+      }
+    ]
+  },
+  "6136": {
+    "id": 6136,
+    "name": "Pirate Captain's Hook",
+    "class": 3,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "as": 14,
+        "asInc": 2.5,
+        "dmg": 95,
+        "dmgInc": 22.5,
+        "crit": 12.5,
+        "critInc": 2.5
+      }
+    ]
+  },
+  "6142": {
+    "id": 6142,
+    "name": "Knight of Agatis' Helmet",
+    "class": 4,
+    "slot": 0,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 90,
+        "hpInc": 20,
+        "crit": 10,
+        "critInc": 3,
+        "dodge": 4.5,
+        "dodgeInc": 2
+      }
+    ]
+  },
+  "6143": {
+    "id": 6143,
+    "name": "Knight of Agatis' Plate",
+    "class": 4,
+    "slot": 1,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 100,
+        "hpInc": 22,
+        "crit": 9,
+        "critInc": 2.6,
+        "def": 8,
+        "defInc": 2.5
+      }
+    ]
+  },
+  "6144": {
+    "id": 6144,
+    "name": "Knight of Agatis' Spear",
+    "class": 4,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 110,
+        "dmgInc": 23,
+        "crit": 9,
+        "critInc": 4,
+        "as": 10,
+        "asInc": 3.1
+      }
+    ]
+  },
+  "6145": {
+    "id": 6145,
+    "name": "Knight of Agatis' Shield ",
+    "class": 4,
+    "slot": 3,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "hp": 100,
+        "hpInc": 75,
+        "dmg": 100,
+        "dmgInc": 7,
+        "dodge": 10,
+        "dodgeInc": 7
+      }
+    ]
+  },
+  "6146": {
+    "id": 6146,
+    "name": "Knight of Agatis' Boots ",
+    "class": 4,
+    "slot": 4,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 80,
+        "dmgInc": 19,
+        "dodge": 7.5,
+        "dodgeInc": 2.1,
+        "as": 7.5,
+        "asInc": 3
+      }
+    ]
+  },
   "7001": {
     "id": 7001,
     "name": "Corrupted Legion's Helmet",
@@ -11548,6 +13008,31 @@
         "cdrInc": -3
       },
       null
+    ]
+  },
+  "8001": {
+    "id": 8001,
+    "tex": 4045,
+    "name": "Reforged Cursed Bow",
+    "maiden": 55,
+    "class": 3,
+    "slot": 2,
+    "maxLevel": 5,
+    "dropRate": 0,
+    "eventDropRate": null,
+    "stats": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "dmg": 120,
+        "dmgInc": 26.25,
+        "as": 9.5,
+        "asInc": 3.75,
+        "crit": 7.5,
+        "critInc": 3
+      }
     ]
   }
 }

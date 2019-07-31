@@ -631,5 +631,256 @@
       null,
       null
     ]
+  },
+  {
+    "id": 21,
+    "desc": "Dragon Slayer",
+    "items": [
+      6110,
+      6111,
+      6112,
+      6113
+    ],
+    "bonuses": [
+      {
+        "resistanceAgainstFire": 2000
+      },
+      {
+        "defenseOvercap": 1000
+      },
+      {
+        "respawn": -3000
+      },
+      {
+        "extraHealing": 1500,
+        "dmgAgainstFire": 2000,
+        "hpAfterItems": 1500,
+        "dmgAgainstEngineer": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 22,
+    "desc": "Desert Wanderer",
+    "items": [
+      6114,
+      6115,
+      6116,
+      6117
+    ],
+    "bonuses": [
+      {
+        "stepPerTiles": -1
+      },
+      {
+        "extraHealing": 1000
+      },
+      {
+        "reflect": 2000
+      },
+      {
+        "crowdControlResistance": 1500,
+        "dmgAgainstMarksman": 2000,
+        "bypassDodge": 1000,
+        "dmgAgainstMage ": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 23,
+    "desc": "Dark Assassin",
+    "items": [
+      6118,
+      6119,
+      6120,
+      6121
+    ],
+    "bonuses": [
+      {
+        "lifesteal": 1500
+      },
+      {
+        "deathGateShield": 1000
+      },
+      {
+        "critDamage": 2000
+      },
+      {
+        "crowdControlResistance": 1500,
+        "dmgAgainstWarrior": 2000,
+        "bypassDodge": 1000,
+        "dmgAgainstSupport": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 24,
+    "desc": "Golden Architect",
+    "items": [
+      6122,
+      6123,
+      6124,
+      6125
+    ],
+    "bonuses": [
+      {
+        "coinOnMap": 2000
+      },
+      {
+        "cooldownOverCap": 500
+      },
+      {
+        "defenseOvercap": 1000
+      },
+      {
+        "hpAfterItems": 1500,
+        "dmgAgainstDark": 2000,
+        "cooldownOverCap": 1000,
+        "dmgAgainstNature": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 25,
+    "desc": "Exalted Warlord",
+    "items": [
+      6126,
+      6127,
+      6128,
+      6129
+    ],
+    "bonuses": [
+      {
+        "lifesteal": 1000
+      },
+      {
+        "bypassDodge": 1500
+      },
+      {
+        "critDamage": 1500
+      },
+      {
+        "critDamage": 1500,
+        "dmgAgainstLight": 2000,
+        "lifesteal": 1000,
+        "dmgAgainstWater": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 26,
+    "desc": "Pirate Captain",
+    "items": [
+      6133,
+      6134,
+      6135,
+      6136,
+      6137
+    ],
+    "bonuses": [
+      {
+        "coinOnMap": 1500
+      },
+      {
+        "crowdControlResistance": 1000
+      },
+      {
+        "critDamage": 2000
+      },
+      {
+        "bypassDodge": 2000
+      },
+      {
+        "dmgAgainstWarrior": 2000,
+        "dropChanceOnMap": 1000,
+        "resistanceAgainstMage": 1500,
+        "resistanceAgainstMarksman": 1500
+      },
+      null
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Scuba Diver",
+    "desc": "Scuba Diver",
+    "items": [
+      6130,
+      6131,
+      6132,
+      null
+    ],
+    "bonuses": [
+      {
+        "dmgAgainstFire": 1000
+      },
+      {
+        "critChance": 1500
+      },
+      {
+        "lifesteal": 2000,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 28,
+    "desc": "Knight of Agatis",
+    "items": [
+      6142,
+      6143,
+      6144,
+      6145,
+      6146
+    ],
+    "bonuses": [
+      null,
+      {
+        "lifesteal": 1000
+      },
+      {
+        "extraHealing": 1000
+      },
+      {
+        "reflect": 2000
+      },
+      {
+        "critDamage": 1500,
+        "bypassDodge": 2000,
+        "extraHealing": 1000,
+        "hpAfterItems": 2000
+      },
+      null
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Ivory's Reforged Cursed Bow",
+    "desc": "Cursed Bow Unique Item",
+    "items": [
+      8001
+    ],
+    "bonuses": [
+      {
+        "lifesteal": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   }
 ]

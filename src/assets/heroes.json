@@ -1287,7 +1287,7 @@
     "vision": 7,
     "affection": "20 20 25 30 60 45 45 50 60 110 65 75 85 115 395",
     "dropRate": 100,
-    "eventDropRate": 100,
+    "eventDropRate": 0,
     "title": "The Lich Queen",
     "attack": {
       "hits": 1,
@@ -2380,7 +2380,7 @@
     "vision": 7,
     "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 100,
     "title": "The Pool Party Girl",
     "attack": {
       "hits": 1,
@@ -3261,7 +3261,7 @@
     "vision": 7,
     "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 100,
     "title": "The Wave Slicer",
     "attack": {
       "hits": 1,
@@ -3944,7 +3944,7 @@
     "vision": 7,
     "affection": "30 35 40 45 60 55 60 65 70 100 80 90 120 150 500",
     "dropRate": 0,
-    "eventDropRate": 150,
+    "eventDropRate": 0,
     "title": "The Soul Seeker",
     "attack": {
       "hits": 1,
@@ -4691,7 +4691,7 @@
     "skill": {
       "id": 154,
       "name": "Fire Wave",
-      "desc": "Brings forth a wave from the fire plane that burns enemies and ignites her allies' strenght.",
+      "desc": "Brings forth a wave from the fire plane that burns enemies and ignites her allies' strength.",
       "castTime": 0.8,
       "CD": 15,
       "range": 255,
@@ -4728,7 +4728,7 @@
     "element": 16,
     "class": 4,
     "moveSpeed": 4,
-    "as": 145,
+    "as": 100,
     "crit": 5,
     "dodge": 5,
     "def": 0,
@@ -4736,11 +4736,11 @@
     "dmgCoef": 2.14,
     "skillCoef": 2.25,
     "hp": {
-      "base": 650,
-      "inc": 40
+      "base": 600,
+      "inc": 39
     },
     "respawnCD": 10,
-    "vision": 7,
+    "vision": 9,
     "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 0,
     "eventDropRate": 0,
@@ -4758,9 +4758,9 @@
     "skill": {
       "id": 156,
       "name": "Raiding Onward",
-      "desc": "Calls a number of robot crew equal to the enemies in front of her and give a burst of adrenaline to some allies in her path",
+      "desc": "Calls a number of robots from her crew equal to the number of enemies she hurts with her cannonball.",
       "castTime": 0.1,
-      "CD": 12,
+      "CD": 14,
       "range": 20,
       "missChance": 0,
       "radius": 2,
@@ -4768,27 +4768,34 @@
       "duration": 100,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 1,
+      "dmgTicks": 0,
       "healTicks": 1,
       "effects": [
         {
           "type": "SummonEffect",
           "target": "enemies",
           "heroids": [
-            5004
+            5021
           ],
-          "maxconcurrent": 12,
+          "maxconcurrent": 4,
           "level": -1,
           "destroyfirst": 1
         },
         {
           "type": "AlterAttackSpeed",
           "target": "yourself",
-          "percent": 9000,
-          "percentInc": 175,
-          "duration": 30
+          "percent": 5000,
+          "percentInc": 150,
+          "duration": 60
+        },
+        {
+          "type": "DamageEffect",
+          "target": "enemies",
+          "damage": 100,
+          "damageInc": 200
         }
-      ]
+      ],
+      "dmgDuration": 0
     }
   },
   {
@@ -4830,10 +4837,10 @@
       "name": "Quantum Shift",
       "desc": "Switch places with an enemy and give herself a defense bubble for a short time",
       "castTime": 0.8,
-      "CD": 10,
-      "range": 7,
+      "CD": 1,
+      "range": 10,
       "missChance": 0,
-      "radius": 25,
+      "radius": 1,
       "ticks": 1,
       "duration": 100,
       "walkDelay": 1,
@@ -4853,7 +4860,7 @@
         },
         {
           "type": "DefenseModifierEffect",
-          "target": "your allies and yourself",
+          "target": "yourself",
           "defense": 140,
           "defenseInc": 45,
           "duration": 38,
@@ -4945,7 +4952,7 @@
     "name": "#81",
     "rarity": 2,
     "element": 1,
-    "class": 1,
+    "class": 3,
     "moveSpeed": 4,
     "as": 55,
     "crit": 5,
@@ -5022,16 +5029,16 @@
     "element": 1,
     "class": 1,
     "moveSpeed": 4,
-    "as": 100,
+    "as": 95,
     "crit": 7,
     "dodge": 3,
     "def": 0,
     "hpCoef": 2.12,
-    "dmgCoef": 2.09,
+    "dmgCoef": 2.1,
     "skillCoef": 2.5,
     "hp": {
       "base": 800,
-      "inc": 49
+      "inc": 50
     },
     "respawnCD": 10,
     "vision": 7,
@@ -11451,7 +11458,7 @@
     "name": "#5015",
     "rarity": 0,
     "element": 2,
-    "class": 0,
+    "class": 1,
     "moveSpeed": 4,
     "as": 100,
     "crit": 5,
@@ -11642,25 +11649,35 @@
     "id": 5021,
     "name": "#5021",
     "rarity": 0,
-    "element": 16,
-    "class": 4,
+    "element": 0,
+    "class": 1,
     "moveSpeed": 4,
     "as": 80,
     "crit": 10,
-    "dodge": 10,
+    "dodge": 0,
     "def": 0,
-    "hpCoef": 2.1,
+    "hpCoef": 2.34,
     "dmgCoef": 2.09,
     "skillCoef": 2.11,
     "hp": {
-      "base": 300,
-      "inc": 150
+      "base": 500,
+      "inc": 400
     },
     "respawnCD": 12,
     "vision": 6,
     "affection": "15 15 20 25 45 25 25 30 40 80 30 40 60 100 300",
     "dropRate": 0,
-    "eventDropRate": 0
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.3,
+      "range": 1,
+      "damage": 50,
+      "damageInc": 6,
+      "aoe": 0
+    }
   },
   {
     "id": 6000,
@@ -12305,7 +12322,7 @@
   },
   {
     "id": 7006,
-    "name": "Guardian 6",
+    "name": "Aurora",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -12326,7 +12343,7 @@
     "affection": "120 120 120 120 120 180 180 180 180 180 300 300 300 300 300",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Sixth Guardian",
+    "title": "The Spirit Of Quartz",
     "attack": {
       "hits": 1,
       "walkDelay": 2,
@@ -13414,5 +13431,29 @@
         }
       ]
     }
+  },
+  {
+    "id": 20000,
+    "name": "#20000",
+    "rarity": 0,
+    "element": 1,
+    "class": 1,
+    "moveSpeed": 4,
+    "as": 100,
+    "crit": 6,
+    "dodge": 1,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.4,
+    "hp": {
+      "base": 960,
+      "inc": 54
+    },
+    "respawnCD": 1,
+    "vision": 7,
+    "affection": "2 2 3 3 10 3 3 5 7 12 5 5 10 10 20",
+    "dropRate": 0,
+    "eventDropRate": 0
   }
 ]
