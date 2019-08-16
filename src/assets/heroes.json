@@ -2380,7 +2380,7 @@
     "vision": 7,
     "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
     "dropRate": 0,
-    "eventDropRate": 100,
+    "eventDropRate": 0,
     "title": "The Pool Party Girl",
     "attack": {
       "hits": 1,
@@ -3261,7 +3261,7 @@
     "vision": 7,
     "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 0,
-    "eventDropRate": 100,
+    "eventDropRate": 0,
     "title": "The Wave Slicer",
     "attack": {
       "hits": 1,
@@ -4275,7 +4275,7 @@
     "vision": 6,
     "affection": "15 15 20 25 45 25 25 30 40 80 30 40 60 100 300",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 500,
     "title": "The Earthen Soul",
     "attack": {
       "hits": 1,
@@ -4727,7 +4727,7 @@
     "rarity": 2,
     "element": 16,
     "class": 4,
-    "moveSpeed": 4,
+    "moveSpeed": 5,
     "as": 100,
     "crit": 5,
     "dodge": 5,
@@ -4820,7 +4820,7 @@
     "vision": 7,
     "affection": "20 25 30 60 45 45 50 60 110 65 75 85 115 120 400",
     "dropRate": 0,
-    "eventDropRate": 0,
+    "eventDropRate": 500,
     "title": "The Cyber Woman",
     "attack": {
       "hits": 1,
@@ -4835,14 +4835,14 @@
     "skill": {
       "id": 158,
       "name": "Quantum Shift",
-      "desc": "Switch places with an enemy and give herself a defense bubble for a short time",
+      "desc": "Switch places with the furthest ennemy within range and stun him",
       "castTime": 0.8,
-      "CD": 1,
-      "range": 10,
+      "CD": 10,
+      "range": 9,
       "missChance": 0,
       "radius": 1,
       "ticks": 1,
-      "duration": 100,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 1,
       "dmgTicks": 1,
@@ -4850,21 +4850,13 @@
       "effects": [
         {
           "type": "16",
-          "target": "0"
+          "target": "enemies"
         },
         {
-          "type": "17",
-          "target": "0",
-          "duration": 38,
-          "durationInc": 4
-        },
-        {
-          "type": "DefenseModifierEffect",
-          "target": "yourself",
-          "defense": 140,
-          "defenseInc": 45,
-          "duration": 38,
-          "durationInc": 4
+          "type": "StunEffect",
+          "target": "enemies",
+          "duration": 5,
+          "durationInc": 1
         }
       ]
     }
@@ -4949,7 +4941,7 @@
   },
   {
     "id": 81,
-    "name": "#81",
+    "name": "Florence",
     "rarity": 2,
     "element": 1,
     "class": 3,
@@ -4970,6 +4962,7 @@
     "affection": "20 25 30 35 40 45 50 55 90 60 70 80 100 110 290",
     "dropRate": 0,
     "eventDropRate": 0,
+    "title": "The Thrill Seeker",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
@@ -4982,6 +4975,8 @@
     },
     "skill": {
       "id": 162,
+      "name": "Blade Hurricane",
+      "desc": "Unleashes a storm of multiple blades with increasing speed and deadliness.",
       "castTime": 0.6,
       "CD": 10,
       "range": 1,
@@ -7912,7 +7907,7 @@
       "range": 1,
       "missChance": 0,
       "radius": 3,
-      "ticks": 1,
+      "ticks": 4,
       "duration": 100,
       "walkDelay": 2,
       "actDelay": 0,
@@ -10912,7 +10907,7 @@
     "name": "#5005",
     "rarity": 0,
     "element": 8,
-    "class": 0,
+    "class": 3,
     "moveSpeed": 4,
     "as": 100,
     "crit": 5,

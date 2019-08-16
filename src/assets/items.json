@@ -3553,7 +3553,14 @@
     "stats": [
       null,
       null,
-      null,
+      {
+        "dmg": 31.5,
+        "dmgInc": 8.6,
+        "def": 2.6,
+        "defInc": 1.1,
+        "dodge": 2.4,
+        "dodgeInc": 0.9
+      },
       {
         "dmg": 50,
         "dmgInc": 12.5,
@@ -10819,10 +10826,10 @@
       {
         "hp": 100,
         "hpInc": 15,
-        "dodge": 5,
-        "dodgeInc": 2,
-        "as": 4.5,
-        "asInc": 4.5
+        "cdr": 5,
+        "cdrInc": 2,
+        "dodge": 5.25,
+        "dodgeInc": 4
       }
     ]
   },
@@ -10840,12 +10847,12 @@
       null,
       null,
       {
-        "hp": 95,
-        "hpInc": 20,
-        "dmg": 20,
-        "dmgInc": 20,
-        "dodge": 2.5,
-        "dodgeInc": 2.5
+        "hp": 90,
+        "hpInc": 15,
+        "def": 9,
+        "defInc": 3.75,
+        "dodge": 5,
+        "dodgeInc": 3.75
       }
     ]
   },
@@ -10863,12 +10870,12 @@
       null,
       null,
       {
-        "dmg": 80,
-        "dmgInc": 20,
-        "as": 7,
-        "asInc": 2,
-        "crit": 5,
-        "critInc": 4
+        "hp": 80,
+        "hpInc": 15,
+        "cdr": 7,
+        "cdrInc": 2,
+        "dmg": 85,
+        "dmgInc": 15
       }
     ]
   },
@@ -10886,12 +10893,12 @@
       null,
       null,
       {
-        "def": 4,
-        "defInc": 1.5,
-        "crit": 5,
-        "critInc": 1.5,
-        "cdr": 2,
-        "cdrInc": 2
+        "def": 7.75,
+        "defInc": 2.5,
+        "cdr": 5,
+        "cdrInc": 1.5,
+        "dmg": 80,
+        "dmgInc": 14
       }
     ]
   },
@@ -10909,12 +10916,12 @@
       null,
       null,
       {
+        "hp": 50,
+        "hpInc": 12.5,
+        "dmg": 50,
+        "dmgInc": 13,
         "dodge": 5,
-        "dodgeInc": 2.5,
-        "as": 5,
-        "asInc": 2.5,
-        "def": 2,
-        "defInc": 2
+        "dodgeInc": 2
       }
     ]
   },
@@ -12418,7 +12425,7 @@
   "6142": {
     "id": 6142,
     "name": "Knight of Agatis' Helmet",
-    "class": 4,
+    "class": 0,
     "slot": 0,
     "maxLevel": 5,
     "dropRate": 0,
@@ -12431,8 +12438,8 @@
       {
         "hp": 90,
         "hpInc": 20,
-        "crit": 10,
-        "critInc": 3,
+        "as": 10,
+        "asInc": 3,
         "dodge": 4.5,
         "dodgeInc": 2
       }
@@ -12441,7 +12448,7 @@
   "6143": {
     "id": 6143,
     "name": "Knight of Agatis' Plate",
-    "class": 4,
+    "class": 0,
     "slot": 1,
     "maxLevel": 5,
     "dropRate": 0,
@@ -12454,8 +12461,8 @@
       {
         "hp": 100,
         "hpInc": 22,
-        "crit": 9,
-        "critInc": 2.6,
+        "dmg": 90,
+        "dmgInc": 16,
         "def": 8,
         "defInc": 2.5
       }
@@ -12464,7 +12471,7 @@
   "6144": {
     "id": 6144,
     "name": "Knight of Agatis' Spear",
-    "class": 4,
+    "class": 0,
     "slot": 2,
     "maxLevel": 5,
     "dropRate": 0,
@@ -12475,8 +12482,8 @@
       null,
       null,
       {
-        "dmg": 110,
-        "dmgInc": 23,
+        "dmg": 120,
+        "dmgInc": 25,
         "crit": 9,
         "critInc": 4,
         "as": 10,
@@ -12487,7 +12494,7 @@
   "6145": {
     "id": 6145,
     "name": "Knight of Agatis' Shield ",
-    "class": 4,
+    "class": 0,
     "slot": 3,
     "maxLevel": 5,
     "dropRate": 0,
@@ -12498,19 +12505,19 @@
       null,
       null,
       {
-        "hp": 100,
-        "hpInc": 75,
-        "dmg": 100,
-        "dmgInc": 7,
-        "dodge": 10,
-        "dodgeInc": 7
+        "hp": 75,
+        "hpInc": 17,
+        "def": 7,
+        "defInc": 2.5,
+        "dodge": 7,
+        "dodgeInc": 2.5
       }
     ]
   },
   "6146": {
     "id": 6146,
     "name": "Knight of Agatis' Boots ",
-    "class": 4,
+    "class": 0,
     "slot": 4,
     "maxLevel": 5,
     "dropRate": 0,
