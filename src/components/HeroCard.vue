@@ -1,31 +1,71 @@
 <template>
   <div class="col-3 float-left" @mouseenter="showCloseButton" @mouseleave="hideCloseButton">
     <div class="portlet flexible-height block">
+      <div
+        v-if="isMinion"
+        class="flex-row text-shadow headline"
+        @click="toggleDetails"
+        style="cursor:pointer;margin: .2em 0 -.2em 0;"
+      >
+        <button
+          v-if="selectedHeroIDs.length>1"
+          class="close"
+          :id="'close'+hero.id"
+          @click="deselectHero"
+        >
+          <i class="material-icons">close</i>
+        </button>
 
-      <div v-if="isMinion" class="flex-row text-shadow headline" @click="toggleDetails" style="cursor:pointer;margin: .2em 0 -.2em 0;">
-        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero"><i class="material-icons">close</i></button>
-
-        <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
+        <img
+          v-if="getImage(hero.id)"
+          :src="getImage(hero.id)"
+          :alt="hero.name"
+          class="hero-icon border-rarity"
+          :class="'r'+hero.rarity"
+        />
 
         <div v-else style="padding-left:.5em;"></div>
         <span class="hero-name">{{ hero.name }}</span>
         <span class="hero-title" v-if="hero.title">{{ hero.title }}</span>
 
-        <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+        <img
+          v-if="hero.class!==0"
+          :src="getImage(hero.sClass)"
+          :alt="hero.sClass"
+          class="class-icon"
+        />
         <span class="attr">{{ hero.sClass }}</span>
 
-        <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
+        <img
+          v-if="hero.element!==0"
+          :src="getImage(hero.sElement)"
+          :alt="hero.sElement"
+          class="class-icon"
+        />
 
         <span class="attr">{{ hero.sElement }}</span>
         <span class="lvl">(Level {{ heroLevel }})</span>
       </div>
 
       <div v-else :style="showDetails?'':'margin-bottom:-0.5em;'">
-        <button v-if="selectedHeroIDs.length>1" class="close" :id="'close'+hero.id" @click="deselectHero"><i class="material-icons">close</i></button>
+        <button
+          v-if="selectedHeroIDs.length>1"
+          class="close"
+          :id="'close'+hero.id"
+          @click="deselectHero"
+        >
+          <i class="material-icons">close</i>
+        </button>
 
         <div class="portlet-content">
           <div class="hero-icon">
-            <img v-if="getImage(hero.id)" :src="getImage(hero.id)" :alt="hero.name" class="hero-icon border-rarity" :class="'r'+hero.rarity">
+            <img
+              v-if="getImage(hero.id)"
+              :src="getImage(hero.id)"
+              :alt="hero.name"
+              class="hero-icon border-rarity"
+              :class="'r'+hero.rarity"
+            />
           </div>
           <div class="hero-name">
             <span class="subtitle bold">{{ hero.name }}</span>
@@ -34,40 +74,97 @@
         </div>
 
         <div class="portlet-content mt0_25 pb0_5 seperator -b">
-          <img v-if="hero.class!==0" :src="getImage(hero.sClass)" :alt="hero.sClass" class="class-icon">
+          <img
+            v-if="hero.class!==0"
+            :src="getImage(hero.sClass)"
+            :alt="hero.sClass"
+            class="class-icon"
+          />
           <!-- <span class="attr">{{ hero.sClass }}</span> -->
-          <img v-if="hero.element!==0" :src="getImage(hero.sElement)" :alt="hero.sElement" class="class-icon">
+          <img
+            v-if="hero.element!==0"
+            :src="getImage(hero.sElement)"
+            :alt="hero.sElement"
+            class="class-icon"
+          />
           <!-- <span class="attr">{{ hero.sElement }}</span> -->
-          <span class="level overline">Level<span>{{ heroLevel }}</span></span>
+          <span class="level overline">
+            Level
+            <span>{{ heroLevel }}</span>
+          </span>
         </div>
       </div>
 
       <transition name="slide-fade">
         <div v-show="showDetails" class="portlet-content">
           <ul class="cell-block">
-            <li><span class="cell-cap">Health</span><span class="cell-data">{{ heroHealth }}</span></li>
-            <li><span class="cell-cap">Damage</span><span class="cell-data">{{ heroDamage }}</span></li>
-            <li><span class="cell-cap">Atk Spd</span><span class="cell-data">{{ heroAS }}</span></li>
-            <li><span class="cell-cap">Atk /sec</span><span class="cell-data">{{ atkSec }}</span></li>
-            <li><span class="cell-cap">Crit</span><span class="cell-data">{{ heroCrit }}</span></li>
-            <li><span class="cell-cap">Dodge</span><span class="cell-data">{{ heroDodge }}</span></li>
-            <li><span class="cell-cap">Defense</span><span class="cell-data">{{ heroDefense }}</span></li>
-            <li v-if="!isMinion"><span class="cell-cap">CDR</span><span class="cell-data">{{ heroCDR }}</span></li>
+            <li>
+              <span class="cell-cap">Health</span>
+              <span class="cell-data">{{ heroHealth }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Damage</span>
+              <span class="cell-data">{{ heroDamage }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Atk Spd</span>
+              <span class="cell-data">{{ heroAS }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Atk /sec</span>
+              <span class="cell-data">{{ atkSec }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Crit</span>
+              <span class="cell-data">{{ heroCrit }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Dodge</span>
+              <span class="cell-data">{{ heroDodge }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Defense</span>
+              <span class="cell-data">{{ heroDefense }}</span>
+            </li>
+            <li v-if="!isMinion">
+              <span class="cell-cap">CDR</span>
+              <span class="cell-data">{{ heroCDR }}</span>
+            </li>
           </ul>
           <ul class="cell-block">
-            <li><span class="cell-cap">EHP</span><span class="cell-data">{{ heroEHP }}</span></li>
-            <li><span class="cell-cap">DPS</span><span class="cell-data">{{ heroDPS }}</span></li>
-            <li><span class="cell-cap">Range</span><span class="cell-data">{{ heroRange }}</span></li>
-            <li><span class="cell-cap">Vision</span><span class="cell-data">{{ heroVision }}</span></li>
-            <li><span class="cell-cap">Movement</span><span class="cell-data">{{ heroMoveSpeed }}</span></li>
-            <li><span class="cell-cap">{{ isMinion ? 'Swing T.':'Swing Time' }}</span><span class="cell-data">{{ heroSwingTime }}</span></li>
-            <li v-if="!isMinion"><span class="cell-cap">Respawn</span><span class="cell-data">{{ heroRespawn }}</span></li>
+            <li>
+              <span class="cell-cap">EHP</span>
+              <span class="cell-data">{{ heroEHP }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">DPS</span>
+              <span class="cell-data">{{ heroDPS }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Range</span>
+              <span class="cell-data">{{ heroRange }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Vision</span>
+              <span class="cell-data">{{ heroVision }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">Movement</span>
+              <span class="cell-data">{{ heroMoveSpeed }}</span>
+            </li>
+            <li>
+              <span class="cell-cap">{{ isMinion ? 'Swing T.':'Swing Time' }}</span>
+              <span class="cell-data">{{ heroSwingTime }}</span>
+            </li>
+            <li v-if="!isMinion">
+              <span class="cell-cap">Respawn</span>
+              <span class="cell-data">{{ heroRespawn }}</span>
+            </li>
           </ul>
         </div>
       </transition>
 
       <hero-skill v-if="hero.skill && showDetails" :heroID="heroID" :level="heroLevel"></hero-skill>
-
     </div>
     <aside class="gear" v-if="!isMinion">
       <app-gear :maiden="hero"></app-gear>
@@ -76,28 +173,32 @@
 </template>
 
 <script>
-import {
-  mapState
-} from 'vuex';
-import {
-  campBonuses,
-  heroImages
-} from '../api/const.js';
-import Gear from './Gear';
+import { mapState } from "vuex";
+import { campBonuses, heroImages } from "../api/const.js";
+import Gear from "./Gear";
 
 export default {
   props: {
     heroID: {
       type: Number,
-      required: true,
+      required: true
     },
-    level: Number,
+    level: Number
   },
 
   data() {
     return {
       showDetails: null,
-      moveSpeeds: ['Immob.', 'Ultra F.', 'V.Fast', 'V.Fast', 'Fast', 'Med', 'Slow', 'V.Slow'],
+      moveSpeeds: [
+        "Immob.",
+        "Ultra F.",
+        "V.Fast",
+        "V.Fast",
+        "Fast",
+        "Med",
+        "Slow",
+        "V.Slow"
+      ]
     };
   },
 
@@ -107,7 +208,7 @@ export default {
       skillLevel: state => state.heroes.skillLevel,
       cdr: state => state.heroes.cdr,
       campLevel: state => state.heroes.campLevel,
-      selectedHeroIDs: state => state.heroes.selectedHeroIDs,
+      selectedHeroIDs: state => state.heroes.selectedHeroIDs
     }),
     hero() {
       return this.$store.getters.heroes.find(h => h.id === this.heroID);
@@ -129,8 +230,10 @@ export default {
     },
     heroDamage() {
       const m = this.hero;
-      if (!m.attack) return '-';
-      let val = m.attack.damage + m.attack.damageInc * (this.heroLevel - 1) ** m.dmgCoef;
+      if (!m.attack) return "-";
+      let val =
+        m.attack.damage +
+        m.attack.damageInc * (this.heroLevel - 1) ** m.dmgCoef;
       val *= this.campBonus;
       val *= m.id === 4 ? 1.2 : 1.3;
       return Math.round(val).toLocaleString();
@@ -141,31 +244,36 @@ export default {
     },
     heroCrit() {
       const m = this.hero;
-      let val = m.crit
-      return this.digit1(val) + '%';
+      let val = m.crit;
+      return this.digit1(val) + "%";
     },
     heroDodge() {
       const m = this.hero;
       let val = m.dodge;
-      return this.digit1(val) + '%';
+      return this.digit1(val) + "%";
     },
     heroDefense() {
       const m = this.hero;
       let val = this.isMinion ? 0 : m.id === 4 ? 2 : 3;
-      return this.digit1(m.def + val).toLocaleString() + '%';
+      return this.digit1(m.def + val).toLocaleString() + "%";
     },
     heroCDR() {
       // const m = this.hero;
       let val = this.isMinion ? 0 : this.cdr;
-      return this.digit1(val) + '%';
+      return this.digit1(val) + "%";
     },
     AS() {
-      return (this.isMinion ? 0 : this.$store.state.heroes.heroExtraAS) + this.hero.as;
+      return (
+        (this.isMinion ? 0 : this.$store.state.heroes.heroExtraAS) +
+        this.hero.as
+      );
     },
     heroDPS() {
       const m = this.hero;
-      if (!m.attack) return '-';
-      let val = m.attack.damage + m.attack.damageInc * (this.heroLevel - 1) ** m.dmgCoef;
+      if (!m.attack) return "-";
+      let val =
+        m.attack.damage +
+        m.attack.damageInc * (this.heroLevel - 1) ** m.dmgCoef;
       val *= this.campBonus;
       val *= m.id === 4 ? 1.2 : 1.3;
       /* vvv   attacks per second   vvv */
@@ -174,8 +282,9 @@ export default {
     },
     atkSec() {
       const m = this.hero;
-      if (!m.attack) return '-';
-      return (1 / (Math.ceil(1000 / this.AS) / 10 + m.attack.castTime)).toFixed(3);
+      if (!m.attack) return "-";
+      return (1 / (Math.ceil(1000 / this.AS) / 10 + m.attack.castTime))
+        .toFixed(3);
     },
     heroEHP() {
       const m = this.hero;
@@ -192,15 +301,16 @@ export default {
       return this.hero.vision || 0;
     },
     heroMoveSpeed() {
-      return `${this.hero.moveSpeed || 0} (${this.moveSpeeds[this.hero.moveSpeed]})`;
+      return `${this.hero.moveSpeed || 0} (${
+        this.moveSpeeds[this.hero.moveSpeed]
+      })`;
     },
     heroRespawn() {
-      return this.hero.respawnCD + 's';
+      return this.hero.respawnCD + "s";
     },
     heroSwingTime() {
-      return this.hero.attack ? this.hero.attack.castTime + 's' : '-';
-    },
-
+      return this.hero.attack ? this.hero.attack.castTime + "s" : "-";
+    }
   },
 
   methods: {
@@ -211,7 +321,7 @@ export default {
     },
     setColor(color) {
       if (this.selectedHeroIDs.length === 1) return;
-      document.getElementById('close' + this.heroID).style.color = color;
+      document.getElementById("close" + this.heroID).style.color = color;
     },
     getImage(key) {
       return heroImages.get(key) || heroImages.get(0);
@@ -219,25 +329,24 @@ export default {
     digit1: val => Math.round(val * 10) / 10,
     digit2: val => Math.round(val * 100) / 100,
     showCloseButton(event) {
-      this.setColor('#aaa');
+      this.setColor("#aaa");
     },
     hideCloseButton(event) {
-      this.setColor('#eee');
+      this.setColor("#eee");
     },
     deselectHero() {
-      this.$store.commit('deselectMaidenID', this.hero.id);
+      this.$store.commit("deselectMaidenID", this.hero.id);
     }
   },
 
   created() {
-    this.showDetails = !this.isMinion || this.$store.state.heroes.showMinionDetails;
+    this.showDetails =
+      !this.isMinion || this.$store.state.heroes.showMinionDetails;
   },
 
   components: {
-    'app-gear': Gear,
-    HeroSkill: () =>
-      import('./HeroSkill.vue'),
-  },
-
-}
+    "app-gear": Gear,
+    HeroSkill: () => import("./HeroSkill.vue")
+  }
+};
 </script>

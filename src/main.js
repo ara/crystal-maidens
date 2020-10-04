@@ -5,19 +5,23 @@ import App from './App.vue';
 import { routes } from './routes';
 import './registerServiceWorker'
 import { showTT, hideTT } from './api/itemTooltip.js';
+import MaidenStats from './components/MaidenStats';
 
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
 const router = new VueRouter({
   routes,
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
 });
 
 
 var vm = new Vue({
   // el: '#app',
+  components: {
+    'maiden-stats': MaidenStats,
+  },
   render: h => h(App),
   store,
   router,
@@ -40,7 +44,8 @@ Vue.directive('item-tooltip', // bind + update func
     el.addEventListener('mouseenter', (e) => {
       showTT(e, el, binding, context, vnode);
     });
-    el.addEventListener('mouseleave', (e) => hideTT(e, el, binding, context) );
+    el.addEventListener('mouseleave', (e) =>
+      hideTT(e, el, binding, context) );
   }
 );
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="options">
       <!-- REVIEW: need item class here? -->
       <select v-model="classFilter" class="input">
@@ -100,6 +100,10 @@ $set: #73ce73;
 .bg2 { background-color: $epic; }
 .bg3 { background-color: $leg; }
 .bg4 { background-color: $set; }
+
+.wrapper {
+  display: flex;
+}
 
 .container {
   display: flex;

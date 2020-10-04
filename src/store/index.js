@@ -36,7 +36,6 @@ export default new Vuex.Store({
         savedState = JSON.parse( savedState );
         const mergedState = Object.assign( {}, state, savedState );
         // console.log(`load + parse + global merge: ${Date.now()-t} ms`); t = Date.now();
-
         /* crazy CPU load! */
         // Object.assign( state.items.gearItems, savedState.items.gearItems );
 

@@ -77,7 +77,7 @@
       6015,
       6016,
       6017,
-      6018
+      null
     ],
     "bonuses": [
       null,
@@ -85,20 +85,19 @@
         "dmgAgainstNature": 1000
       },
       {
-        "attackSpd": 250
+        "attackSpd": 500,
+        "critDamage": 1000
       },
       {
-        "attackSpd": 250
+        "bypassDodge": 1500,
+        "critDamage": 1000
       },
       {
-        "reflect": 1000
+        "dmgAgainstNature": 1500,
+        "critDamage": 1000,
+        "resistanceAgainstWater": 2000
       },
-      {
-        "dmgAgainstNature": 500,
-        "crystalOnMap": 2500,
-        "reflect": 1000,
-        "attackSpd": 500
-      }
+      null
     ]
   },
   {
@@ -116,7 +115,7 @@
     "bonuses": [
       null,
       {
-        "dmgAgainstNature": 1000
+        "dmgAgainstNature": 1500
       },
       {
         "attackSpd": 250
@@ -385,15 +384,15 @@
         "dmgAgainstWater": 1500
       },
       {
-        "lifesteal": 800
+        "lifesteal": 1000
       },
       {
+        "extraHealing": 1500,
         "resistanceAgainstFire": 2000
       },
       {
         "defenseOvercap": 1000,
         "cooldownOverCap": 1500,
-        "extraHealing": 1500,
         "hpAfterItems": 1000
       },
       null
@@ -402,34 +401,40 @@
   {
     "id": 13,
     "name": "Forest Sniper's set",
-    "desc": "Forest Sniper's",
+    "desc": "Forest Sniper",
     "items": [
       6073,
       6074,
       6075,
       6076,
       6077,
-      6078
+      6078,
+      null
     ],
     "bonuses": [
-      null,
       {
-        "dmgAgainstWater": 1000
+        "dmgAgainstFire": 3000
       },
       {
-        "def": 100
+        "critDamage": 1000
       },
       {
-        "hpAfterItems": 500
+        "dmgAgainstWater": 3000,
+        "critDamage": 2000
       },
       {
-        "def": 100
+        "bypassDodge": 500,
+        "lifesteal": 2000
       },
       {
-        "dmgAgainstWater": 500,
-        "dropChanceOnMap ": 10000,
-        "def": 300,
-        "hpAfterItems": 500
+        "bypassDodge": 1000,
+        "attackSpd": 3000,
+        "resistanceAgainstFire": 3000
+      },
+      {
+        "critDamage": 3000,
+        "bypassDodge": 1500,
+        "respawn": -5000
       }
     ]
   },
@@ -631,6 +636,7 @@
   },
   {
     "id": 21,
+    "name": "Dragon Slayer's set",
     "desc": "Dragon Slayer",
     "items": [
       6110,
@@ -643,16 +649,18 @@
         "resistanceAgainstFire": 2000
       },
       {
-        "defenseOvercap": 1000
+        "defenseOvercap": 1000,
+        "respawn": -1000
       },
       {
-        "respawn": -3000
+        "hpAfterItems": 1500,
+        "respawn": -2000
       },
       {
         "extraHealing": 1500,
         "dmgAgainstFire": 2000,
-        "hpAfterItems": 1500,
-        "dmgAgainstEngineer": 2000
+        "resistanceAgainstMarksman": 2000,
+        "resistanceAgainstEngineer": 2000
       },
       null,
       null
@@ -660,6 +668,7 @@
   },
   {
     "id": 22,
+    "name": "Desert Wanderer's set",
     "desc": "Desert Wanderer",
     "items": [
       6114,
@@ -672,13 +681,15 @@
         "stepPerTiles": -1
       },
       {
-        "extraHealing": 1000
+        "extraHealing": 1000,
+        "xp": 2000
       },
       {
+        "crowdControlResistance": 1000,
         "reflect": 2000
       },
       {
-        "crowdControlResistance": 1500,
+        "crowdControlResistance": 1000,
         "dmgAgainstMarksman": 2000,
         "bypassDodge": 1000,
         "dmgAgainstMage ": 2000
@@ -689,6 +700,7 @@
   },
   {
     "id": 23,
+    "name": "Dark Assassin's set",
     "desc": "Dark Assassin",
     "items": [
       6118,
@@ -698,13 +710,15 @@
     ],
     "bonuses": [
       {
-        "lifesteal": 1500
+        "stepPerTiles": -1
       },
       {
-        "deathGateShield": 1000
+        "deathGateShield": 50,
+        "bypassDodge": 1000
       },
       {
-        "critDamage": 2000
+        "critDamage": 2000,
+        "deathGateShield": 50
       },
       {
         "crowdControlResistance": 1500,
@@ -718,6 +732,7 @@
   },
   {
     "id": 24,
+    "name": "Iron Architect's set",
     "desc": "Golden Architect",
     "items": [
       6122,
@@ -727,19 +742,21 @@
     ],
     "bonuses": [
       {
-        "coinOnMap": 2000
+        "coinOnMap": 1000
       },
       {
-        "cooldownOverCap": 500
+        "cooldownOverCap": 500,
+        "xp": 2000
       },
       {
-        "defenseOvercap": 1000
+        "defenseOvercap": 1000,
+        "reflect": 2000
       },
       {
         "hpAfterItems": 1500,
-        "dmgAgainstDark": 2000,
+        "resistanceAgainstDark": 2000,
         "cooldownOverCap": 1000,
-        "dmgAgainstNature": 2000
+        "resistanceAgainstWater": 2000
       },
       null,
       null
@@ -747,6 +764,7 @@
   },
   {
     "id": 25,
+    "name": "Exalted Warlord's set",
     "desc": "Exalted Warlord",
     "items": [
       6126,
@@ -756,19 +774,22 @@
     ],
     "bonuses": [
       {
-        "lifesteal": 1000
+        "resistanceAgainstFire": 2000
       },
       {
-        "bypassDodge": 1500
+        "crowdControlResistance": 1500,
+        "resistanceAgainstDark": 2000
       },
       {
-        "critDamage": 1500
+        "cooldownOverCap": 1000,
+        "respawn": -1000,
+        "resistanceAgainstWater": 2000
       },
       {
-        "critDamage": 1500,
-        "dmgAgainstLight": 2000,
-        "lifesteal": 1000,
-        "dmgAgainstWater": 2000
+        "cooldownOverCap": 500,
+        "resistanceAgainstLight": 2000,
+        "deathGateShield": 50,
+        "resistanceAgainstNature": 2000
       },
       null,
       null
@@ -776,33 +797,32 @@
   },
   {
     "id": 26,
+    "name": "Pirate Captain's set",
     "desc": "Pirate Captain",
     "items": [
       6133,
       6134,
       6135,
-      6136,
-      6137
+      6136
     ],
     "bonuses": [
       {
-        "coinOnMap": 1500
+        "dropChanceOnMap": 500
       },
       {
-        "crowdControlResistance": 1000
+        "crowdControlResistance": 1500,
+        "coinOnMap": 2000
       },
       {
-        "critDamage": 2000
+        "critDamage": 1500,
+        "coinOnMap": 2000
       },
       {
-        "bypassDodge": 2000
+        "critDamage": 1500,
+        "dropChanceOnMap": 2000,
+        "crowdControlResistance": 1500
       },
-      {
-        "dmgAgainstWarrior": 2000,
-        "dropChanceOnMap": 1000,
-        "resistanceAgainstMage": 1500,
-        "resistanceAgainstMarksman": 1500
-      },
+      null,
       null
     ]
   },
@@ -865,15 +885,1882 @@
     ]
   },
   {
-    "id": 29,
-    "name": "Ivory's Reforged Cursed Bow",
-    "desc": "Cursed Bow Unique Item",
+    "id": 30,
+    "name": "Samurai's set",
+    "desc": "Samurai Set",
     "items": [
-      8001
+      6147,
+      6148,
+      6149,
+      6150,
+      6151,
+      null
+    ],
+    "bonuses": [
+      null,
+      {
+        "deathGateShield": 30
+      },
+      {
+        "critDamage": 1000,
+        "crowdControlResistance": 2000
+      },
+      {
+        "bypassDodge": 1000,
+        "stepPerTiles": -1
+      },
+      {
+        "deathGateShield": 30,
+        "critDamage": 2000,
+        "xp": 1000
+      },
+      null
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Slutty Pumpkin Suit",
+    "desc": "Slutty Pumpkin Suit",
+    "items": [
+      6159,
+      6160,
+      6161,
+      null
     ],
     "bonuses": [
       {
+        "hpAfterItems": 1000
+      },
+      {
+        "defenseOvercap": 500,
+        "cooldownOverCap": 500
+      },
+      {
+        "defenseOvercap": 500,
+        "cooldownOverCap": 500,
+        "hpAfterItems": 2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Sexy Cat Costume",
+    "desc": "Sexy Cat Costume",
+    "items": [
+      6162,
+      6163,
+      6164,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 1000
+      },
+      {
+        "bypassDodge": 1000,
+        "critDamage": 1000
+      },
+      {
+        "coinOnMap": 2000,
+        "bypassDodge": 2000,
+        "critDamage": 2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Blood Cultist's set",
+    "desc": "Blood Cultist",
+    "items": [
+      6152,
+      6153,
+      6154,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500
+      },
+      {
+        "lifesteal": 1000,
+        "critDamage": 1000
+      },
+      {
+        "lifesteal": 2000,
+        "cooldownOverCap": 500,
+        "critDamage": 2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Crusader's Set",
+    "desc": "Crusader",
+    "items": [
+      6155,
+      6156,
+      6157,
+      6158,
+      null
+    ],
+    "bonuses": [
+      {
+        "defenseOvercap": 500
+      },
+      {
+        "respawn": -1000,
+        "extraHealing": 1000
+      },
+      {
+        "defenseOvercap": 1000,
+        "extraHealing": 1000
+      },
+      {
+        "hpAfterItems": 2000,
+        "respawn": -2000,
+        "extraHealing": 1000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 35,
+    "name": "The Archeologist's Set",
+    "desc": "Archeologist' Set",
+    "items": [
+      6165,
+      6166,
+      6167,
+      null
+    ],
+    "bonuses": [
+      {
+        "stepPerTiles": -1
+      },
+      {
+        "bypassDodge": 1000,
+        "lifesteal": 1000
+      },
+      {
+        "critDamage": 2000,
+        "respawn": -2000,
+        "bypassDodge": 1000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Adamantine Set",
+    "desc": "Adamantine Set",
+    "items": [
+      9001,
+      9002,
+      9003,
+      9004,
+      null
+    ],
+    "bonuses": [
+      {
+        "hpAfterItems": 1000
+      },
+      {
+        "hpAfterItems": 1500,
+        "extraHealing": 1000
+      },
+      {
+        "defenseOvercap": 500,
+        "cooldownOverCap": 1000
+      },
+      {
+        "defenseOvercap": 1000,
+        "extraHealing": 1000,
+        "hpAfterItems": 1500
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 37,
+    "name": "The Boner Set",
+    "desc": "The Boner Set",
+    "items": [
+      9009,
+      9010,
+      9011,
+      9012,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -2000
+      },
+      {
+        "dmgAgainstLight": 2500,
+        "dmgAgainstNature": 2500
+      },
+      {
+        "cooldownOverCap": 500,
+        "respawn": -2500
+      },
+      {
+        "cooldownOverCap": 1000,
+        "respawn": -2500,
+        "dmgAgainstLight": 2500
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Dragonspit Set",
+    "desc": "Dragonspit Set",
+    "items": [
+      9017,
+      9018,
+      9019,
+      9020,
+      null
+    ],
+    "bonuses": [
+      {
+        "critDamage": 1000
+      },
+      {
+        "bypassDodge": 1000,
+        "attackSpd": 2000
+      },
+      {
+        "critDamage": 1000,
+        "bypassDodge": 1000
+      },
+      {
+        "bypassDodge": 1000,
+        "critDamage": 2000,
+        "deathGateShield": 50
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Iron Maiden Set",
+    "desc": "Iron Maiden Set",
+    "items": [
+      9013,
+      9014,
+      9015,
+      9016,
+      null
+    ],
+    "bonuses": [
+      {
+        "reflect": 1500
+      },
+      {
+        "hpAfterItems": 1000,
+        "reflect": 1500
+      },
+      {
+        "defenseOvercap": 500,
+        "cooldownOverCap": 1000
+      },
+      {
+        "cooldownOverCap": 500,
+        "defenseOvercap": 1000,
+        "reflect": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Orichalcum Set",
+    "desc": "Orichalcum Set",
+    "items": [
+      9005,
+      9006,
+      9007,
+      9008,
+      null
+    ],
+    "bonuses": [
+      {
+        "hpAfterItems": 1500
+      },
+      {
+        "crowdControlResistance": 2000,
+        "extraHealing": 1000
+      },
+      {
+        "cooldownOverCap": 500,
+        "extraHealing": 1000
+      },
+      {
+        "cooldownOverCap": 1000,
+        "extraHealing": 1000,
+        "crowdControlResistance": 2000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Kris Kringle's Set",
+    "desc": "Kris Kringles",
+    "items": [
+      6168,
+      6169,
+      6170,
+      null
+    ],
+    "bonuses": [
+      {
+        "dropChanceOnMap": 500
+      },
+      {
+        "bypassDodge": 1000,
+        "coinOnMap": 2000
+      },
+      {
+        "defenseOvercap": 1000,
+        "cooldownOverCap": 1000,
+        "bypassDodge": 2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Ice Queen's Set",
+    "desc": "Ice Queen Set",
+    "items": [
+      6171,
+      6172,
+      6173,
+      6174,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -1500
+      },
+      {
+        "bypassDodge": 1000
+      },
+      {
+        "bypassDodge": 1000,
+        "crowdControlResistance": 2000
+      },
+      {
+        "bypassDodge": 2000,
+        "crowdControlResistance": 2000,
+        "critDamage": 2500,
+        "resistanceAgainstFire": 3000
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Frost Shard's Set",
+    "desc": "Frost Shard Set",
+    "items": [
+      6175,
+      6176,
+      null
+    ],
+    "bonuses": [
+      {
+        "critDamage": 2000
+      },
+      {
+        "cooldownOverCap": 1000,
+        "bypassDodge": 1500
+      },
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Fifth Anniversary Set",
+    "desc": "Fifth Anniversary Set",
+    "items": [
+      6177,
+      6178,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 500,
         "lifesteal": 1500
+      },
+      {
+        "bypassDodge": 500,
+        "lifesteal": 1500
+      },
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 45,
+    "name": "S&M Set",
+    "desc": "S&M",
+    "items": [
+      6182,
+      6183,
+      6184,
+      null
+    ],
+    "bonuses": [
+      {
+        "reflect": 2000
+      },
+      {
+        "defenseOvercap": 500,
+        "respawn": -2000
+      },
+      {
+        "reflect": 2000,
+        "defenseOvercap": 1000,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Dominatrix Set",
+    "desc": "Dominatrix",
+    "items": [
+      6179,
+      6180,
+      6181,
+      null
+    ],
+    "bonuses": [
+      {
+        "lifesteal": 500
+      },
+      {
+        "deathGateShield": 10,
+        "bypassDodge": 1000
+      },
+      {
+        "lifesteal": 1000,
+        "deathGateShield": 20,
+        "bypassDodge": 2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Arena Fighter",
+    "desc": "Arena Fighter",
+    "items": [
+      6215,
+      6216,
+      6217,
+      null
+    ],
+    "bonuses": [
+      {
+        "extraHealing": 1000
+      },
+      {
+        "defenseOvercap": 1000
+      },
+      {
+        "crowdControlResistance": 3000,
+        "extraHealing": 1500
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Arena Conjurer",
+    "desc": "Arena Conjurer",
+    "items": [
+      6218,
+      6219,
+      6220,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 750
+      },
+      {
+        "dmgAgainstMage": 2500
+      },
+      {
+        "cooldownOverCap": 750,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Arena Constructor",
+    "desc": "Arena Constructor",
+    "items": [
+      6221,
+      6222,
+      6223,
+      null
+    ],
+    "bonuses": [
+      {
+        "attackSpd": 2000
+      },
+      {
+        "bypassDodge": 750
+      },
+      {
+        "bypassDodge": 1250,
+        "respawn": -1500
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Arena Buttress",
+    "desc": "Arena Buttress",
+    "items": [
+      6224,
+      6225,
+      6226,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 750
+      },
+      {
+        "hpAfterItems": 1000
+      },
+      {
+        "cooldownOverCap": 750,
+        "respawn": -1500
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Green Knight",
+    "desc": "Green Knight",
+    "items": [
+      6185,
+      6186,
+      6187,
+      null
+    ],
+    "bonuses": [
+      {
+        "reflect": 500
+      },
+      {
+        "lifesteal": 1000,
+        "defenseOvercap": 500
+      },
+      {
+        "defenseOvercap": 1000,
+        "reflect": 2000,
+        "cooldownOverCap": 500
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Emerald Sorcerer",
+    "desc": "Emerald Sorcerer",
+    "items": [
+      6188,
+      6189,
+      6190,
+      null
+    ],
+    "bonuses": [
+      {
+        "crowdControlResistance": 1000
+      },
+      {
+        "defenseOvercap": 500,
+        "respawn": -1000
+      },
+      {
+        "defenseOvercap": 500,
+        "cooldownOverCap": 500,
+        "crowdControlResistance": 2000
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 999,
+    "name": "QA TEST SET",
+    "desc": "QA Set",
+    "items": [
+      19991,
+      19992,
+      19993,
+      19994,
+      19995,
+      19996,
+      null
+    ],
+    "bonuses": [
+      null,
+      {
+        "bypassDodge": 8000,
+        "crowdControlResistance": 10000
+      },
+      {
+        "critDamage": 5000,
+        "speed": 10000
+      },
+      {
+        "resistanceAgainstWarrior": 10000,
+        "resistanceAgainstFire": 10000,
+        "dmgAgainstFire": 10000
+      },
+      {
+        "resistanceAgainstWater": 10000,
+        "dmgAgainstWater": 10000,
+        "dmgAgainstWarrior": 10000
+      },
+      {
+        "defenseOvercap": 2000,
+        "extraHealing": 5000
+      }
+    ]
+  },
+  {
+    "id": 8001,
+    "name": "Ultimate Cursed Bow ",
+    "desc": "Ultimate Cursed Bow (Ivory)",
+    "items": [
+      8001,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 2000,
+        "extraHealing": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8002,
+    "name": "Time Paradox",
+    "desc": "the FLARE's Mask",
+    "items": [
+      8002,
+      null
+    ],
+    "bonuses": [
+      {
+        "stepPerTiles": -2,
+        "crowdControlResistance": 2000,
+        "cooldownOverCap": 1000,
+        "respawn": -3000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8101,
+    "name": "Ultimate Brisingamen",
+    "desc": "Ultimate Brisingamen",
+    "items": [
+      8101,
+      null
+    ],
+    "bonuses": [
+      {
+        "defenseOvercap": 500,
+        "resistanceAgainstDark": 3000,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8102,
+    "name": "Ultimate Winter Edge ",
+    "desc": "Ultimate Winter Edge (Astrid)",
+    "items": [
+      8102,
+      null
+    ],
+    "bonuses": [
+      {
+        "reflect": 1000,
+        "crowdControlResistance": 1500,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8103,
+    "name": "Ultimate Astrid's Dire Wolf Pelt",
+    "desc": "Ultimate Dire Wolf Cloak (Astrid)",
+    "items": [
+      8103,
+      null
+    ],
+    "bonuses": [
+      {
+        "extraHealing": 1500,
+        "hpAfterItems": 1500,
+        "crowdControlResistance": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8106,
+    "name": "Ultimate Isana Claws ",
+    "desc": "Ultimate Isanas Claws ",
+    "items": [
+      8106,
+      null
+    ],
+    "bonuses": [
+      {
+        "stepPerTiles": -2,
+        "deathGateShield": 20
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8107,
+    "name": "Ultimate Ichi Headband ",
+    "desc": "Ultimate Ichis Headband",
+    "items": [
+      8107,
+      null
+    ],
+    "bonuses": [
+      {
+        "attackSpd": 5000,
+        "bypassDodge": 2500,
+        "critDamage": 3000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8108,
+    "name": "Ultimate Faye Fighting boots ",
+    "desc": "Ultimate Fayes Fighting boots",
+    "items": [
+      8108,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 1000,
+        "dmgAgainstDark": 1000,
+        "attackSpd": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8110,
+    "name": "Ultimate Chloe Red Hood",
+    "desc": "Ultimate Chloes Red Hood",
+    "items": [
+      8110,
+      null
+    ],
+    "bonuses": [
+      {
+        "attackSpd": 2000,
+        "lifesteal": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8111,
+    "name": "Ultimate Katsumi's Kimono",
+    "desc": "Ultimate Katsumi Item",
+    "items": [
+      8111,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 1000,
+        "respawn": -2000,
+        "critDamage": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8112,
+    "name": "Ultimate Holly's Coat",
+    "desc": "Ultimate Holly Item",
+    "items": [
+      8112,
+      null
+    ],
+    "bonuses": [
+      {
+        "deathGateShield": 30,
+        "crowdControlResistance": 2000,
+        "attackSpd": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8113,
+    "name": "Ultimate Moreen's Shield",
+    "desc": "Ultimate Moreen Item",
+    "items": [
+      8113,
+      null
+    ],
+    "bonuses": [
+      {
+        "defenseOvercap": 750,
+        "crowdControlResistance": 4000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8201,
+    "name": "Ultimate Eloe Cursed Spear ",
+    "desc": "Ultimate Eloes Cursed Spear ",
+    "items": [
+      8201,
+      null
+    ],
+    "bonuses": [
+      {
+        "hpAfterItems": 1000,
+        "reflect": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8202,
+    "name": "Ultimate Arang Fire Dress",
+    "desc": "Ultimate Arangs Fire Dress",
+    "items": [
+      8202,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 1500,
+        "respawn": -1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8203,
+    "name": "Ultimate Cigarette Holder ",
+    "desc": "Ultimate Cigarette Holder (samael)",
+    "items": [
+      8203,
+      null
+    ],
+    "bonuses": [
+      {
+        "deathGateShield": 30,
+        "crowdControlResistance": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8205,
+    "name": "Ultimate Alchemist belt",
+    "desc": "Ultimate Alchemist belt",
+    "items": [
+      8205,
+      null
+    ],
+    "bonuses": [
+      {
+        "dmgAgainstNature": 2000,
+        "dmgAgainstFire": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8206,
+    "name": "Ultimate Necromancer Cape ",
+    "desc": "Ultimate Necromancers Cape (Daphne)",
+    "items": [
+      8206,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "crowdControlResistance": 2000,
+        "resistanceAgainstLight": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8208,
+    "name": "Ultimate Belladonna Blood Scepter",
+    "desc": "Ultimate Belladonna Blood Scepter",
+    "items": [
+      8208,
+      null
+    ],
+    "bonuses": [
+      {
+        "lifesteal": 1500,
+        "crowdControlResistance": 2000,
+        "dmgAgainstLight": 3000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8209,
+    "name": "Ultimate Kai Beret",
+    "desc": "Ultimate Kais Beret",
+    "items": [
+      8209,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8210,
+    "name": "Ultimate Kai Magical Brush",
+    "desc": "Ultimate Kai Magical Brush",
+    "items": [
+      8210,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8211,
+    "name": "Ultimate Jane's Antlers",
+    "desc": "Ultimate Jane Doe Item",
+    "items": [
+      8211,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "crowdControlResistance": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8212,
+    "name": "Ultimate Maeve's Wine Gun",
+    "desc": "Ultimate Maeve Item",
+    "items": [
+      8212,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -1000,
+        "dmgAgainstFire": 3000,
+        "resistanceAgainstFire": 3000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8303,
+    "name": "Ultimate Gabriela Lucky Socks",
+    "desc": "Ultimate Gabrielas Lucky Socks",
+    "items": [
+      8303,
+      null
+    ],
+    "bonuses": [
+      {
+        "dmgAgainstFire": 1500,
+        "dmgAgainstWater": 1500,
+        "dmgAgainstNature": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8304,
+    "name": "Ultimate Amira Flint Pistol",
+    "desc": "Ultimate Amiras Flint Pistol",
+    "items": [
+      8304,
+      null
+    ],
+    "bonuses": [
+      {
+        "attackSpd": 2000,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8306,
+    "name": "Ultimate Florence Hat",
+    "desc": "Ultimate Florences Hat",
+    "items": [
+      8306,
+      null
+    ],
+    "bonuses": [
+      {
+        "deathGateShield": 30,
+        "bypassDodge": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8307,
+    "name": "Ultimate Mercy Gun",
+    "desc": "Ultimate Mercys Gun",
+    "items": [
+      8307,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "lifesteal": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8310,
+    "name": "Ultimate Ophelia Bow ",
+    "desc": "Ultimate Ophelias Bow (Ophelia)",
+    "items": [
+      8310,
+      null
+    ],
+    "bonuses": [
+      {
+        "dmgAgainstLight": 2000,
+        "lifesteal": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8311,
+    "name": "Ultimate Cowgirl Hat ",
+    "desc": "Ultimate Cowgirl Hat (Vanille Only)",
+    "items": [
+      8311,
+      null
+    ],
+    "bonuses": [
+      {
+        "deathGateShield": 30,
+        "bypassDodge": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8312,
+    "name": "Ultimate Masakari Axes ",
+    "desc": "Ultimate Masakari Axes (Nahame)",
+    "items": [
+      8312,
+      null
+    ],
+    "bonuses": [
+      {
+        "critDamage": 2000,
+        "bypassDodge": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8313,
+    "name": "Ultimate Julia Water Suit ",
+    "desc": "Ultimate Julias Water Suit (Julia Only)",
+    "items": [
+      8313,
+      null
+    ],
+    "bonuses": [
+      {
+        "resistanceAgainstWater": 2000,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8314,
+    "name": "Ultimate Clementine Boomerang",
+    "desc": "Ultimate Clementine Bommerang",
+    "items": [
+      8314,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -2000,
+        "critDamage": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8315,
+    "name": "Ultimate Sumiko's Dress",
+    "desc": "Ultimate Sumiko Item",
+    "items": [
+      8315,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "deathGateShield": 20
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8316,
+    "name": "Ultimate Gretta's Bow",
+    "desc": "Ultimate Gretta Item",
+    "items": [
+      8316,
+      null
+    ],
+    "bonuses": [
+      {
+        "defenseOvercap": 500,
+        "bypassDodge": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8317,
+    "name": "Ultimate Eleonor's Coat",
+    "desc": "Ultimate Carmen Item",
+    "items": [
+      8317,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -2500,
+        "attackSpd": 4000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8318,
+    "name": "Ultimate Eleonor's Hat",
+    "desc": "Ultimate Carmen Item",
+    "items": [
+      8318,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -2500,
+        "lifesteal": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8403,
+    "name": "Ultimate Joy Blaze Ring",
+    "desc": "Ultimate Joys Blaze Ring",
+    "items": [
+      8403,
+      null
+    ],
+    "bonuses": [
+      {
+        "dmgAgainstMarksman": 2000,
+        "resistanceAgainstSupport": 2000,
+        "cooldownOverCap": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8404,
+    "name": "Ultimate Jackie Winged Boots",
+    "desc": "Ultimate Jackies Winged Boots",
+    "items": [
+      8404,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 2000,
+        "coinOnMap": 1000,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8406,
+    "name": "Ultimate Litza Gauntlet",
+    "desc": "Ultimate Litzas Gauntlet",
+    "items": [
+      8406,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 1000,
+        "critDamage": 4000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8407,
+    "name": "Ultimate Jess Mecha-arm",
+    "desc": "Ultimate Jess Mecha-arm",
+    "items": [
+      8407,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "deathGateShield": 20,
+        "bypassDodge": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8408,
+    "name": "Ultimate Brooke's MiniGun",
+    "desc": "Ultimate Brooke MiniGun",
+    "items": [
+      8408,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 2000,
+        "critDamage": 1000,
+        "dmgAgainstNature": 3000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8409,
+    "name": "Ultimate Brooke's Goggles",
+    "desc": "Ultimate Brooke Goggles",
+    "items": [
+      8409,
+      null
+    ],
+    "bonuses": [
+      {
+        "critDamage": 2000,
+        "lifesteal": 1000,
+        "cooldownOverCap": 500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8410,
+    "name": "Ultimate Nicole's Coat",
+    "desc": "Ultimate Nicole Item",
+    "items": [
+      8410,
+      null
+    ],
+    "bonuses": [
+      {
+        "dropChanceOnMap": 500,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8411,
+    "name": "Ultimate Nicole's Slippers",
+    "desc": "Ultimate Nicole Item",
+    "items": [
+      8411,
+      null
+    ],
+    "bonuses": [
+      {
+        "coinOnMap": 1000,
+        "stepPerTiles": -1
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8412,
+    "name": "Ultimate Felicity's Lab Coat ",
+    "desc": "Ultimate Felicity Item",
+    "items": [
+      8412,
+      null
+    ],
+    "bonuses": [
+      {
+        "reflect": 2000,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8413,
+    "name": "Ultimate Felicity's Glasses",
+    "desc": "Ultimate Felicity Item",
+    "items": [
+      8413,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "lifesteal": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8414,
+    "name": "Ultimate Nightstorm's Blasters",
+    "desc": "Ultimate Bryce Item",
+    "items": [
+      8414,
+      null
+    ],
+    "bonuses": [
+      {
+        "stepPerTiles": -2,
+        "bypassDodge": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8415,
+    "name": "Ultimate Nightstorm's Mask",
+    "desc": "Ultimate Bryce Item",
+    "items": [
+      8415,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "deathGateShield": 20,
+        "coinOnMap": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8501,
+    "name": "Ultimate Kebi Sunrod",
+    "desc": "Ultimate Kebis Sunrod ",
+    "items": [
+      8501,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "hpAfterItems": 3000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8503,
+    "name": "Ultimate Amber Burning Heart",
+    "desc": "Ultimate Ambers Burning Heart",
+    "items": [
+      8503,
+      null
+    ],
+    "bonuses": [
+      {
+        "resistanceAgainstWater": 2000,
+        "respawn": -3000,
+        "deathGateShield": 20
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8504,
+    "name": "Ultimate Annie Meat Cleaver",
+    "desc": "Ultimate Annies Meat Cleaver",
+    "items": [
+      8504,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "lifesteal": 1000,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8505,
+    "name": "Ultimate Annie Blood Necklace",
+    "desc": "Ultimate Annies Blood Necklace",
+    "items": [
+      8505,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "lifesteal": 1000,
+        "respawn": -2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8506,
+    "name": "Ultimate Vanessa Ribbon",
+    "desc": "Ultimate Vanessas Ribbon",
+    "items": [
+      8506,
+      null
+    ],
+    "bonuses": [
+      {
+        "crowdControlResistance": 2500,
+        "hpAfterItems": 1000,
+        "resistanceAgainstLight": 1000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8507,
+    "name": "Ultimate Anastasia Staff",
+    "desc": "Ultimate Anastasias Staff",
+    "items": [
+      8507,
+      null
+    ],
+    "bonuses": [
+      {
+        "hpAfterItems": 1000,
+        "reflect": 1500,
+        "extraHealing": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8509,
+    "name": "Ultimate Lily Wooden Mask ",
+    "desc": "Ultimate Lilys Wooden Mask",
+    "items": [
+      8509,
+      null
+    ],
+    "bonuses": [
+      {
+        "respawn": -3000,
+        "cooldownOverCap": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8510,
+    "name": "Ultimate Mei-Li Dress",
+    "desc": "Ultimate Mei-Lis Dress",
+    "items": [
+      8510,
+      null
+    ],
+    "bonuses": [
+      {
+        "bypassDodge": 2000,
+        "critDamage": 2000,
+        "dmgAgainstWater": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8511,
+    "name": "Ultimate Raven Crow",
+    "desc": "Ultimate Ravens Crow ",
+    "items": [
+      8511,
+      null
+    ],
+    "bonuses": [
+      {
+        "hpAfterItems": 1500,
+        "dmgAgainstLight": 1500,
+        "resistanceAgainstLight": 1500
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8512,
+    "name": "Ultimate Nurses hat",
+    "desc": "Ultimate Nurses hat",
+    "items": [
+      8512,
+      null
+    ],
+    "bonuses": [
+      {
+        "hpAfterItems": 2000,
+        "resistanceAgainstFire": 2000
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 8513,
+    "name": "Ultimate Dragon Queen's Crown",
+    "desc": "Ultimate Brianna Item",
+    "items": [
+      8513,
+      null
+    ],
+    "bonuses": [
+      {
+        "cooldownOverCap": 500,
+        "respawn": -1000
       },
       null,
       null,

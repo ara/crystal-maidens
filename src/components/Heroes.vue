@@ -114,19 +114,19 @@
     </div>
   </div>
 
-    <vue-context :closeOnClick="false" ref="colMenu" class="cm">
-      <ul class="cm">
-        <li v-for="col in heroCols" :key="col.id"
-          @click="onCMClick(col)"
-          class="cm"
-          :class="{ disabled: col.val==='name' }"
-        >
-          <span :style="{float:'left', opacity:profileCols.includes(col.caption)?1:0, marginRight:'.6em'}"
-          >{{ '✓' }}</span>
-          {{ col.caption }}
-        </li>
-      </ul>
-    </vue-context>
+  <vue-context :closeOnClick="false" ref="colMenu" class="cm">
+    <ul class="cm">
+      <li v-for="col in heroCols" :key="col.id"
+        @click="onCMClick(col)"
+        class="cm"
+        :class="{ disabled: col.val==='name' }"
+      >
+        <span :style="{float:'left', opacity:profileCols.includes(col.caption)?1:0, marginRight:'.6em'}"
+        >✓</span>
+        {{ col.caption }}
+      </li>
+    </ul>
+  </vue-context>
 
 </div>
 </template>

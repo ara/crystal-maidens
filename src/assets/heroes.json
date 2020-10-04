@@ -70,17 +70,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 305
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -130,17 +128,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 210,
           "damageInc": 170
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -191,16 +187,14 @@
       "walkDelay": 2,
       "actDelay": 0,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 350,
           "hpInc": 330
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -233,8 +227,8 @@
       "actDelay": 0,
       "castTime": 0.2,
       "range": 6,
-      "damage": 72,
-      "damageInc": 4,
+      "damage": 220,
+      "damageInc": 7,
       "aoe": 0
     },
     "skill": {
@@ -250,24 +244,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 250,
           "hpInc": 400
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
-          "damage": 250,
+          "type": "Damage",
+          "damage": 600,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -317,17 +307,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 240,
           "damageInc": 550
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -381,8 +369,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "yourself",
+          "type": "AlterDamage",
           "damagealter": 40,
           "damagealterInc": 120,
           "duration": 60
@@ -437,23 +424,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 200
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -503,23 +487,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 775
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 175
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -559,7 +540,7 @@
     "skill": {
       "id": 18,
       "name": "Tempest",
-      "desc": "Casts a tempest that deals damage over 8 seconds to enemies staying under it.",
+      "desc": "Rise 3 Dildelves as presents",
       "castTime": 0.8,
       "CD": 10,
       "range": 7,
@@ -569,17 +550,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 40,
           "damageInc": 75
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -589,7 +568,7 @@
     "element": 1,
     "class": 3,
     "moveSpeed": 4,
-    "as": 200,
+    "as": 150,
     "crit": 10,
     "dodge": 2,
     "def": 0,
@@ -629,17 +608,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 665
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -690,16 +667,14 @@
       "walkDelay": 2,
       "actDelay": 0,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 16,
           "hpInc": 31
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -749,17 +724,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 300,
           "damageInc": 445
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -809,24 +782,21 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 200
         },
         {
-          "type": "DamageAlterEffect",
-          "target": "enemies",
+          "type": "AlterDamage",
           "damagealter": -150,
           "damagealterInc": -230,
           "duration": 50
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -876,19 +846,17 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 10,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 30,
           "damageInc": 55,
           "overtimeduration": 100,
           "overtimeinterval": 10
         }
-      ],
-      "dmgDuration": 100
+      ]
     }
   },
   {
@@ -942,8 +910,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "MinusCooldownEffect",
-          "target": "your allies",
+          "type": "MinusCoolDown",
           "percent": 1000,
           "percentInc": 200
         }
@@ -997,22 +964,19 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 240
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 10
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1066,8 +1030,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5009
           ],
@@ -1129,8 +1092,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5010,
             5011,
@@ -1190,19 +1152,17 @@
       "duration": 30,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 40,
           "damageInc": 100,
           "overtimeduration": 30,
           "overtimeinterval": 10
         }
-      ],
-      "dmgDuration": 30
+      ]
     }
   },
   {
@@ -1252,17 +1212,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 90,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1316,8 +1274,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5004
           ],
@@ -1379,8 +1336,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5006
           ],
@@ -1438,23 +1394,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 260,
           "damageInc": 300
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 8,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1508,8 +1461,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "your allies",
+          "type": "AlterDamage",
           "damagealter": 50,
           "duration": 60,
           "damagealterInc": 200
@@ -1564,17 +1516,15 @@
       "duration": 80,
       "walkDelay": 2.5,
       "actDelay": 1,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 400,
           "damageInc": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1624,23 +1574,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 2,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 250
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 2
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1690,17 +1637,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 250,
           "damageInc": 550
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1750,24 +1695,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 200,
           "hpInc": 350
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -1817,19 +1758,17 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 333,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 8,
           "damageInc": 20,
           "overtimeduration": 5000,
           "overtimeinterval": 15
         }
-      ],
-      "dmgDuration": 5000
+      ]
     }
   },
   {
@@ -1879,17 +1818,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 70
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -1939,24 +1876,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 125,
           "damageInc": 160
         },
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 300,
           "hpInc": 180
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -2006,23 +1939,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 200
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "enemies",
           "percent": -5000,
           "duration": 40
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2072,22 +2002,19 @@
       "duration": 20,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 310
         },
         {
-          "type": "StunEffect",
-          "target": "everyone except yourself",
+          "type": "Stun",
           "duration": 15
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2125,8 +2052,7 @@
       "aoe": 0,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 50,
           "hpInc": 2
         }
@@ -2149,22 +2075,19 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "enemies",
+          "type": "AlterDamage",
           "damagealter": -150,
           "damagealterInc": -28,
           "duration": 60
         },
         {
-          "type": "DamageAlterEffect",
-          "target": "your allies",
+          "type": "AlterDamage",
           "damagealter": 150,
           "damagealterInc": 28,
           "duration": 60
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "your allies",
           "percent": 2000,
           "percentInc": 525,
           "duration": 60
@@ -2209,7 +2132,7 @@
     "skill": {
       "id": 70,
       "name": "Cocobomb Roll",
-      "desc": "Rolls a coconut that explodes after 3 seconds, dealing damage and slowing enemies affected by its AOE",
+      "desc": "Rolls a coconut that explodes after 3 seconds, dealing damage to enemies affected by its AOE",
       "castTime": 0.5,
       "CD": 7,
       "range": 9,
@@ -2219,17 +2142,15 @@
       "duration": 150,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 400,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2279,17 +2200,15 @@
       "duration": 6,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 350,
           "damageInc": 235
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2343,14 +2262,12 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 1,
           "durationInc": 1
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "enemies",
           "percent": -4750,
           "percentInc": -20,
           "duration": 50
@@ -2405,17 +2322,15 @@
       "duration": 8,
       "walkDelay": 2,
       "actDelay": 0.4,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2465,29 +2380,25 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "your allies",
           "percent": 1500,
           "percentInc": 80,
           "duration": 30
         },
         {
-          "type": "MinusCooldownEffect",
-          "target": "your allies",
+          "type": "MinusCoolDown",
           "percent": 3000
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2542,7 +2453,6 @@
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "yourself",
           "percent": 10000,
           "percentInc": 270,
           "duration": 40
@@ -2597,19 +2507,17 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 1,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 60,
           "damageInc": 75,
           "overtimeduration": 12,
           "overtimeinterval": 4
         }
-      ],
-      "dmgDuration": 12
+      ]
     }
   },
   {
@@ -2663,8 +2571,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5013
           ],
@@ -2722,52 +2629,77 @@
       "duration": 6,
       "walkDelay": 3,
       "actDelay": 0.4,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
     "id": 44,
-    "name": "Navie",
-    "rarity": 0,
-    "element": 2,
-    "class": 4,
-    "moveSpeed": 6,
-    "as": 240,
+    "name": "Mercy",
+    "rarity": 1,
+    "element": 16,
+    "class": 3,
+    "moveSpeed": 4,
+    "as": 36,
     "crit": 10,
-    "dodge": 1,
+    "dodge": 0,
     "def": 0,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
-    "skillCoef": 2.11,
+    "hpCoef": 2.1,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.5,
     "hp": {
-      "base": 525,
-      "inc": 37
+      "base": 1000,
+      "inc": 46
     },
     "respawnCD": 10,
-    "vision": 7,
-    "affection": "10 15 20 25 30 15 20 25 35 50 25 35 45 55 150",
+    "vision": 9,
+    "affection": "10 15 20 45 25 25 30 40 75 30 45 50 80 150 300",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Scuba Diver",
+    "title": "The Monster Slayer",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
-      "range": 5,
-      "damage": 65,
-      "damageInc": 2,
-      "aoe": 2
+      "range": 8,
+      "damage": 400,
+      "damageInc": 10,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 88,
+      "name": "Light Bait",
+      "desc": "Sends out a light beacon that taunts enemies and damages them in a zone.",
+      "castTime": 1.2,
+      "CD": 17,
+      "range": 4,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Summon",
+          "heroids": [
+            5007
+          ],
+          "maxconcurrent": 1,
+          "level": -1,
+          "destroyfirst": 1
+        }
+      ]
     }
   },
   {
@@ -2808,74 +2740,99 @@
       "id": 90,
       "name": "Blessing of the Sun",
       "desc": "Use the power of the sun gods to stun your enemies while revivifying your allies",
-      "castTime": 0.8,
-      "CD": 13,
-      "range": 7,
+      "castTime": 0.4,
+      "CD": 14,
+      "range": 1,
       "missChance": 0,
       "radius": 4,
       "ticks": 1,
-      "duration": 80,
-      "walkDelay": 2,
+      "duration": 70,
+      "walkDelay": 1,
       "actDelay": 0,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 250,
           "hpInc": 250
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "your allies and yourself",
           "percent": 1000,
           "percentInc": 90,
           "duration": 50
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 2
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
     "id": 46,
     "name": "Chloe",
-    "rarity": 0,
-    "element": 8,
-    "class": 4,
-    "moveSpeed": 5,
-    "as": 75,
-    "crit": 3,
-    "dodge": 3,
+    "rarity": 2,
+    "element": 4,
+    "class": 1,
+    "moveSpeed": 3,
+    "as": 110,
+    "crit": 5,
+    "dodge": 5,
     "def": 0,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
-    "skillCoef": 2.11,
+    "hpCoef": 2.13,
+    "dmgCoef": 2.1,
+    "skillCoef": 2.09,
     "hp": {
-      "base": 1000,
-      "inc": 55
+      "base": 900,
+      "inc": 46
     },
-    "respawnCD": 10,
+    "respawnCD": 12,
     "vision": 7,
-    "affection": "10 15 20 25 30 15 20 25 35 50 25 35 45 55 150",
+    "affection": "25 30 40 45 70 55 65 70 75 115 90 100 125 140 365",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Rebel",
+    "title": "The Werewolf",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
-      "range": 5,
-      "damage": 150,
+      "range": 1,
+      "damage": 125,
       "damageInc": 4,
-      "aoe": 2
+      "aoe": 1
+    },
+    "skill": {
+      "id": 92,
+      "name": "Moon Rage",
+      "desc": "Let the moonlight push her ferocity while driving fear in the heart of men",
+      "castTime": 0.1,
+      "CD": 10,
+      "range": 1,
+      "missChance": 0,
+      "radius": 2,
+      "ticks": 1,
+      "duration": 10,
+      "walkDelay": 0.1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "AlterAttackSpeed",
+          "percent": 10000,
+          "percentInc": 365,
+          "duration": 30
+        },
+        {
+          "type": "Stun",
+          "duration": 5,
+          "durationInc": 1
+        }
+      ]
     }
   },
   {
@@ -2925,17 +2882,15 @@
       "duration": 45,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 450
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -2985,23 +2940,20 @@
       "duration": 25,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 80,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3051,59 +3003,86 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 15,
           "damageInc": 45
         },
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 15,
           "hpInc": 25
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
     "id": 50,
-    "name": "Reagan",
-    "rarity": 0,
-    "element": 8,
-    "class": 1,
-    "moveSpeed": 4,
-    "as": 182,
-    "crit": 1,
-    "dodge": 5,
+    "name": "Anastasia",
+    "rarity": 3,
+    "element": 2,
+    "class": 5,
+    "moveSpeed": 6,
+    "as": 95,
+    "crit": 0,
+    "dodge": 0,
     "def": 0,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
-    "skillCoef": 2.11,
+    "hpCoef": 2.15,
+    "dmgCoef": 2.1,
+    "skillCoef": 2.25,
     "hp": {
-      "base": 850,
-      "inc": 41
+      "base": 875,
+      "inc": 57
     },
     "respawnCD": 10,
-    "vision": 7,
-    "affection": "10 15 20 25 30 15 20 25 35 50 25 35 45 55 150",
+    "vision": 9,
+    "affection": "20 25 30 60 45 45 50 60 110 65 75 85 115 120 400",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Savage",
+    "title": "The Queen-Goddess",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
-      "range": 5,
+      "range": 6,
       "damage": 210,
       "damageInc": 2,
-      "aoe": 2
+      "aoe": 0
+    },
+    "skill": {
+      "id": 100,
+      "name": "Voice of the Queen",
+      "desc": "Uses her royal voice to freeze her enemies and drive up her followers",
+      "castTime": 0.2,
+      "CD": 13,
+      "range": 5,
+      "missChance": 0,
+      "radius": 4,
+      "ticks": 1,
+      "duration": 50,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "AlterAttackSpeed",
+          "percent": -100000,
+          "duration": 12,
+          "durationInc": 1
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "percent": 3000,
+          "percentInc": 250,
+          "duration": 12,
+          "durationInc": 1
+        }
+      ]
     }
   },
   {
@@ -3153,23 +3132,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 250,
           "damageInc": 350
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3219,24 +3195,21 @@
       "duration": 60,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "your allies and yourself",
           "percent": 2000,
           "percentInc": 12,
           "duration": 60
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 60,
           "damageInc": 80
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3286,17 +3259,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 325
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3346,26 +3317,23 @@
       "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 5,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "enemies",
           "percent": -1000,
           "percentInc": -180,
           "duration": 50
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 40,
           "damageInc": 130,
           "overtimeduration": 50,
           "overtimeinterval": 10
         }
-      ],
-      "dmgDuration": 50
+      ]
     }
   },
   {
@@ -3403,8 +3371,7 @@
       "aoe": 0,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 90,
           "damageInc": 1
         }
@@ -3423,59 +3390,83 @@
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 36,
           "damageInc": 310
         },
         {
-          "type": "HealEffect",
-          "target": "yourself",
+          "type": "Heal",
           "hp": 180,
           "hpInc": 185
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
     "id": 56,
     "name": "Annie",
     "rarity": 1,
-    "element": 2,
+    "element": 1,
     "class": 5,
-    "moveSpeed": 4,
-    "as": 100,
-    "crit": 0,
-    "dodge": 1,
+    "moveSpeed": 5,
+    "as": 87.5,
+    "crit": 5,
+    "dodge": 0,
     "def": 0,
-    "hpCoef": 2.11,
-    "dmgCoef": 2.09,
-    "skillCoef": 2.11,
+    "hpCoef": 2.12,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.5,
     "hp": {
-      "base": 650,
-      "inc": 35
+      "base": 750,
+      "inc": 53
     },
     "respawnCD": 10,
     "vision": 7,
     "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Cook",
+    "title": "The Bloody Maid",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
-      "range": 5,
-      "damage": 110,
+      "range": 1,
+      "damage": 70,
       "damageInc": 4,
-      "aoe": 2
+      "aoe": 1
+    },
+    "skill": {
+      "id": 112,
+      "name": "Feeding Frenzy",
+      "desc": "Throws nourishing meat to her and her teammates which heals them and gives a boost to their skill cooldown.",
+      "castTime": 0.8,
+      "CD": 11,
+      "range": 7,
+      "missChance": 0,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Heal",
+          "hp": 300,
+          "hpInc": 120
+        },
+        {
+          "type": "MinusCoolDown",
+          "percent": 900,
+          "percentInc": 90
+        }
+      ]
     }
   },
   {
@@ -3525,17 +3516,15 @@
       "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 160,
           "damageInc": 60
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3589,8 +3578,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "MorphEffect",
-          "target": "yourself"
+          "type": "Morph"
         }
       ]
     }
@@ -3642,24 +3630,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 300,
           "hpInc": 370
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 370
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -3685,7 +3669,7 @@
     "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
     "dropRate": 0,
     "eventDropRate": 0,
-    "title": "The Bear Hugger",
+    "title": "The Bearely Legal",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
@@ -3713,8 +3697,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5019
           ],
@@ -3772,22 +3755,19 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "everyone except yourself",
+          "type": "Stun",
           "duration": 20
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3837,22 +3817,19 @@
       "duration": 45,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 475
         },
         {
-          "type": "ConfuseEffect",
-          "target": "enemies",
+          "type": "Confuse",
           "duration": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -3902,24 +3879,21 @@
       "duration": 80,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 10,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 10,
           "damageInc": 20,
           "overtimeduration": 100,
           "overtimeinterval": 10
         },
         {
-          "type": "ConfuseEffect",
-          "target": "enemies",
+          "type": "Confuse",
           "duration": 300
         }
-      ],
-      "dmgDuration": 100
+      ]
     }
   },
   {
@@ -3969,34 +3943,29 @@
       "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 5,
-      "healTicks": 5,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 30,
           "damageInc": 55,
           "overtimeduration": 50,
           "overtimeinterval": 10
         },
         {
-          "type": "HealEffect",
-          "target": "yourself",
+          "type": "Heal",
           "hp": 30,
           "hpInc": 55,
           "overtimeduration": 50,
           "overtimeinterval": 10
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 18,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 50,
-      "healDuration": 50
+      ]
     }
   },
   {
@@ -4046,22 +4015,19 @@
       "duration": 0,
       "walkDelay": 3.5,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 400,
           "damageInc": 425
         },
         {
-          "type": "ConfuseEffect",
-          "target": "enemies",
+          "type": "Confuse",
           "duration": 200
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4115,12 +4081,73 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5018
           ],
           "maxconcurrent": 3,
+          "level": -1,
+          "destroyfirst": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "name": "Kai",
+    "rarity": 1,
+    "element": 2,
+    "class": 2,
+    "moveSpeed": 5,
+    "as": 90,
+    "crit": 5,
+    "dodge": 1,
+    "def": 0,
+    "hpCoef": 2.1,
+    "dmgCoef": 2.13,
+    "skillCoef": 2.6,
+    "hp": {
+      "base": 1000,
+      "inc": 45
+    },
+    "respawnCD": 11,
+    "vision": 8,
+    "affection": "3 10 20 25 30 35 40 45 50 55 90 60 70 80 180",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Fabulous Artist",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 7,
+      "damage": 50,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 134,
+      "name": "Chef D'Oeuvre Phallique",
+      "desc": "Creates a dildo shaped creature who stuns enemies with his attack and heal allies around him.",
+      "castTime": 1.2,
+      "CD": 15,
+      "range": 4,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Summon",
+          "heroids": [
+            5020
+          ],
+          "maxconcurrent": 2,
           "level": -1,
           "destroyfirst": 1
         }
@@ -4148,7 +4175,7 @@
     "respawnCD": 10,
     "vision": 5,
     "affection": "10 10 15 20 45 25 25 30 40 75 30 45 50 80 300",
-    "dropRate": 0,
+    "dropRate": 200,
     "eventDropRate": 0,
     "title": "The Tribal Huntress",
     "attack": {
@@ -4174,17 +4201,15 @@
       "duration": 30,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 160,
           "damageInc": 275
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4235,22 +4260,87 @@
       "walkDelay": 1,
       "actDelay": 0,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DefenseModifierEffect",
-          "target": "your allies",
+          "type": "DefenseModifier",
           "defense": 10000,
           "duration": 30
         },
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 750,
           "hpInc": 1600
         }
-      ],
-      "healDuration": 0
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "name": "Vanessa",
+    "rarity": 2,
+    "element": 8,
+    "class": 5,
+    "moveSpeed": 5,
+    "as": 110,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.12,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.5,
+    "hp": {
+      "base": 900,
+      "inc": 46
+    },
+    "respawnCD": 8,
+    "vision": 10,
+    "affection": "25 30 40 45 70 55 65 70 75 115 90 100 125 140 300",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Young Enchantress",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 8,
+      "damage": 80,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 140,
+      "name": "Tempus Suctus Esspressium !",
+      "desc": "Affects time itself by pushing her allies' CDR while diminishing the enemies speed and confusing them.",
+      "castTime": 0.8,
+      "CD": 11,
+      "range": 8,
+      "missChance": 0,
+      "radius": 5,
+      "ticks": 1,
+      "duration": 80,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "AlterAttackSpeed",
+          "percent": -3000,
+          "percentInc": -50,
+          "duration": 60
+        },
+        {
+          "type": "MinusCoolDown",
+          "percent": 615,
+          "percentInc": 65
+        },
+        {
+          "type": "Confuse",
+          "duration": 20
+        }
+      ]
     }
   },
   {
@@ -4275,7 +4365,7 @@
     "vision": 6,
     "affection": "15 15 20 25 45 25 25 30 40 80 30 40 60 100 300",
     "dropRate": 0,
-    "eventDropRate": 500,
+    "eventDropRate": 0,
     "title": "The Earthen Soul",
     "attack": {
       "hits": 1,
@@ -4296,21 +4386,19 @@
       "range": 8,
       "missChance": 0,
       "radius": 6,
-      "ticks": 2,
+      "ticks": 3,
       "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 200
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4334,7 +4422,7 @@
     "respawnCD": 12,
     "vision": 6,
     "affection": "15 15 20 25 45 25 25 30 40 80 30 40 60 100 300",
-    "dropRate": 0,
+    "dropRate": 150,
     "eventDropRate": 0,
     "title": "The Symbol Of Justice",
     "attack": {
@@ -4364,15 +4452,13 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "your allies and yourself",
+          "type": "AlterDamage",
           "damagealter": 25,
           "duration": 50,
           "damagealterInc": 45
         },
         {
-          "type": "DefenseModifierEffect",
-          "target": "your allies and yourself",
+          "type": "DefenseModifier",
           "defense": 100,
           "defenseInc": 55,
           "duration": 30,
@@ -4428,23 +4514,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 600,
           "damageInc": 350
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4494,32 +4577,27 @@
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 6,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 240,
           "overtimeduration": 30,
           "overtimeinterval": 5
         },
         {
-          "type": "HealEffect",
-          "target": "yourself",
+          "type": "Heal",
           "hp": 175,
           "hpInc": 200
         },
         {
-          "type": "MinusCooldownEffect",
-          "target": "yourself",
+          "type": "MinusCoolDown",
           "percent": 900,
           "percentInc": 200
         }
-      ],
-      "dmgDuration": 30,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -4569,22 +4647,19 @@
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 375
         },
         {
-          "type": "ConfuseEffect",
-          "target": "enemies",
+          "type": "Confuse",
           "duration": 200
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4638,15 +4713,13 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "ReflectEffect",
-          "target": "yourself",
+          "type": "Reflect",
           "percent": 3000,
           "percentInc": 75,
           "duration": 50
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "yourself",
           "percent": 15000,
           "percentInc": 500,
           "duration": 50
@@ -4701,24 +4774,21 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 120,
           "damageInc": 130
         },
         {
-          "type": "DamageAlterEffect",
-          "target": "your allies",
+          "type": "AlterDamage",
           "damagealter": 25,
           "duration": 50,
           "damagealterInc": 25
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4728,18 +4798,18 @@
     "element": 16,
     "class": 4,
     "moveSpeed": 5,
-    "as": 100,
+    "as": 110,
     "crit": 5,
     "dodge": 5,
     "def": 0,
     "hpCoef": 2.1,
-    "dmgCoef": 2.14,
-    "skillCoef": 2.25,
+    "dmgCoef": 2.12,
+    "skillCoef": 2.35,
     "hp": {
-      "base": 600,
-      "inc": 39
+      "base": 800,
+      "inc": 43
     },
-    "respawnCD": 10,
+    "respawnCD": 7,
     "vision": 9,
     "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
     "dropRate": 0,
@@ -4752,7 +4822,7 @@
       "castTime": 0.3,
       "range": 1,
       "damage": 150,
-      "damageInc": 3,
+      "damageInc": 4,
       "aoe": 0
     },
     "skill": {
@@ -4764,16 +4834,15 @@
       "range": 20,
       "missChance": 0,
       "radius": 2,
-      "ticks": 10,
+      "ticks": 1,
       "duration": 100,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "enemies",
+          "type": "Summon",
           "heroids": [
             5021
           ],
@@ -4783,19 +4852,16 @@
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "yourself",
           "percent": 5000,
           "percentInc": 150,
           "duration": 60
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 200
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -4820,8 +4886,8 @@
     "vision": 7,
     "affection": "20 25 30 60 45 45 50 60 110 65 75 85 115 120 400",
     "dropRate": 0,
-    "eventDropRate": 500,
-    "title": "The Cyber Woman",
+    "eventDropRate": 0,
+    "title": "The Cyborg Woman",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
@@ -4835,10 +4901,10 @@
     "skill": {
       "id": 158,
       "name": "Quantum Shift",
-      "desc": "Switch places with the furthest ennemy within range and stun him",
+      "desc": "Switches places with the furthest enemy within range and stuns him",
       "castTime": 0.8,
       "CD": 10,
-      "range": 9,
+      "range": 8,
       "missChance": 0,
       "radius": 1,
       "ticks": 1,
@@ -4849,12 +4915,10 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "16",
-          "target": "enemies"
+          "type": "Swap"
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         }
@@ -4863,7 +4927,7 @@
   },
   {
     "id": 80,
-    "name": "#80",
+    "name": "Belladonna",
     "rarity": 3,
     "element": 8,
     "class": 2,
@@ -4884,66 +4948,61 @@
     "affection": "20 25 30 60 45 45 50 60 110 65 75 85 115 120 400",
     "dropRate": 0,
     "eventDropRate": 0,
+    "title": "The Vampire",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
-      "range": 1,
+      "range": 2,
       "damage": 80,
       "damageInc": 5,
       "aoe": 0,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "yourself",
-          "hp": 40,
-          "hpInc": 3
+          "type": "Heal",
+          "hp": 50,
+          "hpInc": 2
         }
       ]
     },
     "skill": {
       "id": 160,
+      "name": "Dark Embrace",
+      "desc": "Switch places with a mortal while feeding herself from their blood.",
       "castTime": 0.8,
-      "CD": 12,
-      "range": 8,
+      "CD": 15,
+      "range": 10,
       "missChance": 0,
-      "radius": 0,
+      "radius": 1,
       "ticks": 1,
-      "duration": 100,
+      "duration": 0,
       "walkDelay": 1,
       "actDelay": 1,
-      "dmgTicks": 0,
-      "healTicks": 20,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "16",
-          "target": "0"
+          "type": "Swap"
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
-          "damage": 150,
-          "damageInc": 200
+          "type": "Damage",
+          "damage": 1000,
+          "damageInc": 500
         },
         {
-          "type": "HealEffect",
-          "target": "yourself",
-          "hp": 25,
-          "hpInc": 25,
-          "overtimeduration": 100,
-          "overtimeinterval": 5
+          "type": "Heal",
+          "hp": 250,
+          "hpInc": 175
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 100
+      ]
     }
   },
   {
     "id": 81,
     "name": "Florence",
     "rarity": 2,
-    "element": 1,
+    "element": 2,
     "class": 3,
     "moveSpeed": 4,
     "as": 55,
@@ -4964,7 +5023,7 @@
     "eventDropRate": 0,
     "title": "The Thrill Seeker",
     "attack": {
-      "hits": 1,
+      "hits": 2,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -4986,45 +5045,39 @@
       "duration": 50,
       "walkDelay": 0.5,
       "actDelay": 0.5,
-      "dmgTicks": 5,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
-          "damage": 100,
-          "damageInc": 45,
+          "type": "Damage",
+          "damage": 20,
+          "damageInc": 14,
           "overtimeduration": 50,
-          "overtimeinterval": 10
+          "overtimeinterval": 2
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "yourself",
           "percent": 800,
           "percentInc": 150,
-          "duration": 22,
-          "durationInc": 4
+          "duration": 50
         },
         {
-          "type": "DamageAlterEffect",
-          "target": "yourself",
+          "type": "AlterDamage",
           "damagealter": 25,
-          "duration": 22,
-          "damagealterInc": 45,
-          "durationInc": 2
+          "duration": 50,
+          "damagealterInc": 45
         }
-      ],
-      "dmgDuration": 50
+      ]
     }
   },
   {
     "id": 82,
-    "name": "#82",
-    "rarity": 2,
+    "name": "Katsumi",
+    "rarity": 3,
     "element": 1,
     "class": 1,
     "moveSpeed": 4,
-    "as": 95,
+    "as": 80,
     "crit": 7,
     "dodge": 3,
     "def": 0,
@@ -5040,6 +5093,7 @@
     "affection": "20 25 30 35 40 45 50 55 90 60 70 80 100 110 290\n",
     "dropRate": 0,
     "eventDropRate": 0,
+    "title": "The Avenging Ronin",
     "attack": {
       "hits": 1,
       "walkDelay": 1,
@@ -5047,11 +5101,13 @@
       "castTime": 0.2,
       "range": 2,
       "damage": 85,
-      "damageInc": 6,
-      "aoe": 3
+      "damageInc": 5,
+      "aoe": 1
     },
     "skill": {
       "id": 164,
+      "name": "Moth to a Flame",
+      "desc": "Spin her sword, creating an irresistible fire that attracks and hurt the enemy while feeding her next skill use.",
       "castTime": 0.2,
       "CD": 13,
       "range": 1,
@@ -5065,18 +5121,962 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "ReflectEffect",
-          "target": "yourself",
-          "percent": 2200,
-          "percentInc": 100,
-          "duration": 36,
-          "durationInc": 3
+          "type": "Reflect",
+          "percent": 3000,
+          "percentInc": 500,
+          "duration": 50
         },
         {
-          "type": "17",
-          "target": "0",
-          "duration": 36,
-          "durationInc": 3
+          "type": "AlterDamage",
+          "damagealter": 100,
+          "duration": 50,
+          "damagealterInc": 75
+        },
+        {
+          "type": "Heal",
+          "hp": 30,
+          "hpInc": 55,
+          "overtimeduration": 50,
+          "overtimeinterval": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "name": "Astrid",
+    "rarity": 3,
+    "element": 2,
+    "class": 1,
+    "moveSpeed": 5,
+    "as": 70,
+    "crit": 0,
+    "dodge": 5,
+    "def": 0,
+    "hpCoef": 2.122,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.15,
+    "hp": {
+      "base": 2000,
+      "inc": 80
+    },
+    "respawnCD": 9,
+    "vision": 8,
+    "affection": "25 30 40 50 70 55 55 65 75 140 80 95 105 150 500",
+    "dropRate": 0,
+    "eventDropRate": 700,
+    "title": "The Mighty Viking",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.5,
+      "range": 2,
+      "damage": 85,
+      "damageInc": 6,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 166,
+      "name": "Battle Fury",
+      "desc": "Each hit she receives feeds her rage and speeds up her skill's cooldown. She then unleashes her fury with speed and might.",
+      "castTime": 0.2,
+      "CD": 22,
+      "range": 2,
+      "missChance": 0,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 0.8,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "AlterAttackSpeed",
+          "percent": 2900,
+          "percentInc": 75,
+          "duration": 90
+        },
+        {
+          "type": "DefenseModifier",
+          "defense": 200,
+          "defenseInc": 100,
+          "duration": 90
+        },
+        {
+          "type": "Heal",
+          "hp": 200,
+          "hpInc": 75,
+          "overtimeduration": 90,
+          "overtimeinterval": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "name": "Brooke",
+    "rarity": 2,
+    "element": 1,
+    "class": 4,
+    "moveSpeed": 8,
+    "as": 300,
+    "crit": 3,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.2,
+    "dmgCoef": 2.1,
+    "skillCoef": 2.15,
+    "hp": {
+      "base": 450,
+      "inc": 38
+    },
+    "respawnCD": 10,
+    "vision": 6,
+    "affection": "20 25 30 60 45 45 50 60 110 65 75 85 130 145 400",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Heavy Gunner",
+    "attack": {
+      "hits": 2,
+      "walkDelay": 0.1,
+      "actDelay": 0.1,
+      "castTime": 0.2,
+      "range": 5,
+      "damage": 40,
+      "damageInc": 1,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 168,
+      "name": "Heavy Rain",
+      "desc": "Unleashes a rain of bullets that permanently shred defense.",
+      "castTime": 0,
+      "CD": 8,
+      "range": 30,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 30,
+      "walkDelay": 0.8,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 200,
+          "damageInc": 300
+        },
+        {
+          "type": "DefenseModifier",
+          "defense": -300,
+          "defenseInc": -30,
+          "duration": 30000
+        }
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "name": "Felicity",
+    "rarity": 2,
+    "element": 4,
+    "class": 4,
+    "moveSpeed": 6,
+    "as": 90,
+    "crit": 15,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.18,
+    "dmgCoef": 2.15,
+    "skillCoef": 2.3,
+    "hp": {
+      "base": 700,
+      "inc": 59
+    },
+    "respawnCD": 10,
+    "vision": 9,
+    "affection": "15 15 20 25 50 35 35 40 50 95 50 60 70 100 340",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Science Bitch",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 4,
+      "damage": 100,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 170,
+      "name": "Acid Drop",
+      "desc": "Drops a small potent Acid Potion that damages and lower defense in a large AoE.",
+      "castTime": 0.8,
+      "CD": 12,
+      "range": 7,
+      "missChance": 0,
+      "radius": 5,
+      "ticks": 7,
+      "duration": 70,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 45,
+          "damageInc": 135
+        },
+        {
+          "type": "DefenseModifier",
+          "defense": -500,
+          "defenseInc": -70,
+          "duration": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "name": "Jane Doe",
+    "rarity": 2,
+    "element": 4,
+    "class": 2,
+    "moveSpeed": 4,
+    "as": 95,
+    "crit": 0.2,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.18,
+    "dmgCoef": 2.15,
+    "skillCoef": 2.3,
+    "hp": {
+      "base": 1100,
+      "inc": 37
+    },
+    "respawnCD": 9,
+    "vision": 5,
+    "affection": "20 25 30 60 45 45 50 60 110 65 75 85 130 145 400",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Bambi Bimbo",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 7,
+      "damage": 72,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 172,
+      "name": "Crippling Thorns",
+      "desc": "Cast a magic thorn stunning and dealing damage to a single ennemy",
+      "castTime": 0.2,
+      "CD": 14,
+      "range": 6,
+      "missChance": 0,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Stun",
+          "duration": 10
+        },
+        {
+          "type": "Damage",
+          "damage": 400,
+          "damageInc": 550
+        },
+        {
+          "type": "Damage",
+          "damage": 100,
+          "damageInc": 125,
+          "overtimeduration": 50,
+          "overtimeinterval": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "name": "Alison",
+    "rarity": 1,
+    "element": 4,
+    "class": 4,
+    "moveSpeed": 4,
+    "as": 70,
+    "crit": 5,
+    "dodge": 5,
+    "def": 0,
+    "hpCoef": 2.12,
+    "dmgCoef": 2.12,
+    "skillCoef": 2.3,
+    "hp": {
+      "base": 1000,
+      "inc": 45
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "15 20 25 30 55 30 40 50 65 95 55 65 100 150 375",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Daring Archeologist",
+    "attack": {
+      "hits": 2,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 6,
+      "damage": 50,
+      "damageInc": 3,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 174,
+      "name": "Dynamite Roll",
+      "desc": "Sends a dynamite roll that will explode everything around it... Watch out for friendly fire.",
+      "castTime": 0.5,
+      "CD": 10,
+      "range": 9,
+      "missChance": 0,
+      "radius": 4,
+      "ticks": 1,
+      "duration": 150,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 500,
+          "damageInc": 550
+        },
+        {
+          "type": "Stun",
+          "duration": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "name": "Nicole Klauz",
+    "rarity": 3,
+    "element": 2,
+    "class": 4,
+    "moveSpeed": 5,
+    "as": 110,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.22,
+    "dmgCoef": 2.12,
+    "skillCoef": 2.28,
+    "hp": {
+      "base": 1400,
+      "inc": 41
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "25 30 40 50 70 55 55 65 75 140 80 95 105 150 500",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Holiday Milf",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 8,
+      "damage": 72,
+      "damageInc": 5,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 176,
+      "name": "Dildelves Rising",
+      "desc": "Summons a hoard of dildelves that dick slaps enemies.",
+      "castTime": 1.2,
+      "CD": 8,
+      "range": 3,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Summon",
+          "heroids": [
+            5024
+          ],
+          "maxconcurrent": 2,
+          "level": -1,
+          "destroyfirst": 1
+        },
+        {
+          "type": "Summon",
+          "heroids": [
+            5025
+          ],
+          "maxconcurrent": 4,
+          "level": -1,
+          "destroyfirst": 1
+        },
+        {
+          "type": "Summon",
+          "heroids": [
+            5025
+          ],
+          "maxconcurrent": 4,
+          "level": -1,
+          "destroyfirst": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 89,
+    "name": "Holly",
+    "rarity": 2,
+    "element": 16,
+    "class": 1,
+    "moveSpeed": 4,
+    "as": 80,
+    "crit": 5,
+    "dodge": 5,
+    "def": 0,
+    "hpCoef": 2.22,
+    "dmgCoef": 2.15,
+    "skillCoef": 2.5,
+    "hp": {
+      "base": 1200,
+      "inc": 33
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "15 20 25 30 55 30 40 50 65 95 55 65 100 150 375\t\t\t",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Rebel Fighter",
+    "attack": {
+      "hits": 2,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.3,
+      "range": 1,
+      "damage": 300,
+      "damageInc": 3,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 178,
+      "name": "Punch-Out",
+      "desc": "A powerful haymaker to finish her 1-2-3 combo. Can be done every couple seconds.",
+      "castTime": 0.6,
+      "CD": 3,
+      "range": 1,
+      "missChance": 0,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 200,
+          "damageInc": 500
+        }
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "name": "Brianna",
+    "rarity": 2,
+    "element": 1,
+    "class": 2,
+    "moveSpeed": 5,
+    "as": 95,
+    "crit": 10,
+    "dodge": 1,
+    "def": 10,
+    "hpCoef": 2.2,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.4,
+    "hp": {
+      "base": 750,
+      "inc": 35
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "15 20 25 30 35 40 45 50 55 90 60 70 80 100 285",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Dragon Queen",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 8,
+      "damage": 100,
+      "damageInc": 5,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 180,
+      "name": "Burn them all",
+      "desc": "Summons a dragon to create a line of fire that burns over time.",
+      "castTime": 0.1,
+      "CD": 11,
+      "range": 255,
+      "missChance": 0,
+      "radius": 255,
+      "ticks": 1,
+      "duration": 20,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 40,
+          "damageInc": 100,
+          "overtimeduration": 100,
+          "overtimeinterval": 25
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "percent": -500,
+          "duration": 100
+        }
+      ]
+    }
+  },
+  {
+    "id": 91,
+    "name": "Sumiko",
+    "rarity": 3,
+    "element": 2,
+    "class": 3,
+    "moveSpeed": 4,
+    "as": 100,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.2,
+    "skillCoef": 2.3,
+    "hp": {
+      "base": 10,
+      "inc": 1
+    },
+    "respawnCD": 10,
+    "vision": 9,
+    "affection": "25 30 40 50 70 55 55 65 75 140 80 95 130 180 600",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Ice Spirit ",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.1,
+      "range": 6,
+      "damage": 100,
+      "damageInc": 8,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 182,
+      "name": "Ice ice baby",
+      "desc": "Use the power of ice in a small AoE that briefly stuns and damages enemies\n Passive: Immune to death for 7 seconds ",
+      "castTime": 0.8,
+      "CD": 7,
+      "range": 9,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Stun",
+          "duration": 5
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "percent": -2000,
+          "duration": 200
+        },
+        {
+          "type": "Damage",
+          "damage": 300,
+          "damageInc": 500
+        }
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "name": "Gretta",
+    "rarity": 3,
+    "element": 4,
+    "class": 3,
+    "moveSpeed": 4,
+    "as": 130,
+    "crit": 10,
+    "dodge": 5,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.3,
+    "hp": {
+      "base": 250,
+      "inc": 40
+    },
+    "respawnCD": 12,
+    "vision": 9,
+    "affection": "25 30 40 50 75 55 55 65 75 140 80 95 105 150 500\t\t\t",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Vegan Elf",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 8,
+      "damage": 200,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 184,
+      "name": "How dare you!",
+      "desc": "Create a safe zone boosting allies' defense and reducing everyones damage",
+      "castTime": 1.5,
+      "CD": 13,
+      "range": 8,
+      "missChance": 0,
+      "radius": 5,
+      "ticks": 1,
+      "duration": 70,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "DefenseModifier",
+          "defense": 350,
+          "defenseInc": 150,
+          "duration": 70
+        },
+        {
+          "type": "AlterDamage",
+          "damagealter": -100,
+          "damagealterInc": -250,
+          "duration": 70
+        }
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "name": "Bryce",
+    "rarity": 2,
+    "element": 8,
+    "class": 4,
+    "moveSpeed": 4,
+    "as": 70,
+    "crit": 5,
+    "dodge": 5,
+    "def": 0,
+    "hpCoef": 2.16,
+    "dmgCoef": 2.075,
+    "skillCoef": 2.35,
+    "hp": {
+      "base": 600,
+      "inc": 40
+    },
+    "respawnCD": 10,
+    "vision": 8,
+    "affection": "25 30 40 45 70 55 65 70 75 115 90 100 125 140 365",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "Aka Nightstorm",
+    "attack": {
+      "hits": 2,
+      "walkDelay": 0.1,
+      "actDelay": 0,
+      "castTime": 0.1,
+      "range": 5,
+      "damage": 40,
+      "damageInc": 4,
+      "aoe": 0,
+      "effects": [
+        {
+          "type": "MinusCoolDown",
+          "percent": -1000,
+          "percentInc": -2
+        }
+      ]
+    },
+    "skill": {
+      "id": 186,
+      "name": "I am the Night !!",
+      "desc": "Throws a smoke bomb to confuse enemies and augment her attack speed. ... Her Basic attack also increases enemies Cooldown by 10 to 20 percent !",
+      "castTime": 0.5,
+      "CD": 12,
+      "range": 1,
+      "missChance": 0,
+      "radius": 4,
+      "ticks": 5,
+      "duration": 50,
+      "walkDelay": 0.3,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Confuse",
+          "duration": 10,
+          "durationInc": 0
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "percent": 500,
+          "percentInc": 125,
+          "duration": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "name": "Maeve",
+    "rarity": 1,
+    "element": 4,
+    "class": 2,
+    "moveSpeed": 4,
+    "as": 80,
+    "crit": 5,
+    "dodge": 5,
+    "def": 0,
+    "hpCoef": 2.15,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.4,
+    "hp": {
+      "base": 750,
+      "inc": 43
+    },
+    "respawnCD": 11,
+    "vision": 7,
+    "affection": "15 20 25 30 55 30 40 50 65 95 55 65 100 150 375",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Leprecunt",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 6,
+      "damage": 60,
+      "damageInc": 4,
+      "aoe": 0,
+      "effects": [
+        {
+          "type": "AlterAttackSpeed",
+          "percent": -50,
+          "percentInc": -1
+        }
+      ]
+    },
+    "skill": {
+      "id": 188,
+      "name": "Drunken Rage",
+      "desc": "Maeve chug her drink reducing her attack speed but significantly increase her damage for 8 seconds.",
+      "castTime": 0.5,
+      "CD": 14,
+      "range": 1,
+      "missChance": 0,
+      "radius": 0,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 0.1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "AlterDamage",
+          "damagealter": 250,
+          "damagealterInc": 1050,
+          "duration": 80
+        },
+        {
+          "type": "AlterAttackSpeed",
+          "percent": -7500,
+          "duration": 80
+        }
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "name": "Moreen",
+    "rarity": 2,
+    "element": 4,
+    "class": 1,
+    "moveSpeed": 4,
+    "as": 85,
+    "crit": 0,
+    "dodge": 0,
+    "def": 10,
+    "hpCoef": 2.31,
+    "dmgCoef": 2.15,
+    "skillCoef": 2.25,
+    "hp": {
+      "base": 750,
+      "inc": 30
+    },
+    "respawnCD": 12,
+    "vision": 4,
+    "affection": "25 30 40 45 70 55 65 70 75 115 90 100 125 140 365",
+    "dropRate": 0,
+    "eventDropRate": 700,
+    "title": "The Emerald Shieldmaiden",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 2,
+      "damage": 60,
+      "damageInc": 3,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 190,
+      "name": "FREEEEEEEEDOOOMMM",
+      "desc": "Cast a protecting aura boosting allies defense for 5 seconds and healing herself instantly",
+      "castTime": 0.5,
+      "CD": 14,
+      "range": 1,
+      "missChance": 0,
+      "radius": 4,
+      "ticks": 1,
+      "duration": 50,
+      "walkDelay": 0.1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "DefenseModifier",
+          "defense": 600,
+          "defenseInc": 150,
+          "duration": 40
+        },
+        {
+          "type": "Heal",
+          "hp": 120,
+          "hpInc": 550
+        }
+      ]
+    }
+  },
+  {
+    "id": 98,
+    "name": "Eleonor",
+    "rarity": 2,
+    "element": 8,
+    "class": 3,
+    "moveSpeed": 3,
+    "as": 120,
+    "crit": 0,
+    "dodge": 15,
+    "def": 0,
+    "hpCoef": 2.13,
+    "dmgCoef": 2.16,
+    "skillCoef": 2.2,
+    "hp": {
+      "base": 500,
+      "inc": 38
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "25 30 40 45 70 55 65 70 75 115 90 100 125 140 365",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "title": "The Red Spy",
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.5,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 4,
+      "damage": 80,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 196,
+      "name": "Come Swap",
+      "desc": "Swap with an ally, healing her and boosting her defense",
+      "castTime": 0.9,
+      "CD": 2,
+      "range": 12,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 0.1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Swap"
+        },
+        {
+          "type": "Heal",
+          "hp": 300,
+          "hpInc": 950
+        },
+        {
+          "type": "DefenseModifier",
+          "defense": 500,
+          "defenseInc": 150,
+          "duration": 60
         }
       ]
     }
@@ -5128,17 +6128,76 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 315
         }
-      ],
-      "dmgDuration": 0
+      ]
+    }
+  },
+  {
+    "id": 101,
+    "name": "Kira",
+    "rarity": 0,
+    "element": 2,
+    "class": 4,
+    "moveSpeed": 6,
+    "as": 240,
+    "crit": 10,
+    "dodge": 1,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 525,
+      "inc": 37
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "10 15 20 25 30 15 20 25 35 50 25 35 45 55 150",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 8,
+      "damage": 400,
+      "damageInc": 10,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 88,
+      "name": "Light Bait",
+      "desc": "Sends out a light beacon that taunts enemies and damages them in a zone.",
+      "castTime": 1.2,
+      "CD": 17,
+      "range": 4,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Summon",
+          "heroids": [
+            5007
+          ],
+          "maxconcurrent": 1,
+          "level": -1,
+          "destroyfirst": 1
+        }
+      ]
     }
   },
   {
@@ -5185,23 +6244,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 400
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "percent": 5000,
           "duration": 20
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5248,17 +6304,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 210,
           "damageInc": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5306,16 +6360,14 @@
       "walkDelay": 2,
       "actDelay": 0,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 350,
           "hpInc": 1650
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -5362,24 +6414,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 250,
           "hpInc": 400
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -5426,17 +6474,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 240,
           "damageInc": 550
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5487,8 +6533,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "yourself",
+          "type": "AlterDamage",
           "damagealter": 40,
           "damagealterInc": 100,
           "duration": 40
@@ -5540,23 +6585,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 200
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5603,23 +6645,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 650
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 650
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5666,17 +6705,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 40,
           "damageInc": 50
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5723,17 +6760,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5781,16 +6816,14 @@
       "walkDelay": 2,
       "actDelay": 0,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 16,
           "hpInc": 36
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -5837,17 +6870,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 300,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5894,24 +6925,21 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 90,
           "damageInc": 60
         },
         {
-          "type": "DamageAlterEffect",
-          "target": "enemies",
+          "type": "AlterDamage",
           "damagealter": -150,
           "damagealterInc": -25,
           "duration": 30
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -5958,19 +6986,17 @@
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 10,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 30,
           "damageInc": 55,
           "overtimeduration": 100,
           "overtimeinterval": 10
         }
-      ],
-      "dmgDuration": 100
+      ]
     }
   },
   {
@@ -6021,8 +7047,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "MinusCooldownEffect",
-          "target": "your allies",
+          "type": "MinusCoolDown",
           "percent": 1000,
           "percentInc": 200
         }
@@ -6073,23 +7098,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 240
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 3,
           "durationInc": 1
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6140,8 +7162,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5009
           ],
@@ -6196,19 +7217,17 @@
       "duration": 30,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 40,
           "damageInc": 83,
           "overtimeduration": 30,
           "overtimeinterval": 10
         }
-      ],
-      "dmgDuration": 30
+      ]
     }
   },
   {
@@ -6255,17 +7274,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 90,
           "damageInc": 325
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6316,8 +7333,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5004
           ],
@@ -6376,8 +7392,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5006
           ],
@@ -6432,23 +7447,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 1
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 260,
           "damageInc": 450
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6499,8 +7511,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "your allies",
+          "type": "AlterDamage",
           "damagealter": 50,
           "duration": 30,
           "damagealterInc": 60
@@ -6552,17 +7563,15 @@
       "duration": 80,
       "walkDelay": 2.5,
       "actDelay": 1,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 400,
           "damageInc": 500
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6609,23 +7618,20 @@
       "duration": 80,
       "walkDelay": 0,
       "actDelay": 2,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 250
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5,
           "durationInc": 2
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6672,17 +7678,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 250,
           "damageInc": 500
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6729,24 +7733,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 200,
           "hpInc": 350
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 200
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -6793,19 +7793,17 @@
       "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 500,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 5,
           "damageInc": 5,
           "overtimeduration": 5000,
           "overtimeinterval": 10
         }
-      ],
-      "dmgDuration": 5000
+      ]
     }
   },
   {
@@ -6854,17 +7852,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 70
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -6911,24 +7907,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 125,
           "damageInc": 320
         },
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 300,
           "hpInc": 800
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -6975,23 +7967,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 500
         },
         {
           "type": "AlterAttackSpeed",
-          "target": "enemies",
           "percent": -5000,
           "duration": 20
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7018,7 +8007,7 @@
     "dropRate": 0,
     "eventDropRate": 0,
     "attack": {
-      "hits": 1,
+      "hits": 2,
       "walkDelay": 1,
       "actDelay": 0,
       "castTime": 0.2,
@@ -7038,17 +8027,15 @@
       "duration": 6,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 300,
           "damageInc": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7097,29 +8084,25 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "your allies",
           "percent": 1500,
           "percentInc": 80,
           "duration": 30
         },
         {
-          "type": "MinusCooldownEffect",
-          "target": "your allies",
+          "type": "MinusCoolDown",
           "percent": 3000
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7166,19 +8149,17 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 1,
-      "dmgTicks": 3,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 60,
           "damageInc": 166,
           "overtimeduration": 12,
           "overtimeinterval": 4
         }
-      ],
-      "dmgDuration": 12
+      ]
     }
   },
   {
@@ -7229,8 +8210,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5013
           ],
@@ -7287,24 +8267,20 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies",
+          "type": "Heal",
           "hp": 300,
           "hpInc": 370
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 370
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -7322,7 +8298,7 @@
     "dmgCoef": 2.09,
     "skillCoef": 2.11,
     "hp": {
-      "base": 250,
+      "base": 600,
       "inc": 40
     },
     "respawnCD": 10,
@@ -7351,17 +8327,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 120,
           "damageInc": 500
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7442,23 +8416,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "your allies and yourself",
+          "type": "Damage",
           "hp": 150,
           "hpInc": 100
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 50
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7505,17 +8476,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 150,
           "damageInc": 50
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7562,24 +8531,20 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
-      "healTicks": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 1500,
           "damageInc": 800
         },
         {
-          "type": "HealEffect",
-          "target": "yourself",
+          "type": "Heal",
           "hp": 1500,
           "hpInc": 1000
         }
-      ],
-      "dmgDuration": 0,
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -7626,17 +8591,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 1500,
           "damageInc": 150
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7683,17 +8646,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 60
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7740,17 +8701,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 50
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7797,17 +8756,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 1800,
           "damageInc": 200
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7854,17 +8811,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 2500,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7911,17 +8866,15 @@
       "duration": 100,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 2000,
           "damageInc": 250
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -7968,17 +8921,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 300,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8025,17 +8976,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 2500,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8082,24 +9031,21 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 2000,
           "damageInc": 250
         },
         {
-          "type": "DamageAlterEffect",
-          "target": "yourself",
+          "type": "AlterDamage",
           "damagealter": 400,
           "damagealterInc": 12,
           "duration": 100
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8146,17 +9092,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 5000,
           "damageInc": 800
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8203,17 +9147,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 2000,
           "damageInc": 250
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8221,7 +9163,7 @@
     "name": "#3015",
     "rarity": 0,
     "element": 4,
-    "class": 0,
+    "class": 1,
     "moveSpeed": 10,
     "as": 80,
     "crit": 80,
@@ -8260,17 +9202,15 @@
       "duration": 20,
       "walkDelay": 2,
       "actDelay": 5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 3500,
           "damageInc": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8317,29 +9257,25 @@
       "duration": 10,
       "walkDelay": 2,
       "actDelay": 5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 3500,
           "damageInc": 300
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 20,
           "durationInc": 1
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "hp": 2000,
           "hpInc": 2500
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8390,8 +9326,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5015
           ],
@@ -8446,17 +9381,15 @@
       "duration": 50,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 1500,
           "damageInc": 20
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8503,17 +9436,15 @@
       "duration": 255,
       "walkDelay": 3,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 4000,
           "damageInc": 50
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8564,8 +9495,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 500
         }
       ]
@@ -8605,19 +9535,17 @@
       "duration": 45,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 6,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 50,
           "overtimeduration": 30,
           "overtimeinterval": 5
         }
-      ],
-      "dmgDuration": 30
+      ]
     }
   },
   {
@@ -8664,22 +9592,19 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 1000,
           "damageInc": 200
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 300
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8726,17 +9651,15 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 300,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -8783,18 +9706,40 @@
       "duration": 80,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 300,
           "damageInc": 400
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
+  },
+  {
+    "id": 3025,
+    "name": "#3025",
+    "rarity": 0,
+    "element": 2,
+    "class": 4,
+    "moveSpeed": 4,
+    "as": 125,
+    "crit": 5,
+    "dodge": 50,
+    "def": 50,
+    "hpCoef": 2.35,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 400,
+      "inc": 600
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
+    "dropRate": 0,
+    "eventDropRate": 0
   },
   {
     "id": 4001,
@@ -8834,8 +9779,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1001
           ],
@@ -8884,8 +9828,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1002
           ],
@@ -8934,8 +9877,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1003
           ],
@@ -8984,8 +9926,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1004
           ],
@@ -9034,8 +9975,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1005
           ],
@@ -9084,8 +10024,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1006
           ],
@@ -9134,8 +10073,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1007
           ],
@@ -9184,8 +10122,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1008
           ],
@@ -9234,8 +10171,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1009
           ],
@@ -9284,8 +10220,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1010
           ],
@@ -9334,8 +10269,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1011
           ],
@@ -9384,8 +10318,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1012
           ],
@@ -9434,8 +10367,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1013
           ],
@@ -9484,8 +10416,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1014
           ],
@@ -9534,8 +10465,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1015
           ],
@@ -9584,8 +10514,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1016
           ],
@@ -9634,8 +10563,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1017
           ],
@@ -9684,8 +10612,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1018
           ],
@@ -9734,8 +10661,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1019
           ],
@@ -9784,8 +10710,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1020
           ],
@@ -9834,8 +10759,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1021
           ],
@@ -9884,8 +10808,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1022
           ],
@@ -9934,8 +10857,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1023
           ],
@@ -9984,8 +10906,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1024
           ],
@@ -10034,8 +10955,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1025
           ],
@@ -10084,8 +11004,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1026
           ],
@@ -10134,8 +11053,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1027
           ],
@@ -10184,8 +11102,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1028
           ],
@@ -10234,8 +11151,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1029
           ],
@@ -10284,8 +11200,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1030
           ],
@@ -10334,8 +11249,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1031
           ],
@@ -10384,8 +11298,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1032
           ],
@@ -10434,8 +11347,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1033
           ],
@@ -10484,8 +11396,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1034
           ],
@@ -10534,8 +11445,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1035
           ],
@@ -10584,8 +11494,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1036
           ],
@@ -10634,8 +11543,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1037
           ],
@@ -10684,8 +11592,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1038
           ],
@@ -10734,8 +11641,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1039
           ],
@@ -10784,8 +11690,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1040
           ],
@@ -10984,8 +11889,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 15
         }
@@ -11003,43 +11907,27 @@
     "crit": 0,
     "dodge": 0,
     "def": 0,
-    "hpCoef": 2.11,
+    "hpCoef": 2.8,
     "dmgCoef": 2.09,
     "skillCoef": 2.11,
     "hp": {
-      "base": 500,
-      "inc": 500
+      "base": 350,
+      "inc": 625
     },
     "respawnCD": 0,
-    "vision": 0,
+    "vision": 10,
     "affection": "",
     "dropRate": 0,
     "eventDropRate": 0,
-    "skill": {
-      "id": 5014,
-      "castTime": 0.5,
-      "CD": 5,
-      "range": 1,
-      "missChance": 0,
-      "radius": 0,
-      "ticks": 1,
-      "duration": 0,
+    "attack": {
+      "hits": 1,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 1,
-      "healTicks": 1,
-      "effects": [
-        {
-          "type": "SummonEffect",
-          "target": "yourself",
-          "heroids": [
-            5004,
-            5005
-          ],
-          "maxconcurrent": 1,
-          "level": -1
-        }
-      ]
+      "castTime": 0.5,
+      "range": 5,
+      "damage": 90,
+      "damageInc": 10,
+      "aoe": 0
     }
   },
   {
@@ -11086,17 +11974,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 10000,
           "damageInc": 10000
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -11143,17 +12029,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 500,
           "damageInc": 60
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -11200,22 +12084,19 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 5000
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -11262,27 +12143,23 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 30
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 100
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -11320,21 +12197,18 @@
       "walkDelay": 2,
       "actDelay": 0.5,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 200,
           "hpInc": 2000
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -11371,22 +12245,19 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 1000
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 50000000
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -11431,21 +12302,19 @@
       "range": 8,
       "missChance": 0,
       "radius": 6,
-      "ticks": 2,
+      "ticks": 3,
       "duration": 60,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 200
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -11632,10 +12501,49 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 100
+        }
+      ]
+    }
+  },
+  {
+    "id": 5020,
+    "name": "#5020",
+    "rarity": 0,
+    "element": 2,
+    "class": 0,
+    "moveSpeed": 5,
+    "as": 35,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.44,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.05,
+    "hp": {
+      "base": 3000,
+      "inc": 700
+    },
+    "respawnCD": 10,
+    "vision": 9,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 1,
+      "range": 2,
+      "damage": 100,
+      "damageInc": 30,
+      "aoe": 0,
+      "effects": [
+        {
+          "type": "Stun",
+          "duration": 10
         }
       ]
     }
@@ -11667,10 +12575,140 @@
       "hits": 1,
       "walkDelay": 1,
       "actDelay": 0,
-      "castTime": 0.3,
+      "castTime": 1,
+      "range": 2,
+      "damage": 100,
+      "damageInc": 30,
+      "aoe": 0,
+      "effects": [
+        {
+          "type": "Stun",
+          "duration": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": 5022,
+    "name": "#5022",
+    "rarity": 0,
+    "element": 1,
+    "class": 0,
+    "moveSpeed": 0,
+    "as": 100,
+    "crit": 0,
+    "dodge": 0.8,
+    "def": 0,
+    "hpCoef": 2.09,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 195,
+      "inc": 299
+    },
+    "respawnCD": 0,
+    "vision": 10,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 0.1,
+      "actDelay": 0,
+      "castTime": 0.1,
       "range": 1,
-      "damage": 50,
-      "damageInc": 6,
+      "aoe": 0
+    }
+  },
+  {
+    "id": 5023,
+    "name": "#5023",
+    "rarity": 0,
+    "element": 2,
+    "class": 0,
+    "moveSpeed": 0,
+    "as": 100,
+    "crit": 0,
+    "dodge": 5,
+    "def": 0.3,
+    "hpCoef": 2.8,
+    "dmgCoef": 2.4,
+    "skillCoef": 2.3,
+    "hp": {
+      "base": 1400,
+      "inc": 450
+    },
+    "respawnCD": 10,
+    "vision": 10,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0
+  },
+  {
+    "id": 5024,
+    "name": "#5024",
+    "rarity": 0,
+    "element": 4,
+    "class": 0,
+    "moveSpeed": 5,
+    "as": 70,
+    "crit": 0,
+    "dodge": 0,
+    "def": 20,
+    "hpCoef": 2.7,
+    "dmgCoef": 2.3,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 1750,
+      "inc": 600
+    },
+    "respawnCD": 10,
+    "vision": 9,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.3,
+      "range": 2,
+      "damage": 450,
+      "damageInc": 325,
+      "aoe": 1
+    }
+  },
+  {
+    "id": 5025,
+    "name": "#5025",
+    "rarity": 0,
+    "element": 2,
+    "class": 0,
+    "moveSpeed": 3,
+    "as": 130,
+    "crit": 0,
+    "dodge": 0,
+    "def": 10,
+    "hpCoef": 2.7,
+    "dmgCoef": 2.3,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 700,
+      "inc": 350
+    },
+    "respawnCD": 10,
+    "vision": 9,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.3,
+      "range": 2,
+      "damage": 400,
+      "damageInc": 180,
       "aoe": 0
     }
   },
@@ -11712,8 +12750,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1001,
             1011,
@@ -11764,8 +12801,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1007,
             1010,
@@ -11816,8 +12852,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1003,
             1024,
@@ -11868,8 +12903,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1006,
             1013,
@@ -11920,8 +12954,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             5004
           ],
@@ -11970,8 +13003,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1001,
             1011,
@@ -12022,8 +13054,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1007,
             1010,
@@ -12074,8 +13105,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1003,
             1024,
@@ -12126,8 +13156,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "SummonEffect",
-          "target": "yourself",
+          "type": "Summon",
           "heroids": [
             1006,
             1013,
@@ -12139,6 +13168,78 @@
         }
       ]
     }
+  },
+  {
+    "id": 6104,
+    "name": "#6104",
+    "rarity": 0,
+    "element": 0,
+    "class": 0,
+    "moveSpeed": 0,
+    "as": 0,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 10,
+      "inc": 0
+    },
+    "respawnCD": 0,
+    "vision": 1,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0
+  },
+  {
+    "id": 6105,
+    "name": "#6105",
+    "rarity": 0,
+    "element": 0,
+    "class": 0,
+    "moveSpeed": 0,
+    "as": 0,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 10,
+      "inc": 0
+    },
+    "respawnCD": 0,
+    "vision": 1,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0
+  },
+  {
+    "id": 6106,
+    "name": "#6106",
+    "rarity": 0,
+    "element": 0,
+    "class": 0,
+    "moveSpeed": 0,
+    "as": 0,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 10,
+      "inc": 0
+    },
+    "respawnCD": 0,
+    "vision": 1,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0
   },
   {
     "id": 7001,
@@ -12352,7 +13453,7 @@
   },
   {
     "id": 7007,
-    "name": "Guardian 7",
+    "name": "Kira's Mecha",
     "rarity": 0,
     "element": 0,
     "class": 1,
@@ -12385,8 +13486,7 @@
       "aoe": 0,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 100
         }
       ]
@@ -12463,7 +13563,6 @@
       "effects": [
         {
           "type": "AlterAttackSpeed",
-          "target": "enemies",
           "percent": -500,
           "duration": 20
         }
@@ -12549,17 +13648,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 20,
           "damageInc": 30
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -12606,22 +13703,19 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 30,
           "damageInc": 240
         },
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 5
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -12672,8 +13766,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageAlterEffect",
-          "target": "yourself",
+          "type": "AlterDamage",
           "damagealter": 20,
           "damagealterInc": 100,
           "duration": 40
@@ -12725,17 +13818,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 35,
           "damageInc": 350
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -12743,7 +13834,7 @@
     "name": "#9015",
     "rarity": 0,
     "element": 8,
-    "class": 0,
+    "class": 1,
     "moveSpeed": 10,
     "as": 0.01,
     "crit": 80,
@@ -12821,6 +13912,67 @@
     "eventDropRate": 0
   },
   {
+    "id": 10022,
+    "name": "#10022",
+    "rarity": 0,
+    "element": 2,
+    "class": 4,
+    "moveSpeed": 4,
+    "as": 125,
+    "crit": 5,
+    "dodge": 2,
+    "def": 0,
+    "hpCoef": 2.11,
+    "dmgCoef": 2.11,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 400,
+      "inc": 37
+    },
+    "respawnCD": 10,
+    "vision": 7,
+    "affection": "10 15 20 25 30 15 20 25 35 60 25 35 45 60 250",
+    "dropRate": 400,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.2,
+      "range": 5,
+      "damage": 22,
+      "damageInc": 3,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 44,
+      "name": "Builder",
+      "desc": "Builds a little turret that will fight for you and die over time.",
+      "castTime": 1.2,
+      "CD": 4,
+      "range": 3,
+      "missChance": 0,
+      "radius": 1,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Summon",
+          "heroids": [
+            5006
+          ],
+          "maxconcurrent": 1,
+          "level": -1,
+          "destroyfirst": 1
+        }
+      ]
+    }
+  },
+  {
     "id": 10048,
     "name": "#10048",
     "rarity": 2,
@@ -12864,17 +14016,15 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 180,
           "damageInc": 305
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -12921,17 +14071,15 @@
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 3
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -13050,8 +14198,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 15
         }
@@ -13102,17 +14249,15 @@
       "duration": 0,
       "walkDelay": 1,
       "actDelay": 0,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 25
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -13159,22 +14304,19 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 200,
           "damageInc": 1100
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -13221,27 +14363,23 @@
       "duration": 0,
       "walkDelay": 2,
       "actDelay": 0.5,
-      "dmgTicks": 0,
+      "dmgTicks": 1,
       "healTicks": 1,
       "effects": [
         {
-          "type": "StunEffect",
-          "target": "enemies",
+          "type": "Stun",
           "duration": 30
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         },
         {
-          "type": "DamageEffect",
-          "target": "enemies",
+          "type": "Damage",
           "damage": 100,
           "damageInc": 100
         }
-      ],
-      "dmgDuration": 0
+      ]
     }
   },
   {
@@ -13279,21 +14417,18 @@
       "walkDelay": 2,
       "actDelay": 0.5,
       "dmgTicks": 1,
-      "healTicks": 0,
+      "healTicks": 1,
       "effects": [
         {
-          "type": "HealEffect",
-          "target": "your allies and yourself",
+          "type": "Heal",
           "hp": 200,
           "hpInc": 2000
         },
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         }
-      ],
-      "healDuration": 0
+      ]
     }
   },
   {
@@ -13330,8 +14465,7 @@
       "aoe": 2,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 1000000
         }
       ]
@@ -13419,8 +14553,7 @@
       "healTicks": 1,
       "effects": [
         {
-          "type": "DamageEffect",
-          "target": "yourself",
+          "type": "Damage",
           "damage": 50,
           "damageInc": 100
         }
@@ -13450,5 +14583,170 @@
     "affection": "2 2 3 3 10 3 3 5 7 12 5 5 10 10 20",
     "dropRate": 0,
     "eventDropRate": 0
+  },
+  {
+    "id": 103011,
+    "name": "#103011",
+    "rarity": 0,
+    "element": 4,
+    "class": 0,
+    "moveSpeed": 3,
+    "as": 100,
+    "crit": 40,
+    "dodge": 10,
+    "def": 75,
+    "hpCoef": 2.3,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 200000,
+      "inc": 400
+    },
+    "respawnCD": 0,
+    "vision": 5,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.4,
+      "range": 2,
+      "damage": 800,
+      "damageInc": 10,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 3016,
+      "castTime": 3.2,
+      "CD": 9,
+      "range": 1,
+      "missChance": 0,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 2500,
+          "damageInc": 400
+        }
+      ]
+    }
+  },
+  {
+    "id": 103014,
+    "name": "#103014",
+    "rarity": 0,
+    "element": 8,
+    "class": 0,
+    "moveSpeed": 3,
+    "as": 200,
+    "crit": 60,
+    "dodge": 10,
+    "def": 50,
+    "hpCoef": 2.3,
+    "dmgCoef": 2.09,
+    "skillCoef": 2.11,
+    "hp": {
+      "base": 20000,
+      "inc": 70
+    },
+    "respawnCD": 0,
+    "vision": 5,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.6,
+      "range": 2,
+      "damage": 400,
+      "damageInc": 4,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 3028,
+      "castTime": 2,
+      "CD": 12,
+      "range": 6,
+      "missChance": 0,
+      "radius": 6,
+      "ticks": 1,
+      "duration": 80,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 2000,
+          "damageInc": 250
+        }
+      ]
+    }
+  },
+  {
+    "id": 1003003,
+    "name": "#1003003",
+    "rarity": 0,
+    "element": 4,
+    "class": 0,
+    "moveSpeed": 3,
+    "as": 100,
+    "crit": 0,
+    "dodge": 0,
+    "def": 0,
+    "hpCoef": 2.08,
+    "dmgCoef": 2.08,
+    "skillCoef": 2.08,
+    "hp": {
+      "base": 600,
+      "inc": 25
+    },
+    "respawnCD": 0,
+    "vision": 7,
+    "affection": "",
+    "dropRate": 0,
+    "eventDropRate": 0,
+    "attack": {
+      "hits": 1,
+      "walkDelay": 1,
+      "actDelay": 0,
+      "castTime": 0.5,
+      "range": 2,
+      "damage": 75,
+      "damageInc": 5,
+      "aoe": 0
+    },
+    "skill": {
+      "id": 1003006,
+      "castTime": 1,
+      "CD": 20,
+      "range": 1,
+      "missChance": 0,
+      "radius": 3,
+      "ticks": 1,
+      "duration": 0,
+      "walkDelay": 2,
+      "actDelay": 0,
+      "dmgTicks": 1,
+      "healTicks": 1,
+      "effects": [
+        {
+          "type": "Damage",
+          "damage": 150,
+          "damageInc": 75
+        }
+      ]
+    }
   }
 ]

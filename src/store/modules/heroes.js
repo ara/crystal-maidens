@@ -103,33 +103,33 @@ const skillTicks = (m,v) => {
 const heroCols = [
   { val:'id', caption:'ID', sortOrderAsc:true, visible:false },
   { val:'name', caption:'Maiden', align:'left', sortOrderAsc:true, visible:true },
-  { val:heroHealth, fmt:_num, caption:'Health' },
-  { val:heroDamage, fmt:txDamage, caption:'Damage' },
-  { val:heroEHP, fmt:_num, caption:'EHP', visible:true },
-  { val:heroDPS, fmt:_num, caption:'DPS', visible:true },
-  { val:attackRange, fmt:_num, caption:'Range' },
+  { val:'hp', fmt:_num, caption:'Health' },
+  { val:'dmg', fmt:txDamage, caption:'Damage' },
+  { val:'ehp', fmt:_num, caption:'EHP', visible:true },
+  { val:'dps', fmt:_num, caption:'DPS', visible:true },
+  { val:'aaRange', fmt:_num, caption:'Range' },
   { val:'as', caption:'Base AS' },
-  { val:atkSec, caption:'atk/s' },
-  { val:skillDamage, fmt:txSkillDMG, caption:'Skill Damage' },
-  { val:skillHeal, fmt:txSkillHEAL, caption:'Skill Heal' },
+  // { val:atkSec, caption:'atk/s' },
+  { val:'skillDamage', fmt:txSkillDMG, caption:'Skill Damage' },
+  { val:'skillHeal', fmt:txSkillHEAL, caption:'Skill Heal' },
   { val:'skillRadius', fmt:_num, caption:'Radius' },
-  { val:skillDPS, fmt:_num, caption:'Skill DPS', visible:true },
-  { val:skillHPS, fmt:_num, caption:'Skill HPS', visible:true },
+  { val:'skillDPS', fmt:_num, caption:'Skill DPS', visible:true },
+  { val:'skillHPS', fmt:_num, caption:'Skill HPS', visible:true },
   { val:'skillCastTime', fmt:(m,v) => v.toFixed(1), caption:'Cast' },
   { val:'skillCD', caption:'CD' },
-  { val:skillTicks, caption:'#Ticks', align:'center' },
+  // { val:skillTicks, caption:'#Ticks', align:'center' },
 ];
 
 heroCols.forEach( (c,i) => {
   const isField = typeof c.val === 'string';
   c.caption = c.caption || (isField ? cap(c.val) : 'Col#'+i);
   c.index = i;
-  c.dataField = isField ? c.val : 'col'+i;
-  c.displayField = c.fmt ? 'colfmt'+i : c.dataField;
+  // c.dataField = isField ? c.val : 'col'+i;
+  // c.displayField = c.fmt ? 'colfmt'+i : c.dataField;
 });
 
 const heroColsProfiles = [
-  { name: 'Default', cols: ['Maiden', 'EHP', 'DPS', 'Skill DPS', 'Skill HPS'] },
+  { name: 'Default', cols: ['name', 'ehp', 'dps', 'skillDPS', 'skillHPS'] },
 ];
 
 
@@ -208,7 +208,7 @@ const getters = {
 
   filteredHeroCols: (state, getters) => {
     const visibleCols = state.heroColsProfiles.find( col => col.name === state.selectedHeroColsProfile ).cols;
-    return getters.heroCols.filter( col => visibleCols.includes(col.caption) );
+    return getters.heroCols.filter( col => visibleCols.includes(col.val) );
   },
 }
 
